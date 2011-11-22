@@ -1,0 +1,7 @@
+dist_noinst_JAVA =  \
+net/jankenpoi/i18n/LocaleListener.java  \
+net/jankenpoi/i18n/I18n.java  \
+net/jankenpoi/autotoolsexample/Version.java  \
+net/jankenpoi/autotoolsexample/Main.java  \
+net/jankenpoi/autotoolsexample/HelloWithJNI.java  \
+gnu/gettext/GettextResource.java

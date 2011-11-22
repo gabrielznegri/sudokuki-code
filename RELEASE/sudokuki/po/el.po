@@ -1,0 +1,267 @@
+# Greek translations for Sudokuki
+# Copyright (C) 2006-2011 Sylvain Vedrenne
+# This file is distributed under the same license as the Sudokuki package.
+# Hélène Damianakos, 2009
+# Sylvain Vedrenne, 2011
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: sudokuki 1.0.A28\n"
+"Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
+"POT-Creation-Date: 2011-10-25 22:48+0200\n"
+"PO-Revision-Date: 2011-07-05 16:08+0100\n"
+"Last-Translator: Sylvain Vedrenne <sylvain.vedrenne@jankenpoi.net>\n"
+"Language-Team: sudokuki-i18n <sudokuki-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Greek\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:41
+msgid "Solution..."
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:44
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:68
+msgid "Resolve"
+msgstr "Επιλύστε"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:46
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:69
+msgid "Resolve the grid"
+msgstr "Επιλύστε πλέγμα"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:54
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:55
+msgid "Clear all moves"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:56
+msgid "Erase all memos..."
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:57
+msgid "Custom grid"
+msgstr "Προσαρμογή"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:58
+msgid "Play grid"
+msgstr "Παιχνίδι πλέγμα"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:55
+msgid "File"
+msgstr "Αρχείο"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:57
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:59
+msgid "New"
+msgstr "Νέο"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:62
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:64
+msgid "Open"
+msgstr "Άνοιγμα"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:67
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:69
+msgid "Save as"
+msgstr "Αποθήκευση"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:72
+msgid "Print"
+msgstr "Εκτύπωση"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:74
+msgid "Print the grid"
+msgstr "Εκτύπωση πλέγμα"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:77
+msgid "Print x 4..."
+msgstr "Εκτύπωση x 4..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:81
+msgid "Print four grids"
+msgstr "Εκτυπώσετε τέσσερις πλέγμα"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:83
+msgid "Quit"
+msgstr "Εξοδος"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:86
+msgid "Quit the application"
+msgstr "Τερματισμός αυτής της εφαρμογής"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:109
+msgid "Generating grid..."
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:51
+msgid "Help"
+msgstr "Βοήθεια"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:53
+msgid "Update"
+msgstr "Ενημέρωση"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:55
+msgid "Check for updates"
+msgstr "Αναζήτηση ενημέρωση"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:58
+msgid "Download"
+msgstr "Λήψη"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:60
+msgid "Download new version"
+msgstr "Κατεβάστε την νέα έκδοση"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:63
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:49
+msgid "Translate this application"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:65
+msgid "Help translate this application"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:68
+msgid "About..."
+msgstr "Περί"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:70
+msgid "About Sudokuki..."
+msgstr "Περί του Sudokuki"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:56
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:70
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:98
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LocaleListenerImpl.java:19
+msgid "DETECTED_LANGUAGE"
+msgstr "el"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:96
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:85
+msgid "Language"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:110
+msgid "German"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:111
+msgid "Greek"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:112
+msgid "English"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:113
+msgid "Esperanto"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:114
+msgid "Spanish"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:115
+msgid "French"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:116
+msgid "Japanese"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:117
+msgid "Portuguese"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:118
+msgid "Russian"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:119
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:56
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:78
+msgid "Chinese"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:52
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:101
+msgid "Level 1"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:59
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:102
+msgid "Level 2"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:66
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:103
+msgid "Level 3"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:73
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:104
+msgid "Level 4"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:80
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:105
+msgid "Level 5"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:100
+msgid "Level"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:48
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:77
+msgid "Arabic"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:76
+msgid "Numbers"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:55
+msgid "Open grid..."
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:73
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:73
+msgid "Sudokuki grid files"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:111
+msgid "Generating and sending four grids"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:116
+msgid "to the printer..."
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:122
+msgid "Grid resolution in progress..."
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:55
+#, fuzzy
+msgid "Save as..."
+msgstr "Αποθήκευση"
+
+#~ msgid "Undo"
+#~ msgstr "Άκυρο"
+
+#~ msgid "Clear all"
+#~ msgstr "Καθαρισμός όλων"
+
+#~ msgid "Printing"
+#~ msgstr "Εκτυπώσεις"
+
+#~ msgid "Preferences"
+#~ msgstr "Προτιμήσεις"

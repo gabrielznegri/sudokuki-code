@@ -1,0 +1,21 @@
+# French translations for javaautotoolsexample package.
+# Copyright (C) 2011 Sylvain Vedrenne
+# This file is distributed under the same license as the javaautotoolsexample package.
+# Sylvain <sylvain@jankenpoi.net>, 2011.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: javaautotoolsexample 0.6.1\n"
+"Report-Msgid-Bugs-To: sylvain@jankenpoi.net\n"
+"POT-Creation-Date: 2011-08-27 23:57+0200\n"
+"PO-Revision-Date: 2011-08-22 23:20+0200\n"
+"Last-Translator: Sylvain <sylvain@jankenpoi.net>\n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/classes/net/jankenpoi/autotoolsexample/HelloWithJNI.c:19
+msgid "Hello from JNI"
+msgstr "Bonjour de la JNI!"

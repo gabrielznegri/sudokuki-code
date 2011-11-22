@@ -1,0 +1,303 @@
+Sudokuki - essential sudoku game 
+
+
+-- Changelog --
+
+* 2011-10-25 - released Sudokuki 1.1.Beta3
+- Implemented "Save grid"/"Open grid" feature.
+
+* 2011-10-19 - released Sudokuki 1.1.Beta2 (Beta version)
+- Implemented grid checking used when entering a custom grid
+
+* 2011-09-30 - released Sudokuki 1.0.B41 (Beta version)
+- Implemented "enter/play custom grid" feature
+- Added country flags to language menu and language dialog
+- Refactored the language menu code
+- Language menu nows reacts to language browsing
+
+* 2011-09-17 - released Sudokuki 1.0.A40 (Alpha version)
+- Fixed bug #3406695 "Twice the same Jar file in the binary release zip"
+- Fixed bug #3406691 "Focus easily lost prevents keyboard play"
+- Raise an error upon 'make' (resp. 'make dist') if the list of java files
+  (resp. the list of resources) is outdated
+- Added Chinese translations from Jeanne PENG
+
+* 2011-09-02 - released Sudokuki 1.0.A39 (Alpha version)
+- improved Autotools support
+- Version.java is now auto-generated
+- The standard 'make install' and 'make distcheck' are now supported
+- Fixed bug #3390267 "sudokuki-1.0.A38.tar.gz is broken"
+- Implemented tracker #3317014 'TODO: a proper "make install"'
+- Fixed bug #3292435 "sudokuki.jar file too big"
+
+* 2011-08-10 - released Sudokuki 1.0.A38 (Alpha version)
+- implemented the capability to play with the keyboard
+- added a focus mark showing the current cell in the grid
+- fixed blurred aspect of the grid on OpenJDK (anti-aliasing)
+
+* 2011-08-05 - released Sudokuki 1.0.A37 (Alpha version)
+- implemented a "Clear All Moves" feature
+- implemented a "Erase All Memos" feature
+- added an experimental "Set Memos Here" feature
+
+* 2011-08-04 - released Sudokuki 1.0.A36 (Alpha version)
+- reactivated the Native sudoku generator and fixed its compilation warnings
+- fall-back to the Java generator when the Native generator can't be loaded
+- better compatibility with the Letter print format
+- improved display and printing so that kanji will fit inside the grid cells
+- output less text and a smaller logo image when the users prints grids
+
+* 2011-08-03 - released Sudokuki 1.0.A35 (Alpha version)
+- fixed bug #3383914 "Print multi (x4) is broken on 64 bits":
+  UnsatisfiedLinkError with Multigrid action in case the suexg_proxy lib
+  is missing or not loaded (example: 64 bits CPU with 32 bits lib).
+- implemented Arabic/Chinese numbers selection
+- implemented sudoku level selection
+- added "Translate this application" dialog
+- added "Please wait" dialogs where necessary
+- updated dialogs that include links to websites
+- updated "Contributors" section in the About dialog
+
+* 2011-07-26 - released Sudokuki 1.0.A34 (Alpha version)
+- implemented a Java transposition of Suexg C generator: SuexgJava
+- temporarily deactivated the native generator (for portability tests)
+- updated JNI files
+
+* 2011-07-20 - released Sudokuki 1.0.A33 (Alpha version)
+- added basic Russian translations from Dmitry Salnikov
+- updated Portuguese translations from Dmitry Salnikov
+
+* 2011-07-20 - released Sudokuki 1.0.A32 (Alpha version)
+- fixed bug #3371789 "Print multi (x4) is broken!"
+- added Portuguese translations from Dmitry Salnikov
+- updated language menu and language dialog accordingly
+
+* 2011-07-10 - released Sudokuki 1.0.A31 (Alpha version)
+- fixed window size issue that was visible only with OpenJDK
+- improved the positioning of the LanguageDialog
+- some clean-up in the JNI code
+
+* 2011-07-08 - released Sudokuki 1.0.A30 (Alpha version)
+ - Added a language selection dialog and its icon in the toolbar
+ - Reorganized Edit and Help menus
+
+* 2011-07-05 - released Sudokuki 1.0.A29 (Alpha version)
+ - Greek translations (revived from v1.0, and using web search)
+ - Spanish translations (revived from v1.0, and using web search)
+ - Fixed the Toolbar that was missing since version 1.0.A28
+
+* 2011-07-04 - released Sudokuki 1.0.A28 (Alpha version)
+ - The "Change language" feature is now operational
+ - Modified several menus to make them Locale aware
+
+* 2011-07-01 - released Sudokuki 1.0.A27 (Alpha version)
+ - Esperanto translations
+ - Japanese translations 
+ - Updated languages menu where the detected locale is selected
+
+* 2011-06-24 - released Sudokuki 1.0.A26 (Alpha version)
+ - Added German translations from Claus Poerschke
+ - Updated po files
+
+* 2011-06-18 - released Sudokuki 1.0.A25 (Alpha version)
+ - Updated po files
+ - Updated Makefile.am
+
+* 2011-06-18 - released Sudokuki 1.0.A24 (Alpha version)
+ - Added languages 'de en eo es ja pt ru' to ALL_LINGUAS
+ - Marked many strings as translatable to allow translations
+
+* 2011-06-15 - released Sudokuki 1.0.A23 (Alpha version)
+ - Improved i18n support and build (includes the .properties files into the jar).
+ - First Russian translations strings thanks to Dmitry Salnikov
+
+* 2011-06-09 - released Sudokuki 1.0.A22 (Alpha version)
+ - Added i18n support (not yet fully functional)
+
+* 2011-06-02 - released Sudokuki 1.0.A21 (Alpha version)
+ - Added dialog shown while the solving process is on-going and allowing to cancel.
+
+* 2011-06-01 - released Sudokuki 1.0.A20 (Alpha version)
+ - Added "cheat -> resolve current grid" feature
+
+* 2011-05-16 - released Sudokuki 1.0.A19 (Alpha version)
+ - Added "cheat -> show memos for all cells" feature
+
+* 2011-05-13 - released Sudokuki 1.0.A18 (Alpha version)
+ - "Notes" renamed to "Memos" are now in blue
+ - Some code cleanup (moved to the grid model some model specific code)
+
+* 2011-05-12 - released Sudokuki 1.0.A17 (Alpha version)
+ - "Clear cell notes" feature
+ - Some code cleanup (constants for notes)
+
+* 2011-05-09 - released Sudokuki 1.0.A16 (Alpha version)
+ - Better prototype of cell notes dialog
+ - Implemented Read-Only cells
+
+* 2011-05-08 - released Sudokuki 1.0.A15 (Alpha version)
+ - First prototype of cell notes dialog
+
+* 2011-05-03 - released Sudokuki 1.0.A14 (Alpha version)
+ - Automatic check for new version at startup
+ - Toolbar button for download when a new version is available 
+
+* 2011-05-01 - released Sudokuki 1.0.A13 (Alpha version)
+ - Added a toolbar to the Swing GUI.
+ - Fixed 3 or 4 minor GUI bugs (wrong mnemonic for Help, tooltip text not showing up, etc.)
+
+* 2011-04-30 - released Sudokuki 1.0.A12 (Alpha version)
+ - AboutDialog:
+  . added a link button pointing to the project's forums on Sourceforge
+  . added a link button for easier download when a new version is available
+
+* 2011-04-28 - released Sudokuki 1.0.A11 (Alpha version)
+ - AboutDialog: 
+  . added a link button to browse to the project's website
+  . added a "feedback" tab.
+
+* 2011-04-27 - released Sudokuki 1.0.A10 (Alpha version)
+ - Updated About Dialog (version, contributors, transfer) using HTML 
+ - Easier way to execute the program:
+  . sudokuki.jar is now generated in the top directory
+  . just clicking on sudokuki.jar will run the program on some platforms
+  . native shared libs expected to be in 'lib' directory relative to sudokuki.jar
+
+* 2011-04-24 - released Sudokuki 1.0.A09 (ALPHA version)
+ - Added license (GPL v3 or later) to About Dialog
+ - Updated path to LATEST in Check Update dialog (for alpha versions)
+
+* 2011-04-18 - released Sudokuki 1.0.A08 (ALPHA version)
+ - Print feature (for those who prefer playing on paper): 
+   . now you can print the current grid
+ - Multi-print feature: 
+   . now you can print 4 random grids and play on paper
+
+* 2011-04-15 - released Sudokuki 1.0.A07 (ALPHA version)
+ - About dialog: added application logo
+   . changed resources.tar.bz2 to add logo.png
+   . updated src/Makefile accordingly
+
+* 2011-04-14 - released Sudokuki 1.0.A06 (ALPHA version)
+ - first draft of the About dialog
+ - fixed position for dialogs (centered on the main frame)
+
+* 2011-04-11 - released Sudokuki 1.0.A05 (ALPHA version)
+ - src/Makefile : fixed Cygwin compilation by escaping '(' and ')' characters
+
+* 2011-04-08 - released Sudokuki 1.0.A04 (ALPHA version)
+ - src/Makefile : rework for effective detection on a CYGWIN environment
+ - added Copyright notice and License terms (GPL v3 or later) to all source files. 
+ - added file 'checklist.sh' as a reminder of things to do for each release
+
+* 2011-04-07 - released Sudokuki 1.0.A03 (ALPHA version)
+ - src/Makefile : detect if the OS is "Linux" or "CYGWIN" and set variables accordingly
+ - updated NEWS, configure.ac
+
+* 2011-04-06 - released Sudokuki 1.0.A02 (ALPHA version)
+ - added a "Check for updates" dialog in the help menu
+   . centralized package version number inside configure.ac
+   . Version.java is generated during build and used in CheckUpdateDialog
+
+* 2011-04-04 - released Sudokuki 1.0.A01 (ALPHA version)
+ - first version of Sudokuki in Java
+ - includes public domain Suexg grid generator (C language)
+ - basic graphical user interface based on Swing
+ - includes Gtk+ stock icons (GNU General Public License)
+ - experimental Print feature to print the grid
+
+
+
+-- Stable releases --
+ 
+The stable release files can be found here:
+https://sourceforge.net/projects/sudokuki/files/sudokuki/
+
+Translations include English, Esperanto, French, German, 
+Greek, Japanese, and Spanish at the moment.
+
+The current stable release is version 1.0. 
+
+
+-- Forums --
+
+Please consult the Sudokuki FORUMS on Sourceforge:
+
+  https://sourceforge.net/projects/sudokuki/forums
+
+and share your comments with other users and contributors.
+
+Those forums are a good place to ask questions, report bugs,
+suggest features, contribute by submitting patches, or get 
+some HELP for anything related to Sudokuki.
+
+
+-- Free software license and Copyright --
+
+Sudokuki is released under the terms of the GNU General Public 
+License version 3 or later (GPL v3+).
+
+This program is developed during the author's free-time, in the
+hope that some users will find it useful, but WITHOUT ANY WARRANTY
+of any kind.
+
+You are welcome to transfer this program to other people as long as
+you respect the license terms. Read the GNU General Public License
+for more details.
+
+The full license text is available in the file called COPYING that
+must be included in every copy of the program.
+
+Sudokuki is free software ("Free" as in "Freedom").
+
+Copyright (C) 2007-2011 Sylvain Vedrenne
+
+
+-- Distributions including Sudokuki --
+
+The following GNU/Linux distributions are known to be using
+Sudokuki: Vector Linux, Puppy Linux, Arch Linux, etc.
+
+
+-- Websites referencing Sudokuki --
+
+Sudokuki is referenced by many websites, for example:
+
+- Free Software Foundation - Free Software Directory
+  http://directory.fsf.org
+
+- Vector Linux
+  http://vectorlinux.osuosl.org/veclinux-7.0/testing/games/sudokuki-1.0-i586-1vl70.meta
+
+- Opensourcebistro.com (related to Vector Linux)
+  http://www.opensourcebistro.com/Tutorial/VL60/13.Gaming/sudokuki/sudokuki.htm
+  http://www.opensourcebistro.com/Tutorial/VL60/13.Gaming/sudokuki/sudokuki-build.htm
+
+- Arch Linux
+  http://aur.archlinux.org/packages.php?ID=24354
+
+- Puppy Linux
+  http://www.murga-linux.com/puppy/viewtopic.php?t=38746
+
+- University of Amsterdam Master Education in System and Network Eng.
+  https://www.os3.nl/
+
+  ...
+
+
+-- Alpha releases --
+
+Alpha versions can be found here:
+https://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Alpha
+
+Sudokuki is being completely rewritten at the moment.
+It is no more based on Gtkmm for the GUI. The GUI is now
+written in Java and based on Swing. The main reason to 
+this is that the author is having fun rewriting the
+program from C++ to Java and to learn more about Swing. 
+
+The author is also hoping to make it easier for users
+and contributors (developers, testers, translators) to
+help with the project, because using Java, Sudokuki
+is expected to be easier to install and run.
+

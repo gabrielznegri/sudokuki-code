@@ -1,0 +1,52 @@
+Java Autotools Example
+======================
+
+This package is a simple example of a Java package following
+GNU packaging standards (or at least trying to follow them).
+
+Feel free to use this package as a starting point if you want
+to write a Java application that can be built with the classical
+sequence:
+  ./configure && make && sudo make install
+
+This package is written in the hope it will be useful to Java
+developers or maintainers who want to make their program easier
+to build and install on a standard GNU/Linux distribution but
+who are not familiar with the Autotools.
+
+This package uses the following classical autotools configuration
+files:
+  configure.ac (Autoconf configuration file)
+  Makefile.am, src/Makefile.am (Automake configuration files)
+
+Features
+========
+
+- Can be installed using the standard ./configure && make && sudo make install
+- Provides a basic Java / JNI application package upon which you can build your Java project if you like.
+  This is Free Software ("Free" as in Freedom) - check the license terms (GPL v3+).
+- Tested on GNU/Linux (gNewSense 2.3 deltah)
+- Tested on MS-Windows with MinGW 1.0. N.B: use the "-Wl,--kill-at" for 'configure':
+    ./configure LDFLAGS="-Wl,--kill-at"
+  Starting on a fresh unpacked archive is strongly recommended. 
+
+License
+=======
+
+Java Autotools Example is transfered to you under the terms of
+the GNU General Public Licence version 3 or later.
+  
+More information about the GNU Autotools
+========================================
+  
+For more information about the GNU Autotools, consult the following
+web sites (for example):
+
+* Autotools tutorial:
+http://www.lrde.epita.fr/~adl/autotools.html
+
+* FLAIM: an Autotools example:
+http://www.freesoftwaremagazine.com/books/agaal/autotools_example
+
+* Autotools documentation on http://www.gnu.org
+http://www.gnu.org/s/hello/manual/automake/Autotools-Introduction.html
