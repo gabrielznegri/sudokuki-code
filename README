@@ -3,7 +3,9 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2011-11-23 - released Sudokuki 1.1.Beta4
 - Fixed bug #3432069 "Can't open or save grid from the toolbar"
+- Fixed bug #3439624 "Make the About dialog smaller"
 
 * 2011-10-25 - released Sudokuki 1.1.Beta3
 - Implemented "Save grid"/"Open grid" feature.

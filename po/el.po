@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.0.A28\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2011-10-19 23:49+0200\n"
+"POT-Creation-Date: 2011-11-23 23:28+0100\n"
 "PO-Revision-Date: 2011-07-05 16:08+0100\n"
 "Last-Translator: Sylvain Vedrenne <sylvain.vedrenne@jankenpoi.net>\n"
 "Language-Team: sudokuki-i18n <sudokuki-i18n@lists.sourceforge.net>\n"
@@ -143,7 +143,7 @@ msgid "DETECTED_LANGUAGE"
 msgstr "el"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:96
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:85
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:84
 msgid "Language"
 msgstr ""
 
