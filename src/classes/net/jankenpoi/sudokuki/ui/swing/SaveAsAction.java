@@ -29,7 +29,6 @@ import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.filechooser.FileFilter;
-import javax.swing.text.Utilities;
 
 import net.jankenpoi.sudokuki.view.GridView;
 
@@ -50,34 +49,31 @@ public class SaveAsAction extends AbstractAction {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		final JFileChooser fc = new JFileChooser();
+		final JFileChooser fc = new JFileChooser() {
+			@Override
+			public File getSelectedFile() {
+				File file = super.getSelectedFile();
+				System.out
+						.println("SaveAsAction::::getSelectedFile() ext:"+getExtension(file)+"|");
+				if (getExtension(file) == null) {
+					file = new File(file.getAbsolutePath()+".skg");
+				}
+				return file;
+			}
+		};
 		
 		fc.setDialogTitle(_("Save as..."));
 		fc.setAcceptAllFileFilterUsed(false);
 		fc.setFileFilter(new FileFilter() {
-			
-			public String getExtension(File f) {
-		        String ext = null;
-		        String s = f.getName();
-		        int i = s.lastIndexOf('.');
-
-		        if (i > 0 &&  i < s.length() - 1) {
-		            ext = s.substring(i+1).toLowerCase();
-		        }
-		        return ext;
-		    }
-			
+						
 			@Override
 			public String getDescription() {
-				// TODO Auto-generated method stub
 				return _("Sudokuki grid files");
 			}
 			
 			@Override
 			public boolean accept(File f) {
 				String extension = getExtension(f);
-				System.out
-						.println("SaveAsAction ext:"+extension+"|");
 				if (f.isDirectory() || "skg".equals(extension)) {
 					return true;
 				}
@@ -97,14 +93,12 @@ public class SaveAsAction extends AbstractAction {
 		try {
 			fileToSave.createNewFile();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		FileOutputStream fos = null;
 		try {
 			fos = new FileOutputStream(fileToSave);
 		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		if (fos == null) {
@@ -125,9 +119,19 @@ public class SaveAsAction extends AbstractAction {
 		try {
 			fos.close();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+	}
+	
+	private static String getExtension(File f) {
+		String ext = null;
+		String s = f.getName();
+		int i = s.lastIndexOf('.');
+
+		if (i > 0 && i < s.length() - 1) {
+			ext = s.substring(i + 1).toLowerCase();
+		}
+		return ext;
 	}
 
 }
