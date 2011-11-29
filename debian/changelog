@@ -1,10 +1,11 @@
-sudokuki (1.0.400-1) unstable; urgency=low
+sudokuki (1.0.500-1) unstable; urgency=low
 
-        * Sudokuki version 1.1.Beta4 ("Sudokuki", stable, Gtkmm GUI)
+        * Sudokuki version 1.1.Beta5 ("Sudokuki", stable, Gtkmm GUI)
 
        Rewrote Sudokuki in Java with a Swing graphical user interface.
+       Added Debian package build support for Sudokuki 1.1.Beta5.
 
- -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Mon, 28 Nov 2011 23:52:00 +0100
+ -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Mon, 29 Nov 2011 01:00:00 +0100
 
 sudokuki (1.0.0-1) unstable; urgency=low
 	

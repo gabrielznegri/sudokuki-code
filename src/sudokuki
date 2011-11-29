@@ -1,2 +1,0 @@
-#!/bin/sh
-java -Djava.library.path="/usr/lib" -jar /usr/share/java/sudokuki-1.1.Beta4.jar

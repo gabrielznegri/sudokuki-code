@@ -37,7 +37,8 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	AUTHORS COPYING ChangeLog INSTALL NEWS build-aux/config.guess \
 	build-aux/config.rpath build-aux/config.sub build-aux/depcomp \
 	build-aux/install-sh build-aux/ltmain.sh build-aux/missing \
-	config.rpath install-sh missing mkinstalldirs
+	config.guess config.rpath config.sub install-sh missing \
+	mkinstalldirs
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \
 	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/intlmacosx.m4 \
@@ -91,7 +92,7 @@ CFLAGS = -g -O2
 CPP = gcc -E
 CPPFLAGS = 
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"sudokuki\" -DPACKAGE_TARNAME=\"sudokuki\" -DPACKAGE_VERSION=\"1.1.Beta4\" -DPACKAGE_STRING=\"sudokuki\ 1.1.Beta4\" -DPACKAGE_BUGREPORT=\"sylvain@jankenpoi.net\" -DPACKAGE=\"sudokuki\" -DVERSION=\"1.1.Beta4\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DENABLE_NLS=1 -DHAVE_GETTEXT=1 -DHAVE_DCGETTEXT=1
+DEFS = -DPACKAGE_NAME=\"sudokuki\" -DPACKAGE_TARNAME=\"sudokuki\" -DPACKAGE_VERSION=\"1.1.Beta5\" -DPACKAGE_STRING=\"sudokuki\ 1.1.Beta5\" -DPACKAGE_BUGREPORT=\"sylvain@jankenpoi.net\" -DPACKAGE=\"sudokuki\" -DVERSION=\"1.1.Beta5\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DENABLE_NLS=1 -DHAVE_GETTEXT=1 -DHAVE_DCGETTEXT=1
 DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
@@ -145,9 +146,9 @@ OTOOL64 =
 PACKAGE = sudokuki
 PACKAGE_BUGREPORT = sylvain@jankenpoi.net
 PACKAGE_NAME = sudokuki
-PACKAGE_STRING = sudokuki 1.1.Beta4
+PACKAGE_STRING = sudokuki 1.1.Beta5
 PACKAGE_TARNAME = sudokuki
-PACKAGE_VERSION = 1.1.Beta4
+PACKAGE_VERSION = 1.1.Beta5
 PATH_SEPARATOR = :
 POSUB = po
 RANLIB = ranlib
@@ -159,7 +160,7 @@ TMP_JAR =
 TMP_JAVAC = /usr/bin/javac
 TMP_JAVAH = 
 USE_NLS = yes
-VERSION = 1.1.Beta4
+VERSION = 1.1.Beta5
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
 XGETTEXT_EXTRA_OPTIONS = 

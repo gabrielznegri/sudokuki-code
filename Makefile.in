@@ -37,7 +37,8 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	AUTHORS COPYING ChangeLog INSTALL NEWS build-aux/config.guess \
 	build-aux/config.rpath build-aux/config.sub build-aux/depcomp \
 	build-aux/install-sh build-aux/ltmain.sh build-aux/missing \
-	config.rpath install-sh missing mkinstalldirs
+	config.guess config.rpath config.sub install-sh missing \
+	mkinstalldirs
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \
 	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/intlmacosx.m4 \
