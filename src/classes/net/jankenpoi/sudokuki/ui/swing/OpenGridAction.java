@@ -23,12 +23,12 @@ import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 
 import net.jankenpoi.sudokuki.view.GridView;
@@ -101,7 +101,12 @@ public class OpenGridAction extends AbstractAction {
 			e1.printStackTrace();
 		}
 		if (fis == null) {
-			return;
+            JOptionPane.showMessageDialog(frame, "<html>"
+                    + "<table border=\"0\">" + "<tr>"
+                    + "File not found:" + "</tr>"
+                    + "<tr>" + fileToOpen + "</tr>"
+                    + "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
+            return;
 		}
 		
 		short[] externalCellInfos = new short[81];
