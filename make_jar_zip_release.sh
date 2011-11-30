@@ -3,12 +3,12 @@ ZIPRELEASEDIR="sudokuki-"$RELEASEVERSION"-binary"
 
 make && make dist
 
-mkdir -p $ZIPRELEASEDIR/libs
+mkdir -p $ZIPRELEASEDIR/
 
 cp NEWS README COPYING HOWTO_RUN_SUDOKUKI.txt $ZIPRELEASEDIR/
-cp libs/* $ZIPRELEASEDIR/libs/
+cp libs/* $ZIPRELEASEDIR/
 cp sudokuki-$RELEASEVERSION.jar $ZIPRELEASEDIR/
-echo "java -Djava.library.path=./libs -jar sudokuki-"$RELEASEVERSION".jar -ui Swing" > $ZIPRELEASEDIR/sudokuki.sh
+echo "java -Djava.library.path=. -jar sudokuki-"$RELEASEVERSION".jar -ui Swing" > $ZIPRELEASEDIR/sudokuki.sh
 chmod +x $ZIPRELEASEDIR"/sudokuki.sh"
 cp "sudokuki-"$RELEASEVERSION".tar.gz" $ZIPRELEASEDIR/
 
