@@ -54,7 +54,12 @@ public class SaveAsAction extends AbstractAction {
 			public File getSelectedFile() {
 				File file = super.getSelectedFile();
 				System.out
-						.println("SaveAsAction::::getSelectedFile() ext:"+getExtension(file)+"|");
+				.println("SaveAsAction.actionPerformed(...).new JFileChooser() {...}.getSelectedFile() file:"+file);
+				if (file == null) {
+					return null;
+				}
+				System.out.println("SaveAsAction::::getSelectedFile() ext:"
+						+ getExtension(file) + "|");
 				if (getExtension(file) == null) {
 					file = new File(file.getAbsolutePath()+".skg");
 				}
