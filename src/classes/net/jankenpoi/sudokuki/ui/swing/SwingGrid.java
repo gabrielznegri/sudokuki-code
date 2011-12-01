@@ -121,24 +121,24 @@ public class SwingGrid extends JPanel implements Printable {
 		if (!(0 <= li && li < 9 && 0 <= co && co < 9)) {
 			throw new IllegalArgumentException();
 		}
-
-		FontMetrics fm = getFontMetrics(g2.getFont());
-		int h = fm.getHeight();
+		
+ 		FontMetrics fm = getFontMetrics(g2.getFont());
+ 		int h = fm.getHeight();
 		int w = fm.stringWidth("X");
-
+ 
 		int x = columns[co].getStart() + CELL_SIZE / 2 - w / 2;
 		int y = rows[li].getStart() + CELL_SIZE / 2 + h / 4;
 
-		int xx = (9 - value) % 3 - 1;
+ 		int xx = (9 - value) % 3 - 1;
 		// System.out.println("val: " + value + " xx : " + xx);
-		int yy = (9 - value) / 3 - 1;
+ 		int yy = (9 - value) / 3 - 1;
 		// System.out.println("val: " + value + " yy : " + yy);
-		x = x - xx * 8 + 1;
+ 		x = x - xx * 8 + 1;
 		y = y - yy * 8 + 1;
-
-		return new Point(x, y);
-	}
-
+ 
+ 		return new Point(x, y);
+ 	}
+	
 	public void paintComponent(Graphics g) {
 		Graphics2D g2 = (Graphics2D) g;
 		
@@ -150,12 +150,14 @@ public class SwingGrid extends JPanel implements Printable {
 		paintPlayerNumbers(g2, kanjiMode);
 	}
 
+
 	private void paintGridNumbers(Graphics2D g2, boolean kanjiMode) {
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		g2.setColor(Color.BLACK);
 		// Font font = new Font("Serif", Font.BOLD, FONT_SIZE);
-		Font font = new Font("Serif", Font.BOLD, FONT_SIZE - (kanjiMode?4:0));
+		Font font = new Font("Serif", Font.BOLD, FONT_SIZE
+				- (kanjiMode ? 4 : 0));
 		g2.setFont(font);
 
 		for (int li = 0; li < 9; li++) {
@@ -338,16 +340,16 @@ public class SwingGrid extends JPanel implements Printable {
 		int li = -1;
 		int co = -1;
 		for (int l = 0; l < rows.length; l++) {
-			if (rows[l].getStart() < inPos.y && inPos.y < rows[l].getEnd()) {
+			if (rows[l].getStart() + 2 <= inPos.y && inPos.y < rows[l].getEnd() + 2) {
 				li = l;
 				System.out.println("SwingGrid.getLiCoForPos() li:" + li);
 				break;
 			}
 		}
 		for (int c = 0; c < columns.length; c++) {
-			if (columns[c].getStart() < inPos.x
+			if (columns[c].getStart() <= inPos.x
 					&& inPos.x < columns[c].getEnd()) {
-				co = new Integer(c);
+				co = c;
 				System.out.println("SwingGrid.getLiCoForPos() co:" + co);
 				break;
 			}
@@ -452,8 +454,11 @@ public class SwingGrid extends JPanel implements Printable {
 
 			int li = cellPos.getLi();
 			int co = cellPos.getCo();
-			posX = co;
+			if (li == -1 || co == -1) {
+				return;
+			}
 			posY = li;
+			posX = co;
 			repaint();
 			selectValue(li, co, pos.x, pos.y);
 		}
@@ -470,8 +475,11 @@ public class SwingGrid extends JPanel implements Printable {
 
 			int li = cellPos.getLi();
 			int co = cellPos.getCo();
-			posX = co;
+			if (li == -1 || co == -1) {
+				return;
+			}
 			posY = li;
+			posX = co;
 			repaint();
 			selectMemos(li, co, pos.x, pos.y);
 		}
@@ -479,7 +487,7 @@ public class SwingGrid extends JPanel implements Printable {
 	}
 
 	private void selectValue(int li, int co, int x, int y) {
-		if (view.isCellReadOnly(li, co)) {
+		if (view.isGrigComplete() || view.isCellReadOnly(li, co)) {
 			return;
 		}
 		byte previousValue = view.getValueAt(li, co);
@@ -495,7 +503,7 @@ public class SwingGrid extends JPanel implements Printable {
 	}
 	
 	private void selectMemos(int li, int co, int x, int y) {
-		if (view.isCellReadOnly(li, co) || view.isCellValueSet(li, co)) {
+		if (view.isGrigComplete() || view.isCellReadOnly(li, co) || view.isCellValueSet(li, co)) {
 			return;
 		}
 		Vector<Byte> vec = new Vector<Byte>();

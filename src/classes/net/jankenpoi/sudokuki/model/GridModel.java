@@ -22,7 +22,6 @@ import java.util.List;
 
 import net.jankenpoi.sudokuki.SudokuGrid;
 import net.jankenpoi.sudokuki.generator.SudokuGeneratorFactory;
-import net.jankenpoi.sudokuki.model.GridModel.GridValidity;
 import net.jankenpoi.sudokuki.preferences.UserPreferences;
 import net.jankenpoi.sudokuki.view.GridListener;
 
@@ -47,9 +46,8 @@ public class GridModel implements Cloneable {
 	public static final int FLAG_CELL_MEMO_8 = 0x0800; // ___0000.1000-0000.0000
 	public static final int FLAG_CELL_MEMO_9 = 0x1000; // ___0001.0000-0000.0000
 	public static final int FLAG_CELL_READ_ONLY = 0x2000; // 0010.0000-0000.0000
-
-//	public static final int FLAG_CELL_SCREENED = 0x4000; // _0100.0000-0000.0000
-//	public static final int FLAG_CELL_FILLED = 0x8000; // ___1000.0000-0000.0000
+	
+	public static final int FLAG_GRID_COMPLETE = 0x4000; // _0100.0000-0000.0000
 
 	private List<GridListener> listeners = new ArrayList<GridListener>();
 	
@@ -62,6 +60,10 @@ public class GridModel implements Cloneable {
 	private short[] cellInfos = new short[81];
 
 	public GridModel(short[] flagsTable, int startIdx) {
+		copyFlagsToGrid(flagsTable, startIdx);
+	}
+	
+	private void copyFlagsToGrid(short [] flagsTable, int startIdx) {
 		for (int i = 0; i < cellInfos.length; i++) {
 			short value = (short) (flagsTable[startIdx + i] & MASK_CELL_VALUES);
 			cellInfos[i] = value;
@@ -84,21 +86,9 @@ public class GridModel implements Cloneable {
 	}
 	
 	private void newGrid() {
-//		SudokuGrid gridFast = SuexgProxy.getInstance().generateGrid();
-//		SudokuGrid grid = SuexgJava.getInstance().generateGrid(5000, 6000);
 		final int minRating = UserPreferences.getInstance().getInteger("minRating", 0);
 		final int maxRating = UserPreferences.getInstance().getInteger("maxRating", Integer.MAX_VALUE);
 		SudokuGrid grid = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
-
-//		for (int z=0; z<1000; z++) {
-//			gridFast = SuexgProxy.getInstance().generateGrid();
-//			grid = SuexgGenerator.getInstance().generateGrid();
-//			for (int k=0; k<81; k++) {
-//				if (grid.getValueAt(k) != gridFast.getValueAt(k)) {
-//					throw new IllegalStateException("GRIDS AREN'T IDENTICAL !!!");
-//				}
-//			}
-//		}
 
 		for (int i = 0; i < cellInfos.length; i++) {
 			short value = (short) grid.getValueAt(i);
@@ -399,6 +389,15 @@ public class GridModel implements Cloneable {
 		return !isCustomGridModeON && (cellInfos[9 * li + co] & FLAG_CELL_READ_ONLY) != 0;
 	}
 
+	public boolean isGridComplete() {
+		System.out.println("GridModel.isGridComplete() is grid complete ? "+((cellInfos[0] & FLAG_GRID_COMPLETE) != 0));
+		return (cellInfos[0] & FLAG_GRID_COMPLETE) != 0;
+	}
+
+	public void setGridComplete() {
+		cellInfos[0] |= FLAG_GRID_COMPLETE;
+	}
+	
 	public byte getValueAt(int li, int co) {
 		byte value = (byte) (cellInfos[9 * li + co] & MASK_CELL_VALUES);
 		return value;

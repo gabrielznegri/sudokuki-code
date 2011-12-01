@@ -124,4 +124,7 @@ public class GridController {
 		return model.asIntArray();
 	}
 
+	public void notifyGridComplete() {
+		model.setGridComplete();
+	}
 }

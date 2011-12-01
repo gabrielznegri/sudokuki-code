@@ -117,7 +117,7 @@ public class SwingView extends GridView {
 			return;
 		}
 		Action clearAllMovesAction = actions.get("ClearAllMoves"); 
-		clearAllMovesAction.setEnabled(model.areSomeCellsFilled());
+		clearAllMovesAction.setEnabled(!model.isGridComplete() && model.areSomeCellsFilled());
 	}
 	
 	private void refreshLevelMenu(GridModel model) {
@@ -143,7 +143,7 @@ public class SwingView extends GridView {
 			return;
 		}
 		Action customGridAction = actions.get("CustomGrid"); 
-		customGridAction.setEnabled(!model.getCustomGridMode());
+		customGridAction.setEnabled(!model.isGridComplete() && !model.getCustomGridMode());
 	}
 
 	private void refreshPlayCustomGridAction(GridModel model) {

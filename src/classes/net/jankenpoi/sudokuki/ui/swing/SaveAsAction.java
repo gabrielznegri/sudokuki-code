@@ -48,20 +48,18 @@ public class SaveAsAction extends AbstractAction {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+
 		final JFileChooser fc = new JFileChooser() {
 			@Override
 			public File getSelectedFile() {
 				File file = super.getSelectedFile();
-				System.out
-				.println("SaveAsAction.actionPerformed(...).new JFileChooser() {...}.getSelectedFile() file:"+file);
 				if (file == null) {
 					return null;
 				}
 				System.out.println("SaveAsAction::::getSelectedFile() ext:"
 						+ getExtension(file) + "|");
 				if (getExtension(file) == null) {
-					file = new File(file.getAbsolutePath()+".skg");
+					file = new File(file.getAbsolutePath() + ".skg");
 				}
 				return file;
 			}

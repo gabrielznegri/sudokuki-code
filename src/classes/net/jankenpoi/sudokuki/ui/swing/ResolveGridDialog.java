@@ -177,6 +177,7 @@ public class ResolveGridDialog extends JDialog {
 					view.getController().notifyGridValueChanged(li, co, value);
 				}
 			}
+			view.getController().notifyGridComplete();
 			// fireGridChanged(new GridChangedEvent(this, 0, 0, (short) 0));
 			/**
 			 * RESOLUTION SUCCESSFULL

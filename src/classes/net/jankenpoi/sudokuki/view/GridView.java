@@ -71,6 +71,10 @@ public abstract class GridView implements GridListener {
 		return model.isCellMemoSet(li, co, memo);
 	}
 
+	public boolean isGrigComplete() {
+		return model.isGridComplete();
+	}
+	
 	public GridValidity getGridValidity() {
 		return model.getGridValidity();
 	}
