@@ -2,8 +2,15 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2011-12-01 - released Sudokuki 1.1.Beta6
+- Fixed #3445643 Regression: on MS-Windows "Save As" has no effect
+- Fixed #3447468 Exception on the AWT if mouse clicks on the grid margins
+- Fixed #3406698 Ensure the suexg lib can be loaded
+- Fixed #3432067 Open grid:Missing error dialog in case the file is not found
+- Fixed #3432051 Forbid "custom grid" after the grid was resolved
+
 * 2011-11-29 - released Sudokuki 1.1.Beta5
-- Debian binary package support (basic support)
+- Debian binary package support (basic support) (item #3432432)
 - Fixed #3432064 Can't find saved grid using "Open grid"
 
 * 2011-11-23 - released Sudokuki 1.1.Beta4

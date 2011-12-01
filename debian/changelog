@@ -1,6 +1,17 @@
-sudokuki (1.0.500-1) unstable; urgency=low
+sudokuki (1.0.600-1) unstable; urgency=low
 
-        * Sudokuki version 1.1.Beta5 ("Sudokuki", stable, Gtkmm GUI)
+	* Sudokuki version 1.1.Beta6 ("Sudokuki", stable, Java Swing GUIegression: on MS-Windows "Save As" has no effect
+
+	- Fixed #3447468 Exception on the AWT if mouse clicks on the grid margins
+	- Fixed #3406698 Ensure the suexg lib can be loaded
+	- Fixed #3432067 Open grid:Missing error dialog in case the file is not found
+	- Fixed #3432051 Forbid "custom grid" after the grid was resolved
+
+ -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Thu, 01 Dec 2011 23:48:00 +0100
+
+sudokuk (1.0.500-1) unstable; urgency=low
+
+        * Sudokuki version 1.1.Beta5 ("Sudokuki", stable, Java Swing GUI)
 
        Rewrote Sudokuki in Java with a Swing graphical user interface.
        Added Debian package build support for Sudokuki 1.1.Beta5.
