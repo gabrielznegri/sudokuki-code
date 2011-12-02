@@ -4,7 +4,7 @@ bin_SCRIPTS = $(PACKAGE)
 EXTRA_SCRIPTS = sudokuki
 sudokuki:
 	echo "#!/bin/sh" > $@ ; \
-	echo "java -Djava.library.path=\"$(libdir)\" -jar $(datadir)/java/$(PACKAGE)-$(VERSION).jar" >> $@
+	echo "java -Djava.library.path=\"$(libdir)\" -jar $(datadir)/sudokuki/$(PACKAGE)-$(VERSION).jar" >> $@
 
 CLEANFILES = $(EXTRA_SCRIPTS) 
 

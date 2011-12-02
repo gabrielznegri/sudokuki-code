@@ -1,7 +1,7 @@
 JAVAROOT = $(top_builddir)/tmpjar
 JAVASRCDIR = $(top_builddir)/src/classes
 jarfile = $(top_builddir)/$(PACKAGE)-$(VERSION).jar
-jardir = $(datadir)/java
+jardir = $(datadir)/sudokuki
 jar_DATA = $(jarfile)
 
 JAVA_HOME=@JAVA_HOME@

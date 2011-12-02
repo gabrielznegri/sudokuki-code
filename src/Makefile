@@ -31,8 +31,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = i486-pc-linux-gnu
-host_triplet = i486-pc-linux-gnu
+build_triplet = i686-pc-linux-gnu
+host_triplet = i686-pc-linux-gnu
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -133,7 +133,7 @@ JAVAC = /usr/bin/javac
 JAVAH = /usr/bin/javah
 JAVA_HOME = /usr
 LD = /usr/bin/ld
-LDFLAGS = -Wl,-z,defs
+LDFLAGS = 
 LIBICONV = -liconv
 LIBINTL = 
 LIBOBJS = 
@@ -190,9 +190,9 @@ am__quote =
 am__tar = tar --format=posix -chf - "$$tardir"
 am__untar = tar -xf -
 bindir = ${exec_prefix}/bin
-build = i486-pc-linux-gnu
-build_alias = i486-linux-gnu
-build_cpu = i486
+build = i686-pc-linux-gnu
+build_alias = 
+build_cpu = i686
 build_os = linux-gnu
 build_vendor = pc
 builddir = .
@@ -201,24 +201,24 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i486-pc-linux-gnu
+host = i686-pc-linux-gnu
 host_alias = 
-host_cpu = i486
+host_cpu = i686
 host_os = linux-gnu
 host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
-infodir = ${prefix}/share/info
+infodir = ${datarootdir}/info
 install_sh = $(SHELL) /home/sylvain/Devs/sudokukiTrunk/sudokuki/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
-mandir = ${prefix}/share/man
+mandir = ${datarootdir}/man
 mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr
+prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
@@ -660,7 +660,7 @@ uninstall-am: uninstall-binSCRIPTS uninstall-libLTLIBRARIES
 
 sudokuki:
 	echo "#!/bin/sh" > $@ ; \
-	echo "java -Djava.library.path=\"$(libdir)\" -jar $(datadir)/java/$(PACKAGE)-$(VERSION).jar" >> $@
+	echo "java -Djava.library.path=\"$(libdir)\" -jar $(datadir)/sudokuki/$(PACKAGE)-$(VERSION).jar" >> $@
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

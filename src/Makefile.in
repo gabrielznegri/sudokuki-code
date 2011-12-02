@@ -660,7 +660,7 @@ uninstall-am: uninstall-binSCRIPTS uninstall-libLTLIBRARIES
 
 sudokuki:
 	echo "#!/bin/sh" > $@ ; \
-	echo "java -Djava.library.path=\"$(libdir)\" -jar $(datadir)/java/$(PACKAGE)-$(VERSION).jar" >> $@
+	echo "java -Djava.library.path=\"$(libdir)\" -jar $(datadir)/sudokuki/$(PACKAGE)-$(VERSION).jar" >> $@
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
