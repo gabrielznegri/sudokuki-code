@@ -52,22 +52,12 @@ public class GridController {
 	}
 	
 	public void notifyGridValueChanged(int li, int co, int value) {
-//		System.out.println("GridController.notifyGridValueChanged("+li+", "+co+", "+value+")");
 		model.setCellValue(li, co, value);
-		
-		////////////////////////////// EXPERIMENTAL......
-		lastLI = li;
-		lastCO = co;
 	}
 
 	public void notifyGridMemosChanged(int li, int co, byte[] memos) {
-//		System.out.println("GridController.notifyGridMemosChanged("+li+", "+co+", "+memos+")");
 		model.clearCellMemos(li, co);
 		model.setCellMemos(li, co, memos);
-		
-		////////////////////////////// EXPERIMENTAL......
-		lastLI = li;
-		lastCO = co;
 	}
 
 	public void addView(GridView view) {
@@ -108,13 +98,6 @@ public class GridController {
 		model.fireGridChanged(new GridChangedEvent(model, 0, 0, (short)0));
 	}
 
-	private int lastLI = 0; // EXPERIMENTAL, wait until it is possible to play with the keyboard...
-	private int lastCO = 0; // EXPERIMENTAL, wait until it is possible to play with the keyboard...
-	public void notifySetMemosHere() {
-//		System.out.println("GridController.notifySetMemosHere() LAST CLICKED CELL : "+lastLI+","+lastCO);
-		model.setMemosForThisCell(lastLI, lastCO);
-	}
-
 	public void notifyResetGridFromShorts(short[] externalCellInfos) {
 		model.resetGridModelFromShorts(externalCellInfos);
 		model.fireGridChanged(new GridChangedEvent(model, 0, 0, (short)0));
@@ -126,5 +109,19 @@ public class GridController {
 
 	public void notifyGridComplete() {
 		model.setGridComplete();
+	}
+
+	private int lastLI = 4;
+	private int lastCO = 4;
+
+	public void notifyFocusPositionChanged(int li, int co) {
+		System.out.println("GridController.notifyGridPositionChanged() li:"
+				+ li + " co:" + co);
+		lastLI = li;
+		lastCO = co;
+	}
+
+	public void notifySetMemosHere() {
+		model.setMemosForThisCell(lastLI, lastCO);
 	}
 }

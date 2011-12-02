@@ -66,7 +66,15 @@ public class SwingGrid extends JPanel implements Printable {
 	private MouseListener innerMouseListener = new InnerMouseListener();
 
 	private KeyListener innerKeyListener = new InnerKeyListener();
+
+	/*
+	 * Column number of the focus mark
+	 */
 	private int posX = 4;
+
+	/*
+	 * Line number of the focus mark
+	 */
 	private int posY = 4;
 	
 	private JFrame parent;
@@ -461,6 +469,7 @@ public class SwingGrid extends JPanel implements Printable {
 			posX = co;
 			repaint();
 			selectValue(li, co, pos.x, pos.y);
+			view.getController().notifyFocusPositionChanged(li, co);
 		}
 
 		private void pressedRight(MouseEvent evt) {
@@ -482,6 +491,7 @@ public class SwingGrid extends JPanel implements Printable {
 			posX = co;
 			repaint();
 			selectMemos(li, co, pos.x, pos.y);
+			view.getController().notifyFocusPositionChanged(li, co);
 		}
 
 	}
@@ -527,29 +537,39 @@ public class SwingGrid extends JPanel implements Printable {
 		public void keyPressed(KeyEvent ke) {
 			System.out.println("SwingGrid.InnerKeyAdapter.keyPressed() ke:"+ke);
 			int code = ke.getKeyCode();
+			boolean hasMoved = false;
 			if (code == KeyEvent.VK_KP_DOWN || code == KeyEvent.VK_DOWN) {
 				if (posY < 8) {
 					posY++;
+					hasMoved = true;
 					repaint();
 				}
 			}
 			else if (code == KeyEvent.VK_KP_UP || code == KeyEvent.VK_UP) {
 				if (posY > 0) {
 					posY--;
+					hasMoved = true;
 					repaint();
 				}
 			}
 			else if (code == KeyEvent.VK_KP_LEFT || code == KeyEvent.VK_LEFT) {
 				if (posX > 0) {
 					posX--;
+					hasMoved = true;
 					repaint();
 				}
 			}
 			else if (code == KeyEvent.VK_KP_RIGHT || code == KeyEvent.VK_RIGHT) {
 				if (posX < 8) {
 					posX++;
+					hasMoved = true;
 					repaint();
 				}
+			}
+			if (hasMoved) {
+				System.out
+				.println("SwingGrid.InnerKeyListener.keyPressed() has moved...");
+				view.getController().notifyFocusPositionChanged(posY, posX);
 			}
 		}
 
@@ -565,11 +585,6 @@ public class SwingGrid extends JPanel implements Printable {
 				Point pos = getTopLeftPoint(posY, posX);
 				selectMemos(posY, posX, pos.x, pos.y);
 			}
-		}
-
-		@Override
-		public void keyTyped(KeyEvent ke) {
-			System.out.println("SwingGrid.InnerKeyAdapter.keyTyped() ke:"+ke);
 		}
 	}
 	
