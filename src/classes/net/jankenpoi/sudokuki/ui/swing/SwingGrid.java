@@ -43,8 +43,6 @@ import javax.swing.JPanel;
 import net.jankenpoi.sudokuki.model.GridModel.GridValidity;
 import net.jankenpoi.sudokuki.model.Position;
 import net.jankenpoi.sudokuki.preferences.UserPreferences;
-import net.jankenpoi.sudokuki.ui.MemosSelector;
-import net.jankenpoi.sudokuki.ui.Selector;
 import net.jankenpoi.sudokuki.view.GridView;
 
 public class SwingGrid extends JPanel implements Printable {
@@ -500,22 +498,19 @@ public class SwingGrid extends JPanel implements Printable {
 		if (view.isGrigComplete() || view.isCellReadOnly(li, co)) {
 			return;
 		}
-		byte previousValue = view.getValueAt(li, co);
-		Selector selector = new SwingSelector(SwingGrid.this.parent,
-				SwingGrid.this, x, y, previousValue);
-		int selected = selector.retrieveNumber();
-		if (selected == previousValue) {
-			selected = 0; // Clear the value
-		}
-		if (0 <= selected && selected <= 9) {
-			view.getController().notifyGridValueChanged(li, co, selected);
-		}
+		pickUpValueOrMemos(true, li, co, x, y);
 	}
 	
 	private void selectMemos(int li, int co, int x, int y) {
-		if (view.isGrigComplete() || view.isCellReadOnly(li, co) || view.isCellValueSet(li, co)) {
+		if (view.isGrigComplete() || view.isCellReadOnly(li, co)) {
 			return;
 		}
+		pickUpValueOrMemos(false, li, co, x, y);
+	}
+
+	private void pickUpValueOrMemos(boolean valuePickerOnTop, int li, int co, int x, int y) {
+		
+		byte previousValue = view.getValueAt(li, co);
 		Vector<Byte> vec = new Vector<Byte>();
 		for (byte i = 1; i <= 9; i++) {
 			if (view.isCellMemoSet(li, co, i)) {
@@ -525,13 +520,26 @@ public class SwingGrid extends JPanel implements Printable {
 		Byte[] previousMemos = new Byte[vec.size()];
 		previousMemos = vec.toArray(previousMemos);
 
-		MemosSelector memosSelector = new SwingMemosSelector(
-				SwingGrid.this.parent, SwingGrid.this, x, y,
-				previousMemos);
-		byte[] selected = memosSelector.retrieveMemos();
-		view.getController().notifyGridMemosChanged(li, co, selected);
+		DualSwingSelector selector = new DualSwingSelector(valuePickerOnTop, SwingGrid.this.parent,
+				SwingGrid.this, x, y, previousValue, previousMemos);
+		
+		// Handle possible value selection
+		int selected = selector.retrieveNumber();
+		System.out.println("SwingGrid.pickUpValueOrMemos() selected:"+selected);
+		if (selected == previousValue) {
+			selected = 0; // Clear the value
+		}
+		if (0 <= selected && selected <= 9) {
+			view.getController().notifyGridValueChanged(li, co, selected);
+		}
+
+		// Handle possible memos selection
+		byte[] selectedMemos = selector.retrieveMemos();
+		if (selectedMemos != null) {
+			view.getController().notifyGridMemosChanged(li, co, selectedMemos);
+		}
 	}
-	
+
 	private class InnerKeyListener extends KeyAdapter {
 		@Override
 		public void keyPressed(KeyEvent ke) {

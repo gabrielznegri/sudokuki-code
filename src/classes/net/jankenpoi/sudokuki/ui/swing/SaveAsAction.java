@@ -36,14 +36,12 @@ import net.jankenpoi.sudokuki.view.GridView;
 public class SaveAsAction extends AbstractAction {
 
 	private final GridView view;
-	private final ActionsRepository actionsRepo;
 
 	private final JFrame frame;
 	
 	SaveAsAction(JFrame frame, GridView view, ActionsRepository actions) {
 		this.frame = frame;
 		this.view = view;
-		this.actionsRepo = actions;
 	}
 	
 	@Override

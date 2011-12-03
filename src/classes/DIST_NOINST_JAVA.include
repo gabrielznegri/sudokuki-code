@@ -28,10 +28,10 @@ net/jankenpoi/sudokuki/ui/swing/FileMenu.java  \
 net/jankenpoi/sudokuki/ui/swing/HelpMenu.java  \
 net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java  \
 net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java  \
+net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java  \
 net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java  \
 net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java  \
-net/jankenpoi/sudokuki/ui/swing/SwingMemosSelector.java  \
-net/jankenpoi/sudokuki/ui/swing/SelectMemosDialog.java  \
+net/jankenpoi/sudokuki/ui/swing/SelectNumberPanel.java  \
 net/jankenpoi/sudokuki/ui/swing/PlayCustomGridAction.java  \
 net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java  \
 net/jankenpoi/sudokuki/ui/swing/QuitAction.java  \
@@ -39,6 +39,7 @@ net/jankenpoi/sudokuki/ui/swing/ActionsRepository.java  \
 net/jankenpoi/sudokuki/ui/swing/EditMenu.java  \
 net/jankenpoi/sudokuki/ui/swing/OpenUpdateSiteAction.java  \
 net/jankenpoi/sudokuki/ui/swing/NewGridAction.java  \
+net/jankenpoi/sudokuki/ui/swing/DualSwingSelector.java  \
 net/jankenpoi/sudokuki/ui/swing/AboutAction.java  \
 net/jankenpoi/sudokuki/ui/swing/SetMemosHereAction.java  \
 net/jankenpoi/sudokuki/ui/swing/CustomGridAction.java  \
@@ -47,7 +48,6 @@ net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java  \
 net/jankenpoi/sudokuki/ui/swing/SwingApp.java  \
 net/jankenpoi/sudokuki/ui/swing/Images.java  \
 net/jankenpoi/sudokuki/ui/swing/SwingView.java  \
-net/jankenpoi/sudokuki/ui/swing/SwingSelector.java  \
 net/jankenpoi/sudokuki/ui/swing/CheckUpdateAction.java  \
 net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java  \
 net/jankenpoi/sudokuki/ui/swing/TranslateAction.java  \
@@ -55,13 +55,13 @@ net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java  \
 net/jankenpoi/sudokuki/ui/swing/LocaleListenerImpl.java  \
 net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java  \
 net/jankenpoi/sudokuki/ui/swing/LevelMenu.java  \
-net/jankenpoi/sudokuki/ui/swing/SelectNumberDialog.java  \
 net/jankenpoi/sudokuki/ui/swing/EraseAllMemosAction.java  \
 net/jankenpoi/sudokuki/ui/swing/StockIcons.java  \
 net/jankenpoi/sudokuki/ui/swing/AboutDialog.java  \
 net/jankenpoi/sudokuki/ui/swing/SetAllMemosAction.java  \
 net/jankenpoi/sudokuki/ui/swing/CheatMenu.java  \
 net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java  \
+net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java  \
 net/jankenpoi/sudokuki/ui/swing/SwingMultiGrid.java  \
 net/jankenpoi/sudokuki/ui/swing/ClearAllMovesAction.java  \
 net/jankenpoi/sudokuki/ui/MemosSelector.java  \

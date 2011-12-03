@@ -43,7 +43,6 @@ public class NewGridAction extends AbstractAction {
 		
 		GridGenerationDialog dlg = new GridGenerationDialog(frame, view);
 		dlg.setVisible(true);
-		int result = dlg.getResult();
 
 		actionsRepo.get("ResolveGrid").setEnabled(true);
 	}

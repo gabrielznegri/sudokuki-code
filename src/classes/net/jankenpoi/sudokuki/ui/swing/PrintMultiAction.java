@@ -42,7 +42,6 @@ public class PrintMultiAction extends AbstractAction {
 
 		PrintMultiDialog dlg = new PrintMultiDialog(parent, view);
 		dlg.setVisible(true);
-		int result = dlg.getResult();
 	}
 
 }

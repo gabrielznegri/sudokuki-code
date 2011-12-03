@@ -2,6 +2,11 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2011-12-03 - released Sudokuki 1.1.Beta7
+- Dev #3440869 IMPROVE:Make one single input dialog for memos and numbers
+- Fixed #3447362 Wrong cell for "Set memos here" (except if right mouse btn)
+- Fixed #3447520 Debian package: fix location for JAR file
+
 * 2011-12-01 - released Sudokuki 1.1.Beta6
 - Fixed #3445643 Regression: on MS-Windows "Save As" has no effect
 - Fixed #3447468 Exception on the AWT if mouse clicks on the grid margins

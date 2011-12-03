@@ -19,8 +19,6 @@ package net.jankenpoi.sudokuki.model;
 
 import java.util.EventObject;
 
-import net.jankenpoi.sudokuki.model.GridModel.GridValidity;
-
 public class GridChangedEvent extends EventObject {
 
 	private static final long serialVersionUID = 1L;

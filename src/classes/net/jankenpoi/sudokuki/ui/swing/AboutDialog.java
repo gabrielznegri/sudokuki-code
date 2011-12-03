@@ -55,7 +55,6 @@ public class AboutDialog extends JDialog {
 		super(parent, true);
 		this.parent = parent;
 		initComponents();
-		// setResizable(false);
 		setTitle("About Sudokuki...");
 		pack();
 	}
@@ -191,20 +190,7 @@ public class AboutDialog extends JDialog {
 								+ "</tr>" + "</table>"),
 						"Transfer"); // tooltip text
 
-//		JEditorPane editPane = new JEditorPane("text/plain", license);
 		JEditorPane editPane = new JEditorPane("text/html", license_html);
-//		try {
-//			InputStream is = UIResources.class.getResourceAsStream("text/COPYING.html");
-//			InputStreamReader isr = new InputStreamReader(is);
-//			BufferedReader br = new BufferedReader(isr);
-//			editPane.read(br, "text/html");
-//		} catch (FileNotFoundException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 		editPane.setEditable(false);
 		editPane.setBackground(Color.WHITE);
 		editPane.setCaretPosition(0);
@@ -213,7 +199,7 @@ public class AboutDialog extends JDialog {
 
 		Dimension parentDim = parent.getPreferredSize();
 		Dimension dim = new Dimension();
-		dim.setSize(parentDim.getHeight() * 1.1, parentDim.getWidth() * 1.3);
+		dim.setSize(parentDim.getHeight() * 1.3, parentDim.getWidth() * 1.3);
 		tabbedPane.setPreferredSize(dim);
 		add(tabbedPane);
 		pack();
