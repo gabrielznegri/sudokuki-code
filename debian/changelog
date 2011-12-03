@@ -1,7 +1,20 @@
+sudokuki (1.0.700-1) unstable; urgency=low
+
+        * Sudokuki version 1.1.Beta7 ("Sudokuki", stable, Java Swing GUI)
+
+        Fixed the following bug(s):
+	- Dev #3440869 IMPROVE:Make one single input dialog for memos and numbers
+	- Fixed #3447362 Wrong cell for "Set memos here" (except if right mouse btn)
+	- Fixed #3447520 Debian package: fix location for JAR file
+
+ -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Thu, 03 Dec 2011 03:38:00 +0100
+
 sudokuki (1.0.600-1) unstable; urgency=low
 
-	* Sudokuki version 1.1.Beta6 ("Sudokuki", stable, Java Swing GUIegression: on MS-Windows "Save As" has no effect
+	* Sudokuki version 1.1.Beta6 ("Sudokuki", stable, Java Swing GUI)
 
+	Fixed the following bug(s):
+	- Fixed #3445643 Regression: on MS-Windows "Save As" has no effect
 	- Fixed #3447468 Exception on the AWT if mouse clicks on the grid margins
 	- Fixed #3406698 Ensure the suexg lib can be loaded
 	- Fixed #3432067 Open grid:Missing error dialog in case the file is not found
