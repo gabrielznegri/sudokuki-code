@@ -27,9 +27,11 @@ import java.net.URL;
 import java.net.URLConnection;
 
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
 import net.jankenpoi.sudokuki.Version;
@@ -94,8 +96,20 @@ public class CheckUpdateDialog extends JDialog {
 		GridLayout btnLayout = new GridLayout(4, 1);
 		pane.setLayout(btnLayout);
 
-		JLabel messageLbl1 = new JLabel("Checking for available updates.");
-		JLabel messageLbl2 = new JLabel("Please wait...");
+		JLabel messageLbl1 = new JLabel(
+				"<html>"
+				+ "<table border=\"0\">"
+				+ "<tr>"
+				+ "<td align=\"center\">"
+				+"Checking for available updates.</td>"
+				+"</tr><html>");
+		JLabel messageLbl2 = new JLabel(
+				"<html>"
+				+ "<table border=\"0\">"
+				+ "<tr>"
+				+ "<td align=\"center\">"
+				+"Please wait...</td>"
+				+"</tr><html>");
 		JLabel messageLbl3 = new JLabel("");
 		JButton cancelBtn = new JButton("Cancel");
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -188,5 +202,5 @@ public class CheckUpdateDialog extends JDialog {
 	public int getResult() {
 		return isNewVersionAvailable;
 	}
-
+	
 }
