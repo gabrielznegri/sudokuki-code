@@ -19,9 +19,7 @@ package net.jankenpoi.sudokuki.ui.swing;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.Container;
 import java.awt.Font;
-import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
@@ -29,14 +27,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JPanel;
-
-/*
- * InputDialog.java
- *
- * Created on Mar 25, 2011, 5:50:15 PM
- */
 
 /**
  *
@@ -63,7 +54,7 @@ public class SelectNumberPanel extends JPanel {
     private JPanel panel456 = new JPanel(new GridLayout());
     private JPanel panel123 = new JPanel(new GridLayout());
 	private byte previousValue = 0;
-	
+
 	private InnerKeyListener innerKeyListener = new InnerKeyListener();
 	private int focusedElement = 4;
 	private InnerFocusListener innerFocusListener = new InnerFocusListener();
@@ -75,6 +66,8 @@ public class SelectNumberPanel extends JPanel {
         this.previousValue = previousValue;
         initComponents();
         btns[focusedElement].requestFocusInWindow();
+		parent.getTabbedPane().addKeyListener(innerKeyListener);
+		parent.getTabbedPane().addFocusListener(innerFocusListener);
     }
 
     private void configureButton(JButton btn, String text, final int value) {
@@ -125,7 +118,15 @@ public class SelectNumberPanel extends JPanel {
         panel123.add(btn3, BorderLayout.LINE_END);
     }
 
-    private void buttonClicked(int button) {
+	private boolean isTabSelected() {
+		int idx = parent.getTabbedPane().getSelectedIndex();
+		if (idx != 0) {
+			System.out.println("SelectNumberPanel.isTabSelected() TAB NOT SELECTED");
+		}
+		return (idx == 0);
+	}
+
+	private void buttonClicked(int button) {
     	System.out.println("InputDialog.buttonClicked() button:"+button);
     	digit = button;
 		parent.numberPanelConfirmed();
@@ -138,29 +139,62 @@ public class SelectNumberPanel extends JPanel {
 	private class InnerKeyListener extends KeyAdapter {
 		@Override
 		public void keyPressed(KeyEvent ke) {
-			System.out.println("SelectMemosDialog.InnerKeyAdapter.keyPressed() ke:"+ke);
-			int code = ke.getKeyCode();
-			if (code == KeyEvent.VK_KP_DOWN || code == KeyEvent.VK_DOWN) {
-				if (focusedElement/3 == 0)
+			System.out
+					.println("SelectNumberPanel  keyPressed() ke:"+ke);
+			if (focusedTabPane() && isTabSelected()) {
+				int code = ke.getKeyCode();
+				if (code == KeyEvent.VK_L) {
+					System.out.println("NumberPanel tab selected <>HL");
+					int index = parent.getTabbedPane().getSelectedIndex();
+					int newIndex = (index == 0)?1:0;
+					System.out.println("NumberPanel tab selected index:"+index);
+					System.out.println("NumberPanel tab selected newIndex:"+newIndex);
+					parent.getTabbedPane().setSelectedIndex(newIndex);
+					parent.getTabbedPane().requestFocusInWindow();
 					return;
+				}
+				else if (code == KeyEvent.VK_H) {
+					return;
+				}
+			}
+			if (!isTabSelected()) {
+				return;
+			}
+			int code = ke.getKeyCode();
+			if (code == KeyEvent.VK_KP_DOWN || code == KeyEvent.VK_DOWN || code == KeyEvent.VK_J) {
+				if (focusedTabPane()) {
+					focusedElement = 7;
+					btns[focusedElement].requestFocusInWindow();
+					return;
+				}
+				if (focusedElement/3 == 0) {
+					return;
+				}
 				focusedElement = Math.max(0, focusedElement-3);
 				btns[focusedElement].requestFocusInWindow();
 			}
-			else if (code == KeyEvent.VK_KP_UP || code == KeyEvent.VK_UP) {
-				if (focusedElement/3 == 2)
+			else if (code == KeyEvent.VK_KP_UP || code == KeyEvent.VK_UP || code == KeyEvent.VK_K) {
+				if (focusedTabPane()) {
 					return;
+				}
+				if (focusedElement/3 == 2) {
+					parent.getTabbedPane().requestFocusInWindow();
+					return;
+				}
 				focusedElement = Math.min(8, focusedElement+3);
 				btns[focusedElement].requestFocusInWindow();
 			}
-			else if (code == KeyEvent.VK_KP_LEFT || code == KeyEvent.VK_LEFT) {
-				if (focusedElement%3 == 0)
+			else if (code == KeyEvent.VK_KP_LEFT || code == KeyEvent.VK_LEFT || code == KeyEvent.VK_H) {
+				if (focusedElement%3 == 0) {
 					return;
+				}
 				focusedElement = Math.max(0, focusedElement-1);
 				btns[focusedElement].requestFocusInWindow();
 			}
-			else if (code == KeyEvent.VK_KP_RIGHT || code == KeyEvent.VK_RIGHT) {
-				if (focusedElement%3 == 2)
+			else if (code == KeyEvent.VK_KP_RIGHT || code == KeyEvent.VK_RIGHT || code == KeyEvent.VK_L) {
+				if (focusedElement%3 == 2) {
 					return;
+				}
 				focusedElement = Math.min(8, focusedElement+1);
 				btns[focusedElement].requestFocusInWindow();
 			}
@@ -169,26 +203,19 @@ public class SelectNumberPanel extends JPanel {
 			}
 		}
 
-		@Override
-		public void keyReleased(KeyEvent ke) {
-			System.out.println("SelectMemosDialog.InnerKeyAdapter.keyReleased() ke:"+ke);
-			int code = ke.getKeyCode();
-			if (code == KeyEvent.VK_SPACE) {
-			}
-			else if (code == KeyEvent.VK_ENTER) {
-			}
+		private boolean focusedTabPane() {
+			boolean res = parent.getTabbedPane().hasFocus();
+			System.out.println("SelectNumberPanel tabbedPane focused?"+res);
+			return res;
 		}
 
-		@Override
-		public void keyTyped(KeyEvent ke) {
-			System.out.println("SelectMemosDialog.InnerKeyAdapter.keyTyped() ke:"+ke);
-		}
 	}
 	
 	private class InnerFocusListener extends FocusAdapter {
 
 		@Override
 		public void focusGained(FocusEvent e) {
+
 			Component comp = e.getComponent();
 			if (comp == btns[focusedElement]) {
 				return;
@@ -199,6 +226,10 @@ public class SelectNumberPanel extends JPanel {
 					return;
 				}
 			}
+//			if (comp == parent.getTabbedPane()) {
+//				focusedElement = 7;
+//				return;
+//			}
 		}
 		
 	}

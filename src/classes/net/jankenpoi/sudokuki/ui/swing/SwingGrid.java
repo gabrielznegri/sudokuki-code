@@ -81,7 +81,7 @@ public class SwingGrid extends JPanel implements Printable {
 		this.parent = parent;
 		this.view = view;
 
-		addMouseListener(this.innerMouseListener);
+		addMouseListener(innerMouseListener);
 		addKeyListener(innerKeyListener);
 		setPreferredSize(new Dimension(columns[columns.length - 1].getEnd()
 				- columns[0].getStart() + offX * 2,
@@ -546,28 +546,28 @@ public class SwingGrid extends JPanel implements Printable {
 			System.out.println("SwingGrid.InnerKeyAdapter.keyPressed() ke:"+ke);
 			int code = ke.getKeyCode();
 			boolean hasMoved = false;
-			if (code == KeyEvent.VK_KP_DOWN || code == KeyEvent.VK_DOWN) {
+			if (code == KeyEvent.VK_KP_DOWN || code == KeyEvent.VK_DOWN || code == KeyEvent.VK_J) {
 				if (posY < 8) {
 					posY++;
 					hasMoved = true;
 					repaint();
 				}
 			}
-			else if (code == KeyEvent.VK_KP_UP || code == KeyEvent.VK_UP) {
+			else if (code == KeyEvent.VK_KP_UP || code == KeyEvent.VK_UP || code == KeyEvent.VK_K) {
 				if (posY > 0) {
 					posY--;
 					hasMoved = true;
 					repaint();
 				}
 			}
-			else if (code == KeyEvent.VK_KP_LEFT || code == KeyEvent.VK_LEFT) {
+			else if (code == KeyEvent.VK_KP_LEFT || code == KeyEvent.VK_LEFT || code == KeyEvent.VK_H) {
 				if (posX > 0) {
 					posX--;
 					hasMoved = true;
 					repaint();
 				}
 			}
-			else if (code == KeyEvent.VK_KP_RIGHT || code == KeyEvent.VK_RIGHT) {
+			else if (code == KeyEvent.VK_KP_RIGHT || code == KeyEvent.VK_RIGHT || code == KeyEvent.VK_L) {
 				if (posX < 8) {
 					posX++;
 					hasMoved = true;
@@ -585,11 +585,11 @@ public class SwingGrid extends JPanel implements Printable {
 		public void keyReleased(KeyEvent ke) {
 			System.out.println("SwingGrid.InnerKeyAdapter.keyReleased() ke:"+ke);
 			int code = ke.getKeyCode();
-			if (code == KeyEvent.VK_SPACE) {
+			if (code == KeyEvent.VK_SPACE || code == KeyEvent.VK_SHIFT) {
 				Point pos = getTopLeftPoint(posY, posX);
 				selectValue(posY, posX, pos.x, pos.y);
 			}
-			else if (code == KeyEvent.VK_SHIFT) {
+			else if (code == KeyEvent.VK_ENTER || code == KeyEvent.VK_ALT) {
 				Point pos = getTopLeftPoint(posY, posX);
 				selectMemos(posY, posX, pos.x, pos.y);
 			}

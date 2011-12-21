@@ -30,7 +30,7 @@ public class DualSelectionDialog extends JDialog {
 	public DualSelectionDialog(boolean valuePickerOnTop, JFrame parent, byte previousValue,
 			Byte[] previousMemos) {
 		super(parent, true);
-		JTabbedPane tabbedPane = new JTabbedPane();
+		tabbedPane = new JTabbedPane();
 		numberPanel = new SelectNumberPanel(this, previousValue);
 		memosPanel = new SelectMemosPanel(this, previousMemos);
 		tabbedPane.addTab("Select", numberPanel);
@@ -43,6 +43,11 @@ public class DualSelectionDialog extends JDialog {
 		setResizable(false);
 	}
 
+	private JTabbedPane tabbedPane;
+	JTabbedPane getTabbedPane() {
+		return tabbedPane;
+	}
+	
 	private int value = -1;
 	private byte[] memos = null;
 	
