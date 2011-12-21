@@ -12,7 +12,7 @@
 GETTEXT_MACRO_VERSION = 0.17
 
 PACKAGE = sudokuki
-VERSION = 1.1.Beta7
+VERSION = 1.1.Beta8
 PACKAGE_BUGREPORT = sylvain@jankenpoi.net
 
 SHELL = /bin/sh
@@ -22,7 +22,7 @@ srcdir = .
 top_srcdir = ..
 
 
-prefix = /usr
+prefix = /usr/local
 exec_prefix = ${prefix}
 datarootdir = ${prefix}/share
 datadir = ${datarootdir}
@@ -162,7 +162,7 @@ $(DOMAIN).pot-update: $(POTFILES) $(srcdir)/POTFILES.in remove-potcdate.sed
 	      --files-from=$(srcdir)/POTFILES.in \
 	      --copyright-holder='$(COPYRIGHT_HOLDER)' \
 	      --package-name="$${package_gnu}sudokuki" \
-	      --package-version='1.1.Beta7' \
+	      --package-version='1.1.Beta8' \
 	      --msgid-bugs-address="$$msgid_bugs_address" \
 	    ;; \
 	esac

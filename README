@@ -2,6 +2,11 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2011-12-22 - released Sudokuki 1.1.Beta8
+- Fixed #3411639 Memos shouldn't be retained if the user pressed ESC
+- Fixed #3462544 Playing with the keyboard is not easy enough
+- Fixed #3411640 Pressing ENTER on Memos dialog has no effect
+
 * 2011-12-03 - released Sudokuki 1.1.Beta7
 - Dev #3440869 IMPROVE:Make one single input dialog for memos and numbers
 - Fixed #3447362 Wrong cell for "Set memos here" (except if right mouse btn)
