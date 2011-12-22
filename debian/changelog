@@ -1,3 +1,14 @@
+sudokuki (1.0.800-1) unstable; urgency=low
+
+        * Sudokuki version 1.1.Beta8 ("Sudokuki", stable, Java Swing GUI)
+
+        Fixed the following bug(s):
+        - Fixed #3411639 Memos shouldn't be retained if the user pressed ESC
+        - Fixed #3462544 Playing with the keyboard is not easy enough
+        - Fixed #3411640 Pressing ENTER on Memos dialog has no effect
+
+ -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Thu, 22 Dec 2011 01:04:00 +0100
+
 sudokuki (1.0.700-1) unstable; urgency=low
 
         * Sudokuki version 1.1.Beta7 ("Sudokuki", stable, Java Swing GUI)

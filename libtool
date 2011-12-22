@@ -63,12 +63,12 @@ ECHO="printf %s\\n"
 
 # The host system.
 host_alias=
-host=i686-pc-linux-gnu
+host=i486-pc-linux-gnu
 host_os=linux-gnu
 
 # The build system.
-build_alias=
-build=i686-pc-linux-gnu
+build_alias=i486-linux-gnu
+build=i486-pc-linux-gnu
 build_os=linux-gnu
 
 # A sed program that does not truncate output.
