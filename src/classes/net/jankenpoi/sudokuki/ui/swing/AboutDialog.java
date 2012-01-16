@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2011 Sylvain Vedrenne
+ * Copyright (C) 2007-2012 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -184,7 +184,7 @@ public class AboutDialog extends JDialog {
 								+ "<td> </td>"+ "<td> </td>"
 								+ "<td>"
 								+ "<p>"
-								+ "Copyright (C) 2007-2011 Sylvain Vedrenne<br/>"
+								+ "Copyright (C) 2007-2012 Sylvain Vedrenne<br/>"
 								+ "</p>" + "</td>"
 								+ "<td> <td/>"
 								+ "</tr>" + "</table>"),
@@ -236,7 +236,7 @@ public class AboutDialog extends JDialog {
 				+ "<tr>"
 				+ "</tr>"
 				+ "<tr>"
-				+ "<td align=\"center\">Copyright 2007-2011 Sylvain Vedrenne</td>"
+				+ "<td align=\"center\">Copyright 2007-2012 Sylvain Vedrenne</td>"
 				+ "</tr>" + "</table>" + "</html>";
 		JLabel label = new JLabel(feedbackStr);
 		feedbackPanel.add(label);
