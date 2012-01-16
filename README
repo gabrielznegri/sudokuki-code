@@ -2,6 +2,10 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2012-01-16 - released Sudokuki 1.1.Beta9
+- Fixed #3469259 Make smaller Jar/Zip distributions
+- Fixed #3464115 MS-Windows: ENTER invokes input dialog after discarding it
+
 * 2011-12-22 - released Sudokuki 1.1.Beta8
 - Fixed #3411639 Memos shouldn't be retained if the user pressed ESC
 - Fixed #3462544 Playing with the keyboard is not easy enough
