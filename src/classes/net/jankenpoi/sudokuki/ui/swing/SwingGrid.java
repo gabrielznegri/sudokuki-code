@@ -583,13 +583,13 @@ public class SwingGrid extends JPanel implements Printable {
 
 		@Override
 		public void keyReleased(KeyEvent ke) {
-			System.out.println("SwingGrid.InnerKeyAdapter.keyReleased() ke:"+ke);
+			System.out.println("SwingGrid.InnerKeyAdapter.keyReleased() ke:"
+					+ ke);
 			int code = ke.getKeyCode();
-			if (code == KeyEvent.VK_SPACE || code == KeyEvent.VK_SHIFT) {
+			if (code == KeyEvent.VK_SPACE) {
 				Point pos = getTopLeftPoint(posY, posX);
 				selectValue(posY, posX, pos.x, pos.y);
-			}
-			else if (code == KeyEvent.VK_ENTER || code == KeyEvent.VK_ALT) {
+			} else if (code == KeyEvent.VK_SHIFT) {
 				Point pos = getTopLeftPoint(posY, posX);
 				selectMemos(posY, posX, pos.x, pos.y);
 			}
