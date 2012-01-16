@@ -2,6 +2,9 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2012-
+- Fixed #3411638 Check the POEdit icon for "translate this app" icon
+
 * 2012-01-16 - released Sudokuki 1.1.Beta9
 - Fixed #3469259 Make smaller Jar/Zip distributions
 - Fixed #3464115 MS-Windows: ENTER invokes input dialog after discarding it
