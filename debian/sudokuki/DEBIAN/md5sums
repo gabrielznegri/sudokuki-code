@@ -1,9 +1,9 @@
-d1b73886654bd9cf4508bc46dc25f494  usr/share/sudokuki/sudokuki-1.1.Beta8.jar
 7ceac3b245bb90bfb1b55105a606913b  usr/share/doc/sudokuki/NEWS.gz
-e73584dbb086f34d192effb3e2fee647  usr/share/doc/sudokuki/changelog.Debian.gz
-f0e138cca17b9a89c7ea1ff03a453239  usr/share/doc/sudokuki/README.gz
+6b5c8e4cb3cf0574e01d85265d517ae5  usr/share/doc/sudokuki/changelog.Debian.gz
+9257cfe172ea38a185ae7661629339a1  usr/share/doc/sudokuki/README.gz
 a709ec4819ed2e00bae3bf763c09b313  usr/share/doc/sudokuki/copyright
 c015433374d6e2ec34eb3818baf2bfa4  usr/share/doc/sudokuki/changelog.gz
+f8a88c0b681e02c5331ed80d0587f47e  usr/share/java/sudokuki-1.1.Beta4.jar
 8231c057291eff90ba13ae1e6ff27943  usr/share/locale/fr/LC_MESSAGES/sudokuki.mo
 3734d2f73b22b164a62165b48a0fba97  usr/share/locale/eo/LC_MESSAGES/sudokuki.mo
 e9abd7b6587eb50bdcc81385ecadb936  usr/share/locale/de/LC_MESSAGES/sudokuki.mo
@@ -14,6 +14,6 @@ eb913a2438ec8b99d799a85f37c911c5  usr/share/locale/zh/LC_MESSAGES/sudokuki.mo
 9fa6c223c88a625b10c1885e8dc2b73d  usr/share/locale/ja/LC_MESSAGES/sudokuki.mo
 2e3e6d547174ad28b50e27fe623ceb22  usr/share/locale/ru/LC_MESSAGES/sudokuki.mo
 6609e7ea40fbf2aa175bef8559dfed2d  usr/share/locale/es/LC_MESSAGES/sudokuki.mo
-a58a6ddd4e3e2c785299934820bd4062  usr/bin/sudokuki
+e9f8b5880a98ab7973e1cd0abdc455e9  usr/bin/sudokuki
 139ce1041f7cccbeda781d9553f3e3eb  usr/lib/libsuexg_proxy.so.0.0.0
 53222be046cdac01238be626f87f2797  usr/lib/libsuexg_proxy.la
