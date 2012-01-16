@@ -1,3 +1,13 @@
+sudokuki (1.0.900-1) unstable; urgency=low
+
+	* Sudokuki version 1.1.Beta9 ("Sudokuki", stable, Java Swing GUI)
+
+	Fixed the following bug(s):
+	- #3469259 Make smaller Jar/Zip distributions
+	- #3464115 MS-Windows: ENTER invokes input dialog after discarding it
+
+ -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Mon, 16 Jan 2012 23:55:00 +0100
+
 sudokuki (1.0.800-1) unstable; urgency=low
 
         * Sudokuki version 1.1.Beta8 ("Sudokuki", stable, Java Swing GUI)

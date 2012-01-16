@@ -1,8 +1,8 @@
 Package: sudokuki
-Version: 1.0.400-1
+Version: 1.0.900-1
 Architecture: i386
 Maintainer: Sylvain Vedrenne <sylvain@jankenpoi.net>
-Installed-Size: 740
+Installed-Size: 424
 Depends: libc6 (>= 2.1.3)
 Section: x11
 Priority: extra

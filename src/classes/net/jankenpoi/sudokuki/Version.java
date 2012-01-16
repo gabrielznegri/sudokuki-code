@@ -7,6 +7,6 @@ package net.jankenpoi.sudokuki;
 
 public interface Version {
 
-    public String versionString = "Sudokuki 1.1.Beta8";
+    public String versionString = "Sudokuki 1.1.Beta9";
 
 }
