@@ -25,6 +25,8 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ExecutionException;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -46,45 +48,115 @@ public class CheckUpdateDialog extends JDialog {
 
 	private JFrame parent;
 
-	private int isNewVersionAvailable = -1;
+	final CheckUpdateAction checkUpdateAction;
+
+	int result = -1;
+
+	private final SwingWorker<String, Void> worker = new SwingWorker<String, Void>() {
+
+		@Override
+		protected String doInBackground() throws Exception {
+			/* Executed in a background thread */
+			final String str = getHttpLatestVersionString();
+
+			return str;
+		}
+
+		@Override
+		protected void done() {
+			/* Executed in the EDT */
+			try {
+				String httpVersionString = get();
+
+				System.out
+				.println("SwingApp.getHttpLatestVersionString() (embedded) Version.versionString:"
+						+ Version.versionString);
+				System.out
+				.println("SwingApp.getHttpLatestVersionString()  retrieved         versionString:"
+						+ httpVersionString);
+
+				if (httpVersionString.equals(Version.versionString)) {
+					System.out
+					.println("SwingApp.getHttpLatestVersionString() This version is up-to-date");
+					result = 0;
+				} else if (httpVersionString.startsWith("Sudokuki")) {
+					System.out
+					.println("SwingApp.getHttpLatestVersionString() This version is outdated. Please download the latest version from Sourceforge.");
+					checkUpdateAction.notifyNewVersionFound();
+					result = 1;
+				} else {
+					result = -1;
+				}
+			} catch (InterruptedException e) {
+				System.out
+				.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() Interrupted !!!!");
+			} catch (ExecutionException e) {
+				System.out
+				.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() ExecutionException !!!!");
+			} catch (CancellationException e) {
+				System.out
+				.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() CancellationException !!!!");
+			}
+			CheckUpdateDialog.this.dispose();
+		}
+
+		private String getHttpLatestVersionString() {
+			String line = null;
+			BufferedReader dis = null;
+			try {
+				URL url;
+				URLConnection urlConn;
+
+				url = new URL(
+				"http://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Beta/LATEST/download");
+
+				// Note: a more portable URL:
+				// url = new URL(getCodeBase().toString() +
+				// "/ToDoList/ToDoList.txt");
+
+				urlConn = url.openConnection();
+				urlConn.setDoInput(true);
+				urlConn.setUseCaches(false);
+
+				// BufferedReader d
+				// = new BufferedReader(new InputStreamReader(in));
+
+				dis = new BufferedReader(new InputStreamReader(
+						urlConn.getInputStream()));
+
+				line = dis.readLine();
+			} catch (MalformedURLException mue) {
+				mue.printStackTrace();
+			} catch (IOException ioe) {
+				ioe.printStackTrace();
+			} finally {
+				try {
+					dis.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			System.out.println("getHttpLatestVersionString() line:" + line);
+			String versionString = "";
+			if (line != null) {
+				// line.startsWith("Sudokuki ");
+				// line.endsWith(") is the latest version.");
+				String[] strs = line.split(" is the latest version.");
+				if (strs.length >= 1) {
+					versionString = strs[0];
+				}
+			}
+			return versionString;
+		}
+	};
 
 	public CheckUpdateDialog(JFrame parent,
 			final CheckUpdateAction checkUpdateAction) {
 		super(parent, true);
+		this.checkUpdateAction = checkUpdateAction;
 		this.parent = parent;
 		initComponents();
 		setResizable(false);
-
-		SwingWorker<String, Void> worker = new SwingWorker<String, Void>() {
-
-			private boolean isNewVersionFound = false;
-
-			@Override
-			protected String doInBackground() throws Exception {
-				/* Executed in a background thread */
-				String str = getHttpLatestVersionString();
-
-				if (!str.startsWith("Sudokuki")) {
-					System.out
-							.println("CheckUpdateDialog.CheckUpdateDialog(...).new SwingWorker<String,Void>() {...}.doInBackground() LATEST NOT FOUND!!!");
-
-					// TODO: in this case, consider the download of LATEST has
-					// failed!!!
-				}
-
-				if (!str.equals(Version.versionString)) {
-					isNewVersionFound = true;
-				}
-				return str;
-			}
-
-			@Override
-			protected void done() {
-				/* Executed in the EDT */
-				checkUpdateAction.notifyNewVersionFound(isNewVersionFound);
-				dispose();
-			}
-		};
 		worker.execute();
 	}
 
@@ -96,26 +168,18 @@ public class CheckUpdateDialog extends JDialog {
 		GridLayout btnLayout = new GridLayout(4, 1);
 		pane.setLayout(btnLayout);
 
-		JLabel messageLbl1 = new JLabel(
-				"<html>"
-				+ "<table border=\"0\">"
-				+ "<tr>"
-				+ "<td align=\"center\">"
-				+"Checking for available updates.</td>"
-				+"</tr><html>");
-		JLabel messageLbl2 = new JLabel(
-				"<html>"
-				+ "<table border=\"0\">"
-				+ "<tr>"
-				+ "<td align=\"center\">"
-				+"Please wait...</td>"
-				+"</tr><html>");
+		JLabel messageLbl1 = new JLabel("<html>" + "<table border=\"0\">"
+				+ "<tr>" + "<td align=\"center\">"
+				+ "Checking for available updates.</td>" + "</tr><html>");
+		JLabel messageLbl2 = new JLabel("<html>" + "<table border=\"0\">"
+				+ "<tr>" + "<td align=\"center\">" + "Please wait...</td>"
+				+ "</tr><html>");
 		JLabel messageLbl3 = new JLabel("");
 		JButton cancelBtn = new JButton("Cancel");
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		cancelBtn.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				buttonClicked();
+				cancelButtonClicked();
 			}
 		});
 
@@ -128,79 +192,19 @@ public class CheckUpdateDialog extends JDialog {
 		setLocationRelativeTo(parent);
 	}
 
-	private void buttonClicked() {
-		System.out.println("CheckUpdateDialog.buttonClicked()");
-		dispose();
-	}
-
-	private String getHttpLatestVersionString() {
-		String line = null;
-		BufferedReader dis = null;
-		try {
-			URL url;
-			URLConnection urlConn;
-
-			url = new URL(
-					"http://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Beta/LATEST/download");
-
-			// Note: a more portable URL:
-			// url = new URL(getCodeBase().toString() +
-			// "/ToDoList/ToDoList.txt");
-
-			urlConn = url.openConnection();
-			urlConn.setDoInput(true);
-			urlConn.setUseCaches(false);
-
-			// BufferedReader d
-			// = new BufferedReader(new InputStreamReader(in));
-
-			dis = new BufferedReader(new InputStreamReader(
-					urlConn.getInputStream()));
-
-			line = dis.readLine();
-		} catch (MalformedURLException mue) {
-			mue.printStackTrace();
-		} catch (IOException ioe) {
-			ioe.printStackTrace();
-		} finally {
-			try {
-				dis.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		System.out
-				.println("SwingApp.getHttpLatestVersionString() line:" + line);
-		String versionString = "";
-		if (line != null) {
-			// line.startsWith("Sudokuki ");
-			// line.endsWith(") is the latest version.");
-			String[] strs = line.split(" is the latest version.");
-			if (strs.length >= 1) {
-				versionString = strs[0];
-			}
-		}
-		System.out
-				.println("SwingApp.getHttpLatestVersionString() Version.versionString:"
-						+ Version.versionString);
-		System.out
-				.println("SwingApp.getHttpLatestVersionString() versionString:"
-						+ versionString);
-
-		if (versionString.equals(Version.versionString)) {
-			System.out
-					.println("SwingApp.getHttpLatestVersionString() This version is up-to-date");
-			isNewVersionAvailable = 0;
-		} else {
-			System.out
-					.println("SwingApp.getHttpLatestVersionString() This version is outdated. Please download the latest version from Sourceforge.");
-			isNewVersionAvailable = 1;
-		}
-		return versionString;
+	private void cancelButtonClicked() {
+		System.out.println("CheckUpdateDialog.cancelButtonClicked()");
+		boolean cancelled = worker.cancel(true);
+		System.out.println("CheckUpdateDialog.cancelButtonClicked() cancelled:"
+				+ cancelled);
 	}
 
 	public int getResult() {
-		return isNewVersionAvailable;
+		System.out.println("CheckUpdateDialog.getResult() Thread:"
+				+ Thread.currentThread().getName());
+
+		System.out.println("result: " + result);
+		return result;
 	}
-	
+
 }

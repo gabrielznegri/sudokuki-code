@@ -71,10 +71,8 @@ public class CheckUpdateAction extends AbstractAction {
 		// this CheckUpdateAction when ready.
 	}
 
-	void notifyNewVersionFound(boolean isNewVersionFound) {
-		if (isNewVersionFound) {
-			openUpdateSiteAction.setEnabled(true);
-		}
+	void notifyNewVersionFound() {
+        openUpdateSiteAction.setEnabled(true);
 	}
 
 }
