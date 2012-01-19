@@ -28,5 +28,7 @@ public class Images {
 	
 	public final static ImageIcon ICON_APPLICATION_LOGO_SMALL = new ImageIcon(
 			UIResources.class.getResource("images/logo_small.png"));
-	
+
+	public final static ImageIcon ICON_APPLICATION = new ImageIcon(
+			UIResources.class.getResource("images/sudokuki_icon.png"));
 }
