@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.0.A28\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-01-16 23:28+0100\n"
+"POT-Creation-Date: 2012-01-20 23:51+0100\n"
 "PO-Revision-Date: 2011-07-05 16:08+0100\n"
 "Last-Translator: Sylvain Vedrenne <sylvain.vedrenne@jankenpoi.net>\n"
 "Language-Team: sudokuki-i18n <sudokuki-i18n@lists.sourceforge.net>\n"
@@ -18,17 +18,41 @@ msgstr ""
 "X-Poedit-Language: Greek\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:252
+msgid "on the Web"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:287
+msgid "Sudokuki Forums"
+msgstr ""
+
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:41
 msgid "Solution..."
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:44
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:68
+msgid "Memos"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:45
+msgid "Set memos"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:46
+msgid "All memos"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:47
+msgid "Set memos in all cells"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:49
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:73
 msgid "Resolve"
 msgstr "Επιλύστε"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:46
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:69
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:51
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:74
 msgid "Resolve the grid"
 msgstr "Επιλύστε πλέγμα"
 
@@ -37,20 +61,38 @@ msgid "Edit"
 msgstr "Επεξεργασία"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:55
+#, fuzzy
+msgid "Clear moves"
+msgstr "Καθαρισμός όλων"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:56
 msgid "Clear all moves"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:56
-msgid "Erase all memos..."
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:57
+msgid "Hide memos..."
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:57
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:58
+msgid "Hide all memos..."
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:59
 msgid "Custom grid"
 msgstr "Προσαρμογή"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:58
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:60
+#, fuzzy
+msgid "Compose a custom grid..."
+msgstr "Προσαρμογή"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:61
 msgid "Play grid"
 msgstr "Παιχνίδι πλέγμα"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:62
+msgid "Play with current grid..."
+msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:55
 msgid "File"
@@ -137,56 +179,55 @@ msgid "About Sudokuki..."
 msgstr "Περί του Sudokuki"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:56
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:70
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:98
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:65
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:80
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LocaleListenerImpl.java:19
 msgid "DETECTED_LANGUAGE"
 msgstr "el"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:96
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:82
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:84
 msgid "Language"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:110
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:92
 msgid "German"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:111
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:93
 msgid "Greek"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:112
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:94
 msgid "English"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:113
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:95
 msgid "Esperanto"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:114
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:96
 msgid "Spanish"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:115
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:97
 msgid "French"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:116
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:98
 msgid "Japanese"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:117
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:99
 msgid "Portuguese"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:118
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:100
 msgid "Russian"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:119
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:56
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:78
-msgid "Chinese"
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:101
+msgid "Mandarin"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:52
@@ -223,8 +264,22 @@ msgstr ""
 msgid "Arabic"
 msgstr ""
 
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:56
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:78
+msgid "Chinese"
+msgstr ""
+
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:76
 msgid "Numbers"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:53
+msgid "Open grid..."
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:71
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:72
+msgid "Sudokuki grid files"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:111
@@ -239,11 +294,13 @@ msgstr ""
 msgid "Grid resolution in progress..."
 msgstr ""
 
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:66
+#, fuzzy
+msgid "Save as..."
+msgstr "Αποθήκευση"
+
 #~ msgid "Undo"
 #~ msgstr "Άκυρο"
-
-#~ msgid "Clear all"
-#~ msgstr "Καθαρισμός όλων"
 
 #~ msgid "Printing"
 #~ msgstr "Εκτυπώσεις"

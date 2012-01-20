@@ -45,7 +45,8 @@ public class SwingView extends GridView {
 				grid = new SwingGrid(SwingView.this, frame);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setResizable(false);
-				frame.setIconImage(Images.ICON_APPLICATION.getImage());
+				
+//				frame.setIconImage(Images.ICON_APPLICATION.getImage());
 				
 				MenuBar menuBar = new MenuBar(frame, grid, SwingView.this);
 				levelMenu = menuBar.getLevelMenu();

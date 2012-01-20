@@ -5,9 +5,8 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * HOW TO USE THIS CLASS: import static
- * net.jankenpoi.sudokuki.resources.Messages._;
- * 
+ * HOW TO USE THIS CLASS:<br/>
+ * import static net.jankenpoi.i18n._; 
  */
 public class I18n {
 

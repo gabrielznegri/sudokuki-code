@@ -38,119 +38,101 @@ import net.jankenpoi.i18n.LocaleListener;
 import net.jankenpoi.sudokuki.ui.L10nComponent;
 
 @SuppressWarnings("serial")
-public class LanguageMenu extends JMenu implements L10nComponent {
+public class LanguageMenu extends JMenu {
 
-	private HashMap<String, JRadioButtonMenuItem> itemsMap = new HashMap<String, JRadioButtonMenuItem>();
+        private HashMap<String, JRadioButtonMenuItem> itemsMap = new HashMap<String, JRadioButtonMenuItem>();
 
-	private String langCode;
-	
-	public LanguageMenu() {
-		icons.put("de", StockIcons.ICON_FLAG_DE);
-		icons.put("el", StockIcons.ICON_FLAG_EL);
-		icons.put("eo", StockIcons.ICON_FLAG_EO);
-		icons.put("en", StockIcons.ICON_FLAG_EN);
-		icons.put("es", StockIcons.ICON_FLAG_ES);
-		icons.put("fr", StockIcons.ICON_FLAG_FR);
-		icons.put("ja", StockIcons.ICON_FLAG_JA);
-		icons.put("pt", StockIcons.ICON_FLAG_PT);
-		icons.put("ru", StockIcons.ICON_FLAG_RU);
-		icons.put("zh", StockIcons.ICON_FLAG_ZH);
-		addItems();
-		setIcon(StockIcons.ICON_GO_HOME);
-		setL10nMessages(null, null);
-		localeListener = new LocaleListenerImpl(this);
-		I18n.addLocaleListener(localeListener);
-		
-		addMenuListener(new MenuListener() {
-			
-			@Override
-			public void menuSelected(MenuEvent arg0) {
-//				System.out
-//						.println("LanguageMenu.LanguageMenu().new MenuAdapter() {...}.menuSelected()");
-				final String detectedLanguage = _("DETECTED_LANGUAGE");
-				langCode = detectedLanguage;
-			}
-			
-			@Override
-			public void menuDeselected(MenuEvent arg0) {
-//				System.out
-//						.println("LanguageMenu.LanguageMenu().new MenuAdapter() {...}.menuDeselected()");
-				I18n.reset(langCode);
-			}
-			
-			@Override
-			public void menuCanceled(MenuEvent arg0) {
-//				System.out
-//						.println("LanguageMenu.LanguageMenu().new MenuAdapter() {...}.menuCanceled()");
-				I18n.reset(langCode);
-			}
-		});
-	}
+        private String langCode;
+        
+        public LanguageMenu() {
+                icons.put("de", StockIcons.ICON_FLAG_DE);
+                icons.put("el", StockIcons.ICON_FLAG_EL);
+                icons.put("eo", StockIcons.ICON_FLAG_EO);
+                icons.put("en", StockIcons.ICON_FLAG_EN);
+                icons.put("es", StockIcons.ICON_FLAG_ES);
+                icons.put("fr", StockIcons.ICON_FLAG_FR);
+                icons.put("ja", StockIcons.ICON_FLAG_JA);
+                icons.put("pt", StockIcons.ICON_FLAG_PT);
+                icons.put("ru", StockIcons.ICON_FLAG_RU);
+                icons.put("zh", StockIcons.ICON_FLAG_ZH);
+                addItems();
+                setIcon(StockIcons.ICON_GO_HOME);
+                
+                addMenuListener(new MenuListener() {
+                        
+                        @Override
+                        public void menuSelected(MenuEvent arg0) {
+                                final String detectedLanguage = _("DETECTED_LANGUAGE");
+                                langCode = detectedLanguage;
+                        }
+                        
+                        @Override
+                        public void menuDeselected(MenuEvent arg0) {
+                                I18n.reset(langCode);
+                        }
+                        
+                        @Override
+                        public void menuCanceled(MenuEvent arg0) {
+                                I18n.reset(langCode);
+                        }
+                });
+                
+                final String detectedLanguage = _("DETECTED_LANGUAGE");
+                JRadioButtonMenuItem selectedItem = itemsMap.get(detectedLanguage);
+                setText(_("Language"));
+                if (selectedItem != null) {
+                        selectedItem.setSelected(true);
+                }
+        }
 
-	private final LocaleListener localeListener;
+        private final HashMap<String, Icon> icons = new HashMap<String, Icon>();
 
-	private final HashMap<String, Icon> icons = new HashMap<String, Icon>();
+        private void addItems() {
+                ButtonGroup myGroup = new ButtonGroup();
+                addItem("de", _("German"), myGroup);
+                addItem("el", _("Greek"), myGroup);
+                addItem("en", _("English"), myGroup);
+                addItem("eo", _("Esperanto"), myGroup);
+                addItem("es", _("Spanish"), myGroup);
+                addItem("fr", _("French"), myGroup);
+                addItem("ja", _("Japanese"), myGroup);
+                addItem("pt", _("Portuguese"), myGroup);
+                addItem("ru", _("Russian"), myGroup);
+                addItem("zh", _("Mandarin"), myGroup);
+        }
 
-	@Override
-	public void setL10nMessages(Locale locale, String languageCode) {
-		setText(_("Language"));
+        private void addItem(final String code, String language, ButtonGroup group) {
+                JRadioButtonMenuItem radioItem;
 
-		final String detectedLanguage = _("DETECTED_LANGUAGE");
-//		System.out
-//				.println("LanguageMenu.setL10nMessages() detected language : "
-//						+ detectedLanguage);
-		JRadioButtonMenuItem item = itemsMap.get(detectedLanguage);
-		if (item != null) {
-			item.setSelected(true);
-		}
-	}
+                radioItem = new JRadioButtonMenuItem(language);
+                itemsMap.put(code, radioItem);
+                if (code.equals(code)) {
+                        radioItem.setSelected(true);
+                }
+//              System.out.println("LanguageMenu.addItem() icons.get(code):"+code+" "+icons.get(code));
+                radioItem.setAction(new AbstractAction(language, icons.get(code)) {
 
-	private void addItems() {
-		ButtonGroup myGroup = new ButtonGroup();
-		addItem("de", _("German"), myGroup);
-		addItem("el", _("Greek"), myGroup);
-		addItem("en", _("English"), myGroup);
-		addItem("eo", _("Esperanto"), myGroup);
-		addItem("es", _("Spanish"), myGroup);
-		addItem("fr", _("French"), myGroup);
-		addItem("ja", _("Japanese"), myGroup);
-		addItem("pt", _("Portuguese"), myGroup);
-		addItem("ru", _("Russian"), myGroup);
-		addItem("zh", _("Chinese"), myGroup);
-	}
+                        @Override
+                        public void actionPerformed(ActionEvent arg0) {
+                                I18n.reset(code);
+                        }
+                });
 
-	private void addItem(final String code, String language, ButtonGroup group) {
-		JRadioButtonMenuItem radioItem;
+                radioItem.addMouseListener(new MouseAdapter() {
 
-		radioItem = new JRadioButtonMenuItem(language);
-		itemsMap.put(code, radioItem);
-		if (code.equals(code)) {
-			radioItem.setSelected(true);
-		}
-//		System.out.println("LanguageMenu.addItem() icons.get(code):"+code+" "+icons.get(code));
-		radioItem.setAction(new AbstractAction(language, icons.get(code)) {
+                        @Override
+                        public void mouseEntered(MouseEvent e) {
+                                I18n.reset(code);
+                        }
+                        
+                        @Override
+                        public void mouseExited(MouseEvent e) {
+                                I18n.reset(langCode);
+                        }
 
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset(code);
-			}
-		});
-
-		radioItem.addMouseListener(new MouseAdapter() {
-
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				I18n.reset(code);
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-				I18n.reset(langCode);
-			}
-
-		});
-		group.add(radioItem);
-		add(radioItem);
-	}
+                });
+                group.add(radioItem);
+                add(radioItem);
+        }
 
 }

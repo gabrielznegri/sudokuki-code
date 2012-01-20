@@ -34,59 +34,64 @@ import net.jankenpoi.sudokuki.view.GridView;
 
 @SuppressWarnings("serial")
 public class CheatMenu extends JMenu implements L10nComponent {
-	
-	private final LocaleListener localeListener;
-	@Override
-	public void setL10nMessages(Locale locale, String languageCode) {
-		setText(_("Solution..."));
-		setIcon(StockIcons.ICON_SOLUTION_MENU);
-		
-		itemResolve.setText(_("Resolve"));
-		actionResolve.putValue(Action.SMALL_ICON, StockIcons.ICON_GO_JUMP);
-		actionResolve.putValue(Action.SHORT_DESCRIPTION, _("Resolve the grid"));
-		actionResolve.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_R));
-	}
+        
+        private final LocaleListener localeListener;
+        @Override
+        public void setL10nMessages(Locale locale, String languageCode) {
+                setText(_("Solution..."));
+                setIcon(StockIcons.ICON_SOLUTION_MENU);
 
-	private final JMenuItem itemSetMemosHere = new JMenuItem();
-	private final JMenuItem itemSetAllMemos = new JMenuItem();
-	private final JMenuItem itemResolve = new JMenuItem();
-	private final Action actionSetMemosHere;
-	private final Action actionSetAllMemos;
-	private final Action actionResolve;
-	
-	public CheatMenu(ActionsRepository actions, JFrame parent, GridView view) {
-		actionSetMemosHere = new SetMemosHereAction(parent, "Set memos here",
-				StockIcons.ICON_SET_MEMOS_HERE, "Set memos in current cell", new Integer(
-						KeyEvent.VK_T), view);
-		actions.put("SetMemosHere", actionSetMemosHere);
-		
-		actionSetAllMemos = new SetAllMemosAction(parent, "Set all memos",
-				StockIcons.ICON_SET_ALL_MEMOS, "Set memos in all cells of the grid", new Integer(
-						KeyEvent.VK_X), view);
-		actions.put("SetAllMemos", actionSetAllMemos);
-		
-		actionResolve = new ResolveAction(parent, _("Resolve"),
-				StockIcons.ICON_GO_JUMP, _("Resolve the grid"), new Integer(
-						KeyEvent.VK_R), view);
-		actions.put("ResolveGrid", actionResolve);
-		
-		addItems();
-		setEnabled(true);
-		setL10nMessages(null, null);
-		localeListener = new LocaleListenerImpl(this);
-		I18n.addLocaleListener(localeListener);
-	}
+                itemSetMemosHere.setText(_("Memos"));
+                actionSetMemosHere.putValue(Action.SHORT_DESCRIPTION, _("Set memos"));
+                itemSetAllMemos.setText(_("All memos"));
+                actionSetAllMemos.putValue(Action.SHORT_DESCRIPTION, _("Set memos in all cells"));
+                
+                itemResolve.setText(_("Resolve"));
+                actionResolve.putValue(Action.SMALL_ICON, StockIcons.ICON_GO_JUMP);
+                actionResolve.putValue(Action.SHORT_DESCRIPTION, _("Resolve the grid"));
+                actionResolve.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_R));
+        }
 
-	private void addItems() {
-		itemSetMemosHere.setAction(actionSetMemosHere);
-		add(itemSetMemosHere);
-		
-		itemSetAllMemos.setAction(actionSetAllMemos);
-		add(itemSetAllMemos);
+        private final JMenuItem itemSetMemosHere = new JMenuItem();
+        private final JMenuItem itemSetAllMemos = new JMenuItem();
+        private final JMenuItem itemResolve = new JMenuItem();
+        private final Action actionSetMemosHere;
+        private final Action actionSetAllMemos;
+        private final Action actionResolve;
+        
+        public CheatMenu(ActionsRepository actions, JFrame parent, GridView view) {
+                actionSetMemosHere = new SetMemosHereAction(parent, "Set memos here",
+                                StockIcons.ICON_SET_MEMOS_HERE, "Set memos in current cell", new Integer(
+                                                KeyEvent.VK_T), view);
+                actions.put("SetMemosHere", actionSetMemosHere);
+                
+                actionSetAllMemos = new SetAllMemosAction(parent, "Set all memos",
+                                StockIcons.ICON_SET_ALL_MEMOS, "Set memos in all cells of the grid", new Integer(
+                                                KeyEvent.VK_X), view);
+                actions.put("SetAllMemos", actionSetAllMemos);
+                
+                actionResolve = new ResolveAction(parent, _("Resolve"),
+                                StockIcons.ICON_GO_JUMP, _("Resolve the grid"), new Integer(
+                                                KeyEvent.VK_R), view);
+                actions.put("ResolveGrid", actionResolve);
+                
+                addItems();
+                setEnabled(true);
+                setL10nMessages(null, null);
+                localeListener = new LocaleListenerImpl(this);
+                I18n.addLocaleListener(localeListener);
+        }
 
-		addSeparator();
-		
-		itemResolve.setAction(actionResolve);
-		add(itemResolve);
-	}
+        private void addItems() {
+                itemSetMemosHere.setAction(actionSetMemosHere);
+                add(itemSetMemosHere);
+                
+                itemSetAllMemos.setAction(actionSetAllMemos);
+                add(itemSetAllMemos);
+
+                addSeparator();
+                
+                itemResolve.setAction(actionResolve);
+                add(itemResolve);
+        }
 }

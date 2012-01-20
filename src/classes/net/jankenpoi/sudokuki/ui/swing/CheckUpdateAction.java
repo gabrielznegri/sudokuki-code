@@ -27,52 +27,54 @@ import javax.swing.JOptionPane;
 @SuppressWarnings("serial")
 public class CheckUpdateAction extends AbstractAction {
 
-	private Action openUpdateSiteAction;
+        private Action openUpdateSiteAction;
 
-	private JFrame frame;
+        private JFrame frame;
 
-	public CheckUpdateAction(JFrame frame, Action openUpdateSiteAction) {
-		this.frame = frame;
-		this.openUpdateSiteAction = openUpdateSiteAction;
-		performSilentCheck();
-	}
+        public CheckUpdateAction(JFrame frame, Action openUpdateSiteAction) {
+                this.frame = frame;
+                this.openUpdateSiteAction = openUpdateSiteAction;
+                performSilentCheck();
+        }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		CheckUpdateDialog dlg = new CheckUpdateDialog(frame, this);
-		dlg.setVisible(true);
-		int isNewVersionAvailable = dlg.getResult();
-		if (isNewVersionAvailable == 0) {
-			JOptionPane.showMessageDialog(frame, "<html>"
-					+ "<table border=\"0\">" + "<tr>"
-					+ "This version of Sudokuki is up-to-date." + "</tr>"
-					+ "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
-		} else if (isNewVersionAvailable == 1) {
-			openUpdateSiteAction.setEnabled(true);
-			NewVersionFoundDialog nvDlg = new NewVersionFoundDialog(frame);
-			nvDlg.setVisible(true);
-		} else {
-			JOptionPane.showMessageDialog(frame, "<html>"
-					+ "<table border=\"0\">" + "<tr>"
-					+ "Unable to retrieve update information.<br/><br/>"
-					+ "Please check on the following website<br/>"
-					+ "if a new version of Sudokuki is available:<br/><br/>"
-					+ "http://sourceforge.net/projects/sudokuki/files/sudokuki"
-					+ "</tr>" + "</html>", "Sudokuki",
-					JOptionPane.WARNING_MESSAGE);
-		}
-	}
+        @Override
+        public void actionPerformed(ActionEvent e) {
+                CheckUpdateDialog dlg = new CheckUpdateDialog(frame, this);
+                dlg.setVisible(true);
+                int isNewVersionAvailable = dlg.getResult();
+                if (isNewVersionAvailable == 0) {
+                        JOptionPane.showMessageDialog(frame, "<html>"
+                                        + "<table border=\"0\">" + "<tr>"
+                                        + "This version of Sudokuki is up-to-date." + "</tr>"
+                                        + "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
+                } else if (isNewVersionAvailable == 1) {
+                        openUpdateSiteAction.setEnabled(true);
+                        NewVersionFoundDialog nvDlg = new NewVersionFoundDialog(frame);
+                        nvDlg.setVisible(true);
+                } else if (isNewVersionAvailable == -1) {
+                        JOptionPane.showMessageDialog(frame, "<html>"
+                                        + "<table border=\"0\">" + "<tr>"
+                                        + "Unable to retrieve update information.<br/><br/>"
+                                        + "Please check on the following website<br/>"
+                                        + "if a new version of Sudokuki is available:<br/><br/>"
+                                        + "http://sourceforge.net/projects/sudokuki/files/sudokuki"
+                                        + "</tr>" + "</html>", "Sudokuki",
+                                        JOptionPane.WARNING_MESSAGE);
+                } else {
+                        System.out.println("CheckUpdateAction.actionPerformed() CANCELLED");
+                }
+        }
 
-	public void performSilentCheck() {
-		CheckUpdateDialog dlg = new CheckUpdateDialog(frame, this);
-		dlg.setVisible(false);
-		// Here I'm supposing that the SwingWorker created by the
-		// CheckUpdateDialog will live on and from its done() method will notify
-		// this CheckUpdateAction when ready.
-	}
+        public void performSilentCheck() {
+                CheckUpdateDialog dlg = new CheckUpdateDialog(frame, this);
+                dlg.setVisible(false);
+                // Here I'm supposing that the SwingWorker created by the
+                // CheckUpdateDialog will live on and from its done() method will notify
+                // this CheckUpdateAction when ready.
+        }
 
-	void notifyNewVersionFound() {
+        void notifyNewVersionFound() {
         openUpdateSiteAction.setEnabled(true);
-	}
+        }
 
 }
