@@ -38,7 +38,7 @@ import net.jankenpoi.i18n.LocaleListener;
 import net.jankenpoi.sudokuki.ui.L10nComponent;
 
 @SuppressWarnings("serial")
-public class LanguageMenu extends JMenu {
+public class LanguageMenu extends JMenu implements L10nComponent {
 
         private HashMap<String, JRadioButtonMenuItem> itemsMap = new HashMap<String, JRadioButtonMenuItem>();
 
@@ -83,8 +83,16 @@ public class LanguageMenu extends JMenu {
                 if (selectedItem != null) {
                         selectedItem.setSelected(true);
                 }
+                localeListener = new LocaleListenerImpl(this);
+                I18n.addLocaleListener(localeListener);
         }
 
+        private final LocaleListener localeListener;
+		@Override
+		public void setL10nMessages(Locale locale, String languageCode) {
+			setText(_("Language"));
+		}
+		
         private final HashMap<String, Icon> icons = new HashMap<String, Icon>();
 
         private void addItems() {
