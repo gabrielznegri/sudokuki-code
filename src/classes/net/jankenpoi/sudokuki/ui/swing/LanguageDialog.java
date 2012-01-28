@@ -22,179 +22,110 @@ import static net.jankenpoi.i18n.I18n._;
 import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
+import java.util.HashMap;
+import java.util.Locale;
 
 import javax.swing.AbstractAction;
 import javax.swing.ButtonGroup;
+import javax.swing.Icon;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 import net.jankenpoi.i18n.I18n;
+import net.jankenpoi.sudokuki.ui.L10nComponent;
 
 @SuppressWarnings("serial")
-public class LanguageDialog extends JDialog {
+public class LanguageDialog extends JDialog implements L10nComponent {
 
-//	private JFrame parent;
+	private HashMap<String, JRadioButton> itemsMap = new HashMap<String, JRadioButton>();
 
 	public LanguageDialog(JFrame parent, ToolBar toolbar) {
 		super(parent, true);
+		setTitle(_("Language"));
+
 		initComponents();
 		setResizable(false);
 		pack();
-		
+
 		Point toolBarLoc = toolbar.getLocationOnScreen();
-		setLocation(toolBarLoc.x + toolbar.getWidth()/2 - getWidth()/2, toolBarLoc.y + toolbar.getHeight());
+		setLocation(toolBarLoc.x + toolbar.getWidth() / 2 - getWidth() / 2,
+				toolBarLoc.y + toolbar.getHeight());
 		setSize(getPreferredSize());
 	}
 
+	private JPanel panel = new JPanel();
+	
 	private void initComponents() {
-		JPanel panel = new JPanel();
-        GridLayout btnLayout = new GridLayout(8, 1);
-        panel.setLayout(btnLayout);
-		
+		GridLayout btnLayout = new GridLayout(8, 1);
+		panel.setLayout(btnLayout);
+
 		String detectedLanguage = _("DETECTED_LANGUAGE");
 		System.out.println("LanguageMenu.addItems() detected language:"
 				+ detectedLanguage);
 
+        icons.put("de", StockIcons.ICON_FLAG_DE);
+        icons.put("el", StockIcons.ICON_FLAG_EL);
+        icons.put("eo", StockIcons.ICON_FLAG_EO);
+        icons.put("en", StockIcons.ICON_FLAG_EN);
+        icons.put("es", StockIcons.ICON_FLAG_ES);
+        icons.put("fr", StockIcons.ICON_FLAG_FR);
+        icons.put("ja", StockIcons.ICON_FLAG_JA);
+        icons.put("pt", StockIcons.ICON_FLAG_PT);
+        icons.put("ru", StockIcons.ICON_FLAG_RU);
+        icons.put("zh", StockIcons.ICON_FLAG_ZH);
+        
 		ButtonGroup myGroup = new ButtonGroup();
-
-		JRadioButton radioItem = new JRadioButton("German", StockIcons.ICON_FLAG_DE);
-		if (detectedLanguage.equals("de"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("German") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("de");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-
-		radioItem = new JRadioButton("Greek", StockIcons.ICON_FLAG_EL);
-		if (detectedLanguage.equals("el"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("Greek") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("el");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-
-		radioItem = new JRadioButton("English", StockIcons.ICON_FLAG_EN);
-		if (detectedLanguage.equals("en"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("English") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("en");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-
-		radioItem = new JRadioButton("Esperanto", StockIcons.ICON_FLAG_EO);
-		if (detectedLanguage.equals("eo"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("Esperanto") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("eo");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-
-		radioItem = new JRadioButton("Spanish", StockIcons.ICON_FLAG_ES);
-		if (detectedLanguage.equals("es"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("Spanish") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("es");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-
-		radioItem = new JRadioButton("French", StockIcons.ICON_FLAG_FR);
-		if (detectedLanguage.equals("fr"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("French") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("fr");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-		
-		radioItem = new JRadioButton("Japanese", StockIcons.ICON_FLAG_JA);
-		if (detectedLanguage.equals("ja"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("Japanese") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("ja");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-		
-		radioItem = new JRadioButton("Portuguese", StockIcons.ICON_FLAG_PT);
-		radioItem.setEnabled(true);
-		if (detectedLanguage.equals("pt"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("Portuguese") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("pt");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-
-		radioItem = new JRadioButton("Russian", StockIcons.ICON_FLAG_RU);
-		radioItem.setEnabled(true);
-		if (detectedLanguage.equals("ru"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("Russian") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("ru");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-		
-		radioItem = new JRadioButton("Chinese", StockIcons.ICON_FLAG_ZH);
-		radioItem.setEnabled(true);
-		if (detectedLanguage.equals("zh"))
-			radioItem.setSelected(true);
-		radioItem.setAction(new AbstractAction("Chinese") {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				I18n.reset("zh");
-			}
-		});
-		myGroup.add(radioItem);
-		panel.add(radioItem);
-
-		
-		
+        addItem("de", _("German"), myGroup);
+        addItem("el", _("Greek"), myGroup);
+        addItem("en", _("English"), myGroup);
+        addItem("eo", _("Esperanto"), myGroup);
+        addItem("es", _("Spanish"), myGroup);
+        addItem("fr", _("French"), myGroup);
+        addItem("ja", _("Japanese"), myGroup);
+        addItem("pt", _("Portuguese"), myGroup);
+        addItem("ru", _("Russian"), myGroup);
+        addItem("zh", _("Mandarin"), myGroup);
+        
 		add(panel);
+	}
+
+	@Override
+	public void setL10nMessages(Locale locale, String languageCode) {
+		setTitle(_("Language"));
+		itemsMap.get("de").setText(_("German"));
+		itemsMap.get("el").setText(_("Greek"));
+		itemsMap.get("en").setText(_("English"));
+		itemsMap.get("eo").setText(_("Esperanto"));
+		itemsMap.get("es").setText(_("Spanish"));
+		itemsMap.get("fr").setText(_("French"));
+		itemsMap.get("ja").setText(_("Japanese"));
+		itemsMap.get("pt").setText(_("Portuguese"));
+		itemsMap.get("zh").setText(_("Mandarin"));
+	}
+
+    private final HashMap<String, Icon> icons = new HashMap<String, Icon>();
+	
+	private void addItem(final String code, String language, ButtonGroup group) {
+		JRadioButton radioItem;
+
+		radioItem = new JRadioButton(language, icons.get(code));
+		itemsMap.put(code, radioItem);
+		
+		if (code.equals(code)) {
+			radioItem.setSelected(true);
+		}
+        radioItem.setAction(new AbstractAction(language, icons.get(code)) {
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                    I18n.reset(code);
+            }
+        });
+
+		group.add(radioItem);
+		panel.add(radioItem);
 	}
 
 }

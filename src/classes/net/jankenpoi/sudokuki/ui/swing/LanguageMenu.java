@@ -71,7 +71,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                                 I18n.reset(langCode);
                         }
                         
-                        @Override
+						@Override
                         public void menuCanceled(MenuEvent arg0) {
                                 I18n.reset(langCode);
                         }
@@ -91,6 +91,15 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 		@Override
 		public void setL10nMessages(Locale locale, String languageCode) {
 			setText(_("Language"));
+            itemsMap.get("de").setText(_("German"));
+            itemsMap.get("el").setText(_("Greek"));
+            itemsMap.get("en").setText(_("English"));
+            itemsMap.get("eo").setText(_("Esperanto"));
+            itemsMap.get("es").setText(_("Spanish"));
+            itemsMap.get("fr").setText(_("French"));
+            itemsMap.get("ja").setText(_("Japanese"));
+            itemsMap.get("pt").setText(_("Portuguese"));
+            itemsMap.get("zh").setText(_("Mandarin"));
 		}
 		
         private final HashMap<String, Icon> icons = new HashMap<String, Icon>();
