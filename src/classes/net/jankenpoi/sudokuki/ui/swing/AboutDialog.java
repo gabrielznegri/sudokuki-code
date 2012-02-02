@@ -53,11 +53,18 @@ public class AboutDialog extends JDialog {
 
         private Frame parent;
 
+        private final String ABOUT_SUDOKUKI = _("About Sudokuki...");
+        private final String INFORMATION = _("Information");
+        private final String CONTRIBUTORS = _("Contributors");
+        private final String FEEDBACK = _("Feedback");
+        private final String TRANSFER = _("Transfer");
+        private final String LICENSE = _("License");
+        
         public AboutDialog(Frame parent) {
                 super(parent, true);
                 this.parent = parent;
                 initComponents();
-                setTitle("About Sudokuki...");
+                setTitle(ABOUT_SUDOKUKI);
                 pack();
         }
 
@@ -77,8 +84,8 @@ public class AboutDialog extends JDialog {
                 }
 
                 JTabbedPane tabbedPane = new JTabbedPane();
-                tabbedPane.addTab("Information", null, makeInfoPanel(sudokukiURI),
-                                "Information");
+                tabbedPane.addTab(INFORMATION, null, makeInfoPanel(sudokukiURI),
+                                INFORMATION);
 
                 String license_html = null;
                 try {
@@ -87,64 +94,63 @@ public class AboutDialog extends JDialog {
                 }
 
                 tabbedPane
-                                .addTab("Contributors",
+                                .addTab(CONTRIBUTORS,
                                                 null,
                                                 makeTextPanel(// "   name_of_contributor | translation   <= each line (aligned on '|')"
 
                                                 "<html>"
                                                                 + "<table border=\"0\">"
                                                                 + "<tr>"
-                                                                + "<td align=\"right\"><b>Aritz Beraza</b></td>"
+                                                                + "<td align=\"right\"><b>"+_("Aritz Beraza")+"</b></td>"
                                                                 + "<td> </td>"
-                                                                + "<td align=\"left\">Spanish translations (v1.0)</td>"
+                                                                + "<td align=\"left\">"+_("Spanish translations (v1.0)")+"</td>"
                                                                 + "</tr>"
                                                                 + "<tr>"
-                                                                + "<td align=\"right\"><b>H&eacute;l&egrave;ne Damianakos</b></td>"
+                                                                + "<td align=\"right\"><b>"+_("Helene Damianakos")+"</b></td>"
                                                                 + "<td> </td>"
-                                                                + "<td align=\"left\">Greek translations (v1.0)</td>"
+                                                                + "<td align=\"left\">"+_("Greek translations (v1.0)")+"</td>"
                                                                 + "</tr>"
                                                                 + "<tr>"
-                                                                + "<td align=\"right\"><b>Jeanne Peng</b></td>"
+                                                                + "<td align=\"right\"><b>"+_("Jeanne Peng")+"</b></td>"
                                                                 + "<td> </td>"
-                                                                + "<td align=\"left\">Chinese translations</td>"
+                                                                + "<td align=\"left\">"+_("Chinese translations")+"</td>"
                                                                 + "</tr>"
                                                                 + "<tr>"
-                                                                + "<td align=\"right\"><b>Claus Poerschke</b></td>"
+                                                                + "<td align=\"right\"><b>"+_("Claus Poerschke")+"</b></td>"
                                                                 + "<td> </td>"
-                                                                + "<td align=\"left\">Patches (v1.0) and German translations</td>"
+                                                                + "<td align=\"left\">"+_("Patches (v1.0) and German translations")+"</td>"
                                                                 + "</tr>"
                                                                 + "<tr>"
-                                                                + "<td align=\"right\"><b>Dmitry Salnikov</b></td>"
+                                                                + "<td align=\"right\"><b>"+_("Dmitry Salnikov")+"</b></td>"
                                                                 + "<td> </td>"
-                                                                + "<td align=\"left\">Portuguese and Russian translations</td>"
+                                                                + "<td align=\"left\">"+_("Portuguese and Russian translations")+"</td>"
                                                                 + "</tr>"
                                                                 + "<tr>"
-                                                                + "<td align=\"right\"><b>H&eacute;l&egrave;ne Vedrenne</b></td>"
+                                                                + "<td align=\"right\"><b>"+_("Helene Vedrenne")+"</b></td>"
                                                                 + "<td> </td>"
-                                                                + "<td align=\"left\">Japanese translations (v1.0)</td>"
+                                                                + "<td align=\"left\">"+_("Japanese translations (v1.0)")+"</td>"
                                                                 + "</tr>"
                                                                 + "<tr>"
-                                                                + "<td align=\"right\"><b>Sylvain Vedrenne</b></td>"
+                                                                + "<td align=\"right\"><b>"+_("Sylvain Vedrenne")+"</b></td>"
                                                                 + "<td> </td>"
-                                                                + "<td align=\"left\">Esperanto, French and Japanese translations</td>"
+                                                                + "<td align=\"left\">"+_("Esperanto, French and Japanese translations")+"</td>"
                                                                 + "</tr>"
                                                                 + "</table>"
 
-                                                                + "</html>"), "Contributors");
+                                                                + "</html>"), CONTRIBUTORS);
 
-                tabbedPane.addTab("Feedback", null, makeFeedbackPanel(forumURI),
-                                "Feedback");
+                tabbedPane.addTab(FEEDBACK, null, makeFeedbackPanel(forumURI),
+                		FEEDBACK);
 
                 tabbedPane
-                                .addTab("Transfer",
+                                .addTab(TRANSFER,
                                                 null,
                                                 makeTextPanel("<html>"
                                                                 + "<table border=\"0\">"
                                                                 + "<tr>" + "<td> </td>"+ "<td> </td>"
                                                                 + "<td>"
                                                                 + "<p>"
-                                                                + "<b>Sudokuki</b> is released under the terms of the GNU General Public "
-                                                                + "License version 3 or later (GPL v3+).<br/>"
+                                                                + _("<b>Sudokuki</b> is released under the terms of the GNU General Public License version 3 or later (GPL v3+).")+"<br/>"
                                                                 + "</p>"
                                                                 + "</td>"
                                                                 + "<td> </td>"+ "<td> </td>"
@@ -153,8 +159,7 @@ public class AboutDialog extends JDialog {
                                                                 + "<td> </td>"+ "<td> </td>"
                                                                 + "<td>"
                                                                 + "<p>"
-                                                                + "The full license text is available in the file called COPYING that "
-                                                                + "must be included in every copy of the program.<br/>"
+                                                                + _("The full license text is available in the file called COPYING that must be included in every copy of the program.")+"<br/>"
                                                                 + "</p>"
                                                                 + "</td>"
                                                                 + "<td> </td>"+ "<td> </td>"
@@ -163,9 +168,7 @@ public class AboutDialog extends JDialog {
                                                                 + "<td> </td>"+ "<td> </td>"
                                                                 + "<td>"
                                                                 + "<p>"
-                                                                + "This program is Free Software (\"Free\" as in \"Freedom\") developped "
-                                                                + "during the author's free-time in the hope that some users will find it "
-                                                                + "useful, but WITHOUT ANY WARRANTY of any kind.<br/>"
+                                                                + _("This program is Free Software (\"Free\" as in \"Freedom\") developped during the author's free-time in the hope that some users will find it useful, but WITHOUT ANY WARRANTY of any kind.")+"<br/>"
                                                                 + "</p>"
                                                                 + "</td>"
                                                                 + "<td> </td>"+ "<td> </td>"
@@ -173,9 +176,7 @@ public class AboutDialog extends JDialog {
                                                                 + "<td> </td>"+ "<td> </td>"
                                                                 + "<td>"
                                                                 + "<p>"
-                                                                + "You are welcome to transfer this program to other people as long as "
-                                                                + "you respect the license terms. Read the GNU General Public License "
-                                                                + "for more details.<br/>"
+                                                                + _("You are welcome to transfer this program to other people as long as you respect the license terms. Read the GNU General Public License for more details.")+"<br/>"
                                                                 + "</p>"
                                                                 + "</td>"
                                                                 + "<td> </td>"+ "<td> </td>"
@@ -186,18 +187,18 @@ public class AboutDialog extends JDialog {
                                                                 + "<td> </td>"+ "<td> </td>"
                                                                 + "<td>"
                                                                 + "<p>"
-                                                                + "Copyright (C) 2007-2012 Sylvain Vedrenne<br/>"
+                                                                + _("Copyright (C) 2007-2012 Sylvain Vedrenne") + "<br/>"
                                                                 + "</p>" + "</td>"
                                                                 + "<td> <td/>"
                                                                 + "</tr>" + "</table>"),
-                                                "Transfer"); // tooltip text
+                                                TRANSFER); // tooltip text
 
                 JEditorPane editPane = new JEditorPane("text/html", license_html);
                 editPane.setEditable(false);
                 editPane.setBackground(Color.WHITE);
                 editPane.setCaretPosition(0);
                 JScrollPane scrollPane = new JScrollPane(editPane);
-                tabbedPane.addTab("License", null, scrollPane, "License");
+                tabbedPane.addTab(LICENSE, null, scrollPane, LICENSE);
 
                 Dimension parentDim = parent.getPreferredSize();
                 Dimension dim = new Dimension();
@@ -238,7 +239,8 @@ public class AboutDialog extends JDialog {
                                 + "<tr>"
                                 + "</tr>"
                                 + "<tr>"
-                                + "<td align=\"center\">Copyright 2007-2012 Sylvain Vedrenne</td>"
+                                + "<td align=\"center\">"
+                                + _("Copyright (C) 2007-2012 Sylvain Vedrenne") + "</td>"
                                 + "</tr>" + "</table>" + "</html>";
                 JLabel label = new JLabel(feedbackStr);
                 feedbackPanel.add(label);
@@ -272,8 +274,9 @@ public class AboutDialog extends JDialog {
                 JPanel panel = new JPanel(false);
                 String feedbackStr = "<html>" + "<table border=\"0\">" + "<tr></tr>"
                                 + "<tr></tr>" + "<tr></tr>" + "<tr></tr>" + "<tr>"
-                                + "<td>    </td>"+ "<td>    </td>"+"<td>Feel free to request features and report bugs "
-                                + "on the Sudokuki Forums hosted by Sourceforge!</td>"+"<td>    </td>"
+                                + "<td>    </td>"+ "<td>    </td>"+"<td>"
+                                + ("Feel free to request features and report bugs on the Sudokuki Forums hosted by Sourceforge!")+"</td>"
+                                +"<td>    </td>"
                                 + "</tr>" + "<tr>" + "</tr>" + "</table>" + "</html>";
                 JLabel label = new JLabel(feedbackStr);
                 label.setHorizontalAlignment(JLabel.CENTER);

@@ -476,13 +476,24 @@ public class GridModel implements Cloneable {
 		private Integer firstErrorSquareX = null;
 		private Integer firstErrorSquareY = null;
 		
-		public GridValidity(boolean isValid, Integer lineWithError, Integer columnWithError,
+		private GridValidity(boolean isValid, Integer lineWithError, Integer columnWithError,
 				Integer squareWithErrorX, Integer squareWithErrorY) {
 			this.isValid = isValid;
 			this.firstErrorLine = lineWithError;
 			this.firstErrorColumn = columnWithError;
 			this.firstErrorSquareX = squareWithErrorX;
 			this.firstErrorSquareY = squareWithErrorY;
+		}
+		
+		private static GridValidity valueOf(boolean isValid, Integer lineWithError, Integer columnWithError,
+				Integer squareWithErrorX, Integer squareWithErrorY) {
+			if (isValid) {
+				return VALID;
+			} else {
+				return new GridValidity(isValid, lineWithError, columnWithError,
+						squareWithErrorX, squareWithErrorY);
+			}
+			
 		}
 		
 		public boolean isGridValid() {
@@ -563,7 +574,7 @@ public class GridModel implements Cloneable {
 				}
 			}
 		}
-		return new GridValidity(isValid, lineWithError, columnWithError,
+		return GridValidity.valueOf(isValid, lineWithError, columnWithError,
 				squareWithErrorX, squareWithErrorY);
 	}
 	

@@ -80,12 +80,11 @@ public class TranslateDialog extends JDialog {
 				+ "<tr>"
 				+ "</tr>"
 				+ "<tr>"
-				+ "You can easily translate Sudokuki into your own language!<br/>"
+				+ _("You can easily translate Sudokuki into your own language!")+"<br/>"
 				+"<br/>"
 				+ "</tr>"
 				+ "<tr>"
-				+ "Propose your help and get information on how to proceed<br/>"
-				+"on the Translators Forum hosted by Sourceforge:<br/>"
+				+ _("Propose your help and get information on how to proceed<br/> on the Translators Forum hosted by Sourceforge:")+"<br/>"
 				+ "</tr>"
 				+ "<tr>"
 				+ "</tr>" + "<tr>" + "</tr>" + "</table>" + "</html>";
@@ -98,7 +97,7 @@ public class TranslateDialog extends JDialog {
 		JButton linkButton = new JButton();
 
 		linkButton
-				.setText("<HTML><FONT color=\"#000099\"><U>Sudokuki Translators Forum</U></FONT></HTML>");
+				.setText("<HTML><FONT color=\"#000099\"><U>"+_("Sudokuki Translators Forum")+"</U></FONT></HTML>");
 		linkButton.setHorizontalAlignment(SwingConstants.CENTER);
 		linkButton.setBorderPainted(false);
 		linkButton.setOpaque(false);

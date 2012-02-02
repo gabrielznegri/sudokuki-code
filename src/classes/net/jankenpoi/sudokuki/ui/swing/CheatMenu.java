@@ -60,13 +60,13 @@ public class CheatMenu extends JMenu implements L10nComponent {
         private final Action actionResolve;
         
         public CheatMenu(ActionsRepository actions, JFrame parent, GridView view) {
-                actionSetMemosHere = new SetMemosHereAction(parent, "Set memos here",
-                                StockIcons.ICON_SET_MEMOS_HERE, "Set memos in current cell", new Integer(
+                actionSetMemosHere = new SetMemosHereAction(parent, _("Memos"),
+                                StockIcons.ICON_SET_MEMOS_HERE, _("Set memos"), new Integer(
                                                 KeyEvent.VK_T), view);
                 actions.put("SetMemosHere", actionSetMemosHere);
                 
-                actionSetAllMemos = new SetAllMemosAction(parent, "Set all memos",
-                                StockIcons.ICON_SET_ALL_MEMOS, "Set memos in all cells of the grid", new Integer(
+                actionSetAllMemos = new SetAllMemosAction(parent, _("All memos"),
+                                StockIcons.ICON_SET_ALL_MEMOS, _("Set memos in all cells"), new Integer(
                                                 KeyEvent.VK_X), view);
                 actions.put("SetAllMemos", actionSetAllMemos);
                 

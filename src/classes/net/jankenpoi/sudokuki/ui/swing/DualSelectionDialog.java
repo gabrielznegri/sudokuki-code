@@ -17,24 +17,33 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
+import java.util.Arrays;
+import java.util.Locale;
+import static net.jankenpoi.i18n.I18n._;
+
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
+
+import net.jankenpoi.i18n.I18n;
+import net.jankenpoi.i18n.LocaleListener;
+import net.jankenpoi.sudokuki.ui.L10nComponent;
 
 @SuppressWarnings("serial")
 public class DualSelectionDialog extends JDialog {
 
 	private SelectNumberPanel numberPanel;
 	private SelectMemosPanel memosPanel;
-
+	
 	public DualSelectionDialog(boolean valuePickerOnTop, JFrame parent, byte previousValue,
 			Byte[] previousMemos) {
 		super(parent, true);
 		tabbedPane = new JTabbedPane();
 		numberPanel = new SelectNumberPanel(this, previousValue);
 		memosPanel = new SelectMemosPanel(this, previousMemos);
-		tabbedPane.addTab("Select", numberPanel);
-		tabbedPane.addTab("Memos", memosPanel);
+		tabbedPane.addTab(_("Select"), numberPanel);
+		tabbedPane.addTab(_("Memos"), memosPanel);
+		
 		tabbedPane.setSelectedComponent(valuePickerOnTop ? numberPanel
 				: memosPanel);
 		add(tabbedPane);
@@ -60,8 +69,10 @@ public class DualSelectionDialog extends JDialog {
 	}
 
 	void memosPanelConfirmed() {
-		value = 0;
 		memos = memosPanel.getSelectedMemos();
+		if (memosPanel.memosChanged()) {
+			value = 0;
+		}
 		dispose();
 	}
 

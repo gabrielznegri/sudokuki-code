@@ -25,6 +25,7 @@ import javax.swing.JToolBar;
 
 import net.jankenpoi.sudokuki.model.GridChangedEvent;
 import net.jankenpoi.sudokuki.model.GridModel;
+import net.jankenpoi.sudokuki.model.GridModel.GridValidity;
 import net.jankenpoi.sudokuki.view.GridView;
 
 public class SwingView extends GridView {
@@ -85,17 +86,19 @@ public class SwingView extends GridView {
 
 	public void gridChanged(final GridChangedEvent event) {
 		super.gridChanged(event);
-//		System.out.println("SwingView.gridChanged()");
 
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				GridModel model = (GridModel) event.getSource();
+				
+				refreshSaveAsAction(model);
+				refreshPrintGridAction(model);
 				refreshClearAllMovesAction(model);
+				
 				refreshClearAllMemosAction(model);
 				refreshLevelMenu(model);
 				refreshSolutionMenu(model);
-//				refreshSetMemosHereAction(model);
-//				refreshSetAllMemosAction(model);
+				
 				refreshResolveAction(model);
 				refreshCustomGridAction(model);
 				refreshPlayCustomGridAction(model);
@@ -105,7 +108,21 @@ public class SwingView extends GridView {
 
 		});
 	}
-
+	
+	private void refreshSaveAsAction(GridModel model) {
+		if (actions == null)
+			return;
+		Action saveAsAction = actions.get("SaveAs");
+		saveAsAction.setEnabled(!model.getCustomGridMode());
+	}
+	
+	private void refreshPrintGridAction(GridModel model) {
+		if (actions == null)
+			return;
+		Action printGridAction = actions.get("Print");
+		printGridAction.setEnabled(!model.getCustomGridMode());
+	}
+	
 	private void refreshClearAllMemosAction(GridModel model) {
 		if (actions == null)
 			return;
@@ -154,7 +171,7 @@ public class SwingView extends GridView {
 			return;
 		}
 		Action playCustomGridAction = actions.get("PlayCustomGrid"); 
-		playCustomGridAction.setEnabled(model.getCustomGridMode());
+		playCustomGridAction.setEnabled(model.getCustomGridMode() && model.getGridValidity().isGridValid());
 	}
 
 	@Override

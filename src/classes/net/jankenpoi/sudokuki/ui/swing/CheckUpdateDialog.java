@@ -17,6 +17,8 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
+import static net.jankenpoi.i18n.I18n._;
+
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.io.BufferedReader;
@@ -29,11 +31,9 @@ import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
 import net.jankenpoi.sudokuki.Version;
@@ -50,7 +50,10 @@ public class CheckUpdateDialog extends JDialog {
 
 	final CheckUpdateAction checkUpdateAction;
 
-	int result = -1;
+	/**
+	 * <b>Warning</b>: read/write this variable from the EDT thread only.
+	 */
+	private int result = -1;
 
 	private final SwingWorker<String, Void> worker = new SwingWorker<String, Void>() {
 
@@ -65,37 +68,37 @@ public class CheckUpdateDialog extends JDialog {
 		@Override
 		protected void done() {
 			/* Executed in the EDT */
+			result = -1;
 			try {
 				String httpVersionString = get();
 
 				System.out
-				.println("SwingApp.getHttpLatestVersionString() (embedded) Version.versionString:"
-						+ Version.versionString);
+						.println("SwingApp.getHttpLatestVersionString() (embedded) Version.versionString:"
+								+ Version.versionString);
 				System.out
-				.println("SwingApp.getHttpLatestVersionString()  retrieved         versionString:"
-						+ httpVersionString);
+						.println("SwingApp.getHttpLatestVersionString()  retrieved         versionString:"
+								+ httpVersionString);
 
 				if (httpVersionString.equals(Version.versionString)) {
 					System.out
-					.println("SwingApp.getHttpLatestVersionString() This version is up-to-date");
+							.println("SwingApp.getHttpLatestVersionString() This version is up-to-date");
 					result = 0;
 				} else if (httpVersionString.startsWith("Sudokuki")) {
 					System.out
-					.println("SwingApp.getHttpLatestVersionString() This version is outdated. Please download the latest version from Sourceforge.");
+							.println("SwingApp.getHttpLatestVersionString() This version is outdated. Please download the latest version from Sourceforge.");
 					checkUpdateAction.notifyNewVersionFound();
 					result = 1;
-				} else {
-					result = -1;
 				}
 			} catch (InterruptedException e) {
 				System.out
-				.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() Interrupted !!!!");
+						.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() Interrupted !!!!");
 			} catch (ExecutionException e) {
 				System.out
-				.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() ExecutionException !!!!");
+						.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() ExecutionException !!!!");
 			} catch (CancellationException e) {
 				System.out
-				.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() CancellationException !!!!");
+						.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() CancellationException !!!!");
+				result = -2;
 			}
 			CheckUpdateDialog.this.dispose();
 		}
@@ -108,18 +111,11 @@ public class CheckUpdateDialog extends JDialog {
 				URLConnection urlConn;
 
 				url = new URL(
-				"http://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Beta/LATEST/download");
-
-				// Note: a more portable URL:
-				// url = new URL(getCodeBase().toString() +
-				// "/ToDoList/ToDoList.txt");
+						"http://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Beta/LATEST/download");
 
 				urlConn = url.openConnection();
 				urlConn.setDoInput(true);
 				urlConn.setUseCaches(false);
-
-				// BufferedReader d
-				// = new BufferedReader(new InputStreamReader(in));
 
 				dis = new BufferedReader(new InputStreamReader(
 						urlConn.getInputStream()));
@@ -139,9 +135,7 @@ public class CheckUpdateDialog extends JDialog {
 			System.out.println("getHttpLatestVersionString() line:" + line);
 			String versionString = "";
 			if (line != null) {
-				// line.startsWith("Sudokuki ");
-				// line.endsWith(") is the latest version.");
-				String[] strs = line.split(" is the latest version.");
+				String[] strs = line.split(_(" is the latest version."));
 				if (strs.length >= 1) {
 					versionString = strs[0];
 				}
@@ -170,12 +164,12 @@ public class CheckUpdateDialog extends JDialog {
 
 		JLabel messageLbl1 = new JLabel("<html>" + "<table border=\"0\">"
 				+ "<tr>" + "<td align=\"center\">"
-				+ "Checking for available updates.</td>" + "</tr><html>");
+				+ _("Checking for available updates")+".</td>" + "</tr><html>");
 		JLabel messageLbl2 = new JLabel("<html>" + "<table border=\"0\">"
-				+ "<tr>" + "<td align=\"center\">" + "Please wait...</td>"
+				+ "<tr>" + "<td align=\"center\">" + _("Please wait...")+"</td>"
 				+ "</tr><html>");
 		JLabel messageLbl3 = new JLabel("");
-		JButton cancelBtn = new JButton("Cancel");
+		JButton cancelBtn = new JButton(_("Cancel"));
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		cancelBtn.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,7 +193,18 @@ public class CheckUpdateDialog extends JDialog {
 				+ cancelled);
 	}
 
-	public int getResult() {
+	/**
+	 * @return <ul>
+	 *         <li>1 if a new version is available</li>
+	 *         <li>0 if the version is up-to-date</li>
+	 *         <li>-1 if an error occurred</li>
+	 *         <li>-2 if cancelled by the user</li>
+	 *         </ul>
+	 * 
+	 *         Must be executed in the EDT only (because it accesses
+	 *         <i>result</i>).
+	 */
+	int getResult() {
 		System.out.println("CheckUpdateDialog.getResult() Thread:"
 				+ Thread.currentThread().getName());
 

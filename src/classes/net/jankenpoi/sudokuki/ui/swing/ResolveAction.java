@@ -25,6 +25,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import net.jankenpoi.sudokuki.view.GridView;
+import static net.jankenpoi.i18n.I18n._;
 
 @SuppressWarnings("serial")
 public class ResolveAction extends AbstractAction {
@@ -52,12 +53,12 @@ public class ResolveAction extends AbstractAction {
 			setEnabled(false);
 			JOptionPane.showMessageDialog(frame, "<html>"
 					+ "<table border=\"0\">" + "<tr>"
-					+ "Grid resolved with success." + "</tr>"
+					+ _("Grid resolved with success.") + "</tr>"
 					+ "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
 		} else if (result == 2) {
 			JOptionPane.showMessageDialog(frame, "<html>"
 					+ "<table border=\"0\">" + "<tr>"
-					+ "This grid has no solution.<br/><br/>"
+					+ _("This grid has no solution.")+"<br/><br/>"
 					+ "</tr>" + "</html>", "Sudokuki",
 					JOptionPane.WARNING_MESSAGE);
 		} else if (result == 1) {

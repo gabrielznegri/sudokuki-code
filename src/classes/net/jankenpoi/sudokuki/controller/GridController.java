@@ -94,11 +94,17 @@ public class GridController {
 	}
 	
 	public void notifyNewGridRequested() {
+		if (model.getCustomGridMode()) {
+			model.exitCustomGridMode();
+		}
 		model.requestNewGrid();
 		model.fireGridChanged(new GridChangedEvent(model, 0, 0, (short)0));
 	}
 
 	public void notifyResetGridFromShorts(short[] externalCellInfos) {
+		if (model.getCustomGridMode()) {
+			model.exitCustomGridMode();
+		}
 		model.resetGridModelFromShorts(externalCellInfos);
 		model.fireGridChanged(new GridChangedEvent(model, 0, 0, (short)0));
 	}

@@ -32,6 +32,7 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
+import static net.jankenpoi.i18n.I18n._;
 
 /**
  * 
@@ -50,6 +51,7 @@ public class SelectMemosPanel extends JPanel {
 	private JPanel panel123 = new JPanel(new GridLayout());
 	private JPanel panelConfirm = new JPanel(new GridLayout());
 	private HashSet<Byte> memos = new HashSet<Byte>();
+	private HashSet<Byte> previousMemos = new HashSet<Byte>();
 
 	private Font BOLD_FONT = new Font("Serif", Font.BOLD, 18);
 	private Font NORMAL_FONT = new Font("Serif", Font.PLAIN, 18);
@@ -68,12 +70,9 @@ public class SelectMemosPanel extends JPanel {
 	}
 
 	private void configureCheckBox(JCheckBox btn, String text, final int button) {
-		// System.out.println("InputDialog.configureButton() btn:"+btn+" text:"+text+" value:"+value);
 
-//		btn.setBorderPainted(false);
 		btn.setFont(NORMAL_FONT);
 
-//		btn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		btn.setToolTipText(text);
 		btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 		btn.addActionListener(new java.awt.event.ActionListener() {
@@ -90,6 +89,7 @@ public class SelectMemosPanel extends JPanel {
 		if (previousMemos != null) {
 			for (int i = 0; i < previousMemos.length; i++) {
 				memos.add(previousMemos[i]);
+				this.previousMemos.add(previousMemos[i]);
 			}
 		}
 		for (int i = 0; i < ckb.length; i++) {
@@ -98,7 +98,7 @@ public class SelectMemosPanel extends JPanel {
 		btnConfirm = new JButton();
 
 		btnClear = new JButton();
-		btnClear.setText("Clear memos");
+		btnClear.setText(_("Clear memos"));
 		btnClear.setEnabled(true);
 		btnClear.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,7 @@ public class SelectMemosPanel extends JPanel {
 		configureCheckBox(ckb[0], "1", 0);
 		configureCheckBox(ckb[1], "2", 1);
 		configureCheckBox(ckb[2], "3", 2);
-		btnConfirm.setText("Ok");
+		btnConfirm.setText(_("Ok"));
 		btnConfirm.setEnabled(true);
 		btnConfirm.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -323,20 +323,6 @@ public class SelectMemosPanel extends JPanel {
 					return;
 				}
 			}
-//			if (comp == btnClear) {
-//				focusedElement = focusedElement%3;
-//				return;
-//			}
-//			if (comp == btnConfirm) {
-//				focusedElement = 6 + focusedElement%3;
-//				return;
-//			}
-//			if (comp == parent.getTabbedPane()) {
-//				System.out
-//						.println("SelectMemosPanel.InnerFocusListener.focusGained() gettabbedpane.hasFocus():"+parent.getTabbedPane().hasFocus());
-//				focusedElement = 1;
-//				return;
-//			}
 		}
 	}
 	
@@ -346,5 +332,12 @@ public class SelectMemosPanel extends JPanel {
 
 	private boolean focusedClearButton() {
 		return btnClear.hasFocus();
+	}
+
+	public boolean memosChanged() {
+		if (previousMemos.equals(memos)) {
+			return false;
+		}
+		return true;
 	}
 }
