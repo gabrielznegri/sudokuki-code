@@ -23,6 +23,7 @@ import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static net.jankenpoi.i18n.I18n._;
 
 @SuppressWarnings("serial")
 public class CheckUpdateAction extends AbstractAction {
@@ -45,7 +46,7 @@ public class CheckUpdateAction extends AbstractAction {
                 if (isNewVersionAvailable == 0) {
                         JOptionPane.showMessageDialog(frame, "<html>"
                                         + "<table border=\"0\">" + "<tr>"
-                                        + "This version of Sudokuki is up-to-date." + "</tr>"
+                                        + _("This version of Sudokuki is up-to-date.") + "</tr>"
                                         + "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
                 } else if (isNewVersionAvailable == 1) {
                         openUpdateSiteAction.setEnabled(true);
@@ -54,9 +55,7 @@ public class CheckUpdateAction extends AbstractAction {
                 } else if (isNewVersionAvailable == -1) {
                         JOptionPane.showMessageDialog(frame, "<html>"
                                         + "<table border=\"0\">" + "<tr>"
-                                        + "Unable to retrieve update information.<br/><br/>"
-                                        + "Please check on the following website<br/>"
-                                        + "if a new version of Sudokuki is available:<br/><br/>"
+                                        + _("Unable to retrieve update information.<br/><br/>Please check on the following website<br/>if a new version of Sudokuki is available:<br/><br/>")
                                         + "http://sourceforge.net/projects/sudokuki/files/sudokuki"
                                         + "</tr>" + "</html>", "Sudokuki",
                                         JOptionPane.WARNING_MESSAGE);

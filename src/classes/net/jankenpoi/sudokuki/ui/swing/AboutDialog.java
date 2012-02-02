@@ -275,7 +275,7 @@ public class AboutDialog extends JDialog {
                 String feedbackStr = "<html>" + "<table border=\"0\">" + "<tr></tr>"
                                 + "<tr></tr>" + "<tr></tr>" + "<tr></tr>" + "<tr>"
                                 + "<td>    </td>"+ "<td>    </td>"+"<td>"
-                                + ("Feel free to request features and report bugs on the Sudokuki Forums hosted by Sourceforge!")+"</td>"
+                                + _("Feel free to request features and report bugs on the Sudokuki Forums hosted by Sourceforge!")+"</td>"
                                 +"<td>    </td>"
                                 + "</tr>" + "<tr>" + "</tr>" + "</table>" + "</html>";
                 JLabel label = new JLabel(feedbackStr);

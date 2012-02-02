@@ -1,5 +1,8 @@
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java
+./src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateAction.java
+./src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java
+./src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java
@@ -8,10 +11,13 @@
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/LocaleListenerImpl.java
+./src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java
+./src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveAction.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java
+./src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java

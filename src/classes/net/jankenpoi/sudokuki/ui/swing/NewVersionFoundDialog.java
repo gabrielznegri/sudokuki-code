@@ -33,6 +33,7 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import static net.jankenpoi.i18n.I18n._;
 
 @SuppressWarnings("serial")
 public class NewVersionFoundDialog extends JDialog {
@@ -44,7 +45,7 @@ public class NewVersionFoundDialog extends JDialog {
 		this.parent = parent;
 		initComponents();
 		// setResizable(false);
-		setTitle("Update recommended");
+		setTitle(_("Update recommended"));
 		pack();
 	}
 
@@ -78,11 +79,10 @@ public class NewVersionFoundDialog extends JDialog {
 				+ "<tr>"
 				+ "</tr>"
 				+ "<tr>"
-				+ "A new version of Sudokuki is available!<br/>"
+				+ _("A new version of Sudokuki is available!<br/>")
 				+ "</tr>"
 				+ "<tr>"
-				+ "Please download and install the latest package<br/>"
-				+ "from the following website:<br/>"
+				+ _("Please download and install the latest package<br/>from the following website:<br/>")
 				+ "</tr>"
 				+ "<tr>"
 				+ "</tr>" + "<tr>" + "</tr>" + "</table>" + "</html>";
@@ -95,7 +95,7 @@ public class NewVersionFoundDialog extends JDialog {
 		JButton linkButton = new JButton();
 
 		linkButton
-				.setText("<HTML><FONT color=\"#000099\"><U>http://sourceforge.net/projects/sudokuki/files/sudokuki</U></FONT></HTML>");
+				.setText("<HTML><FONT color=\"#000099\"><U>"+_("Download Sudokuki")+"</U></FONT></HTML>");
 		linkButton.setHorizontalAlignment(SwingConstants.CENTER);
 		linkButton.setBorderPainted(false);
 		linkButton.setOpaque(false);
