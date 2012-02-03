@@ -3,6 +3,8 @@ Sudokuki - essential sudoku game
 -- Changelog --
 
 * 2012-
+- Updated french translations.
+- Fixed #3432039 TODO: add necessary L10n strings
 - Fixed #3482839 Exit Custom Grid Mode in case New/Open grid is selected
 - Fixed #3482838 Actions to deactivate when in normal "custom grid" mode
 - Fixed #3482837 Deactivate "play grid" if custom grid is invalid

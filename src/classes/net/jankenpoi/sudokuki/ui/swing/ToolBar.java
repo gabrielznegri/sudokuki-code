@@ -21,6 +21,7 @@ import static net.jankenpoi.i18n.I18n._;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;
+import java.util.Locale;
 
 import javax.swing.AbstractAction;
 import javax.swing.Action;
@@ -28,10 +29,16 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
 
+import net.jankenpoi.i18n.I18n;
+import net.jankenpoi.i18n.LocaleListener;
+import net.jankenpoi.sudokuki.ui.L10nComponent;
+
 @SuppressWarnings("serial")
-public class ToolBar extends JToolBar {
+public class ToolBar extends JToolBar implements L10nComponent {
 	
 	private JFrame frame;
+	private Action actionInvokeLanguageDialog;
+	private final LocaleListener localeListener;
 	
 	ToolBar(JFrame frame, ActionsRepository actions) {
 		this.frame = frame;
@@ -42,6 +49,10 @@ public class ToolBar extends JToolBar {
 		for (int i=0; i<components.length; i++) {
 			components[i].setFocusable(false);
 		}
+		
+        setL10nMessages(null, null);
+        localeListener = new LocaleListenerImpl(this);
+        I18n.addLocaleListener(localeListener);
 	}
 
 	private void addButtons(ActionsRepository actions) {
@@ -69,7 +80,7 @@ public class ToolBar extends JToolBar {
 	    button.setEnabled(false);
 	    this.add(button);
 	    
-	    Action actionInvokeLanguageMenu = new AbstractAction() {
+	    actionInvokeLanguageDialog = new AbstractAction() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -78,13 +89,18 @@ public class ToolBar extends JToolBar {
 			}
 
 	    };
-	    button = new JButton(actionInvokeLanguageMenu);
+	    button = new JButton(actionInvokeLanguageDialog);
 	    button.setEnabled(true);
-	    actionInvokeLanguageMenu.putValue(Action.SMALL_ICON, StockIcons.ICON_GO_HOME);
-	    actionInvokeLanguageMenu.putValue(Action.SHORT_DESCRIPTION, _("Language"));
+	    actionInvokeLanguageDialog.putValue(Action.SMALL_ICON, StockIcons.ICON_GO_HOME);
+	    actionInvokeLanguageDialog.putValue(Action.SHORT_DESCRIPTION, _("Language"));
 
 		button.setText("");
 	    this.add(button);
+	}
+
+	@Override
+	public void setL10nMessages(Locale locale, String languageCode) {
+		actionInvokeLanguageDialog.putValue(Action.SHORT_DESCRIPTION, _("Language"));
 	}
 
 }

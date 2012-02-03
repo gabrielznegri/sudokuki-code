@@ -40,8 +40,6 @@ public class GridGenerationDialog extends JDialog {
 
 	private JFrame parent;
 
-	private int status = -1;
-
 	private final GridView view;
 
 	private final SwingWorker<Integer, Void> worker;
@@ -72,20 +70,17 @@ public class GridGenerationDialog extends JDialog {
 			@Override
 			/* Executed in the EDT, triggered when the SwingWorker has completed */
 			protected void done() {
-				boolean isGenerated = false;
 				try {
-					status = get();
-					if (status == 0) {
-						isGenerated = true;
-					}
+					get();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 					return;
 				} catch (ExecutionException e) {
 					e.printStackTrace();
 					return;
+				} finally {
+					dispose();
 				}
-				dispose();
 			}
 		};
 		initComponents();
@@ -94,12 +89,10 @@ public class GridGenerationDialog extends JDialog {
 
 	private void initComponents() {
 
-		// FIXME: TODO: search how to do something special in case the window is
-		// closed => set status to "CANCELLED"
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
 		Container pane = getContentPane();
-		GridLayout btnLayout = new GridLayout(4, 1);
+		GridLayout btnLayout = new GridLayout(3, 1);
 		pane.setLayout(btnLayout);
 
 		
@@ -110,7 +103,8 @@ public class GridGenerationDialog extends JDialog {
 		+ "</html>");
 		
 		JLabel messageLbl3 = new JLabel("");
-		JButton cancelBtn = new JButton("Cancel");
+		JButton cancelBtn = new JButton(_("Please wait..."));
+		cancelBtn.setEnabled(false); // generate task is not interruptible at the moment
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		cancelBtn.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,17 +127,7 @@ public class GridGenerationDialog extends JDialog {
 		 */
 		System.out
 				.println("ResolveGridDialog.ResolveGridDialog(...) CANCELLED");
-	}
-
-	/**
-	 * 
-	 * @return <b>0</b> if the resolution was successful<br/>
-	 *         <b>1</b> if the solving process was canceled by the user before
-	 *         completion<br/>
-	 *         <b>2</b> if the process failed to resolve the grid
-	 */
-	public int getResult() {
-		return status;
+		dispose();
 	}
 
 	private int generateGrid() {

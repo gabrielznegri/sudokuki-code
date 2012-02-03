@@ -20,6 +20,7 @@ package net.jankenpoi.sudokuki.ui.swing;
 import static net.jankenpoi.i18n.I18n._;
 
 import java.awt.Container;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,6 +35,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
 import net.jankenpoi.sudokuki.Version;
@@ -46,14 +48,13 @@ import net.jankenpoi.sudokuki.Version;
 @SuppressWarnings("serial")
 public class CheckUpdateDialog extends JDialog {
 
+	private static final String VERSION_FILE_DOWNLOAD_WEB_SITE = "http://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Beta/LATEST/download";
+
 	private JFrame parent;
 
 	final CheckUpdateAction checkUpdateAction;
 
-	/**
-	 * <b>Warning</b>: read/write this variable from the EDT thread only.
-	 */
-	private int result = -1;
+	private int result = -1; // to access from the EDT only
 
 	private final SwingWorker<String, Void> worker = new SwingWorker<String, Void>() {
 
@@ -99,8 +100,9 @@ public class CheckUpdateDialog extends JDialog {
 				System.out
 						.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() CancellationException !!!!");
 				result = -2;
+			} finally {
+				CheckUpdateDialog.this.dispose();
 			}
-			CheckUpdateDialog.this.dispose();
 		}
 
 		private String getHttpLatestVersionString() {
@@ -110,8 +112,7 @@ public class CheckUpdateDialog extends JDialog {
 				URL url;
 				URLConnection urlConn;
 
-				url = new URL(
-						"http://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Beta/LATEST/download");
+				url = new URL(VERSION_FILE_DOWNLOAD_WEB_SITE);
 
 				urlConn = url.openConnection();
 				urlConn.setDoInput(true);
@@ -135,7 +136,7 @@ public class CheckUpdateDialog extends JDialog {
 			System.out.println("getHttpLatestVersionString() line:" + line);
 			String versionString = "";
 			if (line != null) {
-				String[] strs = line.split(_(" is the latest version."));
+				String[] strs = line.split(" is the latest version.");
 				if (strs.length >= 1) {
 					versionString = strs[0];
 				}
@@ -159,16 +160,16 @@ public class CheckUpdateDialog extends JDialog {
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
 		Container pane = getContentPane();
-		GridLayout btnLayout = new GridLayout(4, 1);
-		pane.setLayout(btnLayout);
+		GridLayout layout = new GridLayout(3, 1);
+		pane.setLayout(layout);
 
 		JLabel messageLbl1 = new JLabel("<html>" + "<table border=\"0\">"
 				+ "<tr>" + "<td align=\"center\">"
-				+ _("Checking for available updates")+".</td>" + "</tr><html>");
-		JLabel messageLbl2 = new JLabel("<html>" + "<table border=\"0\">"
-				+ "<tr>" + "<td align=\"center\">" + _("Please wait...")+"</td>"
+				+ _("Checking for available updates") + ".</td>"
 				+ "</tr><html>");
-		JLabel messageLbl3 = new JLabel("");
+		JLabel messageLbl2 = new JLabel("<html>" + "<table border=\"0\">"
+				+ "<tr>" + "<td align=\"center\">" + _("Please wait...")
+				+ "</td>" + "</tr><html>");
 		JButton cancelBtn = new JButton(_("Cancel"));
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		cancelBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -179,8 +180,12 @@ public class CheckUpdateDialog extends JDialog {
 
 		pane.add(messageLbl1);
 		pane.add(messageLbl2);
-		pane.add(messageLbl3);
-		pane.add(cancelBtn);
+
+		FlowLayout btnLayout = new FlowLayout(1);
+		JPanel btnPanel = new JPanel();
+		btnPanel.setLayout(btnLayout);
+		btnPanel.add(cancelBtn);
+		pane.add(btnPanel);
 
 		pack();
 		setLocationRelativeTo(parent);
@@ -195,8 +200,8 @@ public class CheckUpdateDialog extends JDialog {
 
 	/**
 	 * @return <ul>
-	 *         <li>1 if a new version is available</li>
 	 *         <li>0 if the version is up-to-date</li>
+	 *         <li>1 if a new version is available</li>
 	 *         <li>-1 if an error occurred</li>
 	 *         <li>-2 if cancelled by the user</li>
 	 *         </ul>
@@ -205,6 +210,11 @@ public class CheckUpdateDialog extends JDialog {
 	 *         <i>result</i>).
 	 */
 	int getResult() {
+
+		System.out.println("CheckUpdateDialog.getResult() thread : "
+				+ Thread.currentThread());
+		Thread.dumpStack();
+
 		System.out.println("CheckUpdateDialog.getResult() Thread:"
 				+ Thread.currentThread().getName());
 

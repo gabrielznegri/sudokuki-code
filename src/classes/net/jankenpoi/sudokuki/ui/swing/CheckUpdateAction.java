@@ -42,17 +42,17 @@ public class CheckUpdateAction extends AbstractAction {
         public void actionPerformed(ActionEvent e) {
                 CheckUpdateDialog dlg = new CheckUpdateDialog(frame, this);
                 dlg.setVisible(true);
-                int isNewVersionAvailable = dlg.getResult();
-                if (isNewVersionAvailable == 0) {
+                int upToDateStatus = dlg.getResult();
+                if (upToDateStatus == 0) {
                         JOptionPane.showMessageDialog(frame, "<html>"
                                         + "<table border=\"0\">" + "<tr>"
                                         + _("This version of Sudokuki is up-to-date.") + "</tr>"
                                         + "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
-                } else if (isNewVersionAvailable == 1) {
+                } else if (upToDateStatus == 1) {
                         openUpdateSiteAction.setEnabled(true);
                         NewVersionFoundDialog nvDlg = new NewVersionFoundDialog(frame);
                         nvDlg.setVisible(true);
-                } else if (isNewVersionAvailable == -1) {
+                } else if (upToDateStatus == -1) {
                         JOptionPane.showMessageDialog(frame, "<html>"
                                         + "<table border=\"0\">" + "<tr>"
                                         + _("Unable to retrieve update information.<br/><br/>Please check on the following website<br/>if a new version of Sudokuki is available:<br/><br/>")

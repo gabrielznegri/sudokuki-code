@@ -19,6 +19,8 @@ package net.jankenpoi.sudokuki.ui.swing;
 
 import static net.jankenpoi.i18n.I18n._;
 
+import java.awt.Container;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
@@ -26,14 +28,17 @@ import java.util.HashMap;
 import java.util.Locale;
 
 import javax.swing.AbstractAction;
+import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.Icon;
+import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 import net.jankenpoi.i18n.I18n;
+import net.jankenpoi.i18n.LocaleListener;
 import net.jankenpoi.sudokuki.ui.L10nComponent;
 
 @SuppressWarnings("serial")
@@ -41,6 +46,8 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 
 	private HashMap<String, JRadioButton> itemsMap = new HashMap<String, JRadioButton>();
 
+	private LocaleListener localeListener;
+	
 	public LanguageDialog(JFrame parent, ToolBar toolbar) {
 		super(parent, true);
 		setTitle(_("Language"));
@@ -53,13 +60,23 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		setLocation(toolBarLoc.x + toolbar.getWidth() / 2 - getWidth() / 2,
 				toolBarLoc.y + toolbar.getHeight());
 		setSize(getPreferredSize());
+		
+        localeListener = new LocaleListenerImpl(this);
+        I18n.addLocaleListener(localeListener);
 	}
 
 	private JPanel panel = new JPanel();
+	private JPanel btnPanel = new JPanel();
+	private JButton okBtn = new JButton(_("Ok"));
 	
 	private void initComponents() {
-		GridLayout btnLayout = new GridLayout(8, 1);
-		panel.setLayout(btnLayout);
+		
+		Container pane = getContentPane();
+		BoxLayout globalLayout = new BoxLayout(pane, BoxLayout.Y_AXIS);
+		pane.setLayout(globalLayout);
+
+		GridLayout pnlLayout = new GridLayout(6, 1);
+		panel.setLayout(pnlLayout);
 
 		String detectedLanguage = _("DETECTED_LANGUAGE");
 		System.out.println("LanguageMenu.addItems() detected language:"
@@ -88,12 +105,29 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         addItem("ru", _("Russian"), myGroup);
         addItem("zh", _("Mandarin"), myGroup);
         
-		add(panel);
+		pane.add(panel);
+		
+		FlowLayout btnLayout = new FlowLayout(1);
+		btnPanel.setLayout(btnLayout);
+		okBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+		okBtn.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				okButtonClicked();
+			}
+
+			private void okButtonClicked() {
+				dispose();
+			}
+		});
+		btnPanel.add(okBtn);		
+		
+		pane.add(btnPanel);
 	}
 
 	@Override
 	public void setL10nMessages(Locale locale, String languageCode) {
 		setTitle(_("Language"));
+		okBtn.setText(_("Ok"));
 		itemsMap.get("de").setText(_("German"));
 		itemsMap.get("el").setText(_("Greek"));
 		itemsMap.get("en").setText(_("English"));

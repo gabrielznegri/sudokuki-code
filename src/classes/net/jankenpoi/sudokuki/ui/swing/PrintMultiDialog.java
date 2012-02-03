@@ -20,15 +20,18 @@ package net.jankenpoi.sudokuki.ui.swing;
 import static net.jankenpoi.i18n.I18n._;
 
 import java.awt.Container;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
+import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
 import net.jankenpoi.sudokuki.view.GridView;
@@ -42,9 +45,10 @@ public class PrintMultiDialog extends JDialog {
 
 	private JFrame parent;
 
-	private int status = -1;
-
 	private final SwingWorker<Integer, Void> worker;
+
+	private Object lock = new Object();
+	private boolean cancelledDialog = false;
 
 	public PrintMultiDialog(JFrame parent, final GridView view) {
 
@@ -72,20 +76,19 @@ public class PrintMultiDialog extends JDialog {
 			@Override
 			/* Executed in the EDT, triggered when the SwingWorker has completed */
 			protected void done() {
-				boolean isResolved = false;
 				try {
-					status = get();
-					if (status == 0) {
-						isResolved = true;
-					}
+					get();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 					return;
 				} catch (ExecutionException e) {
 					e.printStackTrace();
 					return;
+				} catch (CancellationException ce) {
+					ce.printStackTrace();
+				} finally {
+					dispose();
 				}
-				dispose();
 			}
 		};
 		initComponents();
@@ -94,15 +97,11 @@ public class PrintMultiDialog extends JDialog {
 
 	private void initComponents() {
 
-		// FIXME: TODO: search how to do something special in case the window is
-		// closed => set status to "CANCELLED"
-		// => call bruteSolver.cancel(); if the window was CLOSED using the
-		// "CLOSE" button instead of the Cancel button...
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
 		Container pane = getContentPane();
-		GridLayout btnLayout = new GridLayout(4, 1);
-		pane.setLayout(btnLayout);
+		GridLayout layout = new GridLayout(3, 1);
+		pane.setLayout(layout);
 
 		
 		JLabel messageLbl1 = new JLabel(	
@@ -115,8 +114,7 @@ public class PrintMultiDialog extends JDialog {
 				+ "<table border=\"0\">" + "<tr>"
 				+ _("to the printer...") + "</tr>"
 				+ "</html>");
-		JLabel messageLbl3 = new JLabel("");
-		JButton cancelBtn = new JButton("Cancel");
+		JButton cancelBtn = new JButton(_("Cancel"));
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		cancelBtn.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,8 +124,13 @@ public class PrintMultiDialog extends JDialog {
 
 		pane.add(messageLbl1);
 		pane.add(messageLbl2);
-		pane.add(messageLbl3);
-		pane.add(cancelBtn);
+		
+		
+		FlowLayout btnLayout = new FlowLayout(1);
+		JPanel btnPanel = new JPanel();
+		btnPanel.setLayout(btnLayout);
+		btnPanel.add(cancelBtn);
+		pane.add(btnPanel);
 
 		pack();
 		setLocationRelativeTo(parent);
@@ -135,66 +138,54 @@ public class PrintMultiDialog extends JDialog {
 
 	private void clickedCancel() {
 		System.out.println("PrintMultiDialog.clickedCancel()");
+		synchronized (lock) {
+			cancelledDialog = true;
+		}
 		/**
 		 * CANCELLED
 		 */
 		System.out
 				.println("PrintMultiDialog.clickedCancel(...) CANCELLED");
-//		bruteSolver.cancel();
+		boolean cancelled = worker.cancel(true);
+		System.out.println("PrintMultiDialog.clickedCancel(...) cancelled:"
+				+ cancelled);
 	}
 
-	/**
-	 * 
-	 * @return <b>0</b> if the resolution was successful<br/>
-	 *         <b>1</b> if the solving process was canceled by the user before
-	 *         completion<br/>
-	 *         <b>2</b> if the process failed to resolve the grid
-	 */
-	public int getResult() {
-		return status;
+	private boolean dialogCancelled() {
+		synchronized (lock) {
+			return cancelledDialog;
+		}
 	}
-
+	
 	private int generateFourGrids() {
-
-		System.out.println("PrintAction.actionPerformed() let try this out...");		
+		System.out.println("PrintAction.actionPerformed() let try this out...");	
+		if (dialogCancelled()) {
+			return 1;
+		}
 		PrinterJob job = PrinterJob.getPrinterJob();
+		if (dialogCancelled()) {
+			return 1;
+		}
 		job.setPrintable(new SwingMultiGrid());
+		if (dialogCancelled()) {
+			return 1;
+		}
 		boolean doPrint = job.printDialog();
 		System.out.println("SwingGrid.mouseExited() doPrint: "+doPrint);
 		if (doPrint) {
 			try {
+				if (dialogCancelled()) {
+					return 1;
+				}
 				job.print();
+				if (dialogCancelled()) {
+					return 1;
+				}
 			} catch (PrinterException pEx) {
 				/* The job did not successfully complete */
 				pEx.printStackTrace();
 			}
 		}
-
-//		if (solution == null) {
-//			/**
-//			 * RESOLUTION PROCESS CANCELLED BEFORE COMPLETION
-//			 */
-//			return 1;
-//		}
-//		if (solution.isSolved()) {
-//			GridModel solGrid = solution.getSolutionGrid();
-//			for (int li = 0; li < 9; li++) {
-//				for (int co = 0; co < 9; co++) {
-//					byte value = solGrid.getValueAt(li, co);
-//					view.getController().notifyGridValueChanged(li, co, value);
-//				}
-//			}
-//			// fireGridChanged(new GridChangedEvent(this, 0, 0, (short) 0));
-//			/**
-//			 * RESOLUTION SUCCESSFULL
-//			 */
-//			return 0;
-//		} else {
-//			/**
-//			 * RESOLUTION PROCESS WAS UNABLE TO SOLVE THIS GRID
-//			 */
-//			return 2;
-//		}
 		return 0;
 	}
 
