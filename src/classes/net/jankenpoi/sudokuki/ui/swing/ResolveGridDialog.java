@@ -95,7 +95,7 @@ public class ResolveGridDialog extends JDialog {
 					e.printStackTrace();
 					return;
 				}
-				view.getController().notifyGridChanged(); /////
+				view.getController().notifyGridChanged();
 				dispose();
 			}
 		};
@@ -104,15 +104,10 @@ public class ResolveGridDialog extends JDialog {
 	}
 
 	private void initComponents() {
-
-		// FIXME: TODO: search how to do something special in case the window is
-		// closed => set status to "CANCELLED"
-		// => call bruteSolver.cancel(); if the window was CLOSED using the
-		// "CLOSE" button instead of the Cancel button...
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
 		Container pane = getContentPane();
-		GridLayout btnLayout = new GridLayout(4, 1);
+		GridLayout btnLayout = new GridLayout(3, 1);
 		pane.setLayout(btnLayout);
 
 		
@@ -178,7 +173,6 @@ public class ResolveGridDialog extends JDialog {
 				}
 			}
 			view.getController().notifyGridComplete();
-			// fireGridChanged(new GridChangedEvent(this, 0, 0, (short) 0));
 			/**
 			 * RESOLUTION SUCCESSFULL
 			 */
