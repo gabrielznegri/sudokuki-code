@@ -210,15 +210,6 @@ public class CheckUpdateDialog extends JDialog {
 	 *         <i>result</i>).
 	 */
 	int getResult() {
-
-		System.out.println("CheckUpdateDialog.getResult() thread : "
-				+ Thread.currentThread());
-		Thread.dumpStack();
-
-		System.out.println("CheckUpdateDialog.getResult() Thread:"
-				+ Thread.currentThread().getName());
-
-		System.out.println("result: " + result);
 		return result;
 	}
 
