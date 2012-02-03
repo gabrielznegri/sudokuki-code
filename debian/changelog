@@ -1,3 +1,20 @@
+sudokuki (1.0.910-1) unstable; urgency=low
+
+        * Sudokuki version 1.1.Beta10 ("Sudokuki", stable, Java Swing GUI)
+
+        Fixed the following bug(s):
+	- Updated french translations.
+	- Fixed #3432039 TODO: add necessary L10n strings
+	- Fixed #3482839 Exit Custom Grid Mode in case New/Open grid is selected
+	- Fixed #3482838 Actions to deactivate when in normal "custom grid" mode
+	- Fixed #3482837 Deactivate "play grid" if custom grid is invalid
+	- Fixed #3482836 Select-memos dialog should not always clear the cell value
+	- I18n the language dialog. Static language names (German => Deutsch).
+	- Fixed #3476292 TODO: Application logo for final release
+	- Fixed #3411638 Check the POEdit icon for "translate this app" icon
+
+ -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Fri, 3 Feb 2012 23:45:00 +0100
+
 sudokuki (1.0.900-1) unstable; urgency=low
 
 	* Sudokuki version 1.1.Beta9 ("Sudokuki", stable, Java Swing GUI)
