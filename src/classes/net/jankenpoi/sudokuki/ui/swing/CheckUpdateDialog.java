@@ -203,7 +203,7 @@ public class CheckUpdateDialog extends JDialog {
 	 *         <li>0 if the version is up-to-date</li>
 	 *         <li>1 if a new version is available</li>
 	 *         <li>-1 if an error occurred</li>
-	 *         <li>-2 if cancelled by the user</li>
+	 *         <li>-2 if canceled by the user</li>
 	 *         </ul>
 	 * 
 	 *         Must be executed in the EDT only (because it accesses
