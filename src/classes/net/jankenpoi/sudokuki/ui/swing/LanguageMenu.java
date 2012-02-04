@@ -86,21 +86,6 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                 localeListener = new LocaleListenerImpl(this);
                 I18n.addLocaleListener(localeListener);
         }
-
-        private final LocaleListener localeListener;
-		@Override
-		public void setL10nMessages(Locale locale, String languageCode) {
-			setText(_("Language"));
-            itemsMap.get("de").setText(_("German"));
-            itemsMap.get("el").setText(_("Greek"));
-            itemsMap.get("en").setText(_("English"));
-            itemsMap.get("eo").setText(_("Esperanto"));
-            itemsMap.get("es").setText(_("Spanish"));
-            itemsMap.get("fr").setText(_("French"));
-            itemsMap.get("ja").setText(_("Japanese"));
-            itemsMap.get("pt").setText(_("Portuguese"));
-            itemsMap.get("zh").setText(_("Mandarin"));
-		}
 		
         private final HashMap<String, Icon> icons = new HashMap<String, Icon>();
 
@@ -123,10 +108,6 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 
                 radioItem = new JRadioButtonMenuItem(language);
                 itemsMap.put(code, radioItem);
-                if (code.equals(code)) {
-                        radioItem.setSelected(true);
-                }
-//              System.out.println("LanguageMenu.addItem() icons.get(code):"+code+" "+icons.get(code));
                 radioItem.setAction(new AbstractAction(language, icons.get(code)) {
 
                         @Override
@@ -152,4 +133,33 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                 add(radioItem);
         }
 
+        private final LocaleListener localeListener;
+		@Override
+		public void setL10nMessages(Locale locale, String languageCode) {
+			setText(_("Language"));
+			
+			if (this.isSelected()) {
+				return;
+			}
+            refreshItem(languageCode, "de", "German");
+            refreshItem(languageCode, "el", "Greek");
+            refreshItem(languageCode, "en", "English");
+            refreshItem(languageCode, "eo", "Esperanto");
+            refreshItem(languageCode, "es", "Spanish");
+            refreshItem(languageCode, "fr", "French");
+            refreshItem(languageCode, "ja", "Japanese");
+            refreshItem(languageCode, "pt", "Portuguese");
+            refreshItem(languageCode, "zh", "Mandarin");
+		}
+
+		private void refreshItem(final String langCode, final String itemCode, final String langName) {
+			JRadioButtonMenuItem item = itemsMap.get(itemCode);
+			if (item != null) {
+				item.setText(_(langName));
+				if (itemCode.equals(langCode)) {
+					item.setSelected(true);
+				}
+			}
+		}
+        
 }
