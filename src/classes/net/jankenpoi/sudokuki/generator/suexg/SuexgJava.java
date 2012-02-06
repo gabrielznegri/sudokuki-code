@@ -123,7 +123,7 @@ class SuexgJava extends SuexgGenerator {
 	}
 
 	@Override
-	public SudokuGrid generateGrid(final int requestedRatingMin, final int requestedRatingMax) {
+	public synchronized SudokuGrid generateGrid(final int requestedRatingMin, final int requestedRatingMax) {
 		System.out.println("SuexgJava.generateGrid()");
 		Random rand = new Random(System.currentTimeMillis());
 
@@ -143,7 +143,7 @@ class SuexgJava extends SuexgGenerator {
 	}
 
 
-	public int
+	private int
 	gridGenerate(final int seed, final int requestedRatingMin, final int requestedRatingMax, final int[] grid, final int[] rating,
 			final int[] grid_with_clues) {
 

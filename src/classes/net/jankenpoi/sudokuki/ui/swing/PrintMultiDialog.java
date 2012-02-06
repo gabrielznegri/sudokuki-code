@@ -34,6 +34,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
+import net.jankenpoi.sudokuki.SudokuGrid;
+import net.jankenpoi.sudokuki.generator.SudokuGeneratorFactory;
+import net.jankenpoi.sudokuki.preferences.UserPreferences;
 import net.jankenpoi.sudokuki.view.GridView;
 /**
  * CheckUpdateDialog.java
@@ -158,7 +161,6 @@ public class PrintMultiDialog extends JDialog {
 	}
 	
 	private int generateFourGrids() {
-		System.out.println("PrintAction.actionPerformed() let try this out...");	
 		if (dialogCancelled()) {
 			return 1;
 		}
@@ -166,12 +168,26 @@ public class PrintMultiDialog extends JDialog {
 		if (dialogCancelled()) {
 			return 1;
 		}
-		job.setPrintable(new SwingMultiGrid());
+		final int minRating = UserPreferences.getInstance().getInteger("minRating", 0);
+		final int maxRating = UserPreferences.getInstance().getInteger("maxRating", Integer.MAX_VALUE);
+		SudokuGrid su1 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
+		if (dialogCancelled()) {
+			return 1;
+		}
+		SudokuGrid su2 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
+		if (dialogCancelled()) {
+			return 1;
+		}
+		SudokuGrid su3 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
+		if (dialogCancelled()) {
+			return 1;
+		}
+		SudokuGrid su4 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
+		job.setPrintable(new SwingMultiGrid(su1, su2, su3, su4));
 		if (dialogCancelled()) {
 			return 1;
 		}
 		boolean doPrint = job.printDialog();
-		System.out.println("SwingGrid.mouseExited() doPrint: "+doPrint);
 		if (doPrint) {
 			try {
 				if (dialogCancelled()) {

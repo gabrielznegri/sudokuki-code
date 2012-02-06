@@ -19,6 +19,4 @@ public abstract class SudokuGenerator {
 	
 	public abstract SudokuGrid generateGrid(final int minRating, final int maxRating);
 
-	public abstract SudokuGrid generateGrid();
-	
 }

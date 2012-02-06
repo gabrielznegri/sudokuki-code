@@ -54,7 +54,7 @@ class SuexgProxy extends SuexgGenerator {
 	}
 	
 	@Override
-	public SudokuGrid generateGrid(int minRating, int maxRating) {
+	public synchronized SudokuGrid generateGrid(int minRating, int maxRating) {
 		Random rand = new Random(System.currentTimeMillis());
 
 		int[] grid = new int[81];
@@ -74,9 +74,9 @@ class SuexgProxy extends SuexgGenerator {
 		return sudoku;
 	}
 	
-	native int generateSuexgGrid(int inSeed, int minRating, int maxRating, int[] outGrid, int[] outRating,
+	private native int generateSuexgGrid(int inSeed, int minRating, int maxRating, int[] outGrid, int[] outRating,
 			int[] outGridWithClues);
 
-	native int solveCustomGrid(int[] inGrid, int[] outGrid);
+	private native int solveCustomGrid(int[] inGrid, int[] outGrid);
 
 }

@@ -17,9 +17,5 @@ public abstract class SuexgGenerator extends SudokuGenerator {
 	public final static SudokuGenerator getInstance() {
 		return INSTANCE;
 	}
-
-	public SudokuGrid generateGrid() {
-		return generateGrid(0, 0);
-	}
 	
 }

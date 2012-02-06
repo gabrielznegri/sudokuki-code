@@ -53,18 +53,16 @@ public class SwingMultiGrid extends JPanel implements Printable {
 	private SudokuGrid su3;
 	private SudokuGrid su4;
 
-	SwingMultiGrid() {
+	SwingMultiGrid(SudokuGrid su1, SudokuGrid su2, SudokuGrid su3, SudokuGrid su4) {
 
 		setPreferredSize(new Dimension(columns[columns.length-1].getEnd()
 				- columns[0].getStart() + offX * 2, rows[rows.length-1].getEnd()
 				- rows[0].getStart() + offY * 2));
 
-		final int minRating = UserPreferences.getInstance().getInteger("minRating", 0);
-		final int maxRating = UserPreferences.getInstance().getInteger("maxRating", Integer.MAX_VALUE);
-		su1 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
-		su2 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
-		su3 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
-		su4 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
+		this.su1 = su1;
+		this.su2 = su2;
+		this.su3 = su3;
+		this.su4 = su4;
 	}
 
 	/**
