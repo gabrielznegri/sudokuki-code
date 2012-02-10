@@ -71,7 +71,6 @@ public class TextView extends GridView {
 	}
 
 	public void gridChanged(GridChangedEvent event) {
-		super.gridChanged(event);
 		System.out.println("TextView.gridChanged()");
 		display();
 	}
@@ -81,5 +80,17 @@ public class TextView extends GridView {
 		// TODO Auto-generated method stub
 
 	}
-	
+
+	@Override
+	public void gridComplete() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void gridResolved() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -51,8 +51,8 @@ public class GridController {
 		model.fireGridChanged(new GridChangedEvent(model, 0, 0, (short)0));
 	}
 	
-	public void notifyGridValueChanged(int li, int co, int value) {
-		model.setCellValue(li, co, value);
+	public void notifyGridValueChanged(int li, int co, int value, boolean silent) {
+		model.setCellValue(li, co, value, silent);
 	}
 
 	public void notifyGridMemosChanged(int li, int co, byte[] memos) {
@@ -113,10 +113,16 @@ public class GridController {
 		return model.asIntArray();
 	}
 
-	public void notifyGridComplete() {
-		model.setGridComplete();
+	public void notifyGridResolutionSuccess() {
+		notifyGridChanged();
+		model.setGridResolved();
 	}
 
+	public void notifyGridComplete() {
+		notifyGridChanged();
+		model.setGridComplete();
+	}
+	
 	private int lastLI = 4;
 	private int lastCO = 4;
 

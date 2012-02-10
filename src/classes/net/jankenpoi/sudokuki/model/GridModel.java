@@ -358,18 +358,23 @@ public class GridModel implements Cloneable {
 		cellInfos[9 * li + co] |= FLAG_CELL_READ_ONLY;
 	}
 
-	public void setCellValue(int li, int co, int value) {
-//		System.out.println("GridModel.setCellValue() li:" + li + " co:" + co
-//				+ " value:" + value);
-//		System.out.println("GridModel.setCellValue() cellInfos[9*li+co]:"
-//				+ cellInfos[9 * li + co]);
+	public void setCellValue(int li, int co, int value, boolean silent) {
 		cellInfos[9 * li + co] &= ~MASK_CELL_VALUES;
 		cellInfos[9 * li + co] |= value;
 		clearCellMemos(li, co);
-//		System.out.println("GridModel.setCellValue() cellInfos[9*li+co]:"
-//				+ cellInfos[9 * li + co] + " (after)...");
-		fireGridChanged(new GridChangedEvent(this, li, co, cellInfos[9 * li
+		
+		if (silent == false) {
+			fireGridChanged(new GridChangedEvent(this, li, co, cellInfos[9 * li
 				+ co]));
+		}
+		
+		if (!silent && isGridFull()) {
+			GridValidity validity = checkGridValidity();
+			if (validity.isGridValid()) {
+				setGridComplete();
+			}
+			fireGridChanged(new GridChangedEvent(this, 0, 0, (short)0));
+		}
 	}
 
 	public void fireGridChanged(GridChangedEvent event) {
@@ -384,18 +389,45 @@ public class GridModel implements Cloneable {
 	}
 
 	public boolean isCellReadOnly(int li, int co) {
-		// System.out.println("GridView.isCellReadOnly() cellInfos[9 * li + co]:"+cellInfos[9
-		// * li + co]);
 		return !isCustomGridModeON && (cellInfos[9 * li + co] & FLAG_CELL_READ_ONLY) != 0;
 	}
 
+	public boolean isGridFull() {
+		for (int li=0; li<9; li++) {
+			for (int co=0; co<9; co++) {
+				if (!isCellFilled(li, co)) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	
 	public boolean isGridComplete() {
 		System.out.println("GridModel.isGridComplete() is grid complete ? "+((cellInfos[0] & FLAG_GRID_COMPLETE) != 0));
 		return (cellInfos[0] & FLAG_GRID_COMPLETE) != 0;
 	}
 
+	public void setGridResolved() {
+		cellInfos[0] |= FLAG_GRID_COMPLETE;
+		fireGridResolved();
+	}
+	
+	private void fireGridResolved() {
+		for (GridListener listener : listeners) {
+			listener.gridResolved();
+		}
+	}
+	
 	public void setGridComplete() {
 		cellInfos[0] |= FLAG_GRID_COMPLETE;
+		fireGridComplete();
+	}
+
+	private void fireGridComplete() {
+		for (GridListener listener : listeners) {
+			listener.gridComplete();
+		}
 	}
 	
 	public byte getValueAt(int li, int co) {
@@ -443,7 +475,7 @@ public class GridModel implements Cloneable {
 	}
 	
 	public GridValidity getGridValidity() {
-		if (!isCustomGridModeON) {
+		if (!isCustomGridModeON && !isGridFull()) {
 			return GridValidity.VALID;
 		}
 		return checkGridValidity();
@@ -499,7 +531,7 @@ public class GridModel implements Cloneable {
 		public boolean isGridValid() {
 			return isValid;
 		}
-		
+				
 		public Integer getFirstErrorLine() {
 			return firstErrorLine;
 		}

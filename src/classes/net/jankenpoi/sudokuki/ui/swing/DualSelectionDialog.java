@@ -17,17 +17,11 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import java.util.Arrays;
-import java.util.Locale;
 import static net.jankenpoi.i18n.I18n._;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
-
-import net.jankenpoi.i18n.I18n;
-import net.jankenpoi.i18n.LocaleListener;
-import net.jankenpoi.sudokuki.ui.L10nComponent;
 
 @SuppressWarnings("serial")
 public class DualSelectionDialog extends JDialog {

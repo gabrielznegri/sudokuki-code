@@ -39,8 +39,7 @@ public abstract class GridView implements GridListener {
 	}
 
 	@Override
-	public void gridChanged(GridChangedEvent event) {
-	}
+	public abstract void gridChanged(GridChangedEvent event);
 
 	public abstract void display();
 

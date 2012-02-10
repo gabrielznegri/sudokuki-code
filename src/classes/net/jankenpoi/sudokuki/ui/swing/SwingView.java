@@ -17,15 +17,18 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
+import static net.jankenpoi.i18n.I18n._;
+
 import java.awt.BorderLayout;
 
 import javax.swing.Action;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 
+import net.jankenpoi.sudokuki.Version;
 import net.jankenpoi.sudokuki.model.GridChangedEvent;
 import net.jankenpoi.sudokuki.model.GridModel;
-import net.jankenpoi.sudokuki.model.GridModel.GridValidity;
 import net.jankenpoi.sudokuki.view.GridView;
 
 public class SwingView extends GridView {
@@ -85,12 +88,12 @@ public class SwingView extends GridView {
 	}
 
 	public void gridChanged(final GridChangedEvent event) {
-		super.gridChanged(event);
 
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				GridModel model = (GridModel) event.getSource();
+				grid.repaint();
 				
+				GridModel model = (GridModel) event.getSource();
 				refreshSaveAsAction(model);
 				refreshPrintGridAction(model);
 				refreshClearAllMovesAction(model);
@@ -102,11 +105,34 @@ public class SwingView extends GridView {
 				refreshResolveAction(model);
 				refreshCustomGridAction(model);
 				refreshPlayCustomGridAction(model);
-				
-				grid.repaint();
 			}
 
 		});
+	}
+	
+	@Override
+	public void gridComplete() {
+		JOptionPane.showMessageDialog(frame, 
+		"<html>"
+        + "<table border=\"0\">"
+        + "<tr>"
+        + "<td align=\"center\"><b>"
+        + _("Congratulations!")
+        + "</b></td>"
+        + "</tr>"
+        + "<tr>"
+        + "</tr>"
+        + "<tr>"
+        + "<td align=\"center\">"
+        + _("Grid complete!") + "</td>"
+        + "</tr>" + "</table>" + "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	@Override
+	public void gridResolved() {
+		JOptionPane.showMessageDialog(frame, "<html>" + "<table border=\"0\">"
+				+ "<tr>" + _("Grid resolved with success.") + "</tr>"
+				+ "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
 	}
 	
 	private void refreshSaveAsAction(GridModel model) {
@@ -162,7 +188,7 @@ public class SwingView extends GridView {
 			return;
 		}
 		Action customGridAction = actions.get("CustomGrid"); 
-		customGridAction.setEnabled(!model.isGridComplete() && !model.getCustomGridMode());
+		customGridAction.setEnabled(!model.isGridComplete() && !model.getCustomGridMode() && !model.isGridFull());
 	}
 
 	private void refreshPlayCustomGridAction(GridModel model) {

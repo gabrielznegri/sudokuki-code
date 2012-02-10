@@ -51,10 +51,6 @@ public class ResolveAction extends AbstractAction {
 		System.out.println("ResolveAction.actionPerformed() result:"+result);
 		if (result == 0) {
 			setEnabled(false);
-			JOptionPane.showMessageDialog(frame, "<html>"
-					+ "<table border=\"0\">" + "<tr>"
-					+ _("Grid resolved with success.") + "</tr>"
-					+ "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
 		} else if (result == 2) {
 			JOptionPane.showMessageDialog(frame, "<html>"
 					+ "<table border=\"0\">" + "<tr>"

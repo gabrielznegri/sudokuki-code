@@ -33,7 +33,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 import net.jankenpoi.sudokuki.SudokuGrid;
-import net.jankenpoi.sudokuki.generator.SudokuGeneratorFactory;
 import net.jankenpoi.sudokuki.preferences.UserPreferences;
 
 public class SwingMultiGrid extends JPanel implements Printable {

@@ -236,7 +236,6 @@ public class SwingGrid extends JPanel implements Printable {
 	}
 	
 	private void paintPlayerNumbers(Graphics2D g2, boolean kanjiMode) {
-		g2.setColor(Color.BLUE);
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		Font font = new Font("Serif", Font.PLAIN, FONT_SIZE- (kanjiMode?4:0));
@@ -259,7 +258,11 @@ public class SwingGrid extends JPanel implements Printable {
 									((firstErrorSquareY != null && firstErrorSquareY <= li && li < firstErrorSquareY + 3)))) {
 						g2.setColor(Color.RED);
 					} else {
-						g2.setColor(Color.BLUE);
+						if (view.isGrigComplete()) {
+							g2.setColor(Color.DARK_GRAY);
+						} else {
+							g2.setColor(Color.BLUE);
+						}
 					}
 					
 					g2.drawString(getValueAsStringAt(li, co, kanjiMode), pos.x, pos.y);
@@ -530,7 +533,7 @@ public class SwingGrid extends JPanel implements Printable {
 			selected = 0; // Clear the value
 		}
 		if (0 <= selected && selected <= 9) {
-			view.getController().notifyGridValueChanged(li, co, selected);
+			view.getController().notifyGridValueChanged(li, co, selected, false);
 		}
 
 		// Handle possible memos selection

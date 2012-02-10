@@ -25,4 +25,8 @@ public interface GridListener extends EventListener {
 
 	public void gridChanged(GridChangedEvent event);
 
+	public void gridComplete();
+	
+	public void gridResolved();
+
 }

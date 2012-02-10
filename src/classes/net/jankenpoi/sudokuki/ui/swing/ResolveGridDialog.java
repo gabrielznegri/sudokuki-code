@@ -82,12 +82,8 @@ public class ResolveGridDialog extends JDialog {
 			@Override
 			/* Executed in the EDT, triggered when the SwingWorker has completed */
 			protected void done() {
-				boolean isResolved = false;
 				try {
 					status = get();
-					if (status == 0) {
-						isResolved = true;
-					}
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 					return;
@@ -95,7 +91,6 @@ public class ResolveGridDialog extends JDialog {
 					e.printStackTrace();
 					return;
 				}
-				view.getController().notifyGridChanged();
 				dispose();
 			}
 		};
@@ -169,10 +164,10 @@ public class ResolveGridDialog extends JDialog {
 			for (int li = 0; li < 9; li++) {
 				for (int co = 0; co < 9; co++) {
 					byte value = solGrid.getValueAt(li, co);
-					view.getController().notifyGridValueChanged(li, co, value);
+					view.getController().notifyGridValueChanged(li, co, value, true);
 				}
 			}
-			view.getController().notifyGridComplete();
+			view.getController().notifyGridResolutionSuccess();
 			/**
 			 * RESOLUTION SUCCESSFULL
 			 */
