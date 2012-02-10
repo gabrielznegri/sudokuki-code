@@ -404,7 +404,6 @@ public class GridModel implements Cloneable {
 	}
 	
 	public boolean isGridComplete() {
-		System.out.println("GridModel.isGridComplete() is grid complete ? "+((cellInfos[0] & FLAG_GRID_COMPLETE) != 0));
 		return (cellInfos[0] & FLAG_GRID_COMPLETE) != 0;
 	}
 
@@ -562,7 +561,6 @@ public class GridModel implements Cloneable {
 			byte[] numbers = new byte[10];
 			for (int co = 0; co < 9; co++) {
 				byte value = getValueAt(li, co);
-				System.out.println("GridModel.checkGridValidity() //lines// value:"+value);
 				if (numbers[value] != 0) {
 					isValid = false;
 					lineWithError = Integer.valueOf(li);
@@ -576,7 +574,6 @@ public class GridModel implements Cloneable {
 			byte[] numbers = new byte[10];
 			for (int li = 0; li < 9; li++) {
 				byte value = getValueAt(li, co);
-				System.out.println("GridModel.checkGridValidity() //columns// value:"+value);
 				if (numbers[value] != 0) {
 					isValid = false;
 					columnWithError = Integer.valueOf(co);
@@ -596,7 +593,6 @@ public class GridModel implements Cloneable {
 						byte value = getValueAt(li, co);
 						if (numbers[value] != 0) {
 							isValid = false;
-							System.out.println("GridModel.checkGridValidity() is not valid SQUARE");
 							squareWithErrorX = Integer.valueOf(X);
 							squareWithErrorY = Integer.valueOf(Y);
 							break;

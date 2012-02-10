@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokuki 1.1.Beta9\n"
+"Project-Id-Version: sudokuki 1.1.Beta10\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-02-03 22:49+0100\n"
+"POT-Creation-Date: 2012-02-11 00:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,7 +148,7 @@ msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:44
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:63
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java:45
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java:39
 msgid "Memos"
 msgstr ""
 
@@ -197,11 +197,11 @@ msgid "Please wait..."
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:173
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:117
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:120
 msgid "Cancel"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java:44
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java:38
 msgid "Select"
 msgstr ""
 
@@ -324,7 +324,7 @@ msgstr ""
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:53
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:129
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:82
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:93
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:139
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:95
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:103
 msgid "Language"
@@ -346,68 +346,59 @@ msgstr ""
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:97
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:131
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:94
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:109
 msgid "German"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:98
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:132
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:95
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:110
 msgid "Greek"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:99
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:133
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:96
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:111
 msgid "English"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:100
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:134
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:97
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:112
 msgid "Esperanto"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:101
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:135
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:98
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:113
 msgid "Spanish"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:102
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:136
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:99
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:114
 msgid "French"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:103
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:137
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:100
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:115
 msgid "Japanese"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:104
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:138
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:101
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:116
 msgid "Portuguese"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:105
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:117
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:102
 msgid "Russian"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:106
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:139
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:102
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:118
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:103
 msgid "Mandarin"
 msgstr ""
 
@@ -481,23 +472,19 @@ msgstr ""
 msgid "Sudokuki grid files"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:110
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:113
 msgid "Generating and sending four grids"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:115
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:118
 msgid "to the printer..."
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveAction.java:56
-msgid "Grid resolved with success."
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveAction.java:61
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveAction.java:57
 msgid "This grid has no solution."
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:117
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:112
 msgid "Grid resolution in progress..."
 msgstr ""
 
@@ -507,6 +494,18 @@ msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101
 msgid "Clear memos"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:120
+msgid "Congratulations!"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:127
+msgid "Grid complete!"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:134
+msgid "Grid resolved with success."
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:83

@@ -19,5 +19,6 @@
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java
+./src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java
 ./src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java
