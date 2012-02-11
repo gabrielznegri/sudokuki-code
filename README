@@ -2,11 +2,13 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2012-02-11 - released Sudokuki 1.1.Beta11
 - Fixed #3476292 TODO: Application logo for final release
 - Fixed #3485100 Cancelling 4 grids generation doesn't have expected effect
 - Improved aspect of 'resolve grid dialog'
 - Fixed LanguageMenu not in sync with actual locale if changed from LanguageDialog
-
+- Fixed #3485144 When grid is full but wrong, errors should be shown in red
+- Fixed #3485142 Nothing happens when the grid is complete
 
 * 2012-02-03 - released Sudokuki 1.1.Beta10
 - Updated french translations.

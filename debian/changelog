@@ -1,203 +1,217 @@
+sudokuki (1.0.910-2) unstable; urgency=low
+
+ * Sudokuki version 1.1.Beta11 ("Sudokuki", stable, Java Swing GUI)
+
+ Fixed the following bug(s):
+ - Fixed #3476292 TODO: Application logo for final release
+ - Fixed #3485100 Cancelling 4 grids generation doesn't have expected effect
+ - Improved aspect of 'resolve grid dialog'
+ - Fixed LanguageMenu not in sync with actual locale if changed from LanguageDialog
+ - Fixed #3485144 When grid is full but wrong, errors should be shown in red
+ - Fixed #3485142 Nothing happens when the grid is complete
+
+ -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Fri, 11 Feb 2012 23:40:00 +0100
+
 sudokuki (1.0.910-1) unstable; urgency=low
 
-        * Sudokuki version 1.1.Beta10 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta10 ("Sudokuki", stable, Java Swing GUI)
 
-        Fixed the following bug(s):
-	- Updated french translations.
-	- Fixed #3432039 TODO: add necessary L10n strings
-	- Fixed #3482839 Exit Custom Grid Mode in case New/Open grid is selected
-	- Fixed #3482838 Actions to deactivate when in normal "custom grid" mode
-	- Fixed #3482837 Deactivate "play grid" if custom grid is invalid
-	- Fixed #3482836 Select-memos dialog should not always clear the cell value
-	- I18n the language dialog. Static language names (German => Deutsch).
-	- Fixed #3476292 TODO: Application logo for final release
-	- Fixed #3411638 Check the POEdit icon for "translate this app" icon
+ Fixed the following bug(s):
+ - Updated french translations.
+ - Fixed #3432039 TODO: add necessary L10n strings
+ - Fixed #3482839 Exit Custom Grid Mode in case New/Open grid is selected
+ - Fixed #3482838 Actions to deactivate when in normal "custom grid" mode
+ - Fixed #3482837 Deactivate "play grid" if custom grid is invalid
+ - Fixed #3482836 Select-memos dialog should not always clear the cell value
+ - I18n the language dialog. Static language names (German => Deutsch).
+ - Fixed #3476292 TODO: Application logo for final release
+ - Fixed #3411638 Check the POEdit icon for "translate this app" icon
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Fri, 3 Feb 2012 23:45:00 +0100
 
 sudokuki (1.0.900-1) unstable; urgency=low
 
-	* Sudokuki version 1.1.Beta9 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta9 ("Sudokuki", stable, Java Swing GUI)
 
-	Fixed the following bug(s):
-	- #3469259 Make smaller Jar/Zip distributions
-	- #3464115 MS-Windows: ENTER invokes input dialog after discarding it
+ Fixed the following bug(s):
+ - #3469259 Make smaller Jar/Zip distributions
+ - #3464115 MS-Windows: ENTER invokes input dialog after discarding it
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Mon, 16 Jan 2012 23:55:00 +0100
 
 sudokuki (1.0.800-1) unstable; urgency=low
 
-        * Sudokuki version 1.1.Beta8 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta8 ("Sudokuki", stable, Java Swing GUI)
 
-        Fixed the following bug(s):
-        - Fixed #3411639 Memos shouldn't be retained if the user pressed ESC
-        - Fixed #3462544 Playing with the keyboard is not easy enough
-        - Fixed #3411640 Pressing ENTER on Memos dialog has no effect
+ Fixed the following bug(s):
+ - Fixed #3411639 Memos shouldn't be retained if the user pressed ESC
+ - Fixed #3462544 Playing with the keyboard is not easy enough
+ - Fixed #3411640 Pressing ENTER on Memos dialog has no effect
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Thu, 22 Dec 2011 01:04:00 +0100
 
 sudokuki (1.0.700-1) unstable; urgency=low
 
-        * Sudokuki version 1.1.Beta7 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta7 ("Sudokuki", stable, Java Swing GUI)
 
-        Fixed the following bug(s):
-	- Dev #3440869 IMPROVE:Make one single input dialog for memos and numbers
-	- Fixed #3447362 Wrong cell for "Set memos here" (except if right mouse btn)
-	- Fixed #3447520 Debian package: fix location for JAR file
+ Fixed the following bug(s):
+ - Dev #3440869 IMPROVE:Make one single input dialog for memos and numbers
+ - Fixed #3447362 Wrong cell for "Set memos here" (except if right mouse btn)
+ - Fixed #3447520 Debian package: fix location for JAR file
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Thu, 03 Dec 2011 03:38:00 +0100
 
 sudokuki (1.0.600-1) unstable; urgency=low
 
-	* Sudokuki version 1.1.Beta6 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta6 ("Sudokuki", stable, Java Swing GUI)
 
-	Fixed the following bug(s):
-	- Fixed #3445643 Regression: on MS-Windows "Save As" has no effect
-	- Fixed #3447468 Exception on the AWT if mouse clicks on the grid margins
-	- Fixed #3406698 Ensure the suexg lib can be loaded
-	- Fixed #3432067 Open grid:Missing error dialog in case the file is not found
-	- Fixed #3432051 Forbid "custom grid" after the grid was resolved
+ Fixed the following bug(s):
+ - Fixed #3445643 Regression: on MS-Windows "Save As" has no effect
+ - Fixed #3447468 Exception on the AWT if mouse clicks on the grid margins
+ - Fixed #3406698 Ensure the suexg lib can be loaded
+ - Fixed #3432067 Open grid:Missing error dialog in case the file is not found
+ - Fixed #3432051 Forbid "custom grid" after the grid was resolved
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Thu, 01 Dec 2011 23:48:00 +0100
 
-sudokuk (1.0.500-1) unstable; urgency=low
+sudokuki (1.0.500-1) unstable; urgency=low
 
-        * Sudokuki version 1.1.Beta5 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta5 ("Sudokuki", stable, Java Swing GUI)
 
-       Rewrote Sudokuki in Java with a Swing graphical user interface.
-       Added Debian package build support for Sudokuki 1.1.Beta5.
+ Rewrote Sudokuki in Java with a Swing graphical user interface.
+ Added Debian package build support for Sudokuki 1.1.Beta5.
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Mon, 29 Nov 2011 01:00:00 +0100
 
 sudokuki (1.0.0-1) unstable; urgency=low
 	
-        * Sudokuki version 1.0.0 ("Sudokuki", stable, Gtkmm GUI)
+ * Sudokuki version 1.0.0 ("Sudokuki", stable, Gtkmm GUI)
 
-       Fixed the following bug(s):
-        - 2798611 "Edit/Lang","Edit/numbers" unavailable after Custom+New
-        - 2797875 "Save grid as..." and "Print" unavailable after Custom + New
-        - 2797600 Position of "Open grid" and "Save grid" dialogs
-        - 2797599 "Discard grid?" dialog remains after "custom grid" action
-        - 2796991 Keep same window position when changing language or numbers
-        - 2796986 "Discard grid?" dialog: leave it until the new grid is ready
+ Fixed the following bug(s):
+ - 2798611 "Edit/Lang","Edit/numbers" unavailable after Custom+New
+ - 2797875 "Save grid as..." and "Print" unavailable after Custom + New
+ - 2797600 Position of "Open grid" and "Save grid" dialogs
+ - 2797599 "Discard grid?" dialog remains after "custom grid" action
+ - 2796991 Keep same window position when changing language or numbers
+ - 2796986 "Discard grid?" dialog: leave it until the new grid is ready
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Thu, 04 Jun 2009 00:20:00 +0100
 	
 sudokuki (0.9.14-1) unstable; urgency=low
 
-        * Sudokuki version 0.9.14 ("Sudokuki", stable, Gtkmm GUI)
+ * Sudokuki version 0.9.14 ("Sudokuki", stable, Gtkmm GUI)
 
-       Fixed the following bug(s):
-	- 2796157 "Resolve cell" unavailable in pop up menu on first line
-        - 2795456 "New game" while in custom grid mode doen't behave well
-        - 2795379 Should not allow opening files other than .ski files
-        - 2795372 In the menu, "Resolve cell" available after filling cell
-        - 2795364 Play custom grid: resolve cell is always available
-        - 2795360 Should not be possible to Undo custom grid values!
-        - 2795287 Resolve cell must be deactivated while composing custom grid
-        - 2795081 "Open a sudokuki grid file..." cannot be translated
-        - 2795080 "Save sudokuki grid to a file..." cannot be translated
-        - 2794984 Incorrect custom grid resolved after changing kanji mode
-        - 2794448 Deactivate "Resolve cell" when user fills current cell
-        - 2794447 Activate "Resolve cell" upon Undo emptying current cell
+ Fixed the following bug(s):
+ - 2796157 "Resolve cell" unavailable in pop up menu on first line
+ - 2795456 "New game" while in custom grid mode doen't behave well
+ - 2795379 Should not allow opening files other than .ski files
+ - 2795372 In the menu, "Resolve cell" available after filling cell
+ - 2795364 Play custom grid: resolve cell is always available
+ - 2795360 Should not be possible to Undo custom grid values!
+ - 2795287 Resolve cell must be deactivated while composing custom grid
+ - 2795081 "Open a sudokuki grid file..." cannot be translated
+ - 2795080 "Save sudokuki grid to a file..." cannot be translated
+ - 2794984 Incorrect custom grid resolved after changing kanji mode
+ - 2794448 Deactivate "Resolve cell" when user fills current cell
+ - 2794447 Activate "Resolve cell" upon Undo emptying current cell
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Sun, 24 May 2009 23:47:00 +0100
 
 sudokuki (0.9.13-1) unstable; urgency=low
 
-        * Sudokuki version 0.9.13 ("Sudokuki", stable, Gtkmm GUI)
+ * Sudokuki version 0.9.13 ("Sudokuki", stable, Gtkmm GUI)
 
-       Implemented the following feature(s):
-        - 2793552 Print preferences: show a simple information dialog
+ Implemented the following feature(s):
+ - 2793552 Print preferences: show a simple information dialog
 
-       Fixed the following bug(s):
-        - 2789531 Should not be possible to enter values after resolve game!
-        - 2789532 Can enter a value from context menu on a non-empty cells!
-        - 2789809 Regression:if there are user values, crash when solving game
-        - 2715501 Undo doesn't behave correctly after "Resolve cell"
-        - 2789530 Win32FullPackage with more recent gtk/gtkmm dlls
-        - 2172819 Impossible to cancel when entering a dead end upon first go
-        - 2791441 "One of your moves is in the way" remaining...
-        - 2015967 Dead end detection incomplete
-        - 2791435 Changing kanji mode allows playing though in a dead end
-        - 2793555 Custom grid values should be in black
-        - 2793552 Print preferences: show a simple information dialog
-        - 2793551 Impossible to Undo / Clear All after changing kanji/language
-        - 2652376 Many strings cannot be localized
-        - 2794092 Resolve_cell action should be deactivated after Resolve
+ Fixed the following bug(s):
+ - 2789531 Should not be possible to enter values after resolve game!
+ - 2789532 Can enter a value from context menu on a non-empty cells!
+ - 2789809 Regression:if there are user values, crash when solving game
+ - 2715501 Undo doesn't behave correctly after "Resolve cell"
+ - 2789530 Win32FullPackage with more recent gtk/gtkmm dlls
+ - 2172819 Impossible to cancel when entering a dead end upon first go
+ - 2791441 "One of your moves is in the way" remaining...
+ - 2015967 Dead end detection incomplete
+ - 2791435 Changing kanji mode allows playing though in a dead end
+ - 2793555 Custom grid values should be in black
+ - 2793552 Print preferences: show a simple information dialog
+ - 2793551 Impossible to Undo / Clear All after changing kanji/language
+ - 2652376 Many strings cannot be localized
+ - 2794092 Resolve_cell action should be deactivated after Resolve
 	
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Thu, 21 May 2009 23:47:00 +0100
 
 sudokuki (0.9.12-1) unstable; urgency=low
 
-	* Sudokuki version 0.9.12 ("Sudokuki", almost stable, Gtkmm GUI)
+ * Sudokuki version 0.9.12 ("Sudokuki", almost stable, Gtkmm GUI)
 
-       Implemented the following feature(s):
-        - <none>
+ Implemented the following feature(s):
+ - <none>
 
-       Fixed the following bug(s):
-        - 2747982 [r403]Saved game user played values should be in "blue"
-        - #2118524 0.7.0_Gtkmm Dead-end message remaining
-        - #2715501 Undo doesn't behave correctly after "Resolve cell"
-	- #2789811 win32FullPackage.zip : incorrect _bold_ ka
-	- #2789531 Should not be possible to enter values after resolve game!
+ Fixed the following bug(s):
+ - 2747982 [r403]Saved game user played values should be in "blue"
+ - #2118524 0.7.0_Gtkmm Dead-end message remaining
+ - #2715501 Undo doesn't behave correctly after "Resolve cell"
+ - #2789811 win32FullPackage.zip : incorrect _bold_ ka
+ - #2789531 Should not be possible to enter values after resolve game!
 	
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Fri, 15 May 2009 23:47:00 +0100
 
 sudokuki (0.9.11-1) unstable; urgency=low
 
-	* Sudokuki version 0.9.11 ("Sudokuki", almost stable, Gtkmm GUI)
+ * Sudokuki version 0.9.11 ("Sudokuki", almost stable, Gtkmm GUI)
 
-       Implemented the following feature(s):
-        - Level selection
+ Implemented the following feature(s):
+ - Level selection
 
-       Fixed the following bug(s):
-	- 2406808 [092]Change_language after Resolve goes back to play status
+ Fixed the following bug(s):
+ - 2406808 [092]Change_language after Resolve goes back to play status
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Mon, 24 Apr 2009 23:47:00 +0100
 
 sudokuki (0.9.10-1) unstable; urgency=low
 
-	* Sudokuki version 0.9.10 ("Sudokuki", almost stable, Gtkmm GUI)
+ * Sudokuki version 0.9.10 ("Sudokuki", almost stable, Gtkmm GUI)
 
-	Implemented the following features:
-        - Added a popup menu for "Resolve cell" feature (Claus Poerschke).
-        - 2406830 Allow playing only with the mouse (Sylvain Vedrenne).
-        - 2715495 reinit the grid after kanji/numbers change
+ Implemented the following features:
+ - Added a popup menu for "Resolve cell" feature (Claus Poerschke).
+ - 2406830 Allow playing only with the mouse (Sylvain Vedrenne).
+ - 2715495 reinit the grid after kanji/numbers change 
 
-	Fixed the following bugs:
-        - 2118521 Print action => 2 browser instead of 1
-        - 2715510 Changing language to "ja" when in kanjimode crashes
+ Fixed the following bugs:
+ - 2118521 Print action => 2 browser instead of 1
+ - 2715510 Changing language to "ja" when in kanjimode crashes
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Sun, 19 Apr 2009 23:40:00 +0100
 
 sudokuki (0.9.9-2) unstable; urgency=low
 
-	* Fixed build problem related to debug traces.
+ * Fixed build problem related to debug traces.
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Mon, 13 Apr 2009 22:30:00 +0100
 	
 sudokuki (0.9.9-1) unstable; urgency=low
 	
-  * Added a nice "resolve cell" feature, thanks to Claus Poerschke,
-  and fixed some side effects that appeared with this modification.
-  * Added "kanji mode" allowing the user to play with kanji numbers.
-  * Changed fonts, now using "dark green" color for resolved cells.
-  * Cleaned up some traces, centralized traces definition in one include.
-  * Updated German translations from Claus Poerschke.
+ * Added a nice "resolve cell" feature, thanks to Claus Poerschke,
+   and fixed some side effects that appeared with this modification.
+ * Added "kanji mode" allowing the user to play with kanji numbers.
+ * Changed fonts, now using "dark green" color for resolved cells.
+ * Cleaned up some traces, centralized traces definition in one include.
+ * Updated German translations from Claus Poerschke.
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Sun, 12 Apr 2009 21:00:00 +0100
 	
 sudokuki (0.9.8-1) unstable; urgency=low
 
-  * Added German translations.
-  * Marked missing strings as gettextized using '_( )'.	
+ * Added German translations.
+ * Marked missing strings as gettextized using '_( )'.	
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Sun, 01 Mar 2009 20:00:00 +0100
 
 sudokuki (0.9.7-1) experimental; urgency=low
 
-  * Initial release as a Debian package.
+ * Initial release as a Debian package.
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Wed, 11 Feb 2009 23:09:30 +0100
 
