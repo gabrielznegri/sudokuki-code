@@ -113,7 +113,7 @@ public class ResolveGridDialog extends JDialog {
 		+ "</html>");
 		
 		JLabel messageLbl3 = new JLabel("");
-		JButton cancelBtn = new JButton("Cancel");
+		JButton cancelBtn = new JButton(_("Cancel"));
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		cancelBtn.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
