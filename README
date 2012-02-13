@@ -2,6 +2,9 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+
+- German translations for Sudokuki 1.1 from Claus Poerschke
+
 * 2012-02-11 - released Sudokuki 1.1.Beta11
 - Fixed #3485100 Cancelling 4 grids generation doesn't have expected effect
 - Improved aspect of 'resolve grid dialog'
