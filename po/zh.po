@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.0.A39\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-02-11 23:25+0100\n"
+"POT-Creation-Date: 2012-02-15 22:31+0100\n"
 "PO-Revision-Date: 2011-09-16 16:27+0100\n"
 "Last-Translator: Sylvain Vedrenne <sylvain.vedrenne@free.fr>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -199,6 +199,7 @@ msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:173
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:120
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:116
 msgid "Cancel"
 msgstr ""
 
