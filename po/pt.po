@@ -363,19 +363,19 @@ msgstr "pt"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:131
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:94
 msgid "German"
-msgstr "Alemão"
+msgstr "Deutsch"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:98
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:132
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:95
 msgid "Greek"
-msgstr "Grego"
+msgstr "Eλληνικά"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:99
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:133
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:96
 msgid "English"
-msgstr "Inglês"
+msgstr "English"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:100
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:134
@@ -387,19 +387,19 @@ msgstr "Esperanto"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:135
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:98
 msgid "Spanish"
-msgstr "Espanhol"
+msgstr "Español"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:102
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:136
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:99
 msgid "French"
-msgstr "Francês"
+msgstr "Français"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:103
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:137
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:100
 msgid "Japanese"
-msgstr "Japonês"
+msgstr "日本語"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:104
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:138
@@ -410,13 +410,13 @@ msgstr "Português"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:105
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:102
 msgid "Russian"
-msgstr "Rússo"
+msgstr "Русский"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:106
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:139
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:103
 msgid "Mandarin"
-msgstr "Mandarin"
+msgstr "中文"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:52
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:101

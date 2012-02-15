@@ -372,37 +372,37 @@ msgstr "Eλληνικά"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:133
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:96
 msgid "English"
-msgstr "Английский"
+msgstr "English"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:100
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:134
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:97
 msgid "Esperanto"
-msgstr "Эсперанто"
+msgstr "Esperanto"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:101
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:135
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:98
 msgid "Spanish"
-msgstr "Испанский"
+msgstr "Español"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:102
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:136
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:99
 msgid "French"
-msgstr "Французкий"
+msgstr "Français"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:103
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:137
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:100
 msgid "Japanese"
-msgstr "Японский"
+msgstr "日本語"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:104
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:138
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:101
 msgid "Portuguese"
-msgstr "Португальский"
+msgstr "Português"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:105
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:102
@@ -413,7 +413,7 @@ msgstr "Русский"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:139
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:103
 msgid "Mandarin"
-msgstr "Северокитайский"
+msgstr "中文"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:52
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:101
