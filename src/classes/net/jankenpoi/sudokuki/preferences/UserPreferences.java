@@ -23,7 +23,6 @@ public class UserPreferences {
 	
 	public final Integer getInteger(String name, Integer defaultInteger) {
 		Object obj = map.get(name);
-		System.out.println("UserPreferences.getInteger("+name+") found obj:"+obj);
 		if (!(obj instanceof Integer)) {
 			return defaultInteger;
 		}
@@ -33,7 +32,6 @@ public class UserPreferences {
 	
 	public final Boolean getBoolean(String name, Boolean defaultBoolean) {
 		Object obj = map.get(name);
-		System.out.println("UserPreferences.getBoolean("+name+") found obj:"+obj);
 		if (!(obj instanceof Boolean)) {
 			return defaultBoolean;
 		}

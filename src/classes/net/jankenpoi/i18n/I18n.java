@@ -53,7 +53,6 @@ public class I18n {
 					catalog = null;
 				}
 			}
-			System.out.println("I18n using locale: " + currentLocale);
 		}
 	}
 

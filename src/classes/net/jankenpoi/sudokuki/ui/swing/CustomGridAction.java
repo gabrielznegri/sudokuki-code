@@ -33,7 +33,6 @@ public class CustomGridAction extends AbstractAction {
 	public CustomGridAction(JFrame parent, String text, Icon icon,
 			String desc, Integer mnemonic, GridView view) {
 		super(text, icon);
-		System.out.println("CustomGridAction.CustomGridAction()");
 		
 		putValue(SHORT_DESCRIPTION, desc);
 		putValue(MNEMONIC_KEY, mnemonic);
@@ -43,7 +42,6 @@ public class CustomGridAction extends AbstractAction {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("CustomGridAction.actionPerformed()");
 		view.getController().notifyEnterCustomGridMode();
 	}
 

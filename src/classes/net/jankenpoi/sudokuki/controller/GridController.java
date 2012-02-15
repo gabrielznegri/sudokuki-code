@@ -81,7 +81,6 @@ public class GridController {
 	}
 	
 	public void notifyEnterCustomGridMode() {
-//		System.out.println("GridController.notifyEnterCustomGridMode()");
 		model.enterCustomGridMode();
 	}
 	
@@ -127,8 +126,6 @@ public class GridController {
 	private int lastCO = 4;
 
 	public void notifyFocusPositionChanged(int li, int co) {
-		System.out.println("GridController.notifyGridPositionChanged() li:"
-				+ li + " co:" + co);
 		lastLI = li;
 		lastCO = co;
 	}

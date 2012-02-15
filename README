@@ -2,9 +2,10 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
-
-- Esperanto translations for Sudokuki 1.1 (from Sylvain Vedrenne)
-- German translations for Sudokuki 1.1 from Claus Poerschke
+- Fixed issue where "ENTER" doesn't close language dialog, and minor sync issue 
+- Portuguese and russian translations for Sudokuki 1.1 (by Dmitry Salnikov) 
+- Esperanto translations for Sudokuki 1.1 (by Sylvain Vedrenne)
+- German translations for Sudokuki 1.1 ( byClaus Poerschke)
 
 * 2012-02-11 - released Sudokuki 1.1.Beta11
 - Fixed #3485100 Cancelling 4 grids generation doesn't have expected effect

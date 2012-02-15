@@ -73,20 +73,9 @@ public class CheckUpdateDialog extends JDialog {
 			try {
 				String httpVersionString = get();
 
-				System.out
-						.println("SwingApp.getHttpLatestVersionString() (embedded) Version.versionString:"
-								+ Version.versionString);
-				System.out
-						.println("SwingApp.getHttpLatestVersionString()  retrieved         versionString:"
-								+ httpVersionString);
-
 				if (httpVersionString.equals(Version.versionString)) {
-					System.out
-							.println("SwingApp.getHttpLatestVersionString() This version is up-to-date");
 					result = 0;
 				} else if (httpVersionString.startsWith("Sudokuki")) {
-					System.out
-							.println("SwingApp.getHttpLatestVersionString() This version is outdated. Please download the latest version from Sourceforge.");
 					checkUpdateAction.notifyNewVersionFound();
 					result = 1;
 				}
@@ -133,7 +122,6 @@ public class CheckUpdateDialog extends JDialog {
 					e.printStackTrace();
 				}
 			}
-			System.out.println("getHttpLatestVersionString() line:" + line);
 			String versionString = "";
 			if (line != null) {
 				String[] strs = line.split(" is the latest version.");
@@ -192,10 +180,7 @@ public class CheckUpdateDialog extends JDialog {
 	}
 
 	private void cancelButtonClicked() {
-		System.out.println("CheckUpdateDialog.cancelButtonClicked()");
 		boolean cancelled = worker.cancel(true);
-		System.out.println("CheckUpdateDialog.cancelButtonClicked() cancelled:"
-				+ cancelled);
 	}
 
 	/**

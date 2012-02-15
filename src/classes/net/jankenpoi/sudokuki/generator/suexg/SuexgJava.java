@@ -147,8 +147,6 @@ class SuexgJava extends SuexgGenerator {
 	gridGenerate(final int seed, final int requestedRatingMin, final int requestedRatingMax, final int[] grid, final int[] rating,
 			final int[] grid_with_clues) {
 
-		// System.out.println("SuexgJava.grid_generate()");
-
 		/*
 		 * boolean values used to simulate the infamous goto used in the
 		 * original C suexg algorithm
@@ -177,19 +175,11 @@ class SuexgJava extends SuexgGenerator {
 			for (y = 1; y <= 9; y++) {
 				for (s = 1; s <= 9; s++) {
 					r++;
-					// System.out.println("r : " + r);
 					Cols[r] = 4;
 					Col[r][1] = x * 9 - 9 + y;
-					// System.out.println("Col[" + r + "][1] : " + Col[r][1]);
 					Col[r][2] = (B[x * 9 - 9 + y] - 48) * 9 - 9 + s + 81;
-					// System.out.println("(B[" + (x * 9 - 9 + y) + "]-48)*9-9+"
-					// + s + "+81");
-					// System.out.println("Col[" + r + "][2] : " + Col[r][2]);
 					Col[r][3] = x * 9 - 9 + s + 81 * 2;
-					// System.out.println("Col[" + r + "][3] : " + Col[r][3]);
 					Col[r][4] = y * 9 - 9 + s + 81 * 3;
-					// System.out.println("Col[" + r + "][4] : " + Col[r][4]);
-
 				}
 			}
 		}
@@ -197,10 +187,8 @@ class SuexgJava extends SuexgGenerator {
 			Rows[c] = 0;
 		}
 		for (r = 1; r <= n; r++) {
-			// System.out.println("r : " + r);
 			for (c = 1; c <= Cols[r]; c++) {
 				a = Col[r][c];
-				// System.out.println("a:" + a);
 				Rows[a]++;
 				Row[a][Rows[a]] = r;
 			}
@@ -211,11 +199,9 @@ class SuexgJava extends SuexgGenerator {
 		while (true) {
 			// m0s:
 			if (gotoM0S) {
-				// System.out.println("m0s");
 				gotoM0S = false;
 				sam1++;
 				if (sam1 > samples) {
-					// printf(".\n");
 					return 0;
 				} else {
 					gotoM0 = true;
@@ -224,7 +210,6 @@ class SuexgJava extends SuexgGenerator {
 
 			// m0:
 			if (gotoM0) {
-				// System.out.println("m0");
 				gotoM0 = false;
 				for (i = 1; i <= 81; i++) {
 					A[i] = 0;
@@ -234,7 +219,6 @@ class SuexgJava extends SuexgGenerator {
 
 			// mr1:
 			if (gotoMR1) {
-				// System.out.println("mr1");
 				gotoMR1 = false;
 				i1 = (int) (MWC() >> 8) & 127;
 				if (i1 > 80) {
@@ -251,7 +235,6 @@ class SuexgJava extends SuexgGenerator {
 
 			// mr3:
 			if (gotoMR3) {
-				// System.out.println("mr3");
 				gotoMR3 = false;
 				s = (int) (MWC() >> 9) & 15;
 				if (s > 8) {
@@ -260,8 +243,6 @@ class SuexgJava extends SuexgGenerator {
 				}
 				s++;
 				A[i1] = s;
-				// printf("\nA[i1:%d] = s:%d\n", i1, s);
-				// System.out.println("A[i1:"+i1+"] = s:"+s);
 				m2 = solve();
 
 				// add a random clue and solve it. No solution ==> remove it
@@ -282,7 +263,6 @@ class SuexgJava extends SuexgGenerator {
 				// now we have a unique-solution sudoku. Now remove clues to
 				// make it minimal
 				{// EXPERIMENTAL: here is the grid with clues in it
-					// System.out.println("SuexgJava.grid_generate() EXPERIMENTAL...");
 					for (i = 1; i <= 81; i++) {
 						grid_with_clues[i - 1] = A[i];
 					}
@@ -291,7 +271,6 @@ class SuexgJava extends SuexgGenerator {
 
 					x = i;
 					while (x >= i) {
-						// System.out.println("mr4");
 						// mr4:
 						x = (int) (MWC() >> 8) & 127;
 					}
@@ -313,7 +292,6 @@ class SuexgJava extends SuexgGenerator {
 						solve();
 						nt += nodes;
 					}
-					// printf ( "new grid, rating:%6i", nt );
 					
 					if (nt < requestedRatingMin|| requestedRatingMax < nt) {
 						gotoM0 = true;
@@ -342,7 +320,6 @@ class SuexgJava extends SuexgGenerator {
 								// (more
 		// than one sol.)
 
-		// System.out.println("SuexgJava.solve()");
 		/*
 		 * boolean values used to simulate the infamous goto used in the
 		 * original C suexg algorithm
@@ -358,7 +335,6 @@ class SuexgJava extends SuexgGenerator {
 		clues = 0;
 		for (i = 1; i <= 81; i++) {
 			if (A[i] != 0) {
-				// System.out.println("clues:"+clues);
 				clues++;
 				r = i * 9 - 9 + A[i];
 				for (j = 1; j <= Cols[r]; j++) {
@@ -393,23 +369,18 @@ class SuexgJava extends SuexgGenerator {
 
 			// m2: //////////
 			if (gotoM2) {
-				// System.out.println("M2 ");
 				gotoM2 = false;
 
 				i++;
 				I[i] = 0;
 				min = n + 1;
 
-				// System.out.println("i:"+i+" m0:"+m0+" ");
 				if (i > 81 || m0 != 0) {
-					// System.out.println("SuexgJava.solve() ICI(1) ");
 					gotoM4 = true;
 					continue; // simulates: goto m4;
 				}
-				// System.out.println("m1:"+m1+" ");
 				if (m1 != 0) {
 					C[i] = m1;
-					// System.out.println("gotoM3 ");
 					gotoM3 = true;
 					continue; // simulates: goto m3;
 				}
@@ -419,7 +390,6 @@ class SuexgJava extends SuexgGenerator {
 					if (Uc[c] == 0) {
 						if (V[c] < 2) {
 							C[i] = c;
-							// System.out.println("gotoM3 ");
 							gotoM3 = true;
 							continue whileloop; // simulates: goto m3;
 						}
@@ -440,37 +410,30 @@ class SuexgJava extends SuexgGenerator {
 
 			// /mr:
 			if (gotoMR) {
-				// System.out.println("MR ");
 				gotoMR = false;
 
 				c2 = (int) (MWC() & Two[w]);
 				if (c2 >= w) {
 					gotoMR = true;
-					// System.out.println("gotoMR ");
 					continue; // simulates: goto mr;
 				}
 				C[i] = W[c2 + 1];
 				gotoM3 = true;
-				// System.out.println("gotoM3 ");
 			}
 
 			// m3: //////
 			if (gotoM3) {
-				// System.out.println("M3 ");
 				gotoM3 = false;
 
 				c = C[i];
 				I[i]++;
 				if (I[i] > Rows[c]) {
-					// System.out.println("SuexgJava.solve() ICI(2) ");
 					gotoM4 = true;
-					// System.out.println("gotoM4 ");
 					continue; // simulates: goto m4;
 				}
 				r = Row[c][I[i]];
 				if (Ur[r] != 0) {
 					gotoM3 = true;
-					// System.out.println("gotoM3 ");
 					continue; // simulates: goto m3;
 				}
 				m0 = 0;
@@ -506,13 +469,11 @@ class SuexgJava extends SuexgGenerator {
 					break; // simulates: goto m9;
 				}
 				gotoM2 = true;
-				// System.out.println("gotoM2 ");
 				continue; // simulates: goto m2;
 			} // end of m3 if
 
 			// m4: ////
 			if (gotoM4) {
-				// System.out.println("M4 ");
 				gotoM4 = false;
 
 				i--;
@@ -538,7 +499,6 @@ class SuexgJava extends SuexgGenerator {
 
 				if (i > clues) {
 					gotoM3 = true;
-					// System.out.println("gotoM3 ");
 					continue; // simulates: goto m3;
 				}
 			} // end of m4 if
@@ -546,8 +506,6 @@ class SuexgJava extends SuexgGenerator {
 			break;
 		} // outer while loop
 
-		// System.out.println();
-		// System.out.println("solve=>"+solutions);
 		// m9: /////
 		return solutions;
 	}

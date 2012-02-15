@@ -546,7 +546,6 @@ public class SwingGrid extends JPanel implements Printable {
 	private class InnerKeyListener extends KeyAdapter {
 		@Override
 		public void keyPressed(KeyEvent ke) {
-			System.out.println("SwingGrid.InnerKeyAdapter.keyPressed() ke:"+ke);
 			int code = ke.getKeyCode();
 			boolean hasMoved = false;
 			if (code == KeyEvent.VK_KP_DOWN || code == KeyEvent.VK_DOWN || code == KeyEvent.VK_J) {
@@ -578,16 +577,12 @@ public class SwingGrid extends JPanel implements Printable {
 				}
 			}
 			if (hasMoved) {
-				System.out
-				.println("SwingGrid.InnerKeyListener.keyPressed() has moved...");
 				view.getController().notifyFocusPositionChanged(posY, posX);
 			}
 		}
 
 		@Override
 		public void keyReleased(KeyEvent ke) {
-			System.out.println("SwingGrid.InnerKeyAdapter.keyReleased() ke:"
-					+ ke);
 			int code = ke.getKeyCode();
 			if (code == KeyEvent.VK_SPACE) {
 				Point pos = getTopLeftPoint(posY, posX);

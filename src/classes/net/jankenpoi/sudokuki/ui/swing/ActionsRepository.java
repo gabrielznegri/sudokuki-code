@@ -9,9 +9,7 @@ public class ActionsRepository {
 	private final HashMap<String, Action> map = new HashMap<String, Action>();
 	
 	final Action get(String name) {
-		System.out.println("ActionsRepository.get() name:"+name);
 		Action action = map.get(name);
-		//System.out.println("ActionsRepository.get() found action:"+action);
 		return action;
 	}
 	

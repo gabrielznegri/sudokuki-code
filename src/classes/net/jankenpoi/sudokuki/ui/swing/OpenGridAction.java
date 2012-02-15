@@ -74,8 +74,6 @@ public class OpenGridAction extends AbstractAction {
 			@Override
 			public boolean accept(File f) {
 				String extension = getExtension(f);
-				System.out
-						.println("OpenGridAction ext:"+extension+"|");
 				if (f.isDirectory() || "skg".equals(extension)) {
 					return true;
 				}
@@ -112,11 +110,9 @@ public class OpenGridAction extends AbstractAction {
 			try {
 				int lo = fis.read();
 				int hi = fis.read();
-//				System.out.println("OpenGridAction.actionPerformed() hi:"+hi+" lo:"+lo);
 				short together = (short) (hi << 8 | lo);
 
 				externalCellInfos[i] = (short) together;
-//				System.out.println("OpenGridAction.actionPerformed() externalCellInfos["+i+"]:"+externalCellInfos[i]);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

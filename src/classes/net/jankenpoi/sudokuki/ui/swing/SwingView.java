@@ -77,14 +77,12 @@ public class SwingView extends GridView {
 
 	@Override
 	public void display() {
-		System.out.println("SwingView.display()");
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				frame.setVisible(true);
 				frame.setSize(frame.getPreferredSize());
 			}
 		});
-		System.out.println("SwingView.display()/");
 	}
 
 	public void gridChanged(final GridChangedEvent event) {
@@ -158,7 +156,6 @@ public class SwingView extends GridView {
 
 	private void refreshClearAllMovesAction(GridModel model) {
 		if (actions == null) {
-			System.out.println("SwingView.refreshClearAllMovesAction() actions is null...");
 			return;
 		}
 		Action clearAllMovesAction = actions.get("ClearAllMoves"); 
@@ -175,7 +172,6 @@ public class SwingView extends GridView {
 
 	protected void refreshResolveAction(GridModel model) {
 		if (actions == null) {
-			System.out.println("SwingView.refreshResolveAction() actions is null...");
 			return;
 		}
 		Action resolveAction = actions.get("ResolveGrid"); 
@@ -184,7 +180,6 @@ public class SwingView extends GridView {
 	
 	private void refreshCustomGridAction(GridModel model) {
 		if (actions == null) {
-			System.out.println("SwingView.refreshCustomGridAction() actions is null...");
 			return;
 		}
 		Action customGridAction = actions.get("CustomGrid"); 
@@ -193,7 +188,6 @@ public class SwingView extends GridView {
 
 	private void refreshPlayCustomGridAction(GridModel model) {
 		if (actions == null) {
-			System.out.println("SwingView.refreshPlayCustomGridAction() actions is null...");
 			return;
 		}
 		Action playCustomGridAction = actions.get("PlayCustomGrid"); 
