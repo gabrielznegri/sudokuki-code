@@ -24,6 +24,8 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.HashMap;
 import java.util.Locale;
 
@@ -136,15 +138,14 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		itemsMap.get("fr").setText(_("French"));
 		itemsMap.get("ja").setText(_("Japanese"));
 		itemsMap.get("pt").setText(_("Portuguese"));
+		itemsMap.get("ru").setText(_("Russian"));
 		itemsMap.get("zh").setText(_("Mandarin"));
 	}
 
     private final HashMap<String, Icon> icons = new HashMap<String, Icon>();
 	
 	private void addItem(final String code, String language, ButtonGroup group) {
-		JRadioButton radioItem;
-
-		radioItem = new JRadioButton(language, icons.get(code));
+		final JRadioButton radioItem = new JRadioButton(language, icons.get(code));
 		itemsMap.put(code, radioItem);
 		
 		if (code.equals(code)) {
@@ -154,10 +155,20 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
+            	System.out
+						.println("LanguageDialog.addItem(...).new AbstractAction() {...}.actionPerformed()");
                     I18n.reset(code);
             }
         });
-
+        radioItem.addKeyListener(new KeyAdapter() {
+        	@Override
+    		public void keyPressed(KeyEvent ke) {
+        		if (ke.getKeyCode() == KeyEvent.VK_ENTER) {
+        			dispose();
+        		}
+        	}
+		});
+        
 		group.add(radioItem);
 		panel.add(radioItem);
 	}

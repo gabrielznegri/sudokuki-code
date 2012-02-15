@@ -149,6 +149,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
             refreshItem(languageCode, "fr", "French");
             refreshItem(languageCode, "ja", "Japanese");
             refreshItem(languageCode, "pt", "Portuguese");
+            refreshItem(languageCode, "ru", "Russian");
             refreshItem(languageCode, "zh", "Mandarin");
 		}
 
