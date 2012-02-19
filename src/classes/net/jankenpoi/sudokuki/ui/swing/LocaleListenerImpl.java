@@ -17,7 +17,6 @@ class LocaleListenerImpl implements LocaleListener {
 	@Override
 	public void onLocaleChanged(Locale locale) {
 		String languageCode = _("DETECTED_LANGUAGE");
-//		System.out.println("LocaleListenerImpl.onLocaleChanged() detected : "+languageCode);
 		l10nComp.setL10nMessages(locale, languageCode);
 	}
 	

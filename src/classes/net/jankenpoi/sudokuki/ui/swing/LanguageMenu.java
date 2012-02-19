@@ -45,18 +45,8 @@ public class LanguageMenu extends JMenu implements L10nComponent {
         private String langCode;
         
         public LanguageMenu() {
-                icons.put("de", StockIcons.ICON_FLAG_DE);
-                icons.put("el", StockIcons.ICON_FLAG_EL);
-                icons.put("eo", StockIcons.ICON_FLAG_EO);
-                icons.put("en", StockIcons.ICON_FLAG_EN);
-                icons.put("es", StockIcons.ICON_FLAG_ES);
-                icons.put("fr", StockIcons.ICON_FLAG_FR);
-                icons.put("ja", StockIcons.ICON_FLAG_JA);
-                icons.put("pt", StockIcons.ICON_FLAG_PT);
-                icons.put("ru", StockIcons.ICON_FLAG_RU);
-                icons.put("zh", StockIcons.ICON_FLAG_ZH);
                 addItems();
-                setIcon(StockIcons.ICON_GO_HOME);
+                setIcon(languageIcon(_("DETECTED_LANGUAGE")));
                 
                 addMenuListener(new MenuListener() {
                         
@@ -86,9 +76,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                 localeListener = new LocaleListenerImpl(this);
                 I18n.addLocaleListener(localeListener);
         }
-		
-        private final HashMap<String, Icon> icons = new HashMap<String, Icon>();
-
+		        
         private void addItems() {
                 ButtonGroup myGroup = new ButtonGroup();
                 addItem("de", _("German"), myGroup);
@@ -108,7 +96,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 
                 radioItem = new JRadioButtonMenuItem(language);
                 itemsMap.put(code, radioItem);
-                radioItem.setAction(new AbstractAction(language, icons.get(code)) {
+                radioItem.setAction(new AbstractAction(language, languageIcon(code)) {
 
                         @Override
                         public void actionPerformed(ActionEvent arg0) {
@@ -137,6 +125,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 		@Override
 		public void setL10nMessages(Locale locale, String languageCode) {
 			setText(_("Language"));
+			setIcon(languageIcon(languageCode));
 			
 			if (this.isSelected()) {
 				return;
@@ -163,4 +152,30 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 			}
 		}
         
+		public static Icon languageIcon(final String langCode) {
+			if ("de".equals(langCode)) {
+				return StockIcons.ICON_FLAG_DE;
+			} else if ("el".equals(langCode)) {
+				return StockIcons.ICON_FLAG_EL;
+			} else if ("eo".equals(langCode)) {
+				return StockIcons.ICON_FLAG_EO;
+			} else if ("en".equals(langCode)) {
+				return StockIcons.ICON_FLAG_EN;
+			} else if ("es".equals(langCode)) {
+				return StockIcons.ICON_FLAG_ES;
+			} else if ("fr".equals(langCode)) {
+				return StockIcons.ICON_FLAG_FR;
+			} else if ("ja".equals(langCode)) {
+				return StockIcons.ICON_FLAG_JA;
+			} else if ("pt".equals(langCode)) {
+				return StockIcons.ICON_FLAG_PT;
+			} else if ("ru".equals(langCode)) {
+				return StockIcons.ICON_FLAG_RU;
+			} else if ("zh".equals(langCode)) {
+				return StockIcons.ICON_FLAG_ZH;
+			}
+			Thread.dumpStack();
+			return StockIcons.ICON_GO_HOME;
+		}
+		
 }

@@ -50,7 +50,7 @@ public class ToolBar extends JToolBar implements L10nComponent {
 			components[i].setFocusable(false);
 		}
 		
-        setL10nMessages(null, null);
+        setL10nMessages(null, _("DETECTED_LANGUAGE"));
         localeListener = new LocaleListenerImpl(this);
         I18n.addLocaleListener(localeListener);
 	}
@@ -91,7 +91,7 @@ public class ToolBar extends JToolBar implements L10nComponent {
 	    };
 	    button = new JButton(actionInvokeLanguageDialog);
 	    button.setEnabled(true);
-	    actionInvokeLanguageDialog.putValue(Action.SMALL_ICON, StockIcons.ICON_GO_HOME);
+	    actionInvokeLanguageDialog.putValue(Action.SMALL_ICON, LanguageMenu.languageIcon(_("DETECTED_LANGUAGE")));
 	    actionInvokeLanguageDialog.putValue(Action.SHORT_DESCRIPTION, _("Language"));
 
 		button.setText("");
@@ -100,6 +100,7 @@ public class ToolBar extends JToolBar implements L10nComponent {
 
 	@Override
 	public void setL10nMessages(Locale locale, String languageCode) {
+	    actionInvokeLanguageDialog.putValue(Action.SMALL_ICON, LanguageMenu.languageIcon(languageCode));
 		actionInvokeLanguageDialog.putValue(Action.SHORT_DESCRIPTION, _("Language"));
 	}
 

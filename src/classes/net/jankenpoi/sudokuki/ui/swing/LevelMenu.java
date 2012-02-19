@@ -88,7 +88,7 @@ public class LevelMenu extends JMenu implements L10nComponent {
 		addItems();
 		setIcon(StockIcons.ICON_PLUS);
 
-		setL10nMessages(null, null);
+		setL10nMessages(null, _("DETECTED_LANGUAGE"));
 		localeListener = new LocaleListenerImpl(this);
 		I18n.addLocaleListener(localeListener);
 		

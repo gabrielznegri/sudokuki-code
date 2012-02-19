@@ -89,7 +89,7 @@ public class EditMenu extends JMenu implements L10nComponent {
                 
                 addItems(actions, parent, view);
                 
-                setL10nMessages(null, null);
+                setL10nMessages(null, _("DETECTED_LANGUAGE"));
                 localeListener = new LocaleListenerImpl(this);
                 I18n.addLocaleListener(localeListener);
         }

@@ -77,7 +77,7 @@ public class CheatMenu extends JMenu implements L10nComponent {
                 
                 addItems();
                 setEnabled(true);
-                setL10nMessages(null, null);
+                setL10nMessages(null, _("DETECTED_LANGUAGE"));
                 localeListener = new LocaleListenerImpl(this);
                 I18n.addLocaleListener(localeListener);
         }
