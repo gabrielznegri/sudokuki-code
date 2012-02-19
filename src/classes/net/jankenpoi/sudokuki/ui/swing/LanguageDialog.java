@@ -58,6 +58,8 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		setResizable(false);
 		pack();
 
+		okBtn.requestFocus();
+		
 		Point toolBarLoc = toolbar.getLocationOnScreen();
 		setLocation(toolBarLoc.x + toolbar.getWidth() / 2 - getWidth() / 2,
 				toolBarLoc.y + toolbar.getHeight());
