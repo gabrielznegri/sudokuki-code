@@ -1,14 +1,30 @@
+sudokuki (1.0.912) unstable; urgency=low
+
+  * Sudokuki version 1.1.Beta12 ("Sudokuki", stable, Java Swing GUI)
+
+    - Japanese translations for Sudokuki 1.1 (by Fumiaki Nakanishi)
+    - Fixed #3489081 Confusing icon for "Language" in the toolbar
+    - Basic Spanish, Greek and Chinese translations (with help of Google translate)
+      => If you speak one of these languages, please send me your comments!
+    - Fixed issue where "ENTER" doesn't close language dialog, and minor sync issue 
+    - Portuguese and Russian translations for Sudokuki 1.1 (by Dmitry Salnikov) 
+    - Esperanto translations for Sudokuki 1.1 (by Sylvain Vedrenne)
+    - German translations for Sudokuki 1.1 (by Claus Poerschke)
+
+ -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Mon, 20 Feb 2012 20:49:00 +0100
+
+
 sudokuki (1.0.910-2) unstable; urgency=low
 
- * Sudokuki version 1.1.Beta11 ("Sudokuki", stable, Java Swing GUI)
+  * Sudokuki version 1.1.Beta11 ("Sudokuki", stable, Java Swing GUI)
 
- Fixed the following bug(s):
- - Fixed #3476292 TODO: Application logo for final release
- - Fixed #3485100 Cancelling 4 grids generation doesn't have expected effect
- - Improved aspect of 'resolve grid dialog'
- - Fixed LanguageMenu not in sync with actual locale if changed from LanguageDialog
- - Fixed #3485144 When grid is full but wrong, errors should be shown in red
- - Fixed #3485142 Nothing happens when the grid is complete
+    Fixed the following bug(s):
+    - Fixed #3476292 TODO: Application logo for final release
+    - Fixed #3485100 Cancelling 4 grids generation doesn't have expected effect
+    - Improved aspect of 'resolve grid dialog'
+    - Fixed LanguageMenu not in sync with actual locale if changed from LanguageDialog
+    - Fixed #3485144 When grid is full but wrong, errors should be shown in red
+    - Fixed #3485142 Nothing happens when the grid is complete
 
  -- Sylvain Vedrenne <sylvain.vedrenne@free.fr>  Fri, 11 Feb 2012 23:40:00 +0100
 
