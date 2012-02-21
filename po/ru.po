@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.1\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-02-19 23:33+0100\n"
+"POT-Creation-Date: 2012-02-22 00:33+0100\n"
 "PO-Revision-Date: 2011-07-01 18:09+0100\n"
 "Last-Translator: Dmitry Salnikov <dimasalnikov88@gmail.com>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
@@ -58,52 +58,65 @@ msgid "Greek translations (v1.0)"
 msgstr "Греческий перевод (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:114
+msgid "Stavros Mavrakis"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:116
+msgid "Greek translations"
+msgstr "Греческий перевод"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
+msgid "Fumiaki Nakanishi"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:141
+msgid "Japanese translations"
+msgstr "Японский перевод"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:124
 msgid "Jeanne Peng"
 msgstr "Жеанн Пенг"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:116
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:126
 msgid "Chinese translations"
 msgstr "Китайский перевод"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:129
 msgid "Claus Poerschke"
 msgstr "Клаус Поерсчке"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:131
 msgid "Patches (v1.0) and German translations"
 msgstr "Патчи (v1.0) и Немецкий перевод"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:124
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:134
 msgid "Dmitry Salnikov"
 msgstr "Дмитрий Сальников"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:126
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:136
 msgid "Portuguese and Russian translations"
 msgstr "Португальский и Русский перевод"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:129
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:139
 msgid "Helene Vedrenne"
 msgstr "Елен Ведрэннэ"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:131
-msgid "Japanese translations (v1.0)"
-msgstr "Японский перевод (v1.0)"
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:134
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:144
 msgid "Sylvain Vedrenne"
 msgstr "Сильваин Ведреннэ"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:136
-msgid "Esperanto, French and Japanese translations"
-msgstr "Эсперанто, Французкий и Японский перевод"
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:146
+msgid "Esperanto, French, and Japanese translations (v1.0)"
+msgstr "Эсперанто, Французкий, и Японский перевод (v1.0)"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:153
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:163
 msgid ""
 "<b>Sudokuki</b> is released under the terms of the GNU General Public "
 "License version 3 or later (GPL v3+)."
 msgstr "Лицензия версии 3 или последующей (GPL v3+)."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:162
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:172
 msgid ""
 "The full license text is available in the file called COPYING that must be "
 "included in every copy of the program."
@@ -111,7 +124,7 @@ msgstr ""
 "Полный текст лицензии находится в файле под названием COPYING который должен "
 "быть включен в каждую копию программы."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:171
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:181
 msgid ""
 "This program is Free Software (\"Free\" as in \"Freedom\") developped during "
 "the author's free-time in the hope that some users will find it useful, but "
@@ -120,7 +133,7 @@ msgstr ""
 "Эта программа бесплатная. Разработана автором в свободное от работы время, в "
 "надежде что пользователи найдут в ней пользу, но без каких либо гарантий."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:179
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:189
 msgid ""
 "You are welcome to transfer this program to other people as long as you "
 "respect the license terms. Read the GNU General Public License for more "
@@ -130,16 +143,16 @@ msgstr ""
 "подчиняетесь условиям лицензии. Прочитайтеподробнее в Открытом Лицензионном "
 "Соглашении GNU."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:190
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:243
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:200
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:253
 msgid "Copyright (C) 2007-2012 Sylvain Vedrenne"
 msgstr "Copyright (C) 2007-2012 Sylvain Vedrenne"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:254
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:264
 msgid "on the Web"
 msgstr "в Интернете"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:278
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:288
 msgid ""
 "Feel free to request features and report bugs on the Sudokuki Forums hosted "
 "by Sourceforge!"
@@ -147,7 +160,7 @@ msgstr ""
 "Не стесняйтесь спрашивать об особенностях и сообщать об ощибках на Форумах "
 "Sudokuki на Sourceforge!"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:290
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:300
 msgid "Sudokuki Forums"
 msgstr "Форумы Sudokuki"
 
@@ -548,12 +561,3 @@ msgstr ""
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:100
 msgid "Sudokuki Translators Forum"
 msgstr "Форум для переводчиков Sudokuki"
-
-#~ msgid "Undo"
-#~ msgstr "Отменить"
-
-#~ msgid "Printing"
-#~ msgstr "Идет печать"
-
-#~ msgid "Preferences"
-#~ msgstr "Опции"
