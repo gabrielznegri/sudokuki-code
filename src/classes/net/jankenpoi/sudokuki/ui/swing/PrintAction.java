@@ -35,13 +35,10 @@ public class PrintAction extends AbstractAction {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("PrintAction.actionPerformed() let try this out...");		
 		PrinterJob job = PrinterJob.getPrinterJob();
 		Object source = e.getSource();
-		System.out.println("PrintAction.actionPerformed() source:"+source);
 		job.setPrintable(grid);
 		boolean doPrint = job.printDialog();
-		System.out.println("SwingGrid.mouseExited() doPrint: "+doPrint);
 		if (doPrint) {
 			  try {
 			       job.print();

@@ -26,14 +26,10 @@ class SuexgProxy extends SuexgGenerator {
 
 	private static final SuexgProxy INSTANCE;
 	static {
-		String javaLibraryPath = System.getProperty("java.library.path");
-		System.out.println("SuexgProxy.enclosing_method() java.library.path:"
-				+ javaLibraryPath);
 		boolean exceptionCaught = false;
 		try {
 			System.loadLibrary("suexg_proxy");
 		} catch (Throwable t) {
-			System.out.println("SuexgProxy() unable to load library 'suexg_proxy', reason: "+t);
 			exceptionCaught = true;
 		} finally {
 			if (exceptionCaught) {
@@ -42,11 +38,9 @@ class SuexgProxy extends SuexgGenerator {
 				INSTANCE = new SuexgProxy();
 			}
 		}
-		System.out.println("SuexgProxy.enclosing_method() after call to loadLibrary()");
 	}
 	
 	public static SudokuGenerator getGenerator() {
-		System.out.println("SuexgProxy.getGenerator() INSTANCE : "+INSTANCE);
 		return INSTANCE;
 	}
 
@@ -60,15 +54,11 @@ class SuexgProxy extends SuexgGenerator {
 		int[] grid = new int[81];
 		int[] gridAndClues = new int[81];
 		int[] rating = new int[] { -1 };
-		System.out.println("\nSuexgProxy.main() APRES");
 		int seed = rand.nextInt();
 		int status = INSTANCE.generateSuexgGrid(seed, minRating, maxRating, grid, rating,
 				gridAndClues);
-		System.out.println("rating:" + rating[0] + "\nstatus:" + status);
-		System.out.println("\n*** generated grid ***");
-		printGrid(grid);
-		System.out.println("\n*** generated grid with clues ***");
-		printGrid(gridAndClues);
+		//printGrid(grid);
+		//printGrid(gridAndClues);
 		
 		SudokuGrid sudoku = new SudokuGrid(grid);
 		return sudoku;

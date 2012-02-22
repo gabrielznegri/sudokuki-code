@@ -52,20 +52,12 @@ public class GridShadow {
 	 */
 	private final int offset;
 
-	// public GridShadow(GridModel model) {
-	// this.cellFlags = model.cloneCellInfos();
-	// this.startIndex = 0;
-	// initAllFlags();
-	// }
-
 	public GridShadow(int[] bigTable, int startIndex, boolean initFlags) {
-//		System.out.println("GridShadow.GridShadow() <");
 		this.cellFlags = bigTable;
 		this.offset = startIndex;
 		if (initFlags) {
 			initAllFlags();
 		}
-//		System.out.println("GridShadow.GridShadow() //");
 	}
 
 	public int[] popFirstCellWithMinPossValues() {
@@ -85,9 +77,6 @@ public class GridShadow {
 				int nb = getNumberOfPossibleValues(l, c);
 				if (nb == 0) {
 					deadEnd = true;
-//					System.out
-//							.println("GridShadow.popFirstCellWithMinPossValues() dead end found at li,co:"
-//									+ l + "," + c);
 					break scanGrid;
 				} else if (nb < minNB) {
 					li = l;
@@ -102,14 +91,10 @@ public class GridShadow {
 
 		if (tableComplete) {
 			/* means TABLE COMPLETE */
-			System.out
-					.println("GridShadow.popFirstCellWithMinPossValues() TABLE FOUND COMPLETE");
 			return new int[] { 10, 10 };
 		}
 		if (deadEnd) {
 			/* means DEAD END */
-//			System.out
-//					.println("GridShadow.popFirstCellWithMinPossValues() DEAD END FOUND");
 			return new int[] { 11, 11 };
 		}
 		return new int[] { li, co };
@@ -121,16 +106,12 @@ public class GridShadow {
 		for (byte v = 1; v <= 9; v++) {
 			if (isCellValuePossible(li, co, v) && !isCellValueScreened(li, co, v)) {
 				return v;
-			} else {
-//				System.out.println("GridShadow.popFirstValueForCell() value "+v+" is screened in cell "+li+","+co);
 			}
 		}
 		return 0;
 	}
 
 	public boolean setCellValueAt(int li, int co, byte value) {
-//		System.out.println("GridShadow.setCellValueAt(" + li + "," + co + "=>"
-//				+ value + ")");
 
 		cellFlags[offset + 9 * li + co] &= ~MASK_FOR_CURRENT_VALUE;
 		cellFlags[offset + 9 * li + co] |= FLAG_CELL_READ_ONLY | value;
@@ -165,7 +146,6 @@ public class GridShadow {
 		
 		int X = 3 * (co / 3); // column start of the square
 		int Y = 3 * (li / 3); // line start of the square
-//		System.out.println("GridShadow.setCellValueAt() X:" + X + " Y:" + Y);
 		for (int x = 0; x < 3; x++) {
 			for (int y = 0; y < 3; y++) {
 				int c = X + x;
@@ -211,7 +191,6 @@ public class GridShadow {
 
 	byte getValueAt(int li, int co) {
 		byte value = (byte) (cellFlags[offset + 9 * li + co] & MASK_FOR_CURRENT_VALUE);
-		// System.out.println("GridShadow.getValueAt("+li+","+co+"): "+value);
 		return value;
 	}
 
@@ -234,12 +213,6 @@ public class GridShadow {
 
 	void unsetCellValuePossible(int li, int co, byte value) {
 		if (isCellValuePossible(li, co, value)) {
-			// System.out.println("value " + value + " was possible in cell " +
-			// li
-			// + "," + co);
-		} else {
-//			System.out.println("value " + value + " was NOT possible in cell "
-//					+ li + "," + co);
 		}
 		cellFlags[offset + 9 * li + co] &= ~getPossibleValuesFlag(value);
 	}
@@ -301,9 +274,6 @@ public class GridShadow {
 			}
 			for (int co = 0; co < 9; co++) {
 				if (!isCellFilled(li, co)) {
-					// System.out
-					// .println("GridModel.setMemosForAllCells() currentValuesMask:"
-					// + Integer.toHexString(currentValuesMask));
 					cellFlags[offset + 9 * li + co] &= ~currentValuesMask;
 				}
 			}
@@ -322,9 +292,6 @@ public class GridShadow {
 			}
 			for (int li = 0; li < 9; li++) {
 				if (!isCellFilled(li, co)) {
-					// System.out
-					// .println("initAllFlags() currentValuesMask:"
-					// + Integer.toHexString(currentValuesMask));
 					cellFlags[offset + 9 * li + co] &= ~currentValuesMask;
 				}
 			}

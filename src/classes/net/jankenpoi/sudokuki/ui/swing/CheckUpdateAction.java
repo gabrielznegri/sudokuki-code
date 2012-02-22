@@ -60,7 +60,9 @@ public class CheckUpdateAction extends AbstractAction {
                                         + "</tr>" + "</html>", "Sudokuki",
                                         JOptionPane.WARNING_MESSAGE);
                 } else {
-                        System.out.println("CheckUpdateAction.actionPerformed() CANCELLED");
+                        /*
+                         * CheckUpdateAction.actionPerformed() CANCELLED");
+                         */
                 }
         }
 

@@ -171,14 +171,10 @@ public class SelectMemosPanel extends JPanel {
 
 	private boolean isTabSelected() {
 		int idx = parent.getTabbedPane().getSelectedIndex();
-		if (idx != 1) {
-			System.out.println("SelectMemosPanel.isTabSelected() TAB NOT SELECTED");
-		}
 		return (idx == 1);
 	}
 	
 	private void buttonClicked(int button) {
-		System.out.println("InputDialog.buttonClicked() button:" + button);
 		byte value = (byte)(button + 1);
 		if (ckb[button].isSelected()) {
 			memos.add(value);
@@ -207,11 +203,8 @@ public class SelectMemosPanel extends JPanel {
 			if (isTabSelected() && focusedTabPane()) {
 				int code = ke.getKeyCode();
 				if (code == KeyEvent.VK_H) {
-					System.out.println("MemosPanel tab selected <>HL");
 					int index = parent.getTabbedPane().getSelectedIndex();
 					int newIndex = (index == 0)?1:0;
-					System.out.println("MemosPanel tab selected index:"+index);
-					System.out.println("MemosPanel tab selected newIndex:"+newIndex);
 					parent.getTabbedPane().setSelectedIndex(newIndex);
 					parent.getTabbedPane().requestFocusInWindow();
 					return;
@@ -253,7 +246,6 @@ public class SelectMemosPanel extends JPanel {
 				}
 				if (focusedClearButton()) {
 					focusedElement = 1;
-					System.out.println("focusedElement: "+focusedElement);
 					ckb[focusedElement].requestFocusInWindow();
 					return;
 				}
@@ -266,8 +258,6 @@ public class SelectMemosPanel extends JPanel {
 			}
 			else if (code == KeyEvent.VK_KP_LEFT || code == KeyEvent.VK_LEFT || code == KeyEvent.VK_H) {
 				if (focusedElement%3 == 0 || btnConfirm.hasFocus() || btnClear.hasFocus()) {
-					System.out
-							.println("SelectMemosPanel.InnerKeyListener.keyPressed() OK or CLEAR has focus");
 					return;
 				}
 				focusedElement = Math.max(0, focusedElement-1);

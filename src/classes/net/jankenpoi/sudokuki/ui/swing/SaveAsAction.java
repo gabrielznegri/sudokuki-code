@@ -54,8 +54,6 @@ public class SaveAsAction extends AbstractAction {
 				if (file == null) {
 					return null;
 				}
-				System.out.println("SaveAsAction::::getSelectedFile() ext:"
-						+ getExtension(file) + "|");
 				if (getExtension(file) == null) {
 					file = new File(file.getAbsolutePath() + ".skg");
 				}

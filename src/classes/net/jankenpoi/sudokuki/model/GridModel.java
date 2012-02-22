@@ -182,9 +182,6 @@ public class GridModel implements Cloneable {
 			}
 			for (int co = 0; co < 9; co++) {
 				if (!isCellFilled(li, co)) {
-					// System.out
-					// .println("GridModel.setMemosForAllCells() currentValuesMask:"
-					// + Integer.toHexString(currentValuesMask));
 					cellInfos[9 * li + co] &= ~currentValuesMask;
 				}
 			}
@@ -203,9 +200,6 @@ public class GridModel implements Cloneable {
 			}
 			for (int li = 0; li < 9; li++) {
 				if (!isCellFilled(li, co)) {
-					System.out
-							.println("GridModel.setMemosForAllCells() currentValuesMask:"
-									+ Integer.toHexString(currentValuesMask));
 					cellInfos[9 * li + co] &= ~currentValuesMask;
 				}
 			}
@@ -227,7 +221,6 @@ public class GridModel implements Cloneable {
 
 			int X = 3 * (cellCo / 3);
 			int Y = 3 * (cellLi / 3);
-			System.out.println("GridModel.setMemosForThisCell() cellLi:"+cellLi+" cellCo:"+cellCo+" X:"+X+" Y:"+Y);
 			short currentValuesMask = 0;
 			for (int x = 0; x < 3; x++) {
 				for (int y = 0; y < 3; y++) {
@@ -256,9 +249,6 @@ public class GridModel implements Cloneable {
 			}
 			for (int co = 0; co < 9; co++) {
 				if (!isCellFilled(cellLi, co)) {
-					// System.out
-					// .println("GridModel.setMemosForAllCells() currentValuesMask:"
-					// + Integer.toHexString(currentValuesMask));
 					cellInfos[9 * cellLi + co] &= ~currentValuesMask;
 				}
 			}
@@ -277,9 +267,6 @@ public class GridModel implements Cloneable {
 			}
 			for (int li = 0; li < 9; li++) {
 				if (!isCellFilled(li, cellCo)) {
-					System.out
-							.println("GridModel.setMemosForAllCells() currentValuesMask:"
-									+ Integer.toHexString(currentValuesMask));
 					cellInfos[9 * li + cellCo] &= ~currentValuesMask;
 				}
 			}
@@ -438,8 +425,6 @@ public class GridModel implements Cloneable {
 		int[] ints = new int[cellInfos.length];
 		for (int i=0; i<cellInfos.length; i++) {
 			ints[i] = cellInfos[i];
-//			System.out.println("GridModel.cloneCellInfosAsInts() cellInfos["+i+"]:"+cellInfos[i]);
-//			System.out.println("GridModel.cloneCellInfosAsInts() ints["+i+"]:"+ints[i]);
 		}
 		return ints;
 	}

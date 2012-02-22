@@ -140,18 +140,13 @@ public class PrintMultiDialog extends JDialog {
 	}
 
 	private void clickedCancel() {
-		System.out.println("PrintMultiDialog.clickedCancel()");
 		synchronized (lock) {
 			cancelledDialog = true;
 		}
 		/**
 		 * CANCELLED
 		 */
-		System.out
-				.println("PrintMultiDialog.clickedCancel(...) CANCELLED");
 		boolean cancelled = worker.cancel(true);
-		System.out.println("PrintMultiDialog.clickedCancel(...) cancelled:"
-				+ cancelled);
 	}
 
 	private boolean dialogCancelled() {

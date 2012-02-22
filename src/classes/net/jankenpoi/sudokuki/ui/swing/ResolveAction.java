@@ -48,7 +48,6 @@ public class ResolveAction extends AbstractAction {
 		ResolveGridDialog dlg = new ResolveGridDialog(frame, view, this);
 		dlg.setVisible(true);
 		int result = dlg.getResult();
-		System.out.println("ResolveAction.actionPerformed() result:"+result);
 		if (result == 0) {
 			setEnabled(false);
 		} else if (result == 2) {

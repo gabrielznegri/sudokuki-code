@@ -83,8 +83,6 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		panel.setLayout(pnlLayout);
 
 		String detectedLanguage = _("DETECTED_LANGUAGE");
-		System.out.println("LanguageMenu.addItems() detected language:"
-				+ detectedLanguage);
 
         icons.put("de", StockIcons.ICON_FLAG_DE);
         icons.put("el", StockIcons.ICON_FLAG_EL);
@@ -157,8 +155,6 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
-            	System.out
-						.println("LanguageDialog.addItem(...).new AbstractAction() {...}.actionPerformed()");
                     I18n.reset(code);
             }
         });

@@ -33,13 +33,11 @@ public class DualSwingSelector implements Selector, MemosSelector {
 		y = Math.max(upperLimit, y);
 		y = Math.min(lowerLimit, y);
 		
-		System.out.println("DualSwingSelector.SwingSelector() setLocation("+x+","+y+")");
 		dlg.setLocation(x, y);
 		
 		dlg.setVisible(true);
 		
 		digit = dlg.getClickedDigit();
-		System.out.println("DualSwingSelector.SwingSelector() digit:" + digit);
 		
 		memos = dlg.getSelectedMemos();
 	}

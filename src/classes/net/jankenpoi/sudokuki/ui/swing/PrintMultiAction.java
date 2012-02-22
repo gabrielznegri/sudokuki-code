@@ -38,7 +38,6 @@ public class PrintMultiAction extends AbstractAction {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object source = e.getSource();
-		System.out.println("PrintAction.actionPerformed() source:"+source);
 
 		PrintMultiDialog dlg = new PrintMultiDialog(parent, view);
 		dlg.setVisible(true);

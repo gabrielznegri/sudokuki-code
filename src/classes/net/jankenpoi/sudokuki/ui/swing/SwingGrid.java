@@ -136,9 +136,7 @@ public class SwingGrid extends JPanel implements Printable {
 		int y = rows[li].getStart() + CELL_SIZE / 2 + h / 4;
 
  		int xx = (9 - value) % 3 - 1;
-		// System.out.println("val: " + value + " xx : " + xx);
  		int yy = (9 - value) / 3 - 1;
-		// System.out.println("val: " + value + " yy : " + yy);
  		x = x - xx * 8 + 1;
 		y = y - yy * 8 + 1;
  
@@ -170,8 +168,6 @@ public class SwingGrid extends JPanel implements Printable {
 			for (int co = 0; co < 9; co++) {
 				if (view.isCellReadOnly(li, co)) {
 					Point pos = getPosition(g2, li, co);
-					// System.out.println("SwingGrid.paintGridNumbers() li:"+li+" co:"+co+" value:"+getValueAsStringAt(li,
-					// co));
 					g2.drawString(getValueAsStringAt(li, co, kanjiMode), pos.x, pos.y);
 				}
 			}
@@ -351,7 +347,6 @@ public class SwingGrid extends JPanel implements Printable {
 		for (int l = 0; l < rows.length; l++) {
 			if (rows[l].getStart() + 2 <= inPos.y && inPos.y < rows[l].getEnd() + 2) {
 				li = l;
-				System.out.println("SwingGrid.getLiCoForPos() li:" + li);
 				break;
 			}
 		}
@@ -359,17 +354,20 @@ public class SwingGrid extends JPanel implements Printable {
 			if (columns[c].getStart() <= inPos.x
 					&& inPos.x < columns[c].getEnd()) {
 				co = c;
-				System.out.println("SwingGrid.getLiCoForPos() co:" + co);
 				break;
 			}
 		}
 
-		if (li == -1)
-			System.out
-					.println("\nSwingGrid.getLiCoForPos() line is out of the grid!!!\n");
-		if (co == -1)
-			System.out
-					.println("\nSwingGrid.getLiCoForPos() column is out of the grid!!!\n");
+		if (li == -1) {
+			/*
+			 * line is out of the grid
+			 */
+		}
+		if (co == -1) {
+			/*
+			 * column is out of the grid
+			 */
+		}
 
 		return new Position(li, co);
 	}
@@ -446,20 +444,15 @@ public class SwingGrid extends JPanel implements Printable {
 				pressedRight(evt);
 				return;
 			default:
-				System.out
-						.println("SwingGrid.InnerMouseListener.mousePressed() center button??");
+				/*
+				 * Center button pressed??
+				 */
 			}
 		}
 
 		private void pressedLeft(MouseEvent evt) {
-			System.out.println("SwingGrid.InnerMouseListener.mousePressed()");
 			Point pos = evt.getPoint();
-			System.out.println("SwingGrid.InnerMouseListener.mousePressed() x:"
-					+ pos.x + " y:" + pos.y);
 			Position cellPos = getLiCoForPos(pos);
-			System.out
-					.println("SwingGrid.InnerMouseListener.mousePressed() li:"
-							+ cellPos.getLi() + " co:" + cellPos.getCo());
 
 			int li = cellPos.getLi();
 			int co = cellPos.getCo();
@@ -474,14 +467,8 @@ public class SwingGrid extends JPanel implements Printable {
 		}
 
 		private void pressedRight(MouseEvent evt) {
-			System.out.println("SwingGrid.InnerMouseListener.mousePressed()");
 			Point pos = evt.getPoint();
-			System.out.println("SwingGrid.InnerMouseListener.mousePressed() x:"
-					+ pos.x + " y:" + pos.y);
 			Position cellPos = getLiCoForPos(pos);
-			System.out
-					.println("SwingGrid.InnerMouseListener.mousePressed() li:"
-							+ cellPos.getLi() + " co:" + cellPos.getCo());
 
 			int li = cellPos.getLi();
 			int co = cellPos.getCo();
@@ -528,7 +515,6 @@ public class SwingGrid extends JPanel implements Printable {
 		
 		// Handle possible value selection
 		int selected = selector.retrieveNumber();
-		System.out.println("SwingGrid.pickUpValueOrMemos() selected:"+selected);
 		if (selected == previousValue) {
 			selected = 0; // Clear the value
 		}

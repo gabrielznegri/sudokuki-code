@@ -174,7 +174,6 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 			} else if ("zh".equals(langCode)) {
 				return StockIcons.ICON_FLAG_ZH;
 			}
-			Thread.dumpStack();
 			return StockIcons.ICON_GO_HOME;
 		}
 		

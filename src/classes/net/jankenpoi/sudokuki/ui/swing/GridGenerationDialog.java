@@ -121,12 +121,9 @@ public class GridGenerationDialog extends JDialog {
 	}
 
 	private void clickedCancel() {
-		System.out.println("CheckUpdateDialog.buttonClicked()");
 		/**
 		 * CANCELLED
 		 */
-		System.out
-				.println("ResolveGridDialog.ResolveGridDialog(...) CANCELLED");
 		dispose();
 	}
 

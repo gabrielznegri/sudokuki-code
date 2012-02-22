@@ -71,7 +71,6 @@ public class SelectNumberPanel extends JPanel {
     }
 
     private void configureButton(JButton btn, String text, final int value) {
-//    	System.out.println("InputDialog.configureButton() btn:"+btn+" text:"+text+" value:"+value);
     	btn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     	if (previousValue == value) {
     		btn.setText("");
@@ -120,14 +119,10 @@ public class SelectNumberPanel extends JPanel {
 
 	private boolean isTabSelected() {
 		int idx = parent.getTabbedPane().getSelectedIndex();
-		if (idx != 0) {
-			System.out.println("SelectNumberPanel.isTabSelected() TAB NOT SELECTED");
-		}
 		return (idx == 0);
 	}
 
 	private void buttonClicked(int button) {
-    	System.out.println("InputDialog.buttonClicked() button:"+button);
     	digit = button;
 		parent.numberPanelConfirmed();
     }
@@ -139,16 +134,11 @@ public class SelectNumberPanel extends JPanel {
 	private class InnerKeyListener extends KeyAdapter {
 		@Override
 		public void keyPressed(KeyEvent ke) {
-			System.out
-					.println("SelectNumberPanel  keyPressed() ke:"+ke);
 			if (focusedTabPane() && isTabSelected()) {
 				int code = ke.getKeyCode();
 				if (code == KeyEvent.VK_L) {
-					System.out.println("NumberPanel tab selected <>HL");
 					int index = parent.getTabbedPane().getSelectedIndex();
 					int newIndex = (index == 0)?1:0;
-					System.out.println("NumberPanel tab selected index:"+index);
-					System.out.println("NumberPanel tab selected newIndex:"+newIndex);
 					parent.getTabbedPane().setSelectedIndex(newIndex);
 					parent.getTabbedPane().requestFocusInWindow();
 					return;
@@ -205,7 +195,6 @@ public class SelectNumberPanel extends JPanel {
 
 		private boolean focusedTabPane() {
 			boolean res = parent.getTabbedPane().hasFocus();
-			System.out.println("SelectNumberPanel tabbedPane focused?"+res);
 			return res;
 		}
 

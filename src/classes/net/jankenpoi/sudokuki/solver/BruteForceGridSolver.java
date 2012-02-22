@@ -41,26 +41,20 @@ public class BruteForceGridSolver implements GridSolver {
 	@Override
 	public GridSolution resolve() {
 
-//		copyCurrentFlagsToNextPosition(); // 1 // 2
-//		forwardToNextPosition();
-
 		GridShadow gs = new GridShadow(cellShadowMemory, currentIndex, true); // 2.1
 		gs.debugDump();
 		boolean totalDeadEndNoSolution = false;
 		
 		for (int iter = 1; totalDeadEndNoSolution == false && iter < MAX_ITER_NB; iter++) {
 			if (cancelRequested()) {
-				System.out.println("BruteForceGridSolver.resolve() cancel was called");
 				return null;
 			}
 
-//			System.out.println("BruteForceGridSolver.resolve() iter:"+iter);
 			int[] liCo = gs.popFirstCellWithMinPossValues(); // 3, 4
 			int li = liCo[0];
 			int co = liCo[1];
 
 			if (li == 10 && co == 10) {
-				System.out.println("BruteForceGridSolver.resolve() TABLE COMPLETE");
 				/**
 				 * TABLE COMPLETE
 				 * 
@@ -77,7 +71,6 @@ public class BruteForceGridSolver implements GridSolver {
 			}
 
 			if (li == 11 && co == 11) {
-//				System.out.println("BruteForceGridSolver.resolve() DEAD END");
 				/**
 				 * DEAD END
 				 * 
@@ -107,7 +100,6 @@ public class BruteForceGridSolver implements GridSolver {
 
 			boolean deadEnd = gs.setCellValueAt(li, co, value); // 8.1
 			if (deadEnd) {
-//				System.out.println("BruteForceGridSolver.resolve() NORMAL DEAD END - GO BACK ONE POSITION");
 				totalDeadEndNoSolution = backToPreviousPosition(); // 9
 				gs = new GridShadow(cellShadowMemory, currentIndex, false); // 9.1
 				gs.debugDump();

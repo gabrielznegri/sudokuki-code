@@ -33,20 +33,12 @@ public class Main {
 
 		String uiName = null;
 		if (args.length < 2 || !"-ui".equals(args[0])) {
-			System.out.println("usage" + ": java -jar sudokuki.jar -ui Swing");
-			System.out
-					.println("by default, let's try launching the Swing interface...");
-			for (int i = 0; i < args.length; i++) {
-				System.out.println("  args[" + i + "] : " + args[i]);
-			}
 			uiName = "Swing";
 		}
 
 		if (uiName == null) {
 			uiName = args[1];
 		}
-		System.out.println("Starting Sudokuki with a UI of type" + " '"
-				+ uiName + "'...");
 		String subPack = uiName.toLowerCase();
 		String uiAppName = "net.jankenpoi.sudokuki.ui." + subPack + "."
 				+ uiName + "App";

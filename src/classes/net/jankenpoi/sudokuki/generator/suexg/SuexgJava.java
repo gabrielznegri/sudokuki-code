@@ -124,7 +124,6 @@ class SuexgJava extends SuexgGenerator {
 
 	@Override
 	public synchronized SudokuGrid generateGrid(final int requestedRatingMin, final int requestedRatingMax) {
-		System.out.println("SuexgJava.generateGrid()");
 		Random rand = new Random(System.currentTimeMillis());
 
 		int[] grid = new int[81];
@@ -132,11 +131,8 @@ class SuexgJava extends SuexgGenerator {
 		int[] rating = new int[] { -1 };
 		int seed = rand.nextInt();
 		int status = gridGenerate(seed, requestedRatingMin, requestedRatingMax, grid, rating, gridAndClues);
-		System.out.println("SuexgJava rating:" + rating[0] + "\nstatus:" + status);
-		System.out.println("\n*** generated grid ***");
-		printGrid(grid);
-		System.out.println("\n*** generated grid with clues ***");
-		printGrid(gridAndClues);
+		//printGrid(grid);
+		//printGrid(gridAndClues);
 
 		SudokuGrid sudoku = new SudokuGrid(grid);
 		return sudoku;
@@ -516,7 +512,6 @@ class SuexgJava extends SuexgGenerator {
 	}
 	
 	public static SudokuGenerator getGenerator() {
-		System.out.println("SuexgJava.getGenerator() INSTANCE :"+INSTANCE);
 		return INSTANCE;
 	}
 
