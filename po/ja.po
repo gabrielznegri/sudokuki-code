@@ -149,7 +149,7 @@ msgstr ""
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:200
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:253
 msgid "Copyright (C) 2007-2012 Sylvain Vedrenne"
-msgstr "著作権 (C) 2007-2012 シルヴァン　ヴェドレンヌ"
+msgstr "著作権 (C) 2007-2012 シルヴァン・ヴドレンヌ"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:264
 msgid "on the Web"
