@@ -2,6 +2,12 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2012-02-23 - released Sudokuki 1.1 (Stable)
+- Greek translations (by Stavros Mavrakis)
+- Fixed aspect of two Cancel buttons
+- Fixed warnings and spurious traces
+- Application logo for final release
+
 * 2012-02-20 - released Sudokuki 1.1.Beta12
 - Japanese translations for Sudokuki 1.1 (by Fumiaki Nakanishi)
 - Fixed #3489081 Confusing icon for "Language" in the toolbar

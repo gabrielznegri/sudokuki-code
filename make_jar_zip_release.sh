@@ -1,4 +1,4 @@
-RELEASEVERSION=1.1.Beta12
+RELEASEVERSION=1.1
 ZIPRELEASEDIR="sudokuki-"$RELEASEVERSION"-binary"
 
 make && make dist
