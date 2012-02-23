@@ -38,9 +38,11 @@ public class I18n {
 			} catch (Exception e1) {
 				try {
 					if (catalog == null) {
-						System.out
-								.println("I18n unable to find translations for (LANG) locale "
-										+ System.getenv("LANG"));
+						if (System.getenv("LANG") != null) {
+							System.out
+									.println("I18n unable to find translations for (LANG) locale "
+											+ System.getenv("LANG"));
+						}
 						catalog = ResourceBundle.getBundle(I18n.class.getName()
 								.replace("I18n", "sudokuki"), Locale
 								.getDefault());

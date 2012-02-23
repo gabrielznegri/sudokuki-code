@@ -111,8 +111,8 @@ extern "C" {
 int
 grid_generate ( int seed, int requestedRatingMin, int requestedRatingMax, int** grid, int* rating, int** grid_with_clues )
 {
-printf("requestedRatingMin: %d\n", requestedRatingMin);
-printf("requestedRatingMax: %d\n", requestedRatingMax);
+//printf("requestedRatingMin: %d\n", requestedRatingMin);
+//printf("requestedRatingMax: %d\n", requestedRatingMax);
 //int k=0;
 //for (k=0; k<1000; k++) {
 //  //printf("MWC : %d\n", MWC);
