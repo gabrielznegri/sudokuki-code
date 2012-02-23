@@ -48,7 +48,7 @@ import net.jankenpoi.sudokuki.Version;
 @SuppressWarnings("serial")
 public class CheckUpdateDialog extends JDialog {
 
-	private static final String VERSION_FILE_DOWNLOAD_WEB_SITE = "http://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Beta/LATEST/download";
+	private static final String VERSION_FILE_DOWNLOAD_WEB_SITE = "http://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/LATEST/download";
 
 	private JFrame parent;
 
