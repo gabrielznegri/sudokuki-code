@@ -11,8 +11,7 @@ Sudokuki - essential sudoku game
 * 2012-02-20 - released Sudokuki 1.1.Beta12
 - Japanese translations for Sudokuki 1.1 (by Fumiaki Nakanishi)
 - Fixed #3489081 Confusing icon for "Language" in the toolbar
-- Basic Spanish, Greek and Chinese translations (with help of Google translate)
-    => If you speak one of these languages, please send me your comments!
+- Basic Spanish, Greek and very basic Chinese translations
 - Fixed issue where "ENTER" doesn't close language dialog, and minor sync issue 
 - Portuguese and Russian translations for Sudokuki 1.1 (by Dmitry Salnikov) 
 - Esperanto translations for Sudokuki 1.1 (by Sylvain Vedrenne)
@@ -274,10 +273,10 @@ Sudokuki - essential sudoku game
 The stable release files can be found here:
 https://sourceforge.net/projects/sudokuki/files/sudokuki/
 
-Translations include English, Esperanto, French, German, 
-Greek, Japanese, and Spanish at the moment.
+Translations include Japanese, Chinese, English, Esperanto, French, German, 
+Greek, Portuguese, Russian and Spanish at the moment.
 
-The current stable release is version 1.0. 
+The current stable release is version 1.1. 
 
 
 -- Forums --
@@ -327,6 +326,9 @@ Sudokuki is referenced by many websites, for example:
 - Free Software Foundation - Free Software Directory
   http://directory.fsf.org
 
+- Freecode.com
+  http://freecode.com/projects/sudokuki
+
 - Vector Linux
   http://vectorlinux.osuosl.org/veclinux-7.0/testing/games/sudokuki-1.0-i586-1vl70.meta
 
@@ -343,22 +345,10 @@ Sudokuki is referenced by many websites, for example:
 - University of Amsterdam Master Education in System and Network Eng.
   https://www.os3.nl/
 
+- Softpedia
+  http://linux.softpedia.com/get/GAMES-ENTERTAINMENT/Puzzle/Sudokuki-33381.shtml
+  http://mac.softpedia.com/get/Games/Sudokuki.shtml
+  http://www.softpedia.com/get/Others/Home-Education/Sudokuki.shtml
+  
   ...
-
-
--- Alpha releases --
-
-Alpha versions can be found here:
-https://sourceforge.net/projects/sudokuki/files/sudokuki/1.1/Alpha
-
-Sudokuki is being completely rewritten at the moment.
-It is no more based on Gtkmm for the GUI. The GUI is now
-written in Java and based on Swing. The main reason to 
-this is that the author is having fun rewriting the
-program from C++ to Java and to learn more about Swing. 
-
-The author is also hoping to make it easier for users
-and contributors (developers, testers, translators) to
-help with the project, because using Java, Sudokuki
-is expected to be easier to install and run.
 
