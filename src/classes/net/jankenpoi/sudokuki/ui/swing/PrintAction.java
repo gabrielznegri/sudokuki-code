@@ -36,7 +36,6 @@ public class PrintAction extends AbstractAction {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		PrinterJob job = PrinterJob.getPrinterJob();
-		Object source = e.getSource();
 		job.setPrintable(grid);
 		boolean doPrint = job.printDialog();
 		if (doPrint) {

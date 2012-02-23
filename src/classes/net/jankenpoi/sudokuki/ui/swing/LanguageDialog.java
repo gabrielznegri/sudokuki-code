@@ -82,8 +82,6 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		GridLayout pnlLayout = new GridLayout(6, 1);
 		panel.setLayout(pnlLayout);
 
-		String detectedLanguage = _("DETECTED_LANGUAGE");
-
         icons.put("de", StockIcons.ICON_FLAG_DE);
         icons.put("el", StockIcons.ICON_FLAG_EL);
         icons.put("eo", StockIcons.ICON_FLAG_EO);

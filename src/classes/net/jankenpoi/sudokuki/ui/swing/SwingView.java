@@ -26,7 +26,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 
-import net.jankenpoi.sudokuki.Version;
 import net.jankenpoi.sudokuki.model.GridChangedEvent;
 import net.jankenpoi.sudokuki.model.GridModel;
 import net.jankenpoi.sudokuki.view.GridView;

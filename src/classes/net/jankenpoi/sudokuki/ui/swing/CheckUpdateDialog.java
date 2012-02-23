@@ -180,7 +180,7 @@ public class CheckUpdateDialog extends JDialog {
 	}
 
 	private void cancelButtonClicked() {
-		boolean cancelled = worker.cancel(true);
+		worker.cancel(true);
 	}
 
 	/**

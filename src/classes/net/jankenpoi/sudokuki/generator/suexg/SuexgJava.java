@@ -130,7 +130,7 @@ class SuexgJava extends SuexgGenerator {
 		int[] gridAndClues = new int[81];
 		int[] rating = new int[] { -1 };
 		int seed = rand.nextInt();
-		int status = gridGenerate(seed, requestedRatingMin, requestedRatingMax, grid, rating, gridAndClues);
+		gridGenerate(seed, requestedRatingMin, requestedRatingMax, grid, rating, gridAndClues);
 		//printGrid(grid);
 		//printGrid(gridAndClues);
 

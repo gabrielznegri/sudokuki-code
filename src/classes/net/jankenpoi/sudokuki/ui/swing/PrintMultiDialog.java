@@ -146,7 +146,7 @@ public class PrintMultiDialog extends JDialog {
 		/**
 		 * CANCELLED
 		 */
-		boolean cancelled = worker.cancel(true);
+		worker.cancel(true);
 	}
 
 	private boolean dialogCancelled() {

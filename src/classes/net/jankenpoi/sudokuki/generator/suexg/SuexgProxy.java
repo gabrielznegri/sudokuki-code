@@ -55,7 +55,7 @@ class SuexgProxy extends SuexgGenerator {
 		int[] gridAndClues = new int[81];
 		int[] rating = new int[] { -1 };
 		int seed = rand.nextInt();
-		int status = INSTANCE.generateSuexgGrid(seed, minRating, maxRating, grid, rating,
+		INSTANCE.generateSuexgGrid(seed, minRating, maxRating, grid, rating,
 				gridAndClues);
 		//printGrid(grid);
 		//printGrid(gridAndClues);
