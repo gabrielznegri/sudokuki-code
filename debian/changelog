@@ -1,6 +1,18 @@
+sudokuki (1.1.0) unstable; urgency=low
+
+  * Sudokuki version 1.1.0 ("Sudokuki", stable, Java Swing GUI)
+
+    - Greek translations (by Stavros Mavrakis)
+    - Fixed aspect of two Cancel buttons
+    - Fixed warnings and spurious traces
+    - Application logo for final release
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Mon, 23 Feb 2012 23:20:00 +0100
+
+
 sudokuki (1.0.912) unstable; urgency=low
 
-  * Sudokuki version 1.1.Beta12 ("Sudokuki", stable, Java Swing GUI)
+  * Sudokuki version 1.1.Beta12 ("Sudokuki", beta, Java Swing GUI)
 
     - Japanese translations for Sudokuki 1.1 (by Fumiaki Nakanishi)
     - Fixed #3489081 Confusing icon for "Language" in the toolbar
@@ -16,7 +28,7 @@ sudokuki (1.0.912) unstable; urgency=low
 
 sudokuki (1.0.910-2) unstable; urgency=low
 
-  * Sudokuki version 1.1.Beta11 ("Sudokuki", stable, Java Swing GUI)
+  * Sudokuki version 1.1.Beta11 ("Sudokuki", beta, Java Swing GUI)
 
     Fixed the following bug(s):
     - Fixed #3476292 TODO: Application logo for final release
@@ -30,7 +42,7 @@ sudokuki (1.0.910-2) unstable; urgency=low
 
 sudokuki (1.0.910-1) unstable; urgency=low
 
- * Sudokuki version 1.1.Beta10 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta10 ("Sudokuki", beta, Java Swing GUI)
 
  Fixed the following bug(s):
  - Updated french translations.
@@ -47,7 +59,7 @@ sudokuki (1.0.910-1) unstable; urgency=low
 
 sudokuki (1.0.900-1) unstable; urgency=low
 
- * Sudokuki version 1.1.Beta9 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta9 ("Sudokuki", beta, Java Swing GUI)
 
  Fixed the following bug(s):
  - #3469259 Make smaller Jar/Zip distributions
@@ -57,7 +69,7 @@ sudokuki (1.0.900-1) unstable; urgency=low
 
 sudokuki (1.0.800-1) unstable; urgency=low
 
- * Sudokuki version 1.1.Beta8 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta8 ("Sudokuki", beta, Java Swing GUI)
 
  Fixed the following bug(s):
  - Fixed #3411639 Memos shouldn't be retained if the user pressed ESC
@@ -68,7 +80,7 @@ sudokuki (1.0.800-1) unstable; urgency=low
 
 sudokuki (1.0.700-1) unstable; urgency=low
 
- * Sudokuki version 1.1.Beta7 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta7 ("Sudokuki", beta, Java Swing GUI)
 
  Fixed the following bug(s):
  - Dev #3440869 IMPROVE:Make one single input dialog for memos and numbers
@@ -79,7 +91,7 @@ sudokuki (1.0.700-1) unstable; urgency=low
 
 sudokuki (1.0.600-1) unstable; urgency=low
 
- * Sudokuki version 1.1.Beta6 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta6 ("Sudokuki", beta, Java Swing GUI)
 
  Fixed the following bug(s):
  - Fixed #3445643 Regression: on MS-Windows "Save As" has no effect
@@ -92,7 +104,7 @@ sudokuki (1.0.600-1) unstable; urgency=low
 
 sudokuki (1.0.500-1) unstable; urgency=low
 
- * Sudokuki version 1.1.Beta5 ("Sudokuki", stable, Java Swing GUI)
+ * Sudokuki version 1.1.Beta5 ("Sudokuki", beta, Java Swing GUI)
 
  Rewrote Sudokuki in Java with a Swing graphical user interface.
  Added Debian package build support for Sudokuki 1.1.Beta5.
