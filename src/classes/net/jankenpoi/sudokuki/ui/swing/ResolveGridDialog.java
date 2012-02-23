@@ -20,6 +20,7 @@ package net.jankenpoi.sudokuki.ui.swing;
 import static net.jankenpoi.i18n.I18n._;
 
 import java.awt.Container;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.util.concurrent.ExecutionException;
 
@@ -27,6 +28,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
 import net.jankenpoi.sudokuki.model.GridModel;
@@ -102,8 +104,8 @@ public class ResolveGridDialog extends JDialog {
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
 		Container pane = getContentPane();
-		GridLayout btnLayout = new GridLayout(3, 1);
-		pane.setLayout(btnLayout);
+		GridLayout layout = new GridLayout(3, 1);
+		pane.setLayout(layout);
 
 		
 		JLabel messageLbl1 = new JLabel(	
@@ -123,8 +125,13 @@ public class ResolveGridDialog extends JDialog {
 
 		pane.add(messageLbl1);
 		pane.add(messageLbl3);
-		pane.add(cancelBtn);
 
+        FlowLayout btnLayout = new FlowLayout(1);
+        JPanel btnPanel = new JPanel();
+        btnPanel.setLayout(btnLayout);
+        btnPanel.add(cancelBtn);
+        pane.add(btnPanel);
+        
 		pack();
 		setLocationRelativeTo(parent);
 	}
