@@ -1,7 +1,7 @@
 # Portuguese translations for the Sudokuki package.
 # Copyright (C) 2006-2012 Sylvain Vedrenne
 # This file is distributed under the same license as the Sudokuki package.
-# Dmitry Salnikov <dimasalnikov88@gmail.com>, 2011-2012.
+# Dmitry Salnikov <dimasalnikov88@gmail.com>, 2011-2012. 
 # 
 msgid ""
 msgstr ""
@@ -47,7 +47,7 @@ msgstr "Aritz Beraza"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:106
 msgid "Spanish translations (v1.0)"
-msgstr "Tradução espanhola (v1.0)"
+msgstr "Tradução para Espanhol (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:109
 msgid "Helene Damianakos"
@@ -55,24 +55,24 @@ msgstr "Helene Damianakos"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111
 msgid "Greek translations (v1.0)"
-msgstr "Tradução grega (v1.0)"
+msgstr "Tradução para Grego (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:114
 msgid "Stavros Mavrakis"
-msgstr "Stavros Mavrakis"
+msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:116
 msgid "Greek translations"
-msgstr "Tradução grega"
+msgstr "Tradução para Grego"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
 msgid "Fumiaki Nakanishi"
-msgstr "Fumiaki Nakanishi"
+msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:141
 msgid "Japanese translations"
-msgstr "Traduções para japonês"
+msgstr "Traduções para Japonês"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:124
 msgid "Jeanne Peng"
@@ -80,7 +80,7 @@ msgstr "Jeanne Peng"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:126
 msgid "Chinese translations"
-msgstr "Tradução chinesa"
+msgstr "Tradução para Chinês"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:129
 msgid "Claus Poerschke"
@@ -88,7 +88,7 @@ msgstr "Claus Poerschke"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:131
 msgid "Patches (v1.0) and German translations"
-msgstr "Patches (v1.0) e tradução para alemão"
+msgstr "Patches (v1.0) e tradução para Alemão"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:134
 msgid "Dmitry Salnikov"
@@ -108,15 +108,15 @@ msgstr "Sylvain Vedrenne"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:146
 msgid "Esperanto, French, and Japanese translations (v1.0)"
-msgstr "Traduções para esperanto, francês, e japonês (v1.0)"
+msgstr "Traduções para Esperanto, Francês e Japonês (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:163
 msgid ""
 "<b>Sudokuki</b> is released under the terms of the GNU General Public "
 "License version 3 or later (GPL v3+)."
 msgstr ""
-"<b>Sudokuki</b>foi realizado sob os termos da GNU Licença Pública Geral "
-"Verção da licença 3 ou seguinte (GPL v3+)."
+"<b>Sudokuki</b>é realizado segundo os termos da LPG Licença Pública Geral "
+"Versão da licença 3 ou seguinte (GPL v3+)."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:172
 msgid ""
@@ -124,7 +124,7 @@ msgid ""
 "included in every copy of the program."
 msgstr ""
 "O texto completo da licença está disponível no ficheiro chamado COPYING que "
-"deve ser incluido em cada cópia do programa."
+"deve ser incluído em cada cópia do programa."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:181
 msgid ""
@@ -133,8 +133,8 @@ msgid ""
 "WITHOUT ANY WARRANTY of any kind."
 msgstr ""
 "Este programa é Software Livre desenvolvido durante o tempo livre do autor "
-"na esperança de que alguns dos utilizadores vão achar útil, mas SEM QUAL "
-"QUER GARANTIA de qualquer tipo."
+"na esperança de que alguns dos utilizadores o achaem útil, mas SEM QUAL QUER "
+"GARANTIA de qualquer tipo."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:189
 msgid ""
@@ -142,8 +142,8 @@ msgid ""
 "respect the license terms. Read the GNU General Public License for more "
 "details."
 msgstr ""
-"Está bem-vindo de transferir este programa para outras pessoas enquanto "
-"respeitar os termos da licença. Leia Licença Pública Geral GNU para saber "
+"É bem-vindo e pode transferir este programa para outras pessoas na condição "
+"de respeitar os termos da licença. Leia Licença Pública Geral LPG para saber "
 "mais detalhes."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:200
@@ -160,8 +160,8 @@ msgid ""
 "Feel free to request features and report bugs on the Sudokuki Forums hosted "
 "by Sourceforge!"
 msgstr ""
-"Sinta-se livre para solicitar recursos e reportar bugs nos Forums Sudokuki "
-"hospedado por Sourceforge!"
+"Sinta-se livre para solicitar recursos e reportar erros nos Forums Sudokuki "
+"hospedadospor Sourceforge!"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:300
 msgid "Sudokuki Forums"
@@ -169,7 +169,7 @@ msgstr "Forums Sudokuki"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:41
 msgid "Solution..."
-msgstr "Soluções..."
+msgstr "Solução..."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:44
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:63
@@ -190,7 +190,7 @@ msgstr "Todas as notas"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:47
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:69
 msgid "Set memos in all cells"
-msgstr "Por notas em todas as celulas"
+msgstr "Por notas em todas as células"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:49
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:73
@@ -219,7 +219,7 @@ msgstr "pt"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateAction.java:49
 msgid "This version of Sudokuki is up-to-date."
-msgstr "Esta verção do Sudokuki está atualizada."
+msgstr "Esta versão do Sudokuki está atualizada."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateAction.java:58
 msgid ""
@@ -227,8 +227,8 @@ msgid ""
 "following website<br/>if a new version of Sudokuki is available:<br/><br/>"
 msgstr ""
 "Não é possível receber informações de atualização.<br/><br/>Por favor "
-"verifique no seguite site<br/>se nova verção do Sudokuki está disponível:<br/"
-"><br>"
+"verifique no seguite site<br/>se uma nova versão do Sudokuki está disponível:"
+"<br/><br/>"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:156
 msgid "Checking for available updates"
@@ -275,7 +275,7 @@ msgstr "Grelha personalizada"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:60
 msgid "Compose a custom grid..."
-msgstr "Grelha personalizada"
+msgstr "Grelha personalizada..."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:61
 msgid "Play grid"
@@ -326,7 +326,7 @@ msgstr "Sair"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:86
 msgid "Quit the application"
-msgstr "Sair da aplicacao"
+msgstr "Sair da aplicação"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:104
 msgid "Generating grid..."
@@ -338,11 +338,11 @@ msgstr "Ajuda"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:53
 msgid "Update"
-msgstr "Actualizar"
+msgstr "Atualizar"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:55
 msgid "Check for updates"
-msgstr "Verificar actualizacoes"
+msgstr "Verificar atualizações"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:58
 msgid "Download"
@@ -350,7 +350,7 @@ msgstr "Descarregar"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:60
 msgid "Download new version"
-msgstr "Descarregar nova versao"
+msgstr "Descarregar nova versão"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:63
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:49
@@ -471,11 +471,11 @@ msgstr "Nível"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:48
 msgid "Update recommended"
-msgstr "Atualização recomendada"
+msgstr "Recomenda-se atualização"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:82
 msgid "A new version of Sudokuki is available!<br/>"
-msgstr "A nova verção do Sudokuki está disponível!<br/>"
+msgstr "A nova versão do Sudokuki está disponível!<br/>"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:85
 msgid ""
@@ -521,7 +521,7 @@ msgstr "para impressora..."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveAction.java:56
 msgid "This grid has no solution."
-msgstr "Está grelha não tem soluções."
+msgstr "Esta grelha não tem soluções."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:114
 msgid "Grid resolution in progress..."
@@ -529,7 +529,7 @@ msgstr "Resolução da grelha em progresso..."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:64
 msgid "Save as..."
-msgstr "Gravar como..."
+msgstr "Gravar como"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101
 msgid "Clear memos"
@@ -556,8 +556,8 @@ msgid ""
 "Propose your help and get information on how to proceed<br/> on the "
 "Translators Forum hosted by Sourceforge:"
 msgstr ""
-"Proponha a sua ajuda e obtenha informação como prosseguir<br/> no Forum para "
-"tradutores hospedado por Sourceforge:"
+"Proponha a sua ajuda e obtenha informação sobre como prosseguir<br/> no "
+"Forum para tradutores hospedado por Sourceforge:"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:100
 msgid "Sudokuki Translators Forum"
