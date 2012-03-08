@@ -2,7 +2,11 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
-* 2012-02-23 - released Sudokuki 1.1 (Stable)
+* 2012-..... - released Sudokuki 1.1.1 (Stable)
+- #3493404 Final version of Portuguese translation for 1.1 realease.
+
+
+* 2012-02-23 - released Sudokuki 1.1.0 (Stable)
 - Greek translations (by Stavros Mavrakis)
 - Fixed aspect of two Cancel buttons
 - Fixed warnings and spurious traces

@@ -14,7 +14,7 @@ $(EXTRA_DIST): updateAndCheckExtraDistFilesList
 updateAndCheckExtraDistFilesList:
 	rm $(RESOURCESDIR)/new_EXTRA_DIST.include; \
 	line="EXTRA_DIST = "; \
-	for next in `find $(RESOURCESDIR)/files -type f | grep -v ".svn" && echo "THE_END"` ; do \
+	for next in `find $(RESOURCESDIR)/files -type f | grep -v ".svn" | sort && echo "THE_END"` ; do \
 	  if test "$$next" != "THE_END"; then \
 	    echo $$line" \\" >> $(RESOURCESDIR)/new_EXTRA_DIST.include; \
 	    line=`echo "$$next" | sed "s/^.*src\/resources\/\(.*\)/\1 /"` ; \
@@ -23,19 +23,21 @@ updateAndCheckExtraDistFilesList:
 	  fi; \
 	done; \
 	if test -f $(RESOURCESDIR)/EXTRA_DIST.include; then \
-	cmp -s $(RESOURCESDIR)/new_EXTRA_DIST.include $(RESOURCESDIR)/EXTRA_DIST.include; \
-	RETVAL=$$?; \
-	if test "$$RETVAL" = "0" ; then \
-	  echo ""; \
-	  echo "*** EXTRA_DIST.include is up-to-date"; \
-	  echo ""; \
-	else \
-	  echo ""; \
-	  echo "*** The control file 'EXTRA_DIST.include' needs to be updated first!"; \
-	  echo "*** Replace it with 'new_EXTRA_DIST.include' and try again."; \
-	  echo ""; \
-	  exit 1; \
-	fi; \
+	  cat $(RESOURCESDIR)/EXTRA_DIST.include | grep -v EXTRA_DIST | sed "s/\ \ \\\//" > $(RESOURCESDIR)/4diff_EXTRA_DIST.include; \
+	  cat $(RESOURCESDIR)/new_EXTRA_DIST.include | grep -v EXTRA_DIST | sed "s/\ \ \\\//" > $(RESOURCESDIR)/4diff_new_EXTRA_DIST.include; \
+	  cmp -s $(RESOURCESDIR)/4diff_new_EXTRA_DIST.include $(RESOURCESDIR)/4diff_EXTRA_DIST.include; \
+	  RETVAL=$$?; \
+	  if test "$$RETVAL" = "0" ; then \
+	    echo ""; \
+	    echo "*** EXTRA_DIST.include is up-to-date"; \
+	    echo ""; \
+	  else \
+	    echo ""; \
+	    echo "*** The control file 'EXTRA_DIST.include' needs to be updated first!"; \
+	    echo "*** Replace it with 'new_EXTRA_DIST.include' and try again."; \
+	    echo ""; \
+	    exit 1; \
+	  fi; \
 	fi
 
 CLEANFILES = new_EXTRA_DIST.include

@@ -28,7 +28,7 @@ mkoutputdir:
 updateAndCheckJavaFilesList:
 	rm $(JAVASRCDIR)/new_DIST_NOINST_JAVA.include; \
 	line="dist_noinst_JAVA = "; \
-	for next in `find $(JAVASRCDIR) -name "*.java" && echo "THE_END"` ; do \
+	for next in `find $(JAVASRCDIR) -name "*.java" | sort && echo "THE_END"` ; do \
 	  if test "$$next" != "THE_END"; then \
 	    echo $$line" \\" >> $(JAVASRCDIR)/new_DIST_NOINST_JAVA.include; \
 	    line=`echo "$$next" | sed "s/^.*src\/classes\/\(.*\)/\1 /"` ; \
@@ -37,7 +37,9 @@ updateAndCheckJavaFilesList:
 	  fi; \
 	done; \
 	if test -f $(JAVASRCDIR)/DIST_NOINST_JAVA.include; then \
-          cmp -s $(JAVASRCDIR)/DIST_NOINST_JAVA.include $(JAVASRCDIR)/new_DIST_NOINST_JAVA.include; \
+          cat $(JAVASRCDIR)/DIST_NOINST_JAVA.include | grep -v EXTRA_DIST | sed "s/\ \ \\\//" > $(JAVASRCDIR)/4diff_DIST_NOINST_JAVA.include; \
+          cat $(JAVASRCDIR)/new_DIST_NOINST_JAVA.include | grep -v EXTRA_DIST | sed "s/\ \ \\\//" > $(JAVASRCDIR)/4diff_new_DIST_NOINST_JAVA.include; \
+          cmp -s $(JAVASRCDIR)/4diff_new_DIST_NOINST_JAVA.include $(JAVASRCDIR)/4diff_DIST_NOINST_JAVA.include; \
           RETVAL=$$?; \
           if test "$$RETVAL" = "0" ; then \
             echo ""; \
