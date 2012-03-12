@@ -1,3 +1,13 @@
+sudokuki (1.1.1) unstable; urgency=low
+
+  * Sudokuki version 1.1.1 ("Sudokuki", stable, Java Swing GUI)
+
+    - Final version of Portuguese translation for 1.1 realease (item #3493404)
+    - Fixed #3499862 Errors with EXTRA_DIST.include or DIST_NOINST_JAVA.include
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Mon, 23 Feb 2012 23:20:00 +0100
+
+
 sudokuki (1.1.0) unstable; urgency=low
 
   * Sudokuki version 1.1.0 ("Sudokuki", stable, Java Swing GUI)
