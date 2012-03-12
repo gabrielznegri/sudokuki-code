@@ -23,8 +23,8 @@ updateAndCheckExtraDistFilesList:
 	  fi; \
 	done; \
 	if test -f $(RESOURCESDIR)/EXTRA_DIST.include; then \
-	  cat $(RESOURCESDIR)/EXTRA_DIST.include | grep -v EXTRA_DIST | sed "s/\ \ \\\//" > $(RESOURCESDIR)/4diff_EXTRA_DIST.include; \
-	  cat $(RESOURCESDIR)/new_EXTRA_DIST.include | grep -v EXTRA_DIST | sed "s/\ \ \\\//" > $(RESOURCESDIR)/4diff_new_EXTRA_DIST.include; \
+          cat $(RESOURCESDIR)/EXTRA_DIST.include | grep -v EXTRA_DIST | sed "s/\ \ \\///" | sort > $(RESOURCESDIR)/4diff_EXTRA_DIST.include; \
+          cat $(RESOURCESDIR)/new_EXTRA_DIST.include | grep -v EXTRA_DIST | sed "s/\ \ \\///" | sort > $(RESOURCESDIR)/4diff_new_EXTRA_DIST.include; \
 	  cmp -s $(RESOURCESDIR)/4diff_new_EXTRA_DIST.include $(RESOURCESDIR)/4diff_EXTRA_DIST.include; \
 	  RETVAL=$$?; \
 	  if test "$$RETVAL" = "0" ; then \

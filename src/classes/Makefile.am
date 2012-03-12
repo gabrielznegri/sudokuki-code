@@ -37,8 +37,8 @@ updateAndCheckJavaFilesList:
 	  fi; \
 	done; \
 	if test -f $(JAVASRCDIR)/DIST_NOINST_JAVA.include; then \
-          cat $(JAVASRCDIR)/DIST_NOINST_JAVA.include | grep -v EXTRA_DIST | sed "s/\ \ \\\//" > $(JAVASRCDIR)/4diff_DIST_NOINST_JAVA.include; \
-          cat $(JAVASRCDIR)/new_DIST_NOINST_JAVA.include | grep -v EXTRA_DIST | sed "s/\ \ \\\//" > $(JAVASRCDIR)/4diff_new_DIST_NOINST_JAVA.include; \
+          cat $(JAVASRCDIR)/DIST_NOINST_JAVA.include | grep -v EXTRA_DIST | sed "s/\ \ \\///" | sort > $(JAVASRCDIR)/4diff_DIST_NOINST_JAVA.include; \
+          cat $(JAVASRCDIR)/new_DIST_NOINST_JAVA.include | grep -v EXTRA_DIST | sed "s/\ \ \\///" | sort > $(JAVASRCDIR)/4diff_new_DIST_NOINST_JAVA.include; \
           cmp -s $(JAVASRCDIR)/4diff_new_DIST_NOINST_JAVA.include $(JAVASRCDIR)/4diff_DIST_NOINST_JAVA.include; \
           RETVAL=$$?; \
           if test "$$RETVAL" = "0" ; then \
