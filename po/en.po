@@ -1,13 +1,13 @@
 # English translations for the Sudokuki package.
 # Copyright (C) 2006-2012 Sylvain Vedrenne
 # This file is distributed under the same license as the Sudokuki package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Sylvain Vedrenne <sylvain@jankenpoi.net>, 2012.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokuki 1.1\n"
+"Project-Id-Version: sudokuki 1.1.1\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-02-23 22:52+0100\n"
+"POT-Creation-Date: 2012-03-12 22:03+0100\n"
 "PO-Revision-Date: 2011-07-01 18:09+0100\n"
 "Last-Translator: Sylvain Vedrenne <sylvain.vedrenne@free.fr>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"

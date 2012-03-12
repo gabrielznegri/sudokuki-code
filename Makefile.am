@@ -1,7 +1,7 @@
 SUBDIRS = po src
 ACLOCAL_AMFLAGS = -I m4
 
-EXTRA_DIST = build-aux/config.rpath
+EXTRA_DIST = build-aux/config.rpath sudokuki.sh
 
 update-po:
 	if [ -e src/resources/files/net/jankenpoi/i18n/* ]; then rm src/resources/files/net/jankenpoi/i18n/*; fi

@@ -1,14 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Sylvain Vedrenne
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This is the GetText Portable Object Template for Sudokuki translations.
+# You can translate Sudokuki into your language using this file
+# and a program such as POEdit or GNU/Emacs for example, etc.
 #
-#, fuzzy
+# Copyright (C) 2012 Sylvain Vedrenne
+#
+# This file is distributed under the same license as the PACKAGE package.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokuki 1.1\n"
+"Project-Id-Version: sudokuki 1.1.1\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-02-23 22:52+0100\n"
+"POT-Creation-Date: 2012-03-12 22:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"

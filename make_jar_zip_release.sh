@@ -1,7 +1,7 @@
-RELEASEVERSION=1.1
+RELEASEVERSION=1.1.1
 ZIPRELEASEDIR="sudokuki-"$RELEASEVERSION"-binary"
 
-make && make dist
+make && make dist-zip
 
 mkdir -p $ZIPRELEASEDIR/
 
@@ -10,7 +10,7 @@ cp libs/* $ZIPRELEASEDIR/
 cp sudokuki-$RELEASEVERSION.jar $ZIPRELEASEDIR/
 echo "java -Djava.library.path=. -jar sudokuki-"$RELEASEVERSION".jar -ui Swing" > $ZIPRELEASEDIR/sudokuki.sh
 chmod +x $ZIPRELEASEDIR"/sudokuki.sh"
-cp "sudokuki-"$RELEASEVERSION".tar.gz" $ZIPRELEASEDIR/
+cp "sudokuki-"$RELEASEVERSION".zip" $ZIPRELEASEDIR/"sudokuki-"$RELEASEVERSION"-src.zip"
 
 zip -r $ZIPRELEASEDIR".zip" $ZIPRELEASEDIR
 
