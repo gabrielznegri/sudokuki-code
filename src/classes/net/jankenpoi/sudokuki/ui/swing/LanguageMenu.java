@@ -86,6 +86,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                 addItem("es", _("Spanish"), myGroup);
                 addItem("fr", _("French"), myGroup);
                 addItem("ja", _("Japanese"), myGroup);
+                addItem("lv", _("Latvian"), myGroup);
                 addItem("pt", _("Portuguese"), myGroup);
                 addItem("ru", _("Russian"), myGroup);
                 addItem("zh", _("Mandarin"), myGroup);
@@ -137,6 +138,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
             refreshItem(languageCode, "es", "Spanish");
             refreshItem(languageCode, "fr", "French");
             refreshItem(languageCode, "ja", "Japanese");
+            refreshItem(languageCode, "lv", "Latvian");
             refreshItem(languageCode, "pt", "Portuguese");
             refreshItem(languageCode, "ru", "Russian");
             refreshItem(languageCode, "zh", "Mandarin");
@@ -167,6 +169,8 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 				return StockIcons.ICON_FLAG_FR;
 			} else if ("ja".equals(langCode)) {
 				return StockIcons.ICON_FLAG_JA;
+			} else if ("lv".equals(langCode)) {
+				return StockIcons.ICON_FLAG_LV;
 			} else if ("pt".equals(langCode)) {
 				return StockIcons.ICON_FLAG_PT;
 			} else if ("ru".equals(langCode)) {

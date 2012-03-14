@@ -3,7 +3,7 @@ Sudokuki - essential sudoku game
 -- Changelog --
 
 * 2012-03-12 - released Sudokuki 1.1.1 (Stable)
-- #3493404 Final version of Portuguese translation for 1.1 realease
+- Final version of Portuguese translation for 1.1 release (item #3493404)
 - Fixed #3499862 Errors with EXTRA_DIST.include or DIST_NOINST_JAVA.include
 
 * 2012-02-23 - released Sudokuki 1.1.0 (Stable)

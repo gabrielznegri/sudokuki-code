@@ -24,6 +24,10 @@ import net.jankenpoi.sudokuki.resources.UIResources;
 
 public class StockIcons {
 
+	/*
+	 * Current flag image icons thanks to the PIWIK project. For example, visit:
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/
+	 */
 	public final static ImageIcon ICON_FLAG_DE = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/de.png"));
@@ -45,6 +49,9 @@ public class StockIcons {
 	public final static ImageIcon ICON_FLAG_JA = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/ja.png"));
+	public final static ImageIcon ICON_FLAG_LV = new ImageIcon(
+			UIResources.class
+					.getResource("images/countryFlags/lv.png"));
 	public final static ImageIcon ICON_FLAG_PT = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/pt.png"));
