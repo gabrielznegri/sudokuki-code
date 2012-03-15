@@ -96,7 +96,7 @@ public class AboutDialog extends JDialog {
                 tabbedPane
                                 .addTab(CONTRIBUTORS,
                                                 null,
-                                                makeTextPanel(// "   name_of_contributor | translation   <= each line (aligned on '|')"
+                                                makeTextPanel(
 
                                                 "<html>"
                                                                 + "<table border=\"0\">"
@@ -109,6 +109,11 @@ public class AboutDialog extends JDialog {
                                                                 + "<td align=\"right\"><b>"+_("Helene Damianakos")+"</b></td>"
                                                                 + "<td> </td>"
                                                                 + "<td align=\"left\">"+_("Greek translations (v1.0)")+"</td>"
+                                                                + "</tr>"
+                                                                + "<tr>"
+                                                                + "<td align=\"right\"><b>"+_("Janis Eisaks")+"</b></td>"
+                                                                + "<td> </td>"
+                                                                + "<td align=\"left\">"+_("Latvian translations")+"</td>"
                                                                 + "</tr>"
                                                                 + "<tr>"
                                                                 + "<td align=\"right\"><b>"+_("Stavros Mavrakis")+"</b></td>"
