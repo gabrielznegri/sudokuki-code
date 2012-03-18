@@ -59,15 +59,15 @@ msgstr "Tradução para Grego (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:114
 msgid "Janis Eisaks"
-msgstr ""
+msgstr "Janis Eisaks"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:116
 msgid "Latvian translations"
-msgstr ""
+msgstr "Tradução para letão"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
 msgid "Stavros Mavrakis"
-msgstr ""
+msgstr "Stavros Mavrakis"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
 msgid "Greek translations"
@@ -75,7 +75,7 @@ msgstr "Tradução para Grego"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:124
 msgid "Fumiaki Nakanishi"
-msgstr ""
+msgstr "Fumiaki Nakanishi"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:126
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:146
