@@ -1,0 +1,580 @@
+# Latvian translations for the Sudokuki package.
+# Copyright (C) 2006-2012 Sylvain Vedrenne
+# This file is distributed under the same license as the Sudokuki package.
+# Sylvain Vedrenne <sylvain@jankenpoi.net>, 2012.
+# Translation by Janis Eisaks <je@dv.lv>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sudokuki 1.1.1\n"
+"Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
+"POT-Creation-Date: 2012-03-15 23:53+0100\n"
+"PO-Revision-Date: 2012-03-14 11:14+0300\n"
+"Last-Translator: Jānis Eisaks <jancs@dv.lv>\n"
+"Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:56
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:70
+msgid "About Sudokuki..."
+msgstr "Par Sudokuki"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:57
+msgid "Information"
+msgstr "Informācija"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:58
+msgid "Contributors"
+msgstr "Kontributori"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:59
+msgid "Feedback"
+msgstr "Atsauksmes"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:60
+msgid "Transfer"
+msgstr "Pārvietot"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:61
+msgid "License"
+msgstr "Licence"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:104
+msgid "Aritz Beraza"
+msgstr "Aritz Beraza"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:106
+msgid "Spanish translations (v1.0)"
+msgstr "Spāņu valodas tulkojumi (v1.0)"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:109
+msgid "Helene Damianakos"
+msgstr "Helene Damianakos"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111
+msgid "Greek translations (v1.0)"
+msgstr "Grieķu  valodas tulkojumi (v1.0)"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:114
+msgid "Janis Eisaks"
+msgstr "Jānis Eisaks"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:116
+msgid "Latvian translations"
+msgstr "Latviešu valodas tulkojums"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
+msgid "Stavros Mavrakis"
+msgstr "Stavros Mavrakis"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
+msgid "Greek translations"
+msgstr "Grieķu valodas tulkojumi"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:124
+msgid "Fumiaki Nakanishi"
+msgstr "Fumiaki Nakanishi"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:126
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:146
+msgid "Japanese translations"
+msgstr "Japāņu valodas tulkojumi"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:129
+msgid "Jeanne Peng"
+msgstr "Jeanne Peng"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:131
+msgid "Chinese translations"
+msgstr "Ķīniešu valodas tulkojumi"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:134
+msgid "Claus Poerschke"
+msgstr "Claus Poerschke"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:136
+msgid "Patches (v1.0) and German translations"
+msgstr "Labojumi (v1.0) un vācu valodas tulkojums"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:139
+msgid "Dmitry Salnikov"
+msgstr "Dmitry Salnikov"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:141
+msgid "Portuguese and Russian translations"
+msgstr "Portugāļu un krievu valodas tulkojums"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:144
+msgid "Helene Vedrenne"
+msgstr "Helene Vedrenne"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:149
+msgid "Sylvain Vedrenne"
+msgstr "Sylvain Vedrenne"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:151
+msgid "Esperanto, French, and Japanese translations (v1.0)"
+msgstr "Esperanto, franču un japāņu valodas tulkojumi (v1.0)"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:168
+msgid ""
+"<b>Sudokuki</b> is released under the terms of the GNU General Public "
+"License version 3 or later (GPL v3+)."
+msgstr ""
+"<b>Sudokuki</b> ir izlaists atbilstoši GNU Vispārējās publiskās licences "
+"(GNU General Public License version) 3 vai jaunākas (GPL v3+) noteikumiem."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:177
+msgid ""
+"The full license text is available in the file called COPYING that must be "
+"included in every copy of the program."
+msgstr ""
+"Pilns licences teksts ir atrodams failā COPYING un tam jābūt iekļautam "
+"ikvienā šīs aplikācijas kopijā."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:186
+msgid ""
+"This program is Free Software (\"Free\" as in \"Freedom\") developped during "
+"the author's free-time in the hope that some users will find it useful, but "
+"WITHOUT ANY WARRANTY of any kind."
+msgstr ""
+"Šī aplikācija ir brīvā programmatūra, kas ir izstrādāta autora brīvajā laikā "
+"cerot, ka vismaz daži lietotāji to atradīs par noderīgu. Vienlaikus autors "
+"neuzņemas PILNĪGI NEKĀDU ATBILDĪBU PAR APLIKĀCIJAS DARBĪBU VAI NODERĪGUMU."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:194
+msgid ""
+"You are welcome to transfer this program to other people as long as you "
+"respect the license terms. Read the GNU General Public License for more "
+"details."
+msgstr ""
+"Jūs esat laipni aicināti izplatīt šo aplikāciju citiem cilvēkiem, ievērojot "
+"licences noteikumus. Plašākai informācijai iepazīstieties ar GNU Vispārējās "
+"publiskās licences (GNU General Public License) tekstu."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:205
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:258
+msgid "Copyright (C) 2007-2012 Sylvain Vedrenne"
+msgstr "Copyright (C) 2007-2012 Sylvain Vedrenne"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:269
+msgid "on the Web"
+msgstr "Internetā"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:293
+msgid ""
+"Feel free to request features and report bugs on the Sudokuki Forums hosted "
+"by Sourceforge!"
+msgstr ""
+"Jūsu priekšlikumus uzlabojumiem un norādes uz kļūdām esat laipni aicināti "
+"ziņot mums izmantojot Sudokuki forumus uz Sourceforge.net!"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:305
+msgid "Sudokuki Forums"
+msgstr "Sudokuki Forums"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:41
+msgid "Solution..."
+msgstr "Atrisinājums..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:44
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:63
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java:39
+msgid "Memos"
+msgstr "Piezīmes"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:45
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:64
+msgid "Set memos"
+msgstr "Rakstīt piezīmes"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:46
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:68
+msgid "All memos"
+msgstr "Visas piezīmes"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:47
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:69
+msgid "Set memos in all cells"
+msgstr "Rakstīt piezīmes visās šūnās"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:49
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:73
+msgid "Resolve"
+msgstr "Risināt"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:51
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:74
+msgid "Resolve the grid"
+msgstr "Atrisināt režģi"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:80
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:92
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:106
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:91
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:49
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:55
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:70
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:91
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LocaleListenerImpl.java:19
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:67
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:53
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:94
+msgid "DETECTED_LANGUAGE"
+msgstr "lv"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateAction.java:49
+msgid "This version of Sudokuki is up-to-date."
+msgstr "Šī Sudokuki versija ir aktuālā."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateAction.java:58
+msgid ""
+"Unable to retrieve update information.<br/><br/>Please check on the "
+"following website<br/>if a new version of Sudokuki is available:<br/><br/>"
+msgstr ""
+"Nav iespējams saņemt informāciju par atjaunojumu.<br/><br/>Apmeklējiet "
+"sekojošo vietni un pārliecinieties<br/>vai nav pieejama jauna "
+"Sudokukiversija:<br/><br/>"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:156
+msgid "Checking for available updates"
+msgstr "Meklējam pieejamos atjauninājumus"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:159
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:108
+msgid "Please wait..."
+msgstr "Lūdzu, uzgaidiet..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:161
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:120
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:118
+msgid "Cancel"
+msgstr "Atsaukt"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java:38
+msgid "Select"
+msgstr "Iezīmēt"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:54
+msgid "Edit"
+msgstr "Labot"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:55
+msgid "Clear moves"
+msgstr "Iztīrīt gājienus"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:56
+msgid "Clear all moves"
+msgstr "Iztīrīt visus gājienus"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:57
+msgid "Hide memos..."
+msgstr "Slēpt piezīmes..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:58
+msgid "Hide all memos..."
+msgstr "Slēpt visas piezīmes..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:59
+msgid "Custom grid"
+msgstr "Pašizveidots režģis"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:60
+msgid "Compose a custom grid..."
+msgstr "Pašrocīgi veidot režģi..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:61
+msgid "Play grid"
+msgstr "Risināt režģi"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:62
+msgid "Play with current grid..."
+msgstr "Risināt pašreizējo režģi..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:55
+msgid "File"
+msgstr "Fails"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:57
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:59
+msgid "New"
+msgstr "Jauns"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:62
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:64
+msgid "Open"
+msgstr "Atvērt"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:67
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:69
+msgid "Save as"
+msgstr "Saglabāt kā"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:72
+msgid "Print"
+msgstr "Drukāt"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:74
+msgid "Print the grid"
+msgstr "Drukāt režģi"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:77
+msgid "Print x 4..."
+msgstr "Drukāt x 4..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:81
+msgid "Print four grids"
+msgstr "Drukāt četrus režģus"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:83
+msgid "Quit"
+msgstr "Iziet"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:86
+msgid "Quit the application"
+msgstr "Iziet no aplikācijas"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:104
+msgid "Generating grid..."
+msgstr "Veido režģi..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:51
+msgid "Help"
+msgstr "Palīdzība"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:53
+msgid "Update"
+msgstr "Atjaunināt"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:55
+msgid "Check for updates"
+msgstr "Pārbaudīt atjauninājumus"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:58
+msgid "Download"
+msgstr "Lejupielādēt"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:60
+msgid "Download new version"
+msgstr "Lejupielādēt jaunu versiju"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:63
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:49
+msgid "Translate this application"
+msgstr "Tulkot šo aplikāciju"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:65
+msgid "Help translate this application"
+msgstr "Palīdziet tulkot šo aplikāciju"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:68
+msgid "About..."
+msgstr " Par..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:55
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:131
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:72
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:128
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:95
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:104
+msgid "Language"
+msgstr "Valoda"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:74
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:132
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:126
+msgid "Ok"
+msgstr "Ok"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:98
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:133
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:82
+msgid "German"
+msgstr "Deutsch"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:99
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:134
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:83
+msgid "Greek"
+msgstr "Eλληνικά"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:100
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:135
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:84
+msgid "English"
+msgstr "English"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:101
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:136
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:85
+msgid "Esperanto"
+msgstr "Esperanto"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:102
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:137
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:86
+msgid "Spanish"
+msgstr "Español"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:103
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:138
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:87
+msgid "French"
+msgstr "Français"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:104
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:139
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:88
+msgid "Japanese"
+msgstr "日本語"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:105
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:140
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:89
+msgid "Latvian"
+msgstr "Latviešu"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:106
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:141
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:90
+msgid "Portuguese"
+msgstr "Português"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:107
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:142
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:91
+msgid "Russian"
+msgstr "Русский"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:108
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:143
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:92
+msgid "Mandarin"
+msgstr "中文"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:52
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:101
+msgid "Level 1"
+msgstr "1. līmenis"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:59
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:102
+msgid "Level 2"
+msgstr "2. līmenis"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:66
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:103
+msgid "Level 3"
+msgstr "3. līmenis"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:73
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:104
+msgid "Level 4"
+msgstr "4. līmenis"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:80
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:105
+msgid "Level 5"
+msgstr "5. līmenis"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:100
+msgid "Level"
+msgstr "Līmenis"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:48
+msgid "Update recommended"
+msgstr "Ieteicams atjaunojums"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:82
+msgid "A new version of Sudokuki is available!<br/>"
+msgstr "Ir pieejama jauna Sudokuki versija! <br/>"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:85
+msgid ""
+"Please download and install the latest package<br/>from the following "
+"website:<br/>"
+msgstr ""
+"Lūdzam lejupielādēt un uzstādīt jaunāko pakotni<br/>no sekojošās vietnes:<br/"
+">"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:98
+msgid "Download Sudokuki"
+msgstr "Lejupielādēt Sudokuki"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:48
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:77
+msgid "Arabic"
+msgstr "Arābu"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:56
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:78
+msgid "Chinese"
+msgstr "Ķīniešu"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:76
+msgid "Numbers"
+msgstr "Skaitļi"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:53
+msgid "Open grid..."
+msgstr "Atvērt režģi..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:71
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:70
+msgid "Sudokuki grid files"
+msgstr "Sudokuki režģu faili"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:113
+msgid "Generating and sending four grids"
+msgstr "Veidojam un sūtam četrus režģus"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:118
+msgid "to the printer..."
+msgstr "Nosūtīt uz printeri..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveAction.java:56
+msgid "This grid has no solution."
+msgstr "Šim režģim nav atrisinājuma."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:114
+msgid "Grid resolution in progress..."
+msgstr "Režģis tiek risināts...."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:64
+msgid "Save as..."
+msgstr "Saglabāt kā..."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101
+msgid "Clear memos"
+msgstr "Iztīrīt piezīmes"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:117
+msgid "Congratulations!"
+msgstr "Apsveicu! Jūs uzvarējāt!"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:124
+msgid "Grid complete!"
+msgstr "Režģis pabeigts!"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:131
+msgid "Grid resolved with success."
+msgstr "Režģis veiksmīgi atrisināts."
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:83
+msgid "You can easily translate Sudokuki into your own language!"
+msgstr "Jūs bez grūtībām varat pārtulkot Sudokuki savā valodā!"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:87
+msgid ""
+"Propose your help and get information on how to proceed<br/> on the "
+"Translators Forum hosted by Sourceforge:"
+msgstr ""
+"Piedāvājiet savu palīdzību un saņemiet informāciju par veicamām darbībām<br/"
+"> Tulkotāju forumā uz Sourceforge.net:"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:100
+msgid "Sudokuki Translators Forum"
+msgstr "Sudokuki Tulkotāju forums"
