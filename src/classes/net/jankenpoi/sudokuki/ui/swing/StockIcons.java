@@ -76,12 +76,21 @@ public class StockIcons {
 	public final static ImageIcon ICON_FLAG_LV = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/lv.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/pt.png
+	 */
 	public final static ImageIcon ICON_FLAG_PT = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/pt.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/ru.png
+	 */
 	public final static ImageIcon ICON_FLAG_RU = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/ru.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/zh.png
+	 */
 	public final static ImageIcon ICON_FLAG_ZH = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/zh.png"));
