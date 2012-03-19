@@ -28,27 +28,51 @@ public class StockIcons {
 	 * Current flag image icons thanks to the PIWIK project. For example, visit:
 	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/
 	 */
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/de.png
+	 */
 	public final static ImageIcon ICON_FLAG_DE = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/de.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/gr.png
+	 */
 	public final static ImageIcon ICON_FLAG_EL = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/el.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/uk.png
+	 */
 	public final static ImageIcon ICON_FLAG_EN = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/en.png"));
+	/* 
+	 * 
+	 */
 	public final static ImageIcon ICON_FLAG_EO = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/eo.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/es.png
+	 */
 	public final static ImageIcon ICON_FLAG_ES = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/es.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/fr.png
+	 */
 	public final static ImageIcon ICON_FLAG_FR = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/fr.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/jp.png
+	 */
 	public final static ImageIcon ICON_FLAG_JA = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/ja.png"));
+	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/lv.png
+	 */
 	public final static ImageIcon ICON_FLAG_LV = new ImageIcon(
 			UIResources.class
 					.getResource("images/countryFlags/lv.png"));

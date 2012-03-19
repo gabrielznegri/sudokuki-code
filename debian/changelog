@@ -1,3 +1,13 @@
+sudokuki (1.1.2) unstable; urgency=low
+
+  * Sudokuki version 1.1.2 ("Sudokuki", stable, Java Swing GUI)
+
+    - Latvian translations by Janis Eisaks
+    - Updated country flag icons from PIWIK project
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Mon, 19 Mar 2012 22:40:00 +0100
+
+
 sudokuki (1.1.1) unstable; urgency=low
 
   * Sudokuki version 1.1.1 ("Sudokuki", stable, Java Swing GUI)
