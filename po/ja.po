@@ -60,11 +60,11 @@ msgstr "ギリシア語訳 (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:114
 msgid "Janis Eisaks"
-msgstr ""
+msgstr "ジャニスエイザクす"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:116
 msgid "Latvian translations"
-msgstr ""
+msgstr "ラトビア語翻訳"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
 msgid "Stavros Mavrakis"

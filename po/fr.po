@@ -59,7 +59,7 @@ msgstr "Traductions en grec (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:114
 msgid "Janis Eisaks"
-msgstr ""
+msgstr "Janis Eisaks"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:116
 msgid "Latvian translations"
