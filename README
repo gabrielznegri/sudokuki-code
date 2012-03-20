@@ -2,9 +2,10 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
-* 2012-03-19 - released Sudokuki 1.1.2 (Stable)
+* 2012-03-20 - released Sudokuki 1.1.2 (Stable)
 - Latvian translations by Janis Eisaks
 - Updated country flag icons from PIWIK project
+- Fixed #3509367 COPYING file and release packages
 
 * 2012-03-12 - released Sudokuki 1.1.1 (Stable)
 - Final version of Portuguese translation for 1.1 release (item #3493404)
