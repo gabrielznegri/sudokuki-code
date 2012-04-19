@@ -2,13 +2,13 @@ Source: sudokuki
 Section: x11
 Priority: extra
 Maintainer: Sylvain Vedrenne <sylvain@jankenpoi.net>
-Build-Depends: debhelper (>= 7), autotools-dev
+Build-Depends: debhelper (>= 7), autotools-dev, java6-sdk
 Standards-Version: 3.7.3
 Homepage: https://sourceforge.net/projects/sudokuki
 
 Package: sudokuki
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, java6-runtime
 Description: Sudokuki is a graphical SUDOKU game
  Sudokuki solves even the most difficult sudoku grids for you
   - Generate a sudoku

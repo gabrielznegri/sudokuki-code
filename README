@@ -2,6 +2,10 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2012-xx-xx - released Sudokuki 1.1.3 (Stable)
+- Debian package now depends upon java6-runtime and its build upon java6-sdk
+- Fixed Japanese translation string for "Latvian translations"
+
 * 2012-03-20 - released Sudokuki 1.1.2 (Stable)
 - Latvian translations by Janis Eisaks
 - Updated country flag icons from PIWIK project
