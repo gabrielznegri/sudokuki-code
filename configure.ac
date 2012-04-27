@@ -33,17 +33,32 @@ fi
 if test "x$JAVA_HOME" = x; then
   AC_PATH_PROG(TMP_JAVAC, javac, [])
   if test "x$TMP_JAVAC" != "x"; then
+    TMP_NOSYMLINK_JAVAC=$(readlink -f $TMP_JAVAC)
+    if test "$TMP_NOSYMLINK_JAVAC" != "$TMP_JAVAC"; then
+      AC_MSG_RESULT([checking location... $TMP_NOSYMLINK_JAVAC])
+      TMP_JAVAC=$TMP_NOSYMLINK_JAVAC
+    fi
     JAVA_HOME=`echo $TMP_JAVAC | sed "s/\/*bin\/*javac*//"`
   fi
   if test "x$JAVA_HOME" = x; then
     AC_PATH_PROG(TMP_JAVAH, javah, [])
     if test "x$TMP_JAVAH" != "x"; then
+      TMP_NOSYMLINK_JAVAH=$(readlink -f $TMP_JAVAH)
+      if test "$TMP_NOSYMLINK_JAVAH" != "$TMP_JAVAH"; then
+        AC_MSG_RESULT([checking location... $TMP_NOSYMLINK_JAVAH])
+        TMP_JAVAH=$TMP_NOSYMLINK_JAVAH
+      fi
       JAVA_HOME=`echo $TMP_JAVAH | sed "s/\/*bin\/*javah*//"`
     fi
   fi
   if test "x$JAVA_HOME" = x; then
     AC_PATH_PROG(TMP_JAR, jar, [])
     if test "x$TMP_JAR" != "x"; then
+      TMP_NOSYMLINK_JAR=$(readlink -f $TMP_JAR)
+      if test "$TMP_NOSYMLINK_JAR" != "$TMP_JAR"; then
+        AC_MSG_RESULT([checking location... $TMP_NOSYMLINK_JAR])
+        TMP_JAR=$TMP_NOSYMLINK_JAR
+      fi
       JAVA_HOME=`echo $TMP_JAR | sed "s/\/*bin\/*jar*//"`
     fi
   fi
