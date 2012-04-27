@@ -2,7 +2,7 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
-* 2012-xx-xx - released Sudokuki 1.1.3 (Stable)
+* 2012-04-28 - released Sudokuki 1.1.3 (Stable)
 - Dutch translations from Jeroen P. Broks. Added country flag for new translation, 
   updated some po files accordingly.
 - Fixed Japanese translation string for "Latvian translations"
