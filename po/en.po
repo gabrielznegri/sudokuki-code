@@ -5,9 +5,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokuki 1.1.1\n"
+"Project-Id-Version: sudokuki 1.1.3\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-04-28 01:11+0200\n"
+"POT-Creation-Date: 2012-04-28 21:08+0200\n"
 "PO-Revision-Date: 2011-07-01 18:09+0100\n"
 "Last-Translator: Sylvain Vedrenne <sylvain.vedrenne@free.fr>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
