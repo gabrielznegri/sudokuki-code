@@ -9,7 +9,7 @@ sudokuki:
 CLEANFILES = $(EXTRA_SCRIPTS) 
 
 SUEXG_PROXY_JNI_DIR=$(top_builddir)/src/classes/net/jankenpoi/sudokuki/generator/suexg
-AM_CPPFLAGS = -I$(top_builddir)/tmpjar/net/jankenpoi/sudokuki/generator/suexg -Isuexg -DLOCALEDIR=\"$(localedir)\" -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/win32 
+AM_CPPFLAGS = -I$(top_builddir)/tmpjar/net/jankenpoi/sudokuki/generator/suexg -Isuexg -DLOCALEDIR=\"$(localedir)\" -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux -I$(JAVA_HOME)/include/win32 
 
 lib_LTLIBRARIES = libsuexg_proxy.la
 
