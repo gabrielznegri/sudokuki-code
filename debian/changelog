@@ -1,3 +1,16 @@
+sudokuki (1.1.3) unstable; urgency=low
+
+  * Sudokuki version 1.1.3 ("Sudokuki", stable, Java Swing GUI)
+
+    - Dutch translations from Jeroen P. Broks. Added country flag for new translation, 
+      updated some po files accordingly.
+    - Fixed Japanese translation string for "Latvian translations"
+    - Fixed item #3520763 Package build JDK detection should see beyond symlinks
+    - Debian package now depends upon java6-runtime and its build upon java6-sdk
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Sat, 28 Apr 2012 14:24:00 +0100
+
+
 sudokuki (1.1.2) unstable; urgency=low
 
   * Sudokuki version 1.1.2 ("Sudokuki", stable, Java Swing GUI)
