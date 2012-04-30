@@ -1,20 +1,3 @@
-/*
- * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2012 Sylvain Vedrenne
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package net.jankenpoi.sudokuki.ui.swing;
 
 import static net.jankenpoi.i18n.I18n._;
@@ -28,60 +11,47 @@ import java.io.IOException;
 import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.filechooser.FileFilter;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
+import net.jankenpoi.i18n.I18n;
 import net.jankenpoi.sudokuki.view.GridView;
 
 @SuppressWarnings("serial")
 public class SaveAsAction extends AbstractAction {
-
 	private final GridView view;
-
 	private final JFrame frame;
-	
+
 	SaveAsAction(JFrame frame, GridView view, ActionsRepository actions) {
 		this.frame = frame;
 		this.view = view;
 	}
-	
-	@Override
-	public void actionPerformed(ActionEvent e) {
 
-		final JFileChooser fc = new JFileChooser() {
+	public void actionPerformed(ActionEvent e) {
+		JFileChooser fc = new JFileChooser() {
+
 			@Override
 			public File getSelectedFile() {
 				File file = super.getSelectedFile();
 				if (file == null) {
-					return null;
+					return new File("myGrid.skg");
 				}
-				if (getExtension(file) == null) {
-					file = new File(file.getAbsolutePath() + ".skg");
+				if (!"skg".equals(getExtension(file))) {
+					file = new File(String.valueOf(file.getAbsolutePath())
+							+ ".skg");
 				}
 				return file;
 			}
 		};
-		
-		fc.setDialogTitle(_("Save as..."));
+
+		fc.setDialogTitle(I18n._("Save as..."));
 		fc.setAcceptAllFileFilterUsed(false);
-		fc.setFileFilter(new FileFilter() {
-						
-			@Override
-			public String getDescription() {
-				return _("Sudokuki grid files");
-			}
-			
-			@Override
-			public boolean accept(File f) {
-				String extension = getExtension(f);
-				if (f.isDirectory() || "skg".equals(extension)) {
-					return true;
-				}
-				return false;
-			}
-		});
-		int returnVal = fc.showOpenDialog(frame);
-		
-		if (returnVal != JFileChooser.APPROVE_OPTION) {
+		FileNameExtensionFilter filter = new FileNameExtensionFilter(
+				I18n._("Sudokuki grid files"), new String[] { "skg" });
+		fc.setFileFilter(filter);
+		int returnVal = fc.showSaveDialog(this.frame);
+
+		if (returnVal != 0) {
 			return;
 		}
 		File fileToSave = fc.getSelectedFile();
@@ -92,20 +62,26 @@ public class SaveAsAction extends AbstractAction {
 		try {
 			fileToSave.createNewFile();
 		} catch (IOException e1) {
-			e1.printStackTrace();
+            JOptionPane.showMessageDialog(frame, "<html>"
+                    + "<table border=\"0\">" + "<tr>"
+                    + _("Failed to save the grid<br/>at the selected location.") + "</tr>"
+                    + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
 		}
 		FileOutputStream fos = null;
 		try {
 			fos = new FileOutputStream(fileToSave);
 		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
+            JOptionPane.showMessageDialog(frame, "<html>"
+                    + "<table border=\"0\">" + "<tr>"
+                    + _("Failed to save the grid<br/>at the selected location.") + "</tr>"
+                    + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
 		}
 		if (fos == null) {
 			return;
 		}
 
-		int[] cellInfos = view.getController().getCellInfosFromModel();
-		for (int i=0; i<cellInfos.length; i++) {
+		int[] cellInfos = this.view.getController().getCellInfosFromModel();
+		for (int i = 0; i < cellInfos.length; i++) {
 			byte lo = (byte) (cellInfos[i] & 0xFF);
 			byte hi = (byte) ((cellInfos[i] & 0xFF00) >> 8);
 			try {
@@ -121,16 +97,15 @@ public class SaveAsAction extends AbstractAction {
 			e1.printStackTrace();
 		}
 	}
-	
-	private static String getExtension(File f) {
+
+	private static String getExtension(File file) {
 		String ext = null;
-		String s = f.getName();
+		String s = file.getName();
 		int i = s.lastIndexOf('.');
 
-		if (i > 0 && i < s.length() - 1) {
+		if ((i > 0) && (i < s.length() - 1)) {
 			ext = s.substring(i + 1).toLowerCase();
 		}
 		return ext;
 	}
-
 }

@@ -31,6 +31,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 
+import net.jankenpoi.sudokuki.model.GridModel.GridValidity;
 import net.jankenpoi.sudokuki.view.GridView;
 
 @SuppressWarnings("serial")
@@ -67,7 +68,6 @@ public class OpenGridAction extends AbstractAction {
 			
 			@Override
 			public String getDescription() {
-				// TODO Auto-generated method stub
 				return _("Sudokuki grid files");
 			}
 			
@@ -93,8 +93,6 @@ public class OpenGridAction extends AbstractAction {
 		try {
 			fis = new FileInputStream(fileToOpen);
 		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
 		}
 		if (fis == null) {
             JOptionPane.showMessageDialog(frame, "<html>"
@@ -114,17 +112,23 @@ public class OpenGridAction extends AbstractAction {
 
 				externalCellInfos[i] = (short) together;
 			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+	            JOptionPane.showMessageDialog(frame, "<html>"
+	                    + "<table border=\"0\">" + "<tr>"
+	                    + _("Failed to open the grid<br/>at the selected location.") + "</tr>"
+	                    + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
 			}
 		}
-		view.getController().notifyResetGridFromShorts(externalCellInfos);
-		
+		boolean success = view.getController().notifyResetGridFromShorts(externalCellInfos);
+		if (!success) {
+            JOptionPane.showMessageDialog(frame, "<html>"
+                    + "<table border=\"0\">" + "<tr>"
+                    + _("This file is not a valid Sudokuki grid.") + "</tr>"
+                    + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
+		}
 		try {
 			fis.close();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			System.out.println("An error occured upon FileInputStream close()");
 		}
 	}
 		
