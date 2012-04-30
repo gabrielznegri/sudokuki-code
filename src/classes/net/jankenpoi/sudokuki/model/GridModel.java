@@ -77,23 +77,10 @@ public class GridModel implements Cloneable {
 		newGrid();
 	}
 
-	public boolean resetGridModelFromShorts(short[] externalCellInfos) {
-		short[] oldCellInfos = new short[81];
-		for (int i=0; i<81; i++) {
-			oldCellInfos[i] = cellInfos[i];
-		}
-		
+	public void resetGridModelFromShorts(short[] externalCellInfos) {
 		cellInfos = new short[81];
 		for (int i=0; i<81; i++) {
 			cellInfos[i] = externalCellInfos[i];
-		}
-		if (checkGridValidity().isValid) {
-			return true;
-		} else {
-			for (int i=0; i<81; i++) {
-				cellInfos[i] = oldCellInfos[i];
-			}
-			return false;
 		}
 	}
 	
@@ -554,15 +541,10 @@ public class GridModel implements Cloneable {
 		Integer squareWithErrorY = null;
 		
 		// Check validity of all lines
-		lines:
 		for (int li = 0; isValid && li < 9; li++) {
 			byte[] numbers = new byte[10];
 			for (int co = 0; co < 9; co++) {
 				byte value = getValueAt(li, co);
-				if (10 <= value) {
-					isValid = false;
-					break lines;
-				}
 				if (numbers[value] != 0) {
 					isValid = false;
 					lineWithError = Integer.valueOf(li);

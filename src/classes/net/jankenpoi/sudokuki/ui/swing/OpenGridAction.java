@@ -31,7 +31,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 
-import net.jankenpoi.sudokuki.model.GridModel.GridValidity;
+import net.jankenpoi.sudokuki.model.GridModel;
 import net.jankenpoi.sudokuki.view.GridView;
 
 @SuppressWarnings("serial")
@@ -104,31 +104,34 @@ public class OpenGridAction extends AbstractAction {
 		}
 		
 		short[] externalCellInfos = new short[81];
-		for (int i=0; i<81; i++) {
-			try {
+		try {
+			for (int i = 0; i < 81; i++) {
 				int lo = fis.read();
 				int hi = fis.read();
 				short together = (short) (hi << 8 | lo);
 
-				externalCellInfos[i] = (short) together;
-			} catch (IOException e1) {
-	            JOptionPane.showMessageDialog(frame, "<html>"
-	                    + "<table border=\"0\">" + "<tr>"
-	                    + _("Failed to open the grid<br/>at the selected location.") + "</tr>"
-	                    + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
+				if ((together & ~(GridModel.FLAG_CELL_READ_ONLY
+						| GridModel.FLAG_GRID_COMPLETE
+						| GridModel.MASK_CELL_MEMOS | GridModel.MASK_CELL_VALUES)) != 0) {
+					throw new IOException("Invalid cell info");
+				}
+				if (9 < (together & GridModel.MASK_CELL_VALUES)) {
+					throw new IOException("Cell value out of range");
+				}
+				externalCellInfos[i] = together;
 			}
-		}
-		boolean success = view.getController().notifyResetGridFromShorts(externalCellInfos);
-		if (!success) {
-            JOptionPane.showMessageDialog(frame, "<html>"
-                    + "<table border=\"0\">" + "<tr>"
-                    + _("This file is not a valid Sudokuki grid.") + "</tr>"
-                    + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
-		}
-		try {
-			fis.close();
+			view.getController().notifyResetGridFromShorts(externalCellInfos);
 		} catch (IOException e1) {
-			System.out.println("An error occured upon FileInputStream close()");
+			JOptionPane.showMessageDialog(frame, "<html>"
+					+ "<table border=\"0\">" + "<tr>"
+					+ _("This file is not a Sudokuki grid.") + "</tr>"
+					+ "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
+		} finally {
+			try {
+				fis.close();
+			} catch (IOException e1) {
+				System.err.println("An error occured upon FileInputStream close()");
+			}
 		}
 	}
 		

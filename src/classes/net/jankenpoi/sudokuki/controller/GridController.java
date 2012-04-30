@@ -100,17 +100,12 @@ public class GridController {
 		model.fireGridChanged(new GridChangedEvent(model, 0, 0, (short)0));
 	}
 
-	public boolean notifyResetGridFromShorts(short[] externalCellInfos) {
-		final boolean wasCustomGridModeOn = model.getCustomGridMode();
-		if (wasCustomGridModeOn) {
+	public void notifyResetGridFromShorts(short[] externalCellInfos) {
+		if (model.getCustomGridMode()) {
 			model.exitCustomGridMode();
 		}
-		boolean result = model.resetGridModelFromShorts(externalCellInfos);
-		if (wasCustomGridModeOn && result == false) {
-			model.enterCustomGridMode();
-		}
+		model.resetGridModelFromShorts(externalCellInfos);
 		model.fireGridChanged(new GridChangedEvent(model, 0, 0, (short)0));
-		return result;
 	}
 
 	public int[] getCellInfosFromModel() {
