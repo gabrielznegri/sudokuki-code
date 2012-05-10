@@ -2,7 +2,7 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
-* 2012-xx-xx - released Sudokuki 1.1.4 (Stable)
+* 2012-05-10 - released Sudokuki 1.1.4 (Stable)
 - Fixed item #3520726 "Cannot enter filename when saving a grid on MacOS X"
 - Fixed item #3522650 "Corrupted or wrong grid files are not correctly handled"
 - Fixed item #3520759 "AboutDialog: ensure all text is visible (like for GPLv3 txt)"

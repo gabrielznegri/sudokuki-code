@@ -8,6 +8,8 @@ sudokuki (1.1.4) unstable; urgency=low
     - Fixed item #3522280 "With Sun/Oracle JDK: fatal error: jni_md.h: No such file ..."
     - Updated Portuguese and Russian po files with Dutch translator's name
 
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Thu, 10 May 2012 23:00:00 +0100
+
 
 sudokuki (1.1.3) unstable; urgency=low
 

@@ -66,6 +66,7 @@ public class SaveAsAction extends AbstractAction {
                     + "<table border=\"0\">" + "<tr>"
                     + _("Failed to save the grid<br/>at the selected location.") + "</tr>"
                     + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
+            return;
 		}
 		FileOutputStream fos = null;
 		try {
@@ -75,9 +76,7 @@ public class SaveAsAction extends AbstractAction {
                     + "<table border=\"0\">" + "<tr>"
                     + _("Failed to save the grid<br/>at the selected location.") + "</tr>"
                     + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
-		}
-		if (fos == null) {
-			return;
+            return;
 		}
 
 		int[] cellInfos = this.view.getController().getCellInfosFromModel();

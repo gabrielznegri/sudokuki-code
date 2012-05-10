@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.1.4\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-05-01 01:10+0200\n"
+"POT-Creation-Date: 2012-05-03 22:51+0200\n"
 "PO-Revision-Date: 2012-05-01 18:09+0100\n"
 "Last-Translator: Sylvain Vedrenne <sylvain.vedrenne@free.fr>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
@@ -249,7 +249,7 @@ msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:156
 msgid "Checking for available updates"
-msgstr "Vérifier les mises-à-jour"
+msgstr "Vérification des mises-à-jour"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:159
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:108
@@ -566,9 +566,9 @@ msgid "Save as..."
 msgstr "Enregistrer sous..."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:67
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:76
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:77
 msgid "Failed to save the grid<br/>at the selected location."
-msgstr ""
+msgstr "Impossible d'enregistrer la grille<br/>à l'endroit indiqué."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101
 msgid "Clear memos"

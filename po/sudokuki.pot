@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.1.4\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-05-01 01:10+0200\n"
+"POT-Creation-Date: 2012-05-03 22:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -549,7 +549,7 @@ msgid "Save as..."
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:67
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:76
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:77
 msgid "Failed to save the grid<br/>at the selected location."
 msgstr ""
 
