@@ -22,11 +22,15 @@ public class I18n {
 		reset("");
 	}
 
-	public static void reset(String localeString) {
+	public static void reset(final String localeString) {
+		String[] split = localeString.split("_");
+		String lang = split[0];
+		String country = split.length > 1 ? split[1] : "";
 		synchronized (lock) {
 			try {
-				if (localeString != "")
-					currentLocale = new Locale(localeString);
+				if (!"".equals(localeString)) {
+					currentLocale = new Locale(lang, country);
+				}
 				if (currentLocale == null)
 					currentLocale = new Locale(System.getenv("LANG"));
 				ResourceBundle rb = ResourceBundle.getBundle(I18n.class

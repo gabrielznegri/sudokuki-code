@@ -92,6 +92,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         icons.put("lv", StockIcons.ICON_FLAG_LV);
         icons.put("nl", StockIcons.ICON_FLAG_NL);
         icons.put("pt", StockIcons.ICON_FLAG_PT);
+        icons.put("pt_BR", StockIcons.ICON_FLAG_BR);
         icons.put("ru", StockIcons.ICON_FLAG_RU);
         icons.put("zh", StockIcons.ICON_FLAG_ZH);
         
@@ -106,6 +107,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         addItem("lv", _("Latvian"), myGroup);
         addItem("nl", _("Dutch"), myGroup);
         addItem("pt", _("Portuguese"), myGroup);
+        addItem("pt_BR", _("Brazilian Portuguese"), myGroup);
         addItem("ru", _("Russian"), myGroup);
         addItem("zh", _("Mandarin"), myGroup);
         
@@ -140,8 +142,9 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		itemsMap.get("fr").setText(_("French"));
 		itemsMap.get("ja").setText(_("Japanese"));
 		itemsMap.get("lv").setText(_("Latvian"));
-                itemsMap.get("nl").setText(_("Dutch"));
+		itemsMap.get("nl").setText(_("Dutch"));
 		itemsMap.get("pt").setText(_("Portuguese"));
+		itemsMap.get("pt_BR").setText(_("Brazilian Portuguese"));
 		itemsMap.get("ru").setText(_("Russian"));
 		itemsMap.get("zh").setText(_("Mandarin"));
 	}

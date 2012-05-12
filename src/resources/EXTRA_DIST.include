@@ -8,9 +8,11 @@ files/net/jankenpoi/i18n/sudokuki_fr.properties  \
 files/net/jankenpoi/i18n/sudokuki_ja.properties  \
 files/net/jankenpoi/i18n/sudokuki_lv.properties  \
 files/net/jankenpoi/i18n/sudokuki_nl.properties  \
+files/net/jankenpoi/i18n/sudokuki_pt_BR.properties  \
 files/net/jankenpoi/i18n/sudokuki_pt.properties  \
 files/net/jankenpoi/i18n/sudokuki_ru.properties  \
 files/net/jankenpoi/i18n/sudokuki_zh.properties  \
+files/net/jankenpoi/sudokuki/resources/images/countryFlags/br.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/de.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/el.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/en.png  \

@@ -87,105 +87,58 @@ public class AboutDialog extends JDialog {
 				INFORMATION);
 
 		tabbedPane.addTab(CONTRIBUTORS, null, makeTextPanel("<html><body>"
-				+ "<table border=\"0\">" + "<tr></tr>" + "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "<table border=\"0\"><tr></tr>"
+				
+				+ "<tr><td align=\"right\"><b>"
 				+ _("Aritz Beraza")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Spanish translations (v1.0)")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Jeroen P. Broks")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Dutch translations")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Helene Damianakos")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Greek translations (v1.0)")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Janis Eisaks")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Latvian translations")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
+				+ _("Rafael Ferreira")
+				+ "</b></td><td></td><td align=\"left\">"
+				+ _("Brazilian Portuguese translations")
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Stavros Mavrakis")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Greek translations")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Fumiaki Nakanishi")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Japanese translations")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Jeanne Peng")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Chinese translations")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Claus Poerschke")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Patches (v1.0) and German translations")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Dmitry Salnikov")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Portuguese and Russian translations")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Helene Vedrenne")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Japanese translations")
-				+ "</td>"
-				+ "</tr>"
-				+ "<tr>"
-				+ "<td align=\"right\"><b>"
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Sylvain Vedrenne")
-				+ "</b></td>"
-				+ "<td> </td>"
-				+ "<td align=\"left\">"
+				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Esperanto, French, and Japanese translations (v1.0)")
+				
 				+ "</td>" + "</tr>" + "</table>"
-
 				+ "</body></html>"), CONTRIBUTORS);
 
 		tabbedPane
