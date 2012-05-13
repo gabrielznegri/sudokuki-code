@@ -469,9 +469,8 @@ msgstr "Português"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:110
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:147
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:92
-#, fuzzy
 msgid "Brazilian Portuguese"
-msgstr "Português"
+msgstr "Português (Brasil)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:111
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:148

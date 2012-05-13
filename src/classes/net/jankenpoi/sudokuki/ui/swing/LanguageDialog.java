@@ -79,7 +79,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		BoxLayout globalLayout = new BoxLayout(pane, BoxLayout.Y_AXIS);
 		pane.setLayout(globalLayout);
 
-		GridLayout pnlLayout = new GridLayout(6, 1);
+		GridLayout pnlLayout = new GridLayout(7, 1);
 		panel.setLayout(pnlLayout);
 
         icons.put("de", StockIcons.ICON_FLAG_DE);

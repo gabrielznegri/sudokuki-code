@@ -75,12 +75,11 @@ msgstr "Latvaj tradukoj"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:109
 msgid "Rafael Ferreira"
-msgstr ""
+msgstr "Rafael Ferreira"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111
-#, fuzzy
 msgid "Brazilian Portuguese translations"
-msgstr "Japanaj tradukoj"
+msgstr "Brazilaj portugalaj tradukoj"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:113
 msgid "Stavros Mavrakis"
@@ -466,9 +465,8 @@ msgstr "Português"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:110
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:147
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:92
-#, fuzzy
 msgid "Brazilian Portuguese"
-msgstr "Português"
+msgstr "Português (Brasil)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:111
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:148
