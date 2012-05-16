@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sudokuki 1.1.4\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
 "POT-Creation-Date: 2012-05-12 02:25+0200\n"
-"PO-Revision-Date: 2012-05-01 14:06+0100\n"
+"PO-Revision-Date: 2012-05-14 09:04+0100\n"
 "Last-Translator: Claus Poerschke <claus-poerschke@gmx.de>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
 "Language: \n"
@@ -79,9 +79,8 @@ msgid "Rafael Ferreira"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111
-#, fuzzy
 msgid "Brazilian Portuguese translations"
-msgstr "Japanische Übersetzung"
+msgstr "Brasilianisch portugiesische Übersetzung"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:113
 msgid "Stavros Mavrakis"
@@ -558,7 +557,7 @@ msgstr "Sudokuki Dateien"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:127
 msgid "This file is not a Sudokuki grid."
-msgstr ""
+msgstr "Diese Datei ist keine gülitge Sudokuki Datei."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:113
 msgid "Generating and sending four grids"
@@ -584,6 +583,7 @@ msgstr "Speichern unter"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:77
 msgid "Failed to save the grid<br/>at the selected location."
 msgstr ""
+"Das Sudoku konnte nicht<br/>an der ausgewählten Stelle gespeichert werden."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101
 msgid "Clear memos"
