@@ -556,7 +556,7 @@ msgstr "Sudokuki ficheiros de grelhas"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:127
 msgid "This file is not a Sudokuki grid."
-msgstr ""
+msgstr "Este ficheiro não é grelha do Sudokuki."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:113
 msgid "Generating and sending four grids"
@@ -581,7 +581,7 @@ msgstr "Gravar como"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:67
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:77
 msgid "Failed to save the grid<br/>at the selected location."
-msgstr ""
+msgstr "Falhou a gravação da grelha<br/>na localização selecionada."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101
 msgid "Clear memos"
