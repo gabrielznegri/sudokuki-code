@@ -581,8 +581,8 @@ msgstr "Opslaan als..."
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:67
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:77
 msgid "Failed to save the grid<br/>at the selected location."
-msgstr "De sudoku kon niet<br/>op de door u gekozen locatie<br/>worden
-opgeslagen."
+msgstr ""
+"De sudoku kon niet<br/>op de door u gekozen locatie<br/>worden opgeslagen."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101
 msgid "Clear memos"
