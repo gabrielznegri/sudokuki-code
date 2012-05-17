@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the Sudokuki package.
 # Sylvain Vedrenne <sylvain@jankenpoi.net>, 2012.
 # Translation by Janis Eisaks <je@dv.lv>, 2012.
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokuki 1.1.4\n"
+"Project-Id-Version: sudokuki 1.1.1\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-05-12 02:25+0200\n"
-"PO-Revision-Date: 2012-05-01 11:14+0300\n"
+"POT-Creation-Date: 2012-05-17 20:35+0200\n"
+"PO-Revision-Date: 2012-05-14 12:26+0300\n"
 "Last-Translator: Jānis Eisaks <jancs@dv.lv>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
 "Language: \n"
@@ -57,7 +57,7 @@ msgstr "Jeroen P. Broks"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:99
 msgid "Dutch translations"
-msgstr ""
+msgstr "Holandiešu valodas tulkojums"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:101
 msgid "Helene Damianakos"
@@ -77,11 +77,11 @@ msgstr "Latviešu valodas tulkojums"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:109
 msgid "Rafael Ferreira"
-msgstr ""
+msgstr "Rafael Ferreira"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111
 msgid "Brazilian Portuguese translations"
-msgstr ""
+msgstr "Brazīlijas portugāļu valodas tulkojums"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:113
 msgid "Stavros Mavrakis"
@@ -186,8 +186,8 @@ msgid ""
 "Feel free to request features and report bugs<br/>on the Sudokuki Forums "
 "hosted by Sourceforge!"
 msgstr ""
-"Jūsu priekšlikumus uzlabojumiem un norādes uz kļūdām<br/>esat laipni "
-"aicināti ziņot mums izmantojot Sudokuki<br/>forumus uz Sourceforge.net!"
+"Jūsu priekšlikumus uzlabojumiem un norādes uz kļūdām esat laipni aicināti "
+"sūtīt mums izmantojot Sudokuki forumus uz Sourceforge.net!"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:285
 msgid "Sudokuki Forums"
@@ -385,7 +385,7 @@ msgstr "Tulkot šo aplikāciju"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:65
 msgid "Help translate this application"
-msgstr "Palīdziet tulkot šo aplikāciju"
+msgstr "Palīdziet šīs aplikācijas tulkošanā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:68
 msgid "About..."
@@ -558,7 +558,7 @@ msgstr "Sudokuki režģu faili"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:127
 msgid "This file is not a Sudokuki grid."
-msgstr ""
+msgstr "Šis fails nav Sudokuki režģis. "
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:113
 msgid "Generating and sending four grids"
@@ -583,7 +583,7 @@ msgstr "Saglabāt kā..."
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:67
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:77
 msgid "Failed to save the grid<br/>at the selected location."
-msgstr ""
+msgstr "Režģi nav iespējams<br/>saglabāt norādītajā vietā."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101
 msgid "Clear memos"
