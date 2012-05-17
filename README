@@ -5,6 +5,7 @@ Sudokuki - essential sudoku game
 * 2012-05-17 - released Sudokuki 1.1.5 (Stable)
 - Added Brazilian Portuguese translations from Rafael Ferreira
 - Fixed item #3525975 "Ameliorate existing country flags look"
+- Fixed item #3526392 "Hardcoded language names for lang-selection menu/dialog"
 
 * 2012-05-10 - released Sudokuki 1.1.4 (Stable)
 - Fixed item #3520726 "Cannot enter filename when saving a grid on MacOS X"
