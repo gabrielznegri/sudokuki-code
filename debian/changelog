@@ -1,3 +1,13 @@
+sudokuki (1.1.5) unstable; urgency=low
+
+  * Sudokuki version 1.1.5 ("Sudokuki", stable, Java Swing GUI)
+
+    - Added Brazilian Portuguese translations from Rafael Ferreira
+    - Fixed item #3525975 "Ameliorate existing country flags look"
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Thu, 17 May 2012 23:00:00 +0100
+
+
 sudokuki (1.1.4) unstable; urgency=low
 
   * Sudokuki version 1.1.4 ("Sudokuki", stable, Java Swing GUI)

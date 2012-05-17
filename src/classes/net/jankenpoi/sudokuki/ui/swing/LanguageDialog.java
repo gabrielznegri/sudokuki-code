@@ -97,19 +97,19 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         icons.put("zh", StockIcons.ICON_FLAG_ZH);
         
 		ButtonGroup myGroup = new ButtonGroup();
-        addItem("de", _("German"), myGroup);
-        addItem("el", _("Greek"), myGroup);
-        addItem("en", _("English"), myGroup);
-        addItem("eo", _("Esperanto"), myGroup);
-        addItem("es", _("Spanish"), myGroup);
-        addItem("fr", _("French"), myGroup);
-        addItem("ja", _("Japanese"), myGroup);
-        addItem("lv", _("Latvian"), myGroup);
-        addItem("nl", _("Dutch"), myGroup);
-        addItem("pt", _("Portuguese"), myGroup);
-        addItem("pt_BR", _("Brazilian Portuguese"), myGroup);
-        addItem("ru", _("Russian"), myGroup);
-        addItem("zh", _("Mandarin"), myGroup);
+        addItem("de", "Deutsch", myGroup);
+        addItem("el", "E\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac", myGroup);
+        addItem("en", "English", myGroup);
+        addItem("eo", "Esperanto", myGroup);
+        addItem("es", "Espa\u00f1ol", myGroup);
+        addItem("fr", "Fran\u00e7ais", myGroup);
+        addItem("ja", "\u65e5\u672c\u8a9e", myGroup);
+        addItem("lv", "Latvie\u0161u", myGroup);
+        addItem("nl", "Nederlands", myGroup);
+        addItem("pt", "Portugu\u00eas", myGroup);
+        addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
+        addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
+        addItem("zh", "\u4e2d\u6587", myGroup);
         
 		pane.add(panel);
 		
@@ -134,19 +134,6 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 	public void setL10nMessages(Locale locale, String languageCode) {
 		setTitle(_("Language"));
 		okBtn.setText(_("Ok"));
-		itemsMap.get("de").setText(_("German"));
-		itemsMap.get("el").setText(_("Greek"));
-		itemsMap.get("en").setText(_("English"));
-		itemsMap.get("eo").setText(_("Esperanto"));
-		itemsMap.get("es").setText(_("Spanish"));
-		itemsMap.get("fr").setText(_("French"));
-		itemsMap.get("ja").setText(_("Japanese"));
-		itemsMap.get("lv").setText(_("Latvian"));
-		itemsMap.get("nl").setText(_("Dutch"));
-		itemsMap.get("pt").setText(_("Portuguese"));
-		itemsMap.get("pt_BR").setText(_("Brazilian Portuguese"));
-		itemsMap.get("ru").setText(_("Russian"));
-		itemsMap.get("zh").setText(_("Mandarin"));
 	}
 
     private final HashMap<String, Icon> icons = new HashMap<String, Icon>();

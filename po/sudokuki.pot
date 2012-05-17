@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokuki 1.1.4.dbg01\n"
+"Project-Id-Version: sudokuki 1.1.5\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-05-12 02:25+0200\n"
+"POT-Creation-Date: 2012-05-17 21:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -388,84 +388,6 @@ msgstr ""
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:136
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:126
 msgid "Ok"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:100
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:137
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:82
-msgid "German"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:101
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:138
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:83
-msgid "Greek"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:102
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:139
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:84
-msgid "English"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:103
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:140
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:85
-msgid "Esperanto"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:104
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:141
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:86
-msgid "Spanish"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:105
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:142
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:87
-msgid "French"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:106
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:143
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:88
-msgid "Japanese"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:107
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:144
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:89
-msgid "Latvian"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:108
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:145
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:90
-msgid "Dutch"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:109
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:146
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:91
-msgid "Portuguese"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:110
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:147
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:92
-msgid "Brazilian Portuguese"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:111
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:148
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:93
-msgid "Russian"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:112
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:149
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:94
-msgid "Mandarin"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:52

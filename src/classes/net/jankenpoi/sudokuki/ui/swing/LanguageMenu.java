@@ -79,19 +79,19 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 		        
         private void addItems() {
                 ButtonGroup myGroup = new ButtonGroup();
-                addItem("de", _("German"), myGroup);
-                addItem("el", _("Greek"), myGroup);
-                addItem("en", _("English"), myGroup);
-                addItem("eo", _("Esperanto"), myGroup);
-                addItem("es", _("Spanish"), myGroup);
-                addItem("fr", _("French"), myGroup);
-                addItem("ja", _("Japanese"), myGroup);
-                addItem("lv", _("Latvian"), myGroup);
-                addItem("nl", _("Dutch"), myGroup);
-                addItem("pt", _("Portuguese"), myGroup);
-                addItem("pt_BR", _("Brazilian Portuguese"), myGroup);
-                addItem("ru", _("Russian"), myGroup);
-                addItem("zh", _("Mandarin"), myGroup);
+                addItem("de", "Deutsch", myGroup);
+                addItem("el", "E\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac", myGroup);
+                addItem("en", "English", myGroup);
+                addItem("eo", "Esperanto", myGroup);
+                addItem("es", "Espa\u00f1ol", myGroup);
+                addItem("fr", "Fran\u00e7ais", myGroup);
+                addItem("ja", "\u65e5\u672c\u8a9e", myGroup);
+                addItem("lv", "Latvie\u0161u", myGroup);
+                addItem("nl", "Nederlands", myGroup);
+                addItem("pt", "Portugu\u00eas", myGroup);
+                addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
+                addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
+                addItem("zh", "\u4e2d\u6587", myGroup);
         }
 
         private void addItem(final String code, String language, ButtonGroup group) {
@@ -133,31 +133,8 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 			if (this.isSelected()) {
 				return;
 			}
-            refreshItem(languageCode, "de", "German");
-            refreshItem(languageCode, "el", "Greek");
-            refreshItem(languageCode, "en", "English");
-            refreshItem(languageCode, "eo", "Esperanto");
-            refreshItem(languageCode, "es", "Spanish");
-            refreshItem(languageCode, "fr", "French");
-            refreshItem(languageCode, "ja", "Japanese");
-            refreshItem(languageCode, "lv", "Latvian");
-            refreshItem(languageCode, "nl", "Dutch");
-            refreshItem(languageCode, "pt", "Portuguese");
-            refreshItem(languageCode, "pt_BR", "Brazilian Portuguese");
-            refreshItem(languageCode, "ru", "Russian");
-            refreshItem(languageCode, "zh", "Mandarin");
 		}
 
-		private void refreshItem(final String langCode, final String itemCode, final String langName) {
-			JRadioButtonMenuItem item = itemsMap.get(itemCode);
-			if (item != null) {
-				item.setText(_(langName));
-				if (itemCode.equals(langCode)) {
-					item.setSelected(true);
-				}
-			}
-		}
-        
 		public static Icon languageIcon(final String langCode) {
 			if ("de".equals(langCode)) {
 				return StockIcons.ICON_FLAG_DE;
