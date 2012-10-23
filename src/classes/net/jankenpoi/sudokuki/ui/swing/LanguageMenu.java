@@ -129,6 +129,11 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 		public void setL10nMessages(Locale locale, String languageCode) {
 			setText(_("Language"));
 			setIcon(languageIcon(languageCode));
+
+		JRadioButtonMenuItem selectedItem = itemsMap.get(languageCode);
+		if (selectedItem != null) {
+			selectedItem.setSelected(true);
+		}								
 			
 			if (this.isSelected()) {
 				return;
