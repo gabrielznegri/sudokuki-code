@@ -2,6 +2,10 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* xxxx-xx-xx - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Fixed issue #244 1.1.5: LanguageMenu lost sync with current locale
+- Updated translation files for nl and pt_BR
+
 * 2012-05-17 - released Sudokuki 1.1.5 (Stable)
 - Added Brazilian Portuguese translations from Rafael Ferreira
 - Fixed item #3525975 "Ameliorate existing country flags look"
