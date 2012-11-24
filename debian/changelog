@@ -1,3 +1,13 @@
+sudokuki (1.1.6) unstable; urgency=low
+
+  * 2012-11-24 - released Sudokuki 1.1.6 (Stable)
+    - Added Arabic translations from Daneih Ismail
+    - Fixed issue #244 1.1.5: LanguageMenu lost sync with current locale
+    - Updated translation files for nl and pt_BR
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Sat, 23 Nov 2012 19:00:00 +0100
+
+
 sudokuki (1.1.5) unstable; urgency=low
 
   * Sudokuki version 1.1.5 ("Sudokuki", stable, Java Swing GUI)
