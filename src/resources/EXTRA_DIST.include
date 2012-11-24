@@ -1,4 +1,5 @@
 EXTRA_DIST =  \
+files/net/jankenpoi/i18n/sudokuki_ar.properties  \
 files/net/jankenpoi/i18n/sudokuki_de.properties  \
 files/net/jankenpoi/i18n/sudokuki_el.properties  \
 files/net/jankenpoi/i18n/sudokuki_en.properties  \
@@ -24,6 +25,7 @@ files/net/jankenpoi/sudokuki/resources/images/countryFlags/lv.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/nl.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/pt.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/ru.png  \
+files/net/jankenpoi/sudokuki/resources/images/countryFlags/sa.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/xx.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/zh.png  \
 files/net/jankenpoi/sudokuki/resources/images/gtk+/stock-icons/16/application-exit.png  \

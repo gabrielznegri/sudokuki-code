@@ -110,6 +110,10 @@ public class AboutDialog extends JDialog {
 				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Brazilian Portuguese translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
+				+ _("Daneih Ismail")
+				+ "</b></td><td></td><td align=\"left\">"
+				+ _("Arabic translations")
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Stavros Mavrakis")
 				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Greek translations")

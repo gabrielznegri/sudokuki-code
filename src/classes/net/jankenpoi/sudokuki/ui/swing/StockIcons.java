@@ -29,6 +29,12 @@ public class StockIcons {
 	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/
 	 */
 	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/sa.png
+	 */
+	public final static ImageIcon ICON_FLAG_AR = new ImageIcon(
+			UIResources.class
+					.getResource("images/countryFlags/sa.png"));
+	/* 
 	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/br.png
 	 */
 	public final static ImageIcon ICON_FLAG_BR = new ImageIcon(

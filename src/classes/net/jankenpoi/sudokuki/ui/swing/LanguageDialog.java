@@ -82,6 +82,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		GridLayout pnlLayout = new GridLayout(7, 1);
 		panel.setLayout(pnlLayout);
 
+        icons.put("ar", StockIcons.ICON_FLAG_AR);
         icons.put("de", StockIcons.ICON_FLAG_DE);
         icons.put("el", StockIcons.ICON_FLAG_EL);
         icons.put("eo", StockIcons.ICON_FLAG_EO);
@@ -97,6 +98,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         icons.put("zh", StockIcons.ICON_FLAG_ZH);
         
 		ButtonGroup myGroup = new ButtonGroup();
+        addItem("ar", "Arabic", myGroup);
         addItem("de", "Deutsch", myGroup);
         addItem("el", "E\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac", myGroup);
         addItem("en", "English", myGroup);

@@ -79,6 +79,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 		        
         private void addItems() {
                 ButtonGroup myGroup = new ButtonGroup();
+                addItem("ar", "Arabic", myGroup);
                 addItem("de", "Deutsch", myGroup);
                 addItem("el", "E\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac", myGroup);
                 addItem("en", "English", myGroup);
@@ -141,7 +142,9 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 		}
 
 		public static Icon languageIcon(final String langCode) {
-			if ("de".equals(langCode)) {
+			if ("ar".equals(langCode)) {
+				return StockIcons.ICON_FLAG_AR;
+			} else if ("de".equals(langCode)) {
 				return StockIcons.ICON_FLAG_DE;
 			} else if ("el".equals(langCode)) {
 				return StockIcons.ICON_FLAG_EL;

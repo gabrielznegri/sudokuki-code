@@ -2,7 +2,8 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
-* xxxx-xx-xx - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+* 2012-11-24 - released Sudokuki 1.1.6 (Stable)
+- Added Arabic translations from Daneih Ismail
 - Fixed issue #244 1.1.5: LanguageMenu lost sync with current locale
 - Updated translation files for nl and pt_BR
 
