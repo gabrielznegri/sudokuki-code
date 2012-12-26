@@ -79,7 +79,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 		        
         private void addItems() {
                 ButtonGroup myGroup = new ButtonGroup();
-                addItem("ar", "Arabic", myGroup);
+                addItem("ar", "\u0627\u0644\u0639\u0631\u0628\u064a\u0629", myGroup);
                 addItem("de", "Deutsch", myGroup);
                 addItem("el", "E\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac", myGroup);
                 addItem("en", "English", myGroup);
