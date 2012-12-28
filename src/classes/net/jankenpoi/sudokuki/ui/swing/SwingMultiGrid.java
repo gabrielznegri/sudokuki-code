@@ -53,11 +53,9 @@ public class SwingMultiGrid extends JPanel implements Printable {
 	private SudokuGrid su4;
 
 	SwingMultiGrid(SudokuGrid su1, SudokuGrid su2, SudokuGrid su3, SudokuGrid su4) {
-
-		setPreferredSize(new Dimension(columns[columns.length-1].getEnd()
-				- columns[0].getStart() + offX * 2, rows[rows.length-1].getEnd()
-				- rows[0].getStart() + offY * 2));
-
+        setPreferredSize(new Dimension(columns[columns.length - 1].getEnd()
+                                       - columns[0].getStart() + offX * 2 + 1,
+                                       rows[rows.length - 1].getEnd() - rows[0].getStart() + offY * 2 + 1));
 		this.su1 = su1;
 		this.su2 = su2;
 		this.su3 = su3;
@@ -74,75 +72,49 @@ public class SwingMultiGrid extends JPanel implements Printable {
 	 * @return A Point giving the position where to draw the digit for cell (li,
 	 *         co)
 	 */
-	private Point getPosition(Graphics2D g2, int li, int co) {
-		if (!(0 <= li && li < 9 && 0 <= co && co < 9)) {
-			throw new IllegalArgumentException();
-		}
+    private Point getPosition(Graphics2D g2, int li, int co, String digit) {
+        if (!(0 <= li && li < 9 && 0 <= co && co < 9)) {
+            throw new IllegalArgumentException();
+        }
 
-		FontMetrics fm = getFontMetrics(g2.getFont());
-		int h = fm.getHeight();
-		int w = fm.stringWidth("X");
+        FontMetrics fm = getFontMetrics(g2.getFont());
+        int h = fm.getHeight();
+        int w = fm.stringWidth(digit);
 
-		int x = columns[co].getStart() + CELL_SIZE / 2 - w / 2;
-		int y = rows[li].getStart() + CELL_SIZE / 2 + h / 4;
+        int x = columns[co].getStart() + (CELL_SIZE - w ) / 2;
+        int y = rows[li].getStart() + (CELL_SIZE + h / 2) / 2;
 
-		return new Point(x, y);
-	}
+        return new Point(x, y + 1);
+    }
 
-	private void paintGridNumbers(Graphics2D g2, SudokuGrid grid, boolean kanjiMode) {
+	private void paintGridNumbers(Graphics2D g2, SudokuGrid grid, int numbersMode) {
 		g2.setColor(Color.BLACK);
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		// Font font = new Font("Serif", Font.BOLD, FONT_SIZE);
-		Font font = new Font("Serif", Font.BOLD, FONT_SIZE - (kanjiMode?4:0));
+		Font font = new Font("Serif", Font.BOLD, FONT_SIZE - (numbersMode==1?4:0));
 		g2.setFont(font);
 
 		for (int li = 0; li < 9; li++) {
 			for (int co = 0; co < 9; co++) {
-				Point pos = getPosition(g2, li, co);
-				g2.drawString(getValueAsStringAt(grid, li, co, kanjiMode), pos.x, pos.y);
+			    
+                String digit = getValueAsStringAt(grid, li, co, numbersMode);
+                Point pos = getPosition(g2, li, co, digit);
+				g2.drawString(digit, pos.x, pos.y);
 			}
 		}
 	}
 
-	private String getValueAsStringAt(SudokuGrid grid, int li, int co, boolean kanjiMode) {
-		int value = grid.getValueAt(li, co);
-		String result = "";
-		if (kanjiMode) {
-			switch (value) {
-			case 1:
-				result = "\u4e00";
-				break;
-			case 2:
-				result = "\u4E8C";
-				break;
-			case 3:
-				result = "\u4e09";
-				break;
-			case 4:
-				result = "\u56DB";
-				break;
-			case 5:
-				result = "\u4E94";
-				break;
-			case 6:
-				result = "\u516D";
-				break;
-			case 7:
-				result = "\u4E03";
-				break;
-			case 8:
-				result = "\u516B";
-				break;
-			case 9:
-				result = "\u4E5D";
-				break;
-			}
-		} else {
-			result = (value == 0) ? "" : String.valueOf(value);
-		}
-		return result; 
-	}
+    private static String[] digits = { "", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+        "", "\u4e00", "\u4E8C", "\u4e09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D",
+        "", "\u0661", "\u0662", "\u0663", "\u0664", "\u0665", "\u0666", "\u0667", "\u0668", "\u0669",
+    };
+    
+    private String getValueAsStringAt(SudokuGrid grid, int li, int co, int numbersMode) {
+        int value = grid.getValueAt(li, co);
+        String result = digits[value + (10 * numbersMode)];
+        return result; 
+    }
 	
 	private void paintGridBoard(Graphics2D g2) {
 		g2.setColor(Color.WHITE);
@@ -225,21 +197,21 @@ public class SwingMultiGrid extends JPanel implements Printable {
 		/* Now we perform our rendering */
 		g2.translate(-240, 140);
 
-		boolean kanjiMode = UserPreferences.getInstance().getBoolean("kanjiMode", false);
+		int numbersMode = UserPreferences.getInstance().getInteger("numbersMode", Integer.valueOf(0)).intValue();
 		paintGridBoard(g2);
-		paintGridNumbers(g2, su1, kanjiMode);
+		paintGridNumbers(g2, su1, numbersMode);
 
 		g2.translate(230, 0);
 		paintGridBoard(g2);
-		paintGridNumbers(g2, su2, kanjiMode);
+		paintGridNumbers(g2, su2, numbersMode);
 
 		g2.translate(-230, 250);
 		paintGridBoard(g2);
-		paintGridNumbers(g2, su3, kanjiMode);
+		paintGridNumbers(g2, su3, numbersMode);
 
 		g2.translate(230, 0);
 		paintGridBoard(g2);
-		paintGridNumbers(g2, su4, kanjiMode);
+		paintGridNumbers(g2, su4, numbersMode);
 
 		return PAGE_EXISTS;
 	}

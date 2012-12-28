@@ -57,9 +57,7 @@ public class SwingGrid extends JPanel implements Printable {
 
 	private static final int CELL_SIZE = 26;
 
-	private int FONT_SIZE = 20;
-	// private static final int CELL_SIZE = 22;
-	// private int FONT_SIZE = 18;
+	private int FONT_SIZE = 22;
 
 	private MouseListener innerMouseListener = new InnerMouseListener();
 
@@ -84,8 +82,8 @@ public class SwingGrid extends JPanel implements Printable {
 		addMouseListener(innerMouseListener);
 		addKeyListener(innerKeyListener);
 		setPreferredSize(new Dimension(columns[columns.length - 1].getEnd()
-				- columns[0].getStart() + offX * 2,
-				rows[rows.length - 1].getEnd() - rows[0].getStart() + offY * 2));
+				- columns[0].getStart() + offX * 2 + 1,
+				rows[rows.length - 1].getEnd() - rows[0].getStart() + offY * 2 + 1));
 	}
 
 	/**
@@ -98,19 +96,19 @@ public class SwingGrid extends JPanel implements Printable {
 	 * @return A Point giving the position where to draw the digit for cell (li,
 	 *         co)
 	 */
-	private Point getPosition(Graphics2D g2, int li, int co) {
+	private Point getPosition(Graphics2D g2, int li, int co, String digit) {
 		if (!(0 <= li && li < 9 && 0 <= co && co < 9)) {
 			throw new IllegalArgumentException();
 		}
 
 		FontMetrics fm = getFontMetrics(g2.getFont());
 		int h = fm.getHeight();
-		int w = fm.stringWidth("X");
+		int w = fm.stringWidth(digit);
 
-		int x = columns[co].getStart() + CELL_SIZE / 2 - w / 2;
-		int y = rows[li].getStart() + CELL_SIZE / 2 + h / 4;
+		int x = columns[co].getStart() + (CELL_SIZE - w ) / 2;
+		int y = rows[li].getStart() + (CELL_SIZE + h / 2) / 2;
 
-		return new Point(x, y);
+		return new Point(x, y + 1);
 	}
 
 	/**
@@ -148,68 +146,41 @@ public class SwingGrid extends JPanel implements Printable {
 		
 		paintGridBoard(g2);
 		paintFocusMark(g2);
-		boolean kanjiMode = UserPreferences.getInstance().getBoolean("kanjiMode", false);
-		paintGridNumbers(g2, kanjiMode);
+		int numbersMode = UserPreferences.getInstance().getInteger("numbersMode", Integer.valueOf(0)).intValue();
+		paintGridNumbers(g2, numbersMode);
 		paintPlayerMemos(g2);
-		paintPlayerNumbers(g2, kanjiMode);
+		paintPlayerNumbers(g2, numbersMode);
 	}
 
 
-	private void paintGridNumbers(Graphics2D g2, boolean kanjiMode) {
+	private void paintGridNumbers(Graphics2D g2, int numbersMode) {
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		g2.setColor(Color.BLACK);
 		// Font font = new Font("Serif", Font.BOLD, FONT_SIZE);
 		Font font = new Font("Serif", Font.BOLD, FONT_SIZE
-				- (kanjiMode ? 4 : 0));
+				- (numbersMode==1 ? 4 : 0));
 		g2.setFont(font);
 
 		for (int li = 0; li < 9; li++) {
 			for (int co = 0; co < 9; co++) {
 				if (view.isCellReadOnly(li, co)) {
-					Point pos = getPosition(g2, li, co);
-					g2.drawString(getValueAsStringAt(li, co, kanjiMode), pos.x, pos.y);
+				    String digit = getValueAsStringAt(li, co, numbersMode);
+					Point pos = getPosition(g2, li, co, digit);
+					g2.drawString(digit, pos.x, pos.y);
 				}
 			}
 		}
 	}
 
-	private String getValueAsStringAt(int li, int co, boolean kanjiMode) {
+	private static String[] digits = { "", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+	    "", "\u4e00", "\u4E8C", "\u4e09", "\u56DB", "\u4E94", "\u516D", "\u4E03", "\u516B", "\u4E5D",
+        "", "\u0661", "\u0662", "\u0663", "\u0664", "\u0665", "\u0666", "\u0667", "\u0668", "\u0669",
+	};
+	
+	private String getValueAsStringAt(int li, int co, int numbersMode) {
 		int value = view.getValueAt(li, co);
-		String result = "";
-		if (kanjiMode) {
-			switch (value) {
-			case 1:
-				result = "\u4e00";
-				break;
-			case 2:
-				result = "\u4E8C";
-				break;
-			case 3:
-				result = "\u4e09";
-				break;
-			case 4:
-				result = "\u56DB";
-				break;
-			case 5:
-				result = "\u4E94";
-				break;
-			case 6:
-				result = "\u516D";
-				break;
-			case 7:
-				result = "\u4E03";
-				break;
-			case 8:
-				result = "\u516B";
-				break;
-			case 9:
-				result = "\u4E5D";
-				break;
-			}
-		} else {
-			result = (value == 0) ? "" : String.valueOf(value);
-		}
+		String result = digits[value + (10 * numbersMode)];
 		return result; 
 	}
 
@@ -231,10 +202,10 @@ public class SwingGrid extends JPanel implements Printable {
 				CELL_SIZE - 4);
 	}
 	
-	private void paintPlayerNumbers(Graphics2D g2, boolean kanjiMode) {
+	private void paintPlayerNumbers(Graphics2D g2, int numbersMode) {
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
-		Font font = new Font("Serif", Font.PLAIN, FONT_SIZE- (kanjiMode?4:0));
+		Font font = new Font("Serif", Font.PLAIN, FONT_SIZE- (numbersMode==1?4:0));
 		g2.setFont(font);
 
 		GridValidity validity = view.getGridValidity();
@@ -246,12 +217,13 @@ public class SwingGrid extends JPanel implements Printable {
 		for (int li = 0; li < 9; li++) {
 			for (int co = 0; co < 9; co++) {
 				if (!view.isCellReadOnly(li, co)) {
-					Point pos = getPosition(g2, li, co);
+				    String digit = getValueAsStringAt(li, co, numbersMode);
+				    Point pos = getPosition(g2, li, co, digit);
 					
-					if ((firstErrorLine != null && firstErrorLine == li)
-							|| (firstErrorColumn != null && firstErrorColumn == co)
-							|| ((firstErrorSquareX != null && firstErrorSquareX <= co && co < firstErrorSquareX + 3) &&
-									((firstErrorSquareY != null && firstErrorSquareY <= li && li < firstErrorSquareY + 3)))) {
+					if ((firstErrorLine != null && firstErrorLine.intValue() == li)
+							|| (firstErrorColumn != null && firstErrorColumn.intValue() == co)
+							|| ((firstErrorSquareX != null && firstErrorSquareX.intValue() <= co && co < firstErrorSquareX.intValue() + 3) &&
+									((firstErrorSquareY != null && firstErrorSquareY.intValue() <= li && li < firstErrorSquareY.intValue() + 3)))) {
 						g2.setColor(Color.RED);
 					} else {
 						if (view.isGrigComplete()) {
@@ -261,7 +233,7 @@ public class SwingGrid extends JPanel implements Printable {
 						}
 					}
 					
-					g2.drawString(getValueAsStringAt(li, co, kanjiMode), pos.x, pos.y);
+					g2.drawString(digit, pos.x, pos.y);
 				}
 			}
 		}
@@ -426,9 +398,9 @@ public class SwingGrid extends JPanel implements Printable {
 		g2.translate(-160, 140);
 
 		paintGridBoard(g2);
-		boolean kanjiMode = UserPreferences.getInstance().getBoolean("kanjiMode", false);
-		paintGridNumbers(g2, kanjiMode);
-		paintPlayerNumbers(g2, kanjiMode);
+		int numbersMode = UserPreferences.getInstance().getInteger("numbersMode", Integer.valueOf(0)).intValue();
+		paintGridNumbers(g2, numbersMode);
+		paintPlayerNumbers(g2, numbersMode);
 
 		return PAGE_EXISTS;
 	}

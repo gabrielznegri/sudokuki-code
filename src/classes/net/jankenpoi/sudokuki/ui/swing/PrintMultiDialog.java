@@ -73,7 +73,7 @@ public class PrintMultiDialog extends JDialog {
 			@Override
 			/* Executed in the SwingWorker thread */
 			protected Integer doInBackground() {
-				return generateFourGrids();
+				return Integer.valueOf(generateFourGrids());
 			}
 
 			@Override
@@ -163,8 +163,8 @@ public class PrintMultiDialog extends JDialog {
 		if (dialogCancelled()) {
 			return 1;
 		}
-		final int minRating = UserPreferences.getInstance().getInteger("minRating", 0);
-		final int maxRating = UserPreferences.getInstance().getInteger("maxRating", Integer.MAX_VALUE);
+		final int minRating = UserPreferences.getInstance().getInteger("minRating", Integer.valueOf(0)).intValue();
+		final int maxRating = UserPreferences.getInstance().getInteger("maxRating", Integer.valueOf(Integer.MAX_VALUE)).intValue();
 		SudokuGrid su1 = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
 		if (dialogCancelled()) {
 			return 1;

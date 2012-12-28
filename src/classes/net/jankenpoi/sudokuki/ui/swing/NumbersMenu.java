@@ -36,31 +36,41 @@ import net.jankenpoi.sudokuki.ui.L10nComponent;
 public class NumbersMenu extends JMenu implements L10nComponent {
 
 	private final SwingView view;
-	private final JRadioButtonMenuItem itemArabicNumbers = new JRadioButtonMenuItem();
+	private final JRadioButtonMenuItem itemStandardNumbers = new JRadioButtonMenuItem();
 	private final JRadioButtonMenuItem itemChineseNumbers = new JRadioButtonMenuItem();
-	private final Action actionArabicNumbers;
+	private final JRadioButtonMenuItem itemArabicNumbers = new JRadioButtonMenuItem();
+    private final Action actionStandardNumbers;
 	private final Action actionChineseNumbers;
+	private final Action actionArabicNumbers;
 	private LocaleListenerImpl localeListener;
 
 	public NumbersMenu(SwingView view) {
 		this.view = view;
 
-		actionArabicNumbers = new AbstractAction(_("Arabic"), null) {
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				setKanjiMode(false);
-			}
+		actionStandardNumbers = new AbstractAction(_("Standard"), null) {
+		    
+		    @Override
+		    public void actionPerformed(ActionEvent arg0) {
+		        setNumbersMode(0);
+		    }
 		};
 		
 		actionChineseNumbers = new AbstractAction(_("Chinese"), null) {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				setKanjiMode(true);
+			    setNumbersMode(1);
 			}
 		};
 
+		actionArabicNumbers = new AbstractAction(_("Arabic"), null) {
+		    
+		    @Override
+		    public void actionPerformed(ActionEvent arg0) {
+		        setNumbersMode(2);
+		    }
+		};
+		
 		addItems();
 		setIcon(StockIcons.ICON_FONT);
 		
@@ -74,29 +84,35 @@ public class NumbersMenu extends JMenu implements L10nComponent {
 	@Override
 	public void setL10nMessages(Locale locale, String languageCode) {
 		setText(_("Numbers"));
-		itemArabicNumbers.setText(_("Arabic"));
+		itemStandardNumbers.setText(_("Standard"));
 		itemChineseNumbers.setText(_("Chinese"));
+		itemArabicNumbers.setText(_("Arabic"));
 	}
 	
 	private void addItems() {
 		
 		ButtonGroup numbersGroup = new ButtonGroup();
 		
-		boolean kanjiMode = UserPreferences.getInstance().getBoolean("KanjiMode", false);
+		int numbersMode = UserPreferences.getInstance().getInteger("NumbersMode", Integer.valueOf(0)).intValue();
+		
+        itemStandardNumbers.setAction(actionStandardNumbers);
+        numbersGroup.add(itemStandardNumbers);
+        itemStandardNumbers.setSelected(numbersMode == 0);
+        add(itemStandardNumbers);
+        
+		itemChineseNumbers.setAction(actionChineseNumbers);
+		numbersGroup.add(itemChineseNumbers);
+		itemChineseNumbers.setSelected(numbersMode == 1);
+		add(itemChineseNumbers);
 		
 		itemArabicNumbers.setAction(actionArabicNumbers);
 		numbersGroup.add(itemArabicNumbers);
-		itemArabicNumbers.setSelected(!kanjiMode);
+		itemArabicNumbers.setSelected(numbersMode == 2);
 		add(itemArabicNumbers);
-		
-		itemChineseNumbers.setAction(actionChineseNumbers);
-		numbersGroup.add(itemChineseNumbers);
-		itemChineseNumbers.setSelected(kanjiMode);
-		add(itemChineseNumbers);
 	}
 	
-	private void setKanjiMode(boolean mode) {
-		UserPreferences.getInstance().set("kanjiMode", mode);
+	private void setNumbersMode(int mode) {
+		UserPreferences.getInstance().set("numbersMode", Integer.valueOf(mode));
 		view.getController().notifyGridChanged();
 	}
 	
