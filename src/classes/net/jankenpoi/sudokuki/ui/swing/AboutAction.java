@@ -20,7 +20,6 @@ package net.jankenpoi.sudokuki.ui.swing;
 import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
-import javax.swing.Icon;
 import javax.swing.JFrame;
 
 @SuppressWarnings("serial")
@@ -28,8 +27,7 @@ public class AboutAction extends AbstractAction {
 	
 	private JFrame parent;
 	
-	public AboutAction(JFrame parent, SwingGrid grid, String string, Icon iconHelpAbout,
-			String desc, Integer mnemonic) {
+	public AboutAction(JFrame parent) {
 		this.parent = parent;
 	}
 

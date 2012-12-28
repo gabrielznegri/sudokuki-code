@@ -12,7 +12,7 @@ public abstract class SudokuGenerator {
 				System.out.println();
 			if (i % 27 == 0)
 				System.out.println();
-			System.out.print("" + (tab[i] == 0 ? "-" : tab[i]));
+			System.out.print("" + (tab[i] == 0 ? "-" : Integer.valueOf(tab[i])));
 		}
 		System.out.println();
 	}

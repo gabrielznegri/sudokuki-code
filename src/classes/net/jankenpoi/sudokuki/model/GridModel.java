@@ -85,8 +85,8 @@ public class GridModel implements Cloneable {
 	}
 	
 	private void newGrid() {
-		final int minRating = UserPreferences.getInstance().getInteger("minRating", 0);
-		final int maxRating = UserPreferences.getInstance().getInteger("maxRating", Integer.MAX_VALUE);
+		final int minRating = UserPreferences.getInstance().getInteger("minRating", Integer.valueOf(0)).intValue();
+		final int maxRating = UserPreferences.getInstance().getInteger("maxRating", Integer.valueOf(Integer.MAX_VALUE)).intValue();
 		SudokuGrid grid = SudokuGeneratorFactory.getGenerator().generateGrid(minRating, maxRating);
 
 		for (int i = 0; i < cellInfos.length; i++) {
@@ -111,7 +111,7 @@ public class GridModel implements Cloneable {
 				.println("GridModel.GridModel() length:" + strValues.length());
 		System.out.println("GridModel.GridModel() strValues:" + strValues);
 		for (int i = 0; i < strValues.length(); i++) {
-			short value = Short.valueOf(strValues.substring(i, i + 1));
+			short value = Short.valueOf(strValues.substring(i, i + 1)).shortValue();
 			System.out.print(value);
 			cellInfos[i] = value;
 			if (1 <= value && value <= 9) {

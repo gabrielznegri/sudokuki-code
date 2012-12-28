@@ -38,7 +38,7 @@ public class GridChangedEvent extends EventObject {
 	}
 
 	public short getInfos() {
-		return (short)infos;
+		return infos;
 	}
 	
 }

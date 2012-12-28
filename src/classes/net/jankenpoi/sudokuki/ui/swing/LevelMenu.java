@@ -133,8 +133,8 @@ public class LevelMenu extends JMenu implements L10nComponent {
 	}
 	
 	private void setLevelRatingBounds(final int minRating, final int maxRating) {
-		UserPreferences.getInstance().set("minRating", minRating);
-		UserPreferences.getInstance().set("maxRating", maxRating);
+		UserPreferences.getInstance().set("minRating", Integer.valueOf(minRating));
+		UserPreferences.getInstance().set("maxRating", Integer.valueOf(maxRating));
 	}
 	
 }

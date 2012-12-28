@@ -28,6 +28,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.net.UnknownHostException;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
 
@@ -80,14 +81,8 @@ public class CheckUpdateDialog extends JDialog {
 					result = 1;
 				}
 			} catch (InterruptedException e) {
-				System.out
-						.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() Interrupted !!!!");
 			} catch (ExecutionException e) {
-				System.out
-						.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() ExecutionException !!!!");
 			} catch (CancellationException e) {
-				System.out
-						.println("CheckUpdateDialog.worker.new SwingWorker() {...}.done() CancellationException !!!!");
 				result = -2;
 			} finally {
 				CheckUpdateDialog.this.dispose();
@@ -113,11 +108,13 @@ public class CheckUpdateDialog extends JDialog {
 				line = dis.readLine();
 			} catch (MalformedURLException mue) {
 				mue.printStackTrace();
+			} catch (UnknownHostException uhe) {
 			} catch (IOException ioe) {
-				ioe.printStackTrace();
 			} finally {
 				try {
-					dis.close();
+				    if (dis != null) {
+				        dis.close();
+				    }
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

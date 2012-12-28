@@ -21,7 +21,6 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 import javax.swing.Icon;
-import javax.swing.JFrame;
 
 import net.jankenpoi.sudokuki.view.GridView;
 
@@ -30,7 +29,7 @@ public class SetMemosHereAction extends AbstractAction {
 
 	private GridView view;
 
-	public SetMemosHereAction(JFrame parent, String text, Icon icon,
+	public SetMemosHereAction(String text, Icon icon,
 			String desc, Integer mnemonic, GridView view) {
 		super(text, icon);
 		

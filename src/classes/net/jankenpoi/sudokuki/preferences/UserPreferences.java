@@ -9,7 +9,7 @@ public class UserPreferences {
 	static {
 		INSTANCE.set("minRating", Integer.valueOf(0));
 		INSTANCE.set("maxRating", Integer.valueOf(5700));
-		INSTANCE.set("kanjiMode", Boolean.FALSE);
+		INSTANCE.set("numbersMode", Integer.valueOf(0));
 	}
 
 	private final HashMap<String, Object> map = new HashMap<String, Object>();

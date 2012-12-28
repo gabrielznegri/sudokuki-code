@@ -134,9 +134,9 @@ public class GridGenerationDialog extends JDialog {
 		dispose();
 	}
 
-	private int generateGrid() {
+	private Integer generateGrid() {
 		view.getController().notifyNewGridRequested();
-		return 0;
+		return Integer.valueOf(0);
 	}
 
 }

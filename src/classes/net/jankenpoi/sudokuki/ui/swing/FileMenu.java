@@ -94,14 +94,14 @@ public class FileMenu extends JMenu implements L10nComponent {
 
 		actionNew = new NewGridAction(parent, view, actions);
 		actions.put("NewGrid", actionNew);
-		actionOpen = new OpenGridAction(parent, view, actions);
+		actionOpen = new OpenGridAction(parent, view);
 		actions.put("OpenGrid", actionOpen);
-		actionSaveAs = new SaveAsAction(parent, view, actions);
+		actionSaveAs = new SaveAsAction(parent, view);
 		actions.put("SaveAs", actionSaveAs);
 		actionPrint = new PrintAction(grid);
 		actions.put("Print", actionPrint);
 		actionPrintMulti = new PrintMultiAction(parent, view);
-		actions.put("PrintMulti", actionPrintMulti);;
+		actions.put("PrintMulti", actionPrintMulti);
 		addItems();
 		setL10nMessages(null, _("DETECTED_LANGUAGE"));
 		localeListener = new LocaleListenerImpl(this);

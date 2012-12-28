@@ -55,7 +55,7 @@ public abstract class GridView implements GridListener {
 
 	public boolean isCellValueSet(int li, int co) {
 		for (byte v = 1; v<=9; v++) {
-			if (isCellValueSet(li, co, v)) {
+			if (isCellValueSet(li, co, Byte.valueOf(v))) {
 				return true;
 			}
 		}

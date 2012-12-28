@@ -35,7 +35,7 @@ public class MenuBar extends JMenuBar {
 		add(new FileMenu(parent, actions, grid, view));
 		editMenu = new EditMenu(actions, parent, view);
 		add(editMenu);
-		add(new HelpMenu(actions, parent, grid, view));
+		add(new HelpMenu(actions, parent));
 	}
 
 	final CheatMenu getCheatMenu() {

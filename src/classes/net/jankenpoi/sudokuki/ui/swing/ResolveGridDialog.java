@@ -54,8 +54,7 @@ public class ResolveGridDialog extends JDialog {
 	private final BruteForceGridSolver bruteSolver;
 	private final GridModel gridToSolve;
 
-	public ResolveGridDialog(JFrame parent, final GridView view,
-			final ResolveAction resolveAction) {
+	public ResolveGridDialog(JFrame parent, final GridView view) {
 
 		super(parent, true);
 		this.parent = parent;
@@ -85,7 +84,7 @@ public class ResolveGridDialog extends JDialog {
 			/* Executed in the EDT, triggered when the SwingWorker has completed */
 			protected void done() {
 				try {
-					status = get();
+					status = get().intValue();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 					return;
@@ -154,14 +153,14 @@ public class ResolveGridDialog extends JDialog {
 		return status;
 	}
 
-	private int resolveGrid() {
+	private Integer resolveGrid() {
 
 		GridSolution solution = bruteSolver.resolve();
 		if (solution == null) {
 			/**
 			 * RESOLUTION PROCESS CANCELLED BEFORE COMPLETION
 			 */
-			return 1;
+			return Integer.valueOf(1);
 		}
 		if (solution.isSolved()) {
 			GridModel solGrid = solution.getSolutionGrid();
@@ -175,12 +174,12 @@ public class ResolveGridDialog extends JDialog {
 			/**
 			 * RESOLUTION SUCCESSFULL
 			 */
-			return 0;
+			return Integer.valueOf(0);
 		} else {
 			/**
 			 * RESOLUTION PROCESS WAS UNABLE TO SOLVE THIS GRID
 			 */
-			return 2;
+			return Integer.valueOf(2);
 		}
 	}
 

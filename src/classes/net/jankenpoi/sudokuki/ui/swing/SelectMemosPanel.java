@@ -139,7 +139,7 @@ public class SelectMemosPanel extends JPanel {
 
 		Iterator<Byte> it = memos.iterator();
 		while (it.hasNext()) {
-			JToggleButton button = ckb[it.next()-1];
+			JToggleButton button = ckb[it.next().intValue()-1];
 			button.setSelected(true);
 			button.setFont(BOLD_FONT);
 		}
@@ -177,10 +177,10 @@ public class SelectMemosPanel extends JPanel {
 	private void buttonClicked(int button) {
 		byte value = (byte)(button + 1);
 		if (ckb[button].isSelected()) {
-			memos.add(value);
+			memos.add(Byte.valueOf(value));
 			ckb[button].setFont(BOLD_FONT);
 		} else {
-			memos.remove(value);
+			memos.remove(Byte.valueOf(value));
 			ckb[button].setFont(NORMAL_FONT);
 		}
 	}
@@ -191,7 +191,7 @@ public class SelectMemosPanel extends JPanel {
 		Iterator<Byte> it = memos.iterator();
 		int i = 0;
 		while (it.hasNext()) {
-			memosArray[i] = it.next();
+			memosArray[i] = it.next().byteValue();
 			i++;
 		}
 		return memosArray;

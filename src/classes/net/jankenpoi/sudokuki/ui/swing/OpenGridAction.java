@@ -41,7 +41,7 @@ public class OpenGridAction extends AbstractAction {
 
 	private final JFrame frame;
 	
-	OpenGridAction(JFrame frame, GridView view, ActionsRepository actions) {
+	OpenGridAction(JFrame frame, GridView view) {
 		this.frame = frame;
 		this.view = view;
 	}

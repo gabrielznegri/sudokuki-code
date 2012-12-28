@@ -28,7 +28,7 @@ public class BruteForceGridSolver implements GridSolver {
 
 	private boolean cancelRequested() {
 		synchronized (cancelled) {
-			return cancelled;
+			return cancelled.booleanValue();
 		}
 	}
 	

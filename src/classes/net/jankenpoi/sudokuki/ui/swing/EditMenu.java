@@ -67,22 +67,22 @@ public class EditMenu extends JMenu implements L10nComponent {
                 getAccessibleContext().setAccessibleDescription(
                                 "Edit menu");
                 
-                actionClearAllMoves = new ClearAllMovesAction(parent, "Clear all moves",
+                actionClearAllMoves = new ClearAllMovesAction("Clear all moves",
                                 StockIcons.ICON_CLEAR, "Clear all my moves", new Integer(
                                                 KeyEvent.VK_X), view);
                 actions.put("ClearAllMoves", actionClearAllMoves);
                 
-                actionEraseAllMemos = new EraseAllMemosAction(parent, "Erase all memos",
+                actionEraseAllMemos = new EraseAllMemosAction("Erase all memos",
                                 StockIcons.ICON_CLEAR_ALL_MEMOS, "Erase all memos...", new Integer(
                                                 KeyEvent.VK_X), view);
                 actions.put("EraseAllMemos", actionEraseAllMemos);
                 
-                actionCustomGrid = new CustomGridAction(parent, "Custom grid",
+                actionCustomGrid = new CustomGridAction("Custom grid",
                                 StockIcons.ICON_EDIT, "Compose a custom grid...", new Integer(
                                                 KeyEvent.VK_G), view);
                 actions.put("CustomGrid", actionCustomGrid);
 
-                actionPlayCustomGrid = new PlayCustomGridAction(parent, "Play custom grid",
+                actionPlayCustomGrid = new PlayCustomGridAction("Play custom grid",
                                 StockIcons.ICON_PLAY, "Play with current grid...", new Integer(
                                                 KeyEvent.VK_H), view);
                 actions.put("PlayCustomGrid", actionPlayCustomGrid);

@@ -216,7 +216,7 @@ class SuexgJava extends SuexgGenerator {
 			// mr1:
 			if (gotoMR1) {
 				gotoMR1 = false;
-				i1 = (int) (MWC() >> 8) & 127;
+				i1 = (MWC() >> 8) & 127;
 				if (i1 > 80) {
 					gotoMR1 = true;
 					continue; // these 2 instructions stand for: goto mr1;
@@ -232,7 +232,7 @@ class SuexgJava extends SuexgGenerator {
 			// mr3:
 			if (gotoMR3) {
 				gotoMR3 = false;
-				s = (int) (MWC() >> 9) & 15;
+				s = (MWC() >> 9) & 15;
 				if (s > 8) {
 					gotoMR3 = true;
 					continue; // these 2 instructions stand for: goto mr3;
@@ -268,7 +268,7 @@ class SuexgJava extends SuexgGenerator {
 					x = i;
 					while (x >= i) {
 						// mr4:
-						x = (int) (MWC() >> 8) & 127;
+						x = (MWC() >> 8) & 127;
 					}
 					x++;
 					P[i] = P[x];
@@ -393,7 +393,7 @@ class SuexgJava extends SuexgGenerator {
 							w++;
 							W[w] = c;
 						}
-						;
+						
 						if (V[c] < min) {
 							w = 1;
 							W[w] = c;
@@ -408,7 +408,7 @@ class SuexgJava extends SuexgGenerator {
 			if (gotoMR) {
 				gotoMR = false;
 
-				c2 = (int) (MWC() & Two[w]);
+				c2 = (MWC() & Two[w]);
 				if (c2 >= w) {
 					gotoMR = true;
 					continue; // simulates: goto mr;

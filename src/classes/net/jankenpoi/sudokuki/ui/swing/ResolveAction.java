@@ -45,7 +45,7 @@ public class ResolveAction extends AbstractAction {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		ResolveGridDialog dlg = new ResolveGridDialog(frame, view, this);
+		ResolveGridDialog dlg = new ResolveGridDialog(frame, view);
 		dlg.setVisible(true);
 		int result = dlg.getResult();
 		if (result == 0) {

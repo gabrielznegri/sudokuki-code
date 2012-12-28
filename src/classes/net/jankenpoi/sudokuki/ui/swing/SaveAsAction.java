@@ -22,7 +22,7 @@ public class SaveAsAction extends AbstractAction {
 	private final GridView view;
 	private final JFrame frame;
 
-	SaveAsAction(JFrame frame, GridView view, ActionsRepository actions) {
+	SaveAsAction(JFrame frame, GridView view) {
 		this.frame = frame;
 		this.view = view;
 	}

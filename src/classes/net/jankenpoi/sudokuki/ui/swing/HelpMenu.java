@@ -30,7 +30,6 @@ import javax.swing.JMenuItem;
 import net.jankenpoi.i18n.I18n;
 import net.jankenpoi.i18n.LocaleListener;
 import net.jankenpoi.sudokuki.ui.L10nComponent;
-import net.jankenpoi.sudokuki.view.GridView;
 
 @SuppressWarnings("serial")
 public class HelpMenu extends JMenu implements L10nComponent {
@@ -71,7 +70,7 @@ public class HelpMenu extends JMenu implements L10nComponent {
 		actionAbout.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_P));
 	}
 
-	HelpMenu(ActionsRepository actions, JFrame frame, SwingGrid grid, GridView view) {
+	HelpMenu(ActionsRepository actions, JFrame frame) {
 		this.parent = frame;
 		setMnemonic(KeyEvent.VK_H);
 		getAccessibleContext().setAccessibleDescription(
@@ -85,15 +84,15 @@ public class HelpMenu extends JMenu implements L10nComponent {
 		actionTranslate = new TranslateAction(parent);
 		actions.put("Translate", actionTranslate);
 		
-		actionAbout = new AboutAction(parent, grid, "", null, "", Integer.valueOf(0));
+		actionAbout = new AboutAction(parent);
 		actions.put("About", actionAbout);
-		addItems(view);
+		addItems();
 		setL10nMessages(null, _("DETECTED_LANGUAGE"));
 		localeListener = new LocaleListenerImpl(this);
 		I18n.addLocaleListener(localeListener);
 	}
 
-	private void addItems(GridView view) {
+	private void addItems() {
 		itemCheckUpdate.setAction(actionCheckUpdate);
 		add(itemCheckUpdate);
 		
