@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<!-- Server: sfn-web-5 -->
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]>--> <html lang="en" class="no-js"> <!--<![endif]-->
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+    <title>
+  Sudokuki - essential sudoku game / Svn /
+  [r1022]
+  /trunk/sudokuki/po/ar.po
+</title>
+    
+
+<script src="http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/js/sftheme/modernizr.custom.90514.js"></script>
+
+<script src="http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/js/sftheme/jquery-1.8.0.min.js"></script>
+
+<script src="http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/js/sftheme/header.js"></script>
+<!--[if lt IE 7 ]>
+  <script src="http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/js/sftheme/dd_belatedpng.js"></script>
+  <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+<![endif]-->
+<link href='//fonts.googleapis.com/css?family=Ubuntu:regular' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    @font-face {
+        font-family: "Pictos";
+        src: url('http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/css/fonts/sftheme/pictos-web.eot');
+        src: local("☺"), url('http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/css/fonts/sftheme/pictos-web.woff') format('woff'), url('http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/css/fonts/sftheme/pictos-web.ttf') format('truetype'), url('http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/css/fonts/sftheme/pictos-web.svg') format('svg');
+    }
+</style>
+    <script type="text/javascript">
+            /*jslint onevar: false, nomen: false, evil: true, css: true, plusplus: false, white: false, forin: true, on: true, immed: false */
+            /*global confirm, alert, unescape, window, jQuery, $, net, COMSCORE */
+    </script>
+    
+      <!-- ew:head_css -->
+
+    
+      <link rel="stylesheet"
+                type="text/css"
+                href="http://a.fsdn.com/allura/nf/1355943765/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Fhilite.css"
+                >
+    
+      <link rel="stylesheet"
+                type="text/css"
+                href="http://a.fsdn.com/allura/nf/1355943765/_ew_/theme/sftheme/css/forge.css"
+                >
+    
+      
+<!-- /ew:head_css -->
+
+    
+    
+    
+      <!-- ew:head_js -->
+
+    
+      
+<!-- /ew:head_js -->
+
+    
+    
+
+    
+      <style type="text/css">
+        #page-body.project---init-- #top_nav { display: none; }
+#page-body.project---init-- #nav_menu_holder { display: none; margin-bottom: 0; }
+#page-body.project---init-- #content_base {margin-top: 0; }
+      </style>
+    
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/p/sudokuki/svn/feed.rss"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="/p/sudokuki/svn/feed.atom"/>
+
+      <style>.XqQUAvqeVhJfTrNjwBqTmVu { display:none }</style>
+
+    
+    
+    
+    
+
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+
+    function _add_tracking(prefix, tracking_id, send_user) {
+        _gaq.push([prefix+'._setAccount', tracking_id]);
+        _gaq.push([prefix+'._setCustomVar', 1, 'Page Type', 'SVN', 3]);_gaq.push([prefix+'._trackPageview']);
+    }
+      _add_tracking('sfnt1', 'UA-32013-6', true);
+      _add_tracking('sfnt2', 'UA-36130941-1', true);
+    
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+  </head>
+
+  <body id="forge">
+    
+      <!-- ew:body_top_js -->
+
+    
+      
+<!-- /ew:body_top_js -->
+
+    
+    
+<header id="site-header">
+    <div class="wrapper">
+        <a href="/" class="logo">
+            <span>SourceForge</span>
+        </a>
+        
+        <form method="get" action="/directory/">
+            <input type="text" id="words" name="q" placeholder="Search">
+        </form>
+        
+        <!--Switch to {language}-->
+        <nav id="nav-site">
+            <a href="/directory/" title="Browse our software.">Browse</a>
+            <a href="/blog/" title="Read the latest news from the SF HQ.">Blog</a>
+            <a href="/support" title="Contact us for help and feedback.">Help</a>
+        </nav>
+        <nav id="nav-account">
+            
+              <div class="logged_out">
+                <a href="/account/login.php">Log In</a>
+                <span>or</span>
+                <a href="https://sourceforge.net/user/registration/">Join</a>
+              </div>
+            
+        </nav>
+        
+    </div>
+</header>
+<header id="site-sec-header">
+    <div class="wrapper">
+        <nav id="nav-hubs">
+            <h4>Solution Centers</h4>
+            <a href="http://ibmsmartercommerce.sourceforge.net/">Smarter Commerce</a>
+            <a href="http://goparallel.sourceforge.net/">Go Parallel</a>
+            <a href="http://html5center.sourceforge.net/">HTML5</a>
+            <a href="http://ibmsmarteritservices.sourceforge.net/">Smarter IT</a>
+        </nav>
+        <nav id="nav-collateral">
+            <a href="http://library.geeknetmedia.com">Resources</a>
+            
+            <a href="">Newsletters</a>
+            
+        </nav>
+    </div>
+</header>
+    
+    <section id="page-body" class=" neighborhood-Projects project-sudokuki mountpoint-svn">
+	  <div class="grid-24" id="nav_menu_holder">
+            
+            
+
+
+  
+  <a href="/p/sudokuki/">
+    
+      <img src="/p/sudokuki//icon?2012-09-24 15:50:47+00:00" class="project_icon" alt="Project Logo">
+    
+	<h1 class="project_title">
+      
+        Sudokuki - essential sudoku game
+      
+	</h1>
+	</a>
+
+            
+      </div>
+      <div id="top_nav" class="">
+        
+        
+  
+    <a href="/projects/sudokuki/" class="ui-icon-tool-summary">
+      Summary
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/wiki/" class="ui-icon-tool-wiki">
+      Wiki
+      
+        
+      
+    </a>
+	
+    <a href="/projects/sudokuki/files/" class="ui-icon-tool-files">
+      Files
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/mailman/" class="ui-icon-tool-mailman">
+      Mailing Lists
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/code/" class="ui-icon-tool-git">
+      Code
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/svn/" class="ui-icon-tool-svn">
+      Svn
+      
+        
+          <span class="diamond"></span>
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/feature-requests/" class="ui-icon-tool-tickets">
+      Feature Requests
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/patches/" class="ui-icon-tool-tickets">
+      Patches
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/bugs/" class="ui-icon-tool-tickets">
+      Bugs
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/news/" class="ui-icon-tool-blog">
+      News
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/discussion/" class="ui-icon-tool-discussion">
+      Discussion
+      
+        
+      
+    </a>
+	
+    <a href="/p/sudokuki/donate/" class="ui-icon-tool-link">
+      Donate
+      
+        
+      
+    </a>
+	
+	<div style="clear:both"></div>
+
+        
+      </div>
+      <div id="content_base">
+			  
+			    
+          
+
+
+<div id="sidebar">
+  
+    <div>&nbsp;</div>
+  
+    
+    
+      
+        
+    
+      <ul class="sidebarmenu">
+      
+    
+    <li>
+      <a href="/p/sudokuki/svn/commit_browser"><b data-icon="o" class="ico ico-folder"></b> <span>Browse Commits</span></a>
+    </li>
+  
+      
+    
+    
+      </ul>
+      
+    
+    
+</div>
+          
+          
+			  
+			  
+          
+        
+        <div class="grid-20 pad">
+          <h2 class="dark title">
+<a href="/p/sudokuki/svn/1022/">[r1022]</a>:
+
+  
+  
+    <a href="./../../">trunk</a> /
+    
+  
+    <a href="./../">sudokuki</a> /
+    
+  
+    <a href="./">po</a> /
+    
+  
+ ar.po
+
+            <!-- actions -->
+            <small>
+            
+<a href="/p/sudokuki/svn/1022/log/?path=/trunk/sudokuki/po/ar.po">
+  <b data-icon="N" class="ico ico-history" title="History"> </b> History
+</a>
+
+            </small>
+            <!-- /actions -->
+          </h2>
+		
+          <div>
+            
+  
+
+            
+  
+
+  
+
+  
+    <p><a href="?format=raw">Download this file</a></p>
+    <div class="clip grid-19">
+      <h3>
+        <span class="ico-l"><b data-icon="n" class="ico ico-table"></b> ar.po</span>
+        &nbsp;&nbsp;
+        541 lines (428 with data), 20.3 kB
+      </h3>
+      
+        <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540</pre></div></td><td class="code"><div class="codehilite"><pre><div id="l1" class="code_block"><span class="c1"># SOME DESCRIPTIVE TITLE.</span>
+</div><div id="l2" class="code_block"><span class="c1"># Copyright (C) YEAR Sylvain Vedrenne</span>
+</div><div id="l3" class="code_block"><span class="c1"># This file is distributed under the same license as the PACKAGE package.</span>
+</div><div id="l4" class="code_block"><span class="c1"># FIRST AUTHOR &lt;EMAIL@ADDRESS&gt;, YEAR.</span>
+</div><div id="l5" class="code_block"><span class="c1">#</span>
+</div><div id="l6" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l7" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+</div><div id="l8" class="code_block"><span class="s">&quot;</span><span class="py">Project-Id-Version:</span><span class="s"> sudokuki 1.1.6\n&quot;</span>
+</div><div id="l9" class="code_block"><span class="s">&quot;</span><span class="py">Report-Msgid-Bugs-To:</span><span class="s"> sudokuki-i18n@lists.sourceforge.net\n&quot;</span>
+</div><div id="l10" class="code_block"><span class="s">&quot;</span><span class="py">POT-Creation-Date:</span><span class="s"> 2012-11-24 17:41+0100\n&quot;</span>
+</div><div id="l11" class="code_block"><span class="s">&quot;</span><span class="py">PO-Revision-Date:</span><span class="s"> 2012-11-15 09:02-0600\n&quot;</span>
+</div><div id="l12" class="code_block"><span class="s">&quot;</span><span class="py">Last-Translator:</span><span class="s"> daneih ismail &lt;daneih.ismail@gmail.com&gt;\n&quot;</span>
+</div><div id="l13" class="code_block"><span class="s">&quot;</span><span class="py">Language-Team:</span><span class="s"> LANGUAGE &lt;LL@li.org&gt;\n&quot;</span>
+</div><div id="l14" class="code_block"><span class="s">&quot;</span><span class="py">Language:</span><span class="s"> \n&quot;</span>
+</div><div id="l15" class="code_block"><span class="s">&quot;</span><span class="py">MIME-Version:</span><span class="s"> 1.0\n&quot;</span>
+</div><div id="l16" class="code_block"><span class="s">&quot;</span><span class="py">Content-Type:</span><span class="s"> text/plain; charset=UTF-8\n&quot;</span>
+</div><div id="l17" class="code_block"><span class="s">&quot;</span><span class="py">Content-Transfer-Encoding:</span><span class="s"> 8bit\n&quot;</span>
+</div><div id="l18" class="code_block"><span class="s">&quot;</span><span class="py">X-Generator:</span><span class="s"> Poedit 1.5.4\n&quot;</span>
+</div><div id="l19" class="code_block">
+</div><div id="l20" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:55</span>
+</div><div id="l21" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:70</span>
+</div><div id="l22" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;About Sudokuki...&quot;</span>
+</div><div id="l23" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;عن سودوكوكي&quot;</span>
+</div><div id="l24" class="code_block">
+</div><div id="l25" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:56</span>
+</div><div id="l26" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Information&quot;</span>
+</div><div id="l27" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;معلومات&quot;</span>
+</div><div id="l28" class="code_block">
+</div><div id="l29" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:57</span>
+</div><div id="l30" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Contributors&quot;</span>
+</div><div id="l31" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;المساهمين&quot;</span>
+</div><div id="l32" class="code_block">
+</div><div id="l33" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:58</span>
+</div><div id="l34" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Feedback&quot;</span>
+</div><div id="l35" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تعليقات&quot;</span>
+</div><div id="l36" class="code_block">
+</div><div id="l37" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:59</span>
+</div><div id="l38" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Transfer&quot;</span>
+</div><div id="l39" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تحويل&quot;</span>
+</div><div id="l40" class="code_block">
+</div><div id="l41" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:60</span>
+</div><div id="l42" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;License&quot;</span>
+</div><div id="l43" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;ترخيص&quot;</span>
+</div><div id="l44" class="code_block">
+</div><div id="l45" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:93</span>
+</div><div id="l46" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Aritz Beraza&quot;</span>
+</div><div id="l47" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;آريتز برازا&quot;</span>
+</div><div id="l48" class="code_block">
+</div><div id="l49" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:95</span>
+</div><div id="l50" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Spanish translations (v1.0)&quot;</span>
+</div><div id="l51" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot; الترجمة الاسبانية (١.٠)&quot;</span>
+</div><div id="l52" class="code_block">
+</div><div id="l53" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:97</span>
+</div><div id="l54" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Jeroen P. Broks&quot;</span>
+</div><div id="l55" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;جيروين بروكس&quot;</span>
+</div><div id="l56" class="code_block">
+</div><div id="l57" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:99</span>
+</div><div id="l58" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Dutch translations&quot;</span>
+</div><div id="l59" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة الهولندية&quot;</span>
+</div><div id="l60" class="code_block">
+</div><div id="l61" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:101</span>
+</div><div id="l62" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Helene Damianakos&quot;</span>
+</div><div id="l63" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;هيلين دامياناكوس&quot;</span>
+</div><div id="l64" class="code_block">
+</div><div id="l65" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:103</span>
+</div><div id="l66" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Greek translations (v1.0)&quot;</span>
+</div><div id="l67" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot; الترجمة اليونانية (١.٠)&quot;</span>
+</div><div id="l68" class="code_block">
+</div><div id="l69" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:105</span>
+</div><div id="l70" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Janis Eisaks&quot;</span>
+</div><div id="l71" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;جانيس ايساكس&quot;</span>
+</div><div id="l72" class="code_block">
+</div><div id="l73" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:107</span>
+</div><div id="l74" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Latvian translations&quot;</span>
+</div><div id="l75" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة اللاتفيا&quot;</span>
+</div><div id="l76" class="code_block">
+</div><div id="l77" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:109</span>
+</div><div id="l78" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Rafael Ferreira&quot;</span>
+</div><div id="l79" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;رافيل فيريرا&quot;</span>
+</div><div id="l80" class="code_block">
+</div><div id="l81" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111</span>
+</div><div id="l82" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Brazilian Portuguese translations&quot;</span>
+</div><div id="l83" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة البرتغالية البرازيلية&quot;</span>
+</div><div id="l84" class="code_block">
+</div><div id="l85" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:113</span>
+</div><div id="l86" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Daneih Ismail&quot;</span>
+</div><div id="l87" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;دانية اسماعيل&quot;</span>
+</div><div id="l88" class="code_block">
+</div><div id="l89" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:115</span>
+</div><div id="l90" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Arabic translations&quot;</span>
+</div><div id="l91" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة العربية&quot;</span>
+</div><div id="l92" class="code_block">
+</div><div id="l93" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:117</span>
+</div><div id="l94" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Stavros Mavrakis&quot;</span>
+</div><div id="l95" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;ستافورس مافراكيس&quot;</span>
+</div><div id="l96" class="code_block">
+</div><div id="l97" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119</span>
+</div><div id="l98" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Greek translations&quot;</span>
+</div><div id="l99" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة اليونانية&quot;</span>
+</div><div id="l100" class="code_block">
+</div><div id="l101" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121</span>
+</div><div id="l102" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Fumiaki Nakanishi&quot;</span>
+</div><div id="l103" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;فومايكي ناكانيشي&quot;</span>
+</div><div id="l104" class="code_block">
+</div><div id="l105" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:123</span>
+</div><div id="l106" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:139</span>
+</div><div id="l107" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Japanese translations&quot;</span>
+</div><div id="l108" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة اليابانية&quot;</span>
+</div><div id="l109" class="code_block">
+</div><div id="l110" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:125</span>
+</div><div id="l111" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Jeanne Peng&quot;</span>
+</div><div id="l112" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;جين بينج&quot;</span>
+</div><div id="l113" class="code_block">
+</div><div id="l114" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:127</span>
+</div><div id="l115" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Chinese translations&quot;</span>
+</div><div id="l116" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة الصينية&quot;</span>
+</div><div id="l117" class="code_block">
+</div><div id="l118" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:129</span>
+</div><div id="l119" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Claus Poerschke&quot;</span>
+</div><div id="l120" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;كلاوس بورشكا&quot;</span>
+</div><div id="l121" class="code_block">
+</div><div id="l122" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:131</span>
+</div><div id="l123" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Patches (v1.0) and German translations&quot;</span>
+</div><div id="l124" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;باتش (١.٠) و الترجمة الالمانية&quot;</span>
+</div><div id="l125" class="code_block">
+</div><div id="l126" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:133</span>
+</div><div id="l127" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Dmitry Salnikov&quot;</span>
+</div><div id="l128" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;دميتري سالنيكوف&quot;</span>
+</div><div id="l129" class="code_block">
+</div><div id="l130" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:135</span>
+</div><div id="l131" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Portuguese and Russian translations&quot;</span>
+</div><div id="l132" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة الروسية و البرتغالية&quot;</span>
+</div><div id="l133" class="code_block">
+</div><div id="l134" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:137</span>
+</div><div id="l135" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Helene Vedrenne&quot;</span>
+</div><div id="l136" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;هيلين فيدرين&quot;</span>
+</div><div id="l137" class="code_block">
+</div><div id="l138" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:141</span>
+</div><div id="l139" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Sylvain Vedrenne&quot;</span>
+</div><div id="l140" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;سيفاين فيدرين&quot;</span>
+</div><div id="l141" class="code_block">
+</div><div id="l142" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:143</span>
+</div><div id="l143" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Esperanto, French, and Japanese translations (v1.0)&quot;</span>
+</div><div id="l144" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الترجمة اليابانية و الفرنسية و الاسبرانتو (١.٠)&quot;</span>
+</div><div id="l145" class="code_block">
+</div><div id="l146" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:156</span>
+</div><div id="l147" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l148" class="code_block"><span class="s">&quot;&lt;b&gt;Sudokuki&lt;/b&gt; is released under the terms of the GNU General Public &quot;</span>
+</div><div id="l149" class="code_block"><span class="s">&quot;License version 3 or later (GPL v3+).&quot;</span>
+</div><div id="l150" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;&lt;/b&gt; سودوكوكي &lt;b&gt;هي نسخة تم تحريرها وفقا لرخصة جنو النسخة ٣ او لاحقة&quot;</span>
+</div><div id="l151" class="code_block">
+</div><div id="l152" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:160</span>
+</div><div id="l153" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l154" class="code_block"><span class="s">&quot;The full license text is available in the file called COPYING that must be &quot;</span>
+</div><div id="l155" class="code_block"><span class="s">&quot;included in every copy of the program.&quot;</span>
+</div><div id="l156" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+</div><div id="l157" class="code_block"><span class="s">&quot;كامل نص الترخيص متاح في ملف يسمى النسخ التي يجب تضمينها في كل نسخة من &quot;</span>
+</div><div id="l158" class="code_block"><span class="s">&quot;البرنامج.&quot;</span>
+</div><div id="l159" class="code_block">
+</div><div id="l160" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:164</span>
+</div><div id="l161" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l162" class="code_block"><span class="s">&quot;This program is Free Software (\&quot;Free\&quot; as in \&quot;Freedom\&quot;) developped during &quot;</span>
+</div><div id="l163" class="code_block"><span class="s">&quot;the author&#39;s free-time in the hope that some users will find it useful, but &quot;</span>
+</div><div id="l164" class="code_block"><span class="s">&quot;WITHOUT ANY WARRANTY of any kind.&quot;</span>
+</div><div id="l165" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+</div><div id="l166" class="code_block"><span class="s">&quot;هذا البرنامج هو برنامج حر التصرف به (حر كما في الحرية) طور أثناء وقت فراغ &quot;</span>
+</div><div id="l167" class="code_block"><span class="s">&quot;المؤلف. مقدم على أمل أن يفيد بعض المستخدمين ولكن دون أي ضمان من أي نوع.&quot;</span>
+</div><div id="l168" class="code_block">
+</div><div id="l169" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:168</span>
+</div><div id="l170" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l171" class="code_block"><span class="s">&quot;You are welcome to transfer this program to other people as long as you &quot;</span>
+</div><div id="l172" class="code_block"><span class="s">&quot;respect the license terms. Read the GNU General Public License for more &quot;</span>
+</div><div id="l173" class="code_block"><span class="s">&quot;details.&quot;</span>
+</div><div id="l174" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+</div><div id="l175" class="code_block"><span class="s">&quot;انكم مدعوون الى نقل هذا البرنامج إلى أشخاص آخرين ما دمتم تحترمون شروط &quot;</span>
+</div><div id="l176" class="code_block"><span class="s">&quot;الترخيص.الرجاء قراءة رخصة جنو للحصول على مزيد من التفاصيل.&quot;</span>
+</div><div id="l177" class="code_block">
+</div><div id="l178" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:170</span>
+</div><div id="l179" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:220</span>
+</div><div id="l180" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Copyright (C) 2007-2012 Sylvain Vedrenne&quot;</span>
+</div><div id="l181" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;حقوق الطبع محفوظة سيفاين فيدرين ٢٠٠٧ - ٢٠١٢&quot;</span>
+</div><div id="l182" class="code_block">
+</div><div id="l183" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:246</span>
+</div><div id="l184" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;on the Web&quot;</span>
+</div><div id="l185" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;في الموقع&quot;</span>
+</div><div id="l186" class="code_block">
+</div><div id="l187" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:271</span>
+</div><div id="l188" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l189" class="code_block"><span class="s">&quot;Feel free to request features and report bugs&lt;br/&gt;on the Sudokuki Forums &quot;</span>
+</div><div id="l190" class="code_block"><span class="s">&quot;hosted by Sourceforge!&quot;</span>
+</div><div id="l191" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+</div><div id="l192" class="code_block"><span class="s">&quot;لديك الحرية المطلقة لطلب اي مميزات و تعليق عن المشاكل &lt;br/&gt; في منتدى &quot;</span>
+</div><div id="l193" class="code_block"><span class="s">&quot;سودوكوكي الذي تستضيفه سورسفورج !&quot;</span>
+</div><div id="l194" class="code_block">
+</div><div id="l195" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:289</span>
+</div><div id="l196" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Sudokuki Forums&quot;</span>
+</div><div id="l197" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;منتدى سودوكوكي&quot;</span>
+</div><div id="l198" class="code_block">
+</div><div id="l199" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:41</span>
+</div><div id="l200" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Solution...&quot;</span>
+</div><div id="l201" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الحل...&quot;</span>
+</div><div id="l202" class="code_block">
+</div><div id="l203" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:44</span>
+</div><div id="l204" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:63</span>
+</div><div id="l205" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java:39</span>
+</div><div id="l206" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Memos&quot;</span>
+</div><div id="l207" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;المذكرات&quot;</span>
+</div><div id="l208" class="code_block">
+</div><div id="l209" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:45</span>
+</div><div id="l210" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:64</span>
+</div><div id="l211" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Set memos&quot;</span>
+</div><div id="l212" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تعيين المذكرات&quot;</span>
+</div><div id="l213" class="code_block">
+</div><div id="l214" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:46</span>
+</div><div id="l215" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:68</span>
+</div><div id="l216" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;All memos&quot;</span>
+</div><div id="l217" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;كل المذكرات&quot;</span>
+</div><div id="l218" class="code_block">
+</div><div id="l219" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:47</span>
+</div><div id="l220" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:69</span>
+</div><div id="l221" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Set memos in all cells&quot;</span>
+</div><div id="l222" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;حفظ المذكرات في كل الخلايا&quot;</span>
+</div><div id="l223" class="code_block">
+</div><div id="l224" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:49</span>
+</div><div id="l225" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:73</span>
+</div><div id="l226" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Resolve&quot;</span>
+</div><div id="l227" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;حل&quot;</span>
+</div><div id="l228" class="code_block">
+</div><div id="l229" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:51</span>
+</div><div id="l230" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:74</span>
+</div><div id="l231" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Resolve the grid&quot;</span>
+</div><div id="l232" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;حل الشبكة&quot;</span>
+</div><div id="l233" class="code_block">
+</div><div id="l234" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:80</span>
+</div><div id="l235" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:92</span>
+</div><div id="l236" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:106</span>
+</div><div id="l237" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:91</span>
+</div><div id="l238" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:49</span>
+</div><div id="l239" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:55</span>
+</div><div id="l240" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:70</span>
+</div><div id="l241" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:91</span>
+</div><div id="l242" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LocaleListenerImpl.java:19</span>
+</div><div id="l243" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:67</span>
+</div><div id="l244" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:53</span>
+</div><div id="l245" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:94</span>
+</div><div id="l246" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;DETECTED_LANGUAGE&quot;</span>
+</div><div id="l247" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;ar&quot;</span>
+</div><div id="l248" class="code_block">
+</div><div id="l249" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateAction.java:49</span>
+</div><div id="l250" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;This version of Sudokuki is up-to-date.&quot;</span>
+</div><div id="l251" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot; هذا الاصدار من سودوكوكي  حديث&quot;</span>
+</div><div id="l252" class="code_block">
+</div><div id="l253" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateAction.java:58</span>
+</div><div id="l254" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l255" class="code_block"><span class="s">&quot;Unable to retrieve update information.&lt;br/&gt;&lt;br/&gt;Please check on the &quot;</span>
+</div><div id="l256" class="code_block"><span class="s">&quot;following website&lt;br/&gt;if a new version of Sudokuki is available:&lt;br/&gt;&lt;br/&gt;&quot;</span>
+</div><div id="l257" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+</div><div id="l258" class="code_block"><span class="s">&quot;غير قادر على استرداد المعلومات &lt;BR/&gt; &lt;BR/&gt;فضلا قم بزيارة الموقع التالي &lt;BR/&gt; &quot;</span>
+</div><div id="l259" class="code_block"><span class="s">&quot;لمعرفة اي إصدار جديد متاح من سودوكو: &lt;BR/&gt; &lt;BR/&gt;&quot;</span>
+</div><div id="l260" class="code_block">
+</div><div id="l261" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:156</span>
+</div><div id="l262" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Checking for available updates&quot;</span>
+</div><div id="l263" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;التحقق من تحديثات جديدة&quot;</span>
+</div><div id="l264" class="code_block">
+</div><div id="l265" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:159</span>
+</div><div id="l266" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:108</span>
+</div><div id="l267" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Please wait...&quot;</span>
+</div><div id="l268" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;فضلا انتظر...&quot;</span>
+</div><div id="l269" class="code_block">
+</div><div id="l270" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:161</span>
+</div><div id="l271" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:120</span>
+</div><div id="l272" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:118</span>
+</div><div id="l273" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Cancel&quot;</span>
+</div><div id="l274" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الغاء&quot;</span>
+</div><div id="l275" class="code_block">
+</div><div id="l276" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/DualSelectionDialog.java:38</span>
+</div><div id="l277" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Select&quot;</span>
+</div><div id="l278" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تحديد&quot;</span>
+</div><div id="l279" class="code_block">
+</div><div id="l280" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:54</span>
+</div><div id="l281" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Edit&quot;</span>
+</div><div id="l282" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تعديل&quot;</span>
+</div><div id="l283" class="code_block">
+</div><div id="l284" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:55</span>
+</div><div id="l285" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Clear moves&quot;</span>
+</div><div id="l286" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;مسح الحركات&quot;</span>
+</div><div id="l287" class="code_block">
+</div><div id="l288" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:56</span>
+</div><div id="l289" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Clear all moves&quot;</span>
+</div><div id="l290" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;مسح كل الحركات&quot;</span>
+</div><div id="l291" class="code_block">
+</div><div id="l292" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:57</span>
+</div><div id="l293" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Hide memos...&quot;</span>
+</div><div id="l294" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;اخفاء المذكرات...&quot;</span>
+</div><div id="l295" class="code_block">
+</div><div id="l296" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:58</span>
+</div><div id="l297" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Hide all memos...&quot;</span>
+</div><div id="l298" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;اخفاء كل المذكرات…&quot;</span>
+</div><div id="l299" class="code_block">
+</div><div id="l300" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:59</span>
+</div><div id="l301" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Custom grid&quot;</span>
+</div><div id="l302" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;شبكة مخصصة&quot;</span>
+</div><div id="l303" class="code_block">
+</div><div id="l304" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:60</span>
+</div><div id="l305" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Compose a custom grid...&quot;</span>
+</div><div id="l306" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;انشاء شبكة مخصصة&quot;</span>
+</div><div id="l307" class="code_block">
+</div><div id="l308" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:61</span>
+</div><div id="l309" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Play grid&quot;</span>
+</div><div id="l310" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;لعب  بالشبكة&quot;</span>
+</div><div id="l311" class="code_block">
+</div><div id="l312" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:62</span>
+</div><div id="l313" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Play with current grid...&quot;</span>
+</div><div id="l314" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;اللعب بالشبكة الحالية&quot;</span>
+</div><div id="l315" class="code_block">
+</div><div id="l316" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:55</span>
+</div><div id="l317" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;File&quot;</span>
+</div><div id="l318" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;ملف&quot;</span>
+</div><div id="l319" class="code_block">
+</div><div id="l320" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:57</span>
+</div><div id="l321" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:59</span>
+</div><div id="l322" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;New&quot;</span>
+</div><div id="l323" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;جديد&quot;</span>
+</div><div id="l324" class="code_block">
+</div><div id="l325" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:62</span>
+</div><div id="l326" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:64</span>
+</div><div id="l327" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Open&quot;</span>
+</div><div id="l328" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;فتح&quot;</span>
+</div><div id="l329" class="code_block">
+</div><div id="l330" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:67</span>
+</div><div id="l331" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:69</span>
+</div><div id="l332" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Save as&quot;</span>
+</div><div id="l333" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;حفظ باسم&quot;</span>
+</div><div id="l334" class="code_block">
+</div><div id="l335" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:72</span>
+</div><div id="l336" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Print&quot;</span>
+</div><div id="l337" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;طباعة&quot;</span>
+</div><div id="l338" class="code_block">
+</div><div id="l339" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:74</span>
+</div><div id="l340" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Print the grid&quot;</span>
+</div><div id="l341" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;طباعة الشبكة&quot;</span>
+</div><div id="l342" class="code_block">
+</div><div id="l343" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:77</span>
+</div><div id="l344" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Print x 4...&quot;</span>
+</div><div id="l345" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;طباعة x ٤ ...&quot;</span>
+</div><div id="l346" class="code_block">
+</div><div id="l347" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:81</span>
+</div><div id="l348" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Print four grids&quot;</span>
+</div><div id="l349" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;طباعة اربع شبكات&quot;</span>
+</div><div id="l350" class="code_block">
+</div><div id="l351" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:83</span>
+</div><div id="l352" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Quit&quot;</span>
+</div><div id="l353" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;خروج&quot;</span>
+</div><div id="l354" class="code_block">
+</div><div id="l355" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:86</span>
+</div><div id="l356" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Quit the application&quot;</span>
+</div><div id="l357" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;خروج من التطبيق&quot;</span>
+</div><div id="l358" class="code_block">
+</div><div id="l359" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:104</span>
+</div><div id="l360" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Generating grid...&quot;</span>
+</div><div id="l361" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;انشاء شبكة&quot;</span>
+</div><div id="l362" class="code_block">
+</div><div id="l363" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:51</span>
+</div><div id="l364" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Help&quot;</span>
+</div><div id="l365" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;مساعدة&quot;</span>
+</div><div id="l366" class="code_block">
+</div><div id="l367" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:53</span>
+</div><div id="l368" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Update&quot;</span>
+</div><div id="l369" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تحديث&quot;</span>
+</div><div id="l370" class="code_block">
+</div><div id="l371" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:55</span>
+</div><div id="l372" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Check for updates&quot;</span>
+</div><div id="l373" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تحقق من التحديثات&quot;</span>
+</div><div id="l374" class="code_block">
+</div><div id="l375" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:58</span>
+</div><div id="l376" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Download&quot;</span>
+</div><div id="l377" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تحميل&quot;</span>
+</div><div id="l378" class="code_block">
+</div><div id="l379" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:60</span>
+</div><div id="l380" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Download new version&quot;</span>
+</div><div id="l381" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تحميل نسخة جديدة&quot;</span>
+</div><div id="l382" class="code_block">
+</div><div id="l383" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:63</span>
+</div><div id="l384" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:49</span>
+</div><div id="l385" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Translate this application&quot;</span>
+</div><div id="l386" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;ترجم هذا التطبيق&quot;</span>
+</div><div id="l387" class="code_block">
+</div><div id="l388" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:65</span>
+</div><div id="l389" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Help translate this application&quot;</span>
+</div><div id="l390" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;ساعد في ترجمة هذا التطبيق&quot;</span>
+</div><div id="l391" class="code_block">
+</div><div id="l392" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:68</span>
+</div><div id="l393" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;About...&quot;</span>
+</div><div id="l394" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;حول&quot;</span>
+</div><div id="l395" class="code_block">
+</div><div id="l396" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:55</span>
+</div><div id="l397" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:137</span>
+</div><div id="l398" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:72</span>
+</div><div id="l399" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:131</span>
+</div><div id="l400" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:95</span>
+</div><div id="l401" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:104</span>
+</div><div id="l402" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Language&quot;</span>
+</div><div id="l403" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;اللغة&quot;</span>
+</div><div id="l404" class="code_block">
+</div><div id="l405" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:74</span>
+</div><div id="l406" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:138</span>
+</div><div id="l407" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:126</span>
+</div><div id="l408" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Ok&quot;</span>
+</div><div id="l409" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;موافق&quot;</span>
+</div><div id="l410" class="code_block">
+</div><div id="l411" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:52</span>
+</div><div id="l412" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:101</span>
+</div><div id="l413" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Level 1&quot;</span>
+</div><div id="l414" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;المرحلة ١&quot;</span>
+</div><div id="l415" class="code_block">
+</div><div id="l416" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:59</span>
+</div><div id="l417" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:102</span>
+</div><div id="l418" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Level 2&quot;</span>
+</div><div id="l419" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;المرحلة ٢&quot;</span>
+</div><div id="l420" class="code_block">
+</div><div id="l421" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:66</span>
+</div><div id="l422" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:103</span>
+</div><div id="l423" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Level 3&quot;</span>
+</div><div id="l424" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;المرحلة ٣&quot;</span>
+</div><div id="l425" class="code_block">
+</div><div id="l426" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:73</span>
+</div><div id="l427" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:104</span>
+</div><div id="l428" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Level 4&quot;</span>
+</div><div id="l429" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;المرحلة ٤&quot;</span>
+</div><div id="l430" class="code_block">
+</div><div id="l431" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:80</span>
+</div><div id="l432" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:105</span>
+</div><div id="l433" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Level 5&quot;</span>
+</div><div id="l434" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;المرحلة ٥&quot;</span>
+</div><div id="l435" class="code_block">
+</div><div id="l436" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:100</span>
+</div><div id="l437" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Level&quot;</span>
+</div><div id="l438" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;المرحلة &quot;</span>
+</div><div id="l439" class="code_block">
+</div><div id="l440" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:48</span>
+</div><div id="l441" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Update recommended&quot;</span>
+</div><div id="l442" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تحديث موصى به&quot;</span>
+</div><div id="l443" class="code_block">
+</div><div id="l444" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:82</span>
+</div><div id="l445" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;A new version of Sudokuki is available!&lt;br/&gt;&quot;</span>
+</div><div id="l446" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;نسخة جديدة من سودوكوكي متوفرة&lt;br/&gt;&quot;</span>
+</div><div id="l447" class="code_block">
+</div><div id="l448" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:85</span>
+</div><div id="l449" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l450" class="code_block"><span class="s">&quot;Please download and install the latest package&lt;br/&gt;from the following &quot;</span>
+</div><div id="l451" class="code_block"><span class="s">&quot;</span><span class="py">website:</span><span class="s">&lt;br/&gt;&quot;</span>
+</div><div id="l452" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;يرجى تحميل وتثبيت أحدث حزمة &lt;br/&gt;من الموقع التالي&lt;br/&gt;&quot;</span>
+</div><div id="l453" class="code_block">
+</div><div id="l454" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NewVersionFoundDialog.java:98</span>
+</div><div id="l455" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Download Sudokuki&quot;</span>
+</div><div id="l456" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تحميل سودوكوكي&quot;</span>
+</div><div id="l457" class="code_block">
+</div><div id="l458" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:48</span>
+</div><div id="l459" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:77</span>
+</div><div id="l460" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Arabic&quot;</span>
+</div><div id="l461" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;العربية&quot;</span>
+</div><div id="l462" class="code_block">
+</div><div id="l463" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:56</span>
+</div><div id="l464" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:78</span>
+</div><div id="l465" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Chinese&quot;</span>
+</div><div id="l466" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الصينية&quot;</span>
+</div><div id="l467" class="code_block">
+</div><div id="l468" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:76</span>
+</div><div id="l469" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Numbers&quot;</span>
+</div><div id="l470" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الارقام&quot;</span>
+</div><div id="l471" class="code_block">
+</div><div id="l472" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:54</span>
+</div><div id="l473" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Open grid...&quot;</span>
+</div><div id="l474" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;فتح شبكة...&quot;</span>
+</div><div id="l475" class="code_block">
+</div><div id="l476" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:71</span>
+</div><div id="l477" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:50</span>
+</div><div id="l478" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Sudokuki grid files&quot;</span>
+</div><div id="l479" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;ملفات شبكة سودوكوكي&quot;</span>
+</div><div id="l480" class="code_block">
+</div><div id="l481" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:127</span>
+</div><div id="l482" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;This file is not a Sudokuki grid.&quot;</span>
+</div><div id="l483" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;هذا الملف ليس شبكة سودوكوكي&quot;</span>
+</div><div id="l484" class="code_block">
+</div><div id="l485" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:113</span>
+</div><div id="l486" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Generating and sending four grids&quot;</span>
+</div><div id="l487" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;انشاء و ارسال اربع شبكات&quot;</span>
+</div><div id="l488" class="code_block">
+</div><div id="l489" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:118</span>
+</div><div id="l490" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;to the printer...&quot;</span>
+</div><div id="l491" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;الى الطابعة...&quot;</span>
+</div><div id="l492" class="code_block">
+</div><div id="l493" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveAction.java:56</span>
+</div><div id="l494" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;This grid has no solution.&quot;</span>
+</div><div id="l495" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;هذه الشبكة ليس لها حل&quot;</span>
+</div><div id="l496" class="code_block">
+</div><div id="l497" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:114</span>
+</div><div id="l498" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Grid resolution in progress...&quot;</span>
+</div><div id="l499" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;قرار الشبكة في التقدم&quot;</span>
+</div><div id="l500" class="code_block">
+</div><div id="l501" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:47</span>
+</div><div id="l502" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Save as...&quot;</span>
+</div><div id="l503" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;حفظ باسم&quot;</span>
+</div><div id="l504" class="code_block">
+</div><div id="l505" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:67</span>
+</div><div id="l506" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:77</span>
+</div><div id="l507" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Failed to save the grid&lt;br/&gt;at the selected location.&quot;</span>
+</div><div id="l508" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;فشل في حفظ الشبكة&lt;br/&gt; في المكان المحدد&quot;</span>
+</div><div id="l509" class="code_block">
+</div><div id="l510" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:101</span>
+</div><div id="l511" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Clear memos&quot;</span>
+</div><div id="l512" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;مسح المذكرات&quot;</span>
+</div><div id="l513" class="code_block">
+</div><div id="l514" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:117</span>
+</div><div id="l515" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Congratulations!&quot;</span>
+</div><div id="l516" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;مبروك !&quot;</span>
+</div><div id="l517" class="code_block">
+</div><div id="l518" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:124</span>
+</div><div id="l519" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Grid complete!&quot;</span>
+</div><div id="l520" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;اكتملت الشبكة&quot;</span>
+</div><div id="l521" class="code_block">
+</div><div id="l522" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/SwingView.java:131</span>
+</div><div id="l523" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Grid resolved with success.&quot;</span>
+</div><div id="l524" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تم حل الشبكة بنجاح&quot;</span>
+</div><div id="l525" class="code_block">
+</div><div id="l526" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:83</span>
+</div><div id="l527" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;You can easily translate Sudokuki into your own language!&quot;</span>
+</div><div id="l528" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;تستطيع بسهولة ترجمة سودوكوكي الى لغتك&quot;</span>
+</div><div id="l529" class="code_block">
+</div><div id="l530" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:87</span>
+</div><div id="l531" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;&quot;</span>
+</div><div id="l532" class="code_block"><span class="s">&quot;Propose your help and get information on how to proceed&lt;br/&gt; on the &quot;</span>
+</div><div id="l533" class="code_block"><span class="s">&quot;Translators Forum hosted by Sourceforge:&quot;</span>
+</div><div id="l534" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;&quot;</span>
+</div><div id="l535" class="code_block"><span class="s">&quot;اقترح مساعدتك و احصل على معلومات حول كيفية المضي قدما &lt;BR/&gt; في منتدى &quot;</span>
+</div><div id="l536" class="code_block"><span class="s">&quot;المترجمين الذي تستضيفته سورسفورج:&quot;</span>
+</div><div id="l537" class="code_block">
+</div><div id="l538" class="code_block"><span class="kd">#: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:100</span>
+</div><div id="l539" class="code_block"><span class="nv">msgid</span> <span class="s">&quot;Sudokuki Translators Forum&quot;</span>
+</div><div id="l540" class="code_block"><span class="nv">msgstr</span> <span class="s">&quot;منتدى مترجمي سودوكوكي&quot;</span>
+</div></pre></div>
+</td></tr></table>
+      
+    </div>
+  
+
+          </div>
+			
+          
+        </div>
+      </div>
+    </section>
+      
+<footer id="site-footer">
+    <div class="wrapper">
+        <nav>
+            <h5>SourceForge</h5>
+            <a href="/about">About</a>
+            <a href="/blog/category/sitestatus/">Site Status</a>
+            <a href="http://twitter.com/sfnet_ops">@sfnet_ops</a>
+        </nav>
+        <nav>
+            <h5>Find and Develop Software</h5>
+            <a href="/create/">Create a Project</a>
+            <a href="/directory/">Software Directory</a>
+            <a href="/top">Top Downloaded Projects</a>
+        </nav>
+        <nav>
+            <h5>Community</h5>
+            <a href="/blog/">Blog</a>
+            <a href="http://twitter.com/sourceforge">@sourceforge</a>
+            <a href="http://seeker.dice.com/jobsearch/servlet/JobSearch?caller=0&amp;source=76&amp;LOCATION_OPTION=2&amp;EXTRA_STUFF=0&amp;N=0&amp;Hf=0&amp;Ntk=JobSearchRanking&amp;op=300&amp;values=&amp;FREE_TEXT=&amp;Ntx=mode+matchall&amp;EXCLUDE_KEY1=p_JobTitle&amp;EXCLUDE_TEXT1=&amp;EXCLUDE_KEY2=p_JobTitle&amp;EXCLUDE_TEXT2=&amp;EXCLUDE_KEY3=p_JobTitle&amp;EXCLUDE_TEXT3=&amp;EXCLUDE_KEY4=p_JobTitle&amp;EXCLUDE_TEXT4=&amp;EXCLUDE_KEY5=p_JobTitle&amp;EXCLUDE_TEXT5=&amp;EXCLUDE_KEY6=p_JobTitle&amp;EXCLUDE_TEXT6=&amp;EXCLUDE_KEY7=p_JobTitle&amp;EXCLUDE_TEXT7=&amp;EXCLUDE_KEY8=p_JobTitle&amp;EXCLUDE_TEXT8=&amp;locationRadio=on&amp;RADIUS=64.37376&amp;WHERE=&amp;COUNTRY=1525&amp;STAT_PROV=0&amp;METRO_AREA=33.78715899%2C-84.39164034&amp;AREA_CODES=&amp;AC_COUNTRY=1525&amp;TRAVEL=0&amp;TAXTERM=0&amp;SORTSPEC=0&amp;FRMT=0&amp;DAYSBACK=30&amp;NUM_PER_PAGE=30&amp;source_page=allura">Job Board</a>
+        </nav>
+        <nav>
+            <h5>Help</h5>
+            <a href="/apps/trac/sourceforge/wiki/WikiStart">Site Documentation</a>
+            <a href="/support">Support Request</a>
+            <a href="https://sourceforge.net/p/forge/documentation/Support%20via%20IRC/">Real-Time Support</a>
+        </nav>
+    </div>
+</footer>
+<footer id="site-copyright-footer">
+    <div class="wrapper">
+        <div id="copyright">
+            Copyright &copy; 2012 SourceForge. All Rights Reserved.<br />
+            SourceForge is a <a href="http://www.diceholdingsinc.com/phoenix.zhtml?c=211152&amp;p=irol-landing">Dice Holdings, Inc.</a> company.
+        </div>
+        <nav>
+            <a href="http://geeknetmedia.com/terms-of-use">Terms</a>
+            <a href="http://geeknetmedia.com/privacy-statement/">Privacy</a>
+            <a href="http://geeknetmedia.com/opt-out-choices">Cookies/Opt Out</a>
+            <a href="http://geeknetmedia.com">Advertise</a>
+            <a href="http://sourceforge.jp/">SourceForge.JP</a>
+        </nav>
+    </div>
+</footer>
+    <div id="messages">
+        
+    </div>
+    
+      <!-- ew:body_js -->
+
+    
+      <script type="text/javascript" src="http://a.fsdn.com/allura/nf/1355943765/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-base.js%3Ballura%2Fjs%2Fjquery.notify.js%3Ballura%2Fjs%2Fsylvester.js%3Ballura%2Fjs%2Fpb.transformie.min.js%3Ballura%2Fjs%2Fallura-base.js"></script>
+    
+      
+<!-- /ew:body_js -->
+
+    
+    
+      <!-- ew:body_js_tail -->
+
+    
+      
+<!-- /ew:body_js_tail -->
+
+    
+    
+
+<script type="text/javascript" src="http://a.fsdn.com/allura/nf/1355943765/_static_/js/spin.min.js"></script>
+<script type="text/javascript">(function() {
+  $('#access_urls .btn').click(function(evt){
+    evt.preventDefault();
+    var parent = $(this).parents('.btn-bar');
+    $(parent).find('input').val($(this).attr('data-url'));
+    $(parent).find('span').text($(this).attr('title')+' access');
+    $(this).parent().children('.btn').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('#access_urls .btn').first().click();
+
+  
+  var repo_status = document.getElementById('repo_status');
+  // The repo_status div will only be present if repo.status != 'ready'
+  if (repo_status) {
+    var opts = {
+        lines: 9, // The number of lines to draw
+        length: 4, // The length of each line
+        width: 2, // The line thickness
+        radius: 3, // The radius of the inner circle
+        rotate: 0, // The rotation offset
+        color: '#555', // #rgb or #rrggbb
+        speed: 1, // Rounds per second
+        trail: 60, // Afterglow percentage
+        shadow: false, // Whether to render a shadow
+        hwaccel: false, // Whether to use hardware acceleration
+        className: 'spinner', // The CSS class to assign to the spinner
+        zIndex: 2e9, // The z-index (defaults to 2000000000)
+        top: 10, // Top position relative to parent in px
+        left: 10 // Left position relative to parent in px
+    };
+    var spinner = new Spinner(opts).spin(repo_status);
+    function check_status() {
+        $.get('/p/sudokuki/svn/status', function(data) {
+            if (data.status === 'ready') {
+                window.clearInterval(status_checker);
+                spinner.opts.speed = 0;
+                spinner.opts.opacity = 1;
+                spinner.spin(repo_status)
+                $('#repo_status h2').html('Repo status: ready. <a href=".">Click here to refresh this page.</a>');
+            }
+            else {
+                $('#repo_status h2 span').html(data.status);
+            }
+        });
+    }
+    // Check repo status every 15 seconds
+    var status_checker = window.setInterval(check_status, 15000);
+    
+  }
+}());
+</script>
+
+<script type="text/javascript">(function() {
+  $(window).bind('hashchange', function(e) {
+    var hash = window.location.hash.substring(1);
+	if ('originalEvent' in e && 'oldURL' in e.originalEvent) {
+      $('#' + e.originalEvent.oldURL.split('#')[1]).css('background-color', 'transparent');
+	}
+    if (hash !== '' && hash.substring(0, 1) === 'l' && !isNaN(hash.substring(1))) {
+      $('#' + hash).css('background-color', '#ffff99');
+    }
+  }).trigger('hashchange');
+
+  $('.code_block').each(function(index, element) {
+    $(element).bind('click', function() {
+      var hash = window.location.hash.substring(1);
+      if (hash !== '' && hash.substring(0, 1) === 'l' && !isNaN(hash.substring(1))) {
+        $('#' + hash).css('background-color', 'transparent');
+      }
+      $(element).css('background-color', '#ffff99');
+      window.location.href = '#' + $(element).attr('id');
+    });
+  });
+}());
+</script>
+
+    
+      
+    
+    
+   
+    
+  </body>
+</html>
