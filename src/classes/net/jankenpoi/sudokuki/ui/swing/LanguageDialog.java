@@ -89,6 +89,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         icons.put("en", StockIcons.ICON_FLAG_EN);
         icons.put("es", StockIcons.ICON_FLAG_ES);
         icons.put("fr", StockIcons.ICON_FLAG_FR);
+        icons.put("hu", StockIcons.ICON_FLAG_HU);
         icons.put("ja", StockIcons.ICON_FLAG_JA);
         icons.put("lv", StockIcons.ICON_FLAG_LV);
         icons.put("nl", StockIcons.ICON_FLAG_NL);
@@ -105,6 +106,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         addItem("eo", "Esperanto", myGroup);
         addItem("es", "Espa\u00f1ol", myGroup);
         addItem("fr", "Fran\u00e7ais", myGroup);
+        addItem("hu", "Hungarian", myGroup);
         addItem("ja", "\u65e5\u672c\u8a9e", myGroup);
         addItem("lv", "Latvie\u0161u", myGroup);
         addItem("nl", "Nederlands", myGroup);
