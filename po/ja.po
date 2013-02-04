@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.1.4\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2012-11-24 17:41+0100\n"
+"POT-Creation-Date: 2012-12-28 23:23+0100\n"
 "PO-Revision-Date: 2012-05-01 18:29+0100\n"
 "Last-Translator: Fumiaki Nakanishi <fumiaki.nakanishi@sfr.fr>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:55
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:70
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:69
 msgid "About Sudokuki..."
 msgstr "スードクキについて"
 
@@ -238,13 +238,13 @@ msgstr "ボードを解決する"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:80
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/EditMenu.java:92
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:106
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:91
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:90
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:49
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:55
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:70
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LevelMenu.java:91
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LocaleListenerImpl.java:19
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:67
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:77
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:53
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:94
 msgid "DETECTED_LANGUAGE"
@@ -263,18 +263,18 @@ msgstr ""
 "ヴァージョンが利用可能なら<br/>次のウェブサイトをチェックしてください。:<br/"
 "><br/>"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:156
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:153
 msgid "Checking for available updates"
 msgstr "更新のためのチェック"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:159
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:156
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:108
 msgid "Please wait..."
 msgstr "待機"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:161
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:158
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:120
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:118
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:117
 msgid "Cancel"
 msgstr "中止"
 
@@ -365,36 +365,36 @@ msgstr "スードクキを終了する"
 msgid "Generating grid..."
 msgstr "ボード作成..."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:51
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:50
 msgid "Help"
 msgstr "ヘルプ"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:53
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:52
 msgid "Update"
 msgstr "更新"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:55
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:54
 msgid "Check for updates"
 msgstr "更新のためのチェック"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:58
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:57
 msgid "Download"
 msgstr "ダウンロード"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:60
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:59
 msgid "Download new version"
 msgstr "最新のバージョンをダウンロードする"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:63
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:62
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:49
 msgid "Translate this application"
 msgstr "このアプリケーションを翻訳"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:65
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:64
 msgid "Help translate this application"
 msgstr "このアプリケーションの翻訳のヘルプ"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:68
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:67
 msgid "About..."
 msgstr "スードクキについて"
 
@@ -462,17 +462,22 @@ msgstr ""
 msgid "Download Sudokuki"
 msgstr "ダウンロード"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:48
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:77
-msgid "Arabic"
-msgstr "アラビア語"
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:50
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:87
+msgid "Standard"
+msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:56
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:78
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:58
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:88
 msgid "Chinese"
 msgstr "中国語"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:76
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:66
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:89
+msgid "Arabic"
+msgstr "アラビア語"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:86
 msgid "Numbers"
 msgstr "数"
 
@@ -501,7 +506,7 @@ msgstr "印刷機へ..."
 msgid "This grid has no solution."
 msgstr "このボードは解決がない。"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:114
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:113
 msgid "Grid resolution in progress..."
 msgstr "ボードの解決が進行中"
 
