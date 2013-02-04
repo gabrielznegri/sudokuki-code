@@ -1,3 +1,13 @@
+sudokuki (1.1.7) unstable; urgency=low
+
+  * 2012-12-28 - released Sudokuki 1.1.7 (Stable)
+    - Numbers are now 'Standard', 'Chinese' or 'Arabic' (added 'arabic' numbers)
+    - Improved the centering of the digits inside the cells
+    - Fixed several Java warnings in the source code
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Fri, 28 Dec 2012 20:00:00 +0100
+
+
 sudokuki (1.1.6) unstable; urgency=low
 
   * 2012-11-24 - released Sudokuki 1.1.6 (Stable)
