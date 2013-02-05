@@ -45,7 +45,7 @@ msgstr "Jogvédelem"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:93
 msgid "Aritz Beraza"
-msgstr " Aritz Beraza "
+msgstr "Aritz Beraza "
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:95
 msgid "Spanish translations (v1.0)"
@@ -158,7 +158,9 @@ msgstr "Eszperantó, francia és japán fordítások"
 msgid ""
 "<b>Sudokuki</b> is released under the terms of the GNU General Public "
 "License version 3 or later (GPL v3+)."
-msgstr "3. szabadalmazott változat vagy későbbi (GPL v3+)"
+msgstr ""
+"<b>Sudokuki</b> szabadul szerint a GNU General Public License 3-as verziójú "
+"vagy újabb (GPL v3 +)."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:164
 msgid ""
@@ -202,8 +204,8 @@ msgid ""
 "Feel free to request features and report bugs<br/>on the Sudokuki Forums "
 "hosted by Sourceforge!"
 msgstr ""
-"Kérjen nyugodtan ismertetést és hibajelentéseket a Sourceforge szerinti "
-"Sudoku Fórumokon!"
+"Kérjen nyugodtan ismertetést és hibajelentéseket<br/>a Sourceforge szerinti "
+"Sudokuki Fórumokon!"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:293
 msgid "Sudokuki Forums"
@@ -222,7 +224,7 @@ msgstr "Emlékeztetők"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:45
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:64
 msgid "Set memos"
-msgstr " Emlékeztetők beállítása"
+msgstr "Emlékeztetők beállítása"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:46
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:68
@@ -232,7 +234,7 @@ msgstr "Minden emlékeztető"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:47
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:69
 msgid "Set memos in all cells"
-msgstr " Emlékeztetők beállítása minden cellában"
+msgstr "Emlékeztetők beállítása minden cellában"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:49
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheatMenu.java:73
@@ -356,7 +358,7 @@ msgstr "A háló nyomtatása "
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:77
 msgid "Print x 4..."
-msgstr " Nyomtatás 4x"
+msgstr "Nyomtatás 4x"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:81
 msgid "Print four grids"
@@ -368,7 +370,7 @@ msgstr "Kilépés"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/FileMenu.java:86
 msgid "Quit the application"
-msgstr " Kilépés az alkalmazásból"
+msgstr "Kilépés az alkalmazásból"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/GridGenerationDialog.java:104
 msgid "Generating grid..."
@@ -497,7 +499,7 @@ msgstr "Háló megnyitása"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:71
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SaveAsAction.java:50
 msgid "Sudokuki grid files"
-msgstr " Sudokuki háló állományok"
+msgstr "Sudokuki háló állományok"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/OpenGridAction.java:127
 msgid "This file is not a Sudokuki grid."
@@ -558,7 +560,7 @@ msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:100
 msgid "Sudokuki Translators Forum"
-msgstr " Sudokuki Fordítók Foruma"
+msgstr "Sudokuki Fordítók Foruma"
 
 #~ msgid "Japonese translations"
 #~ msgstr "Japán fordítás "
