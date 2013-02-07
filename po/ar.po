@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.1.6\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2013-02-04 17:37+0100\n"
+"POT-Creation-Date: 2013-02-05 21:22+0100\n"
 "PO-Revision-Date: 2012-11-15 09:02-0600\n"
 "Last-Translator: daneih ismail <daneih.ismail@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,12 +52,11 @@ msgstr " الترجمة الاسبانية (١.٠)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:97
 msgid "Toni"
-msgstr ""
+msgstr "توني"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:99
-#, fuzzy
 msgid "Hungarian translations"
-msgstr "الترجمة اللاتفيا"
+msgstr "الترجمة الهنغارية"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:101
 msgid "Jeroen P. Broks"

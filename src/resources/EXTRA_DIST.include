@@ -6,6 +6,7 @@ files/net/jankenpoi/i18n/sudokuki_en.properties  \
 files/net/jankenpoi/i18n/sudokuki_eo.properties  \
 files/net/jankenpoi/i18n/sudokuki_es.properties  \
 files/net/jankenpoi/i18n/sudokuki_fr.properties  \
+files/net/jankenpoi/i18n/sudokuki_hu.properties  \
 files/net/jankenpoi/i18n/sudokuki_ja.properties  \
 files/net/jankenpoi/i18n/sudokuki_lv.properties  \
 files/net/jankenpoi/i18n/sudokuki_nl.properties  \
@@ -20,6 +21,7 @@ files/net/jankenpoi/sudokuki/resources/images/countryFlags/en.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/eo.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/es.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/fr.png  \
+files/net/jankenpoi/sudokuki/resources/images/countryFlags/hu.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/ja.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/lv.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/nl.png  \
