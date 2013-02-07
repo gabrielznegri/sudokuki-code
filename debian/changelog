@@ -1,4 +1,13 @@
+sudokuki (1.1.8) unstable; urgency=low
+
+  * 2013-02-07 - released Sudokuki 1.1.8 (Stable)
+    - Added Hungarian translations from Toni.
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Thu, 07 Feb 2013 22:00:00 +0100
+
+
 sudokuki (1.1.7) unstable; urgency=low
+
 
   * 2012-12-28 - released Sudokuki 1.1.7 (Stable)
     - Numbers are now 'Standard', 'Chinese' or 'Arabic' (added 'arabic' numbers)
