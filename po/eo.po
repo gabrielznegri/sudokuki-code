@@ -51,12 +51,11 @@ msgstr "Hispanaj tradukoj (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:97
 msgid "Toni"
-msgstr ""
+msgstr "Toni"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:99
-#, fuzzy
 msgid "Hungarian translations"
-msgstr "Latvaj tradukoj"
+msgstr "Hungariaj tradukoj"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:101
 msgid "Jeroen P. Broks"
