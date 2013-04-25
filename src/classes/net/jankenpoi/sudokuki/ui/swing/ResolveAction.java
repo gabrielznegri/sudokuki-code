@@ -65,14 +65,4 @@ public class ResolveAction extends AbstractAction {
 			Thread.dumpStack();
 		}
 	}
-
-	void notifyActionCompleted(boolean isResolved) {
-		if (isResolved) {
-			setEnabled(false);
-		} else {
-			setEnabled(true);
-		}
-		
-	}
-
 }

@@ -53,7 +53,6 @@ public class SelectMemosPanel extends JPanel {
 	private HashSet<Byte> memos = new HashSet<Byte>();
 	private HashSet<Byte> previousMemos = new HashSet<Byte>();
 
-	private Font BOLD_FONT = new Font("Serif", Font.BOLD, 18);
 	private Font NORMAL_FONT = new Font("Serif", Font.PLAIN, 18);
 
 	private InnerKeyListener innerKeyListener = new InnerKeyListener();
@@ -107,7 +106,6 @@ public class SelectMemosPanel extends JPanel {
 			private void clearClicked() {
 				for (byte i=1; i<=ckb.length; i++) {
 					memos.remove(Byte.valueOf(i));
-					ckb[i-1].setFont(NORMAL_FONT);
 					ckb[i-1].setSelected(false);
 				}
 			}
@@ -141,7 +139,6 @@ public class SelectMemosPanel extends JPanel {
 		while (it.hasNext()) {
 			JToggleButton button = ckb[it.next().intValue()-1];
 			button.setSelected(true);
-			button.setFont(BOLD_FONT);
 		}
 		
 
@@ -178,10 +175,8 @@ public class SelectMemosPanel extends JPanel {
 		byte value = (byte)(button + 1);
 		if (ckb[button].isSelected()) {
 			memos.add(Byte.valueOf(value));
-			ckb[button].setFont(BOLD_FONT);
 		} else {
 			memos.remove(Byte.valueOf(value));
-			ckb[button].setFont(NORMAL_FONT);
 		}
 	}
 

@@ -17,7 +17,9 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
+import java.awt.AWTEvent;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontMetrics;
@@ -25,12 +27,20 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.RenderingHints;
+import java.awt.Toolkit;
+import java.awt.event.AWTEventListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.PaintEvent;
 import java.awt.print.PageFormat;
 import java.awt.print.Printable;
 import java.awt.print.PrinterException;
@@ -39,6 +49,7 @@ import java.util.Vector;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
 import net.jankenpoi.sudokuki.model.GridModel.GridValidity;
 import net.jankenpoi.sudokuki.model.Position;
@@ -51,17 +62,96 @@ public class SwingGrid extends JPanel implements Printable {
 
 	private GridView view;
 
-	private static final int offX = 2;
+	private static final int offset = 2;
 
-	private static final int offY = 2;
+	private final int MIN_CELL_SIZE = 20;
+	private int MAX_CELL_SIZE = 40;
+	{
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		MAX_CELL_SIZE = (Math.min(screenSize.width, screenSize.height)- 2*offset)/9;
+	}
+	private int CELL_SIZE = 32;
 
-	private static final int CELL_SIZE = 26;
-
-	private int FONT_SIZE = 22;
+	private int FONT_SIZE = CELL_SIZE*5/6;
 
 	private MouseListener innerMouseListener = new InnerMouseListener();
 
 	private KeyListener innerKeyListener = new InnerKeyListener();
+
+	private ComponentListener componentListener = new ComponentAdapter() {
+		
+		@Override
+		public void componentResized(ComponentEvent e) {
+        	Component component = ((Component)e.getSource());
+            CELL_SIZE = (Math.min(component.getSize().width - 2*offset - 3, component.getSize().height - 2*offset - 3)) / 9;
+            CELL_SIZE = Math.max(CELL_SIZE, MIN_CELL_SIZE);
+            CELL_SIZE = Math.min(CELL_SIZE, MAX_CELL_SIZE);
+        	FONT_SIZE = CELL_SIZE*5/6;
+
+    		final int width = 9 * CELL_SIZE + 2 * offset + 3;
+            component.setPreferredSize(new Dimension(width, width));
+            
+            component.repaint();
+            parent.pack();
+         
+            /* 
+             * Hack - read more details below
+             */
+            timer.stop();
+            timer.start();
+		}
+	};
+
+	/*
+	 * Hack in order to avoid paint issues when running JVM 1.7 on MS-Windows 7
+	 * (no such issue on GNU/Linux or MS-Windows XP). The hack is to ensure
+	 * frame.pack() will be called 500 ms after the user finished resizing the
+	 * window. The paint issue (JVM 1.7 + MS-Windows 7 only) was seen when
+	 * resizing with the mouse and releasing it while the frame had a
+	 * rectangular shape: the frame would remain as is (rectangular) instead of
+	 * being resized to a square by ComponentListener.componentResized(). The
+	 * extra part in the rectangle part outside the square was black.
+	 */
+    private final Timer timer = new Timer(500, new ActionListener() {
+        public void actionPerformed(ActionEvent evt) {
+            CELL_SIZE = (Math.min(getSize().width - 2*offset, getSize().height - 2*offset)) / 9;
+            CELL_SIZE = Math.max(CELL_SIZE, MIN_CELL_SIZE);
+            CELL_SIZE = Math.min(CELL_SIZE, MAX_CELL_SIZE);
+        	FONT_SIZE = CELL_SIZE*5/6;
+
+    		final int width = 9 * CELL_SIZE + 2 * offset + 3;
+            setPreferredSize(new Dimension(width, width));
+            repaint();
+            parent.pack();
+        }
+    });
+    {
+        timer.setRepeats(false);
+    }
+
+	/*
+	 * Another hack, also for resize issues when stressing the resize process
+	 * (start resizing, don't release the mouse, move the mouse very quickly in
+	 * circles and suddenly release the mouse button). This sends lots of
+	 * PaintEvents that are received in a random order, the last one ruling over
+	 * the other ones... With this hack, frame.pack() will be called 500 ms
+	 * after the PaintEvent-s flood.
+	 */
+    {
+        java.awt.Toolkit.getDefaultToolkit().addAWTEventListener(new AWTEventListener() {
+
+            @Override
+            public void eventDispatched(AWTEvent event) {
+            	
+            	// remove this if AWTEvent.PAINT_EVENT_MASK
+                if (! (event instanceof PaintEvent)) {
+                    return;
+                }
+                SwingGrid.this.timer.stop();
+                SwingGrid.this.timer.start();
+            }
+        }, AWTEvent.PAINT_EVENT_MASK);
+    }
 
 	/*
 	 * Column number of the focus mark
@@ -81,9 +171,11 @@ public class SwingGrid extends JPanel implements Printable {
 
 		addMouseListener(innerMouseListener);
 		addKeyListener(innerKeyListener);
-		setPreferredSize(new Dimension(columns[columns.length - 1].getEnd()
-				- columns[0].getStart() + offX * 2 + 1,
-				rows[rows.length - 1].getEnd() - rows[0].getStart() + offY * 2 + 1));
+		
+		addComponentListener(componentListener);
+
+		final int width = 9 * CELL_SIZE + 2 * offset + 3;
+		setPreferredSize(new Dimension(width, width));
 	}
 
 	/**
@@ -104,10 +196,10 @@ public class SwingGrid extends JPanel implements Printable {
 		FontMetrics fm = getFontMetrics(g2.getFont());
 		int h = fm.getHeight();
 		int w = fm.stringWidth(digit);
-
-		int x = columns[co].getStart() + (CELL_SIZE - w ) / 2;
-		int y = rows[li].getStart() + (CELL_SIZE + h / 2) / 2;
-
+		
+		int x = startPos(co) + (CELL_SIZE - w ) / 2;
+		int y = startPos(li) + (CELL_SIZE + h/2 ) / 2;
+		
 		return new Point(x, y + 1);
 	}
 
@@ -130,13 +222,13 @@ public class SwingGrid extends JPanel implements Printable {
  		int h = fm.getHeight();
 		int w = fm.stringWidth("X");
  
-		int x = columns[co].getStart() + CELL_SIZE / 2 - w / 2;
-		int y = rows[li].getStart() + CELL_SIZE / 2 + h / 4;
+		int x = startPos(co) + CELL_SIZE / 2 - w / 2;
+		int y = startPos(li) + CELL_SIZE / 2 + h / 4;
 
  		int xx = (9 - value) % 3 - 1;
  		int yy = (9 - value) / 3 - 1;
- 		x = x - xx * 8 + 1;
-		y = y - yy * 8 + 1;
+ 		x = x - xx * (CELL_SIZE/3) + 1;
+		y = y - yy * (CELL_SIZE/3) + 1;
  
  		return new Point(x, y);
  	}
@@ -189,15 +281,15 @@ public class SwingGrid extends JPanel implements Printable {
 				RenderingHints.VALUE_ANTIALIAS_OFF);
 		
 		g2.setColor(Color.DARK_GRAY);
-		g2.drawRect(columns[posX].getStart(), rows[posY].getStart(),
+		g2.drawRect(startPos(posX), startPos(posY),
 				CELL_SIZE,
 				CELL_SIZE);
 		g2.setColor(Color.GRAY);
-		g2.drawRect(columns[posX].getStart() + 1 , rows[posY].getStart() + 1,
+		g2.drawRect(startPos(posX) + 1 , startPos(posY) + 1,
 				CELL_SIZE - 2,
 				CELL_SIZE - 2);
 		g2.setColor(Color.LIGHT_GRAY);
-		g2.drawRect(columns[posX].getStart() + 2 , rows[posY].getStart() + 2,
+		g2.drawRect(startPos(posX) + 2 , startPos(posY) + 2,
 				CELL_SIZE - 4,
 				CELL_SIZE - 4);
 	}
@@ -240,15 +332,15 @@ public class SwingGrid extends JPanel implements Printable {
 	}
 
 	/**
-	 * FIXME: this is just an example. TODO: implement for real.
+	 * Paint the memos that help the user remember which values are possible in
+	 * a given cell
 	 * 
-	 * @param g2
 	 */
 	private void paintPlayerMemos(Graphics2D g2) {
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
 		g2.setColor(Color.BLUE);
-		Font font = new Font("Serif", Font.PLAIN, 9);
+		Font font = new Font("Serif", Font.PLAIN, 9 * FONT_SIZE / 22);
 		g2.setFont(font);
 
 		for (int li = 0; li < 9; li++) {
@@ -263,45 +355,50 @@ public class SwingGrid extends JPanel implements Printable {
 		}
 	}
 
+	private int startPos(int x) {
+		return offset + x * CELL_SIZE + (x/3)%3;
+	}
+	private int endPos(int x) {
+		return offset + (x+1) * CELL_SIZE + (x/3)%3;
+	}
+	
 	private void paintGridBoard(Graphics2D g2) {
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_OFF);
 		
 		g2.setColor(Color.WHITE);
-		g2.fillRect(columns[0].getStart(), rows[0].getStart(),
-				columns[columns.length - 1].getEnd() - 1,
-				rows[rows.length - 1].getEnd() - 1);
+		g2.fillRect(startPos(0), startPos(0),
+				endPos(8) - 1, endPos(8) - 1);
 
 		g2.setColor(new Color(0xEEEEEE));
-		g2.fillRect(columns[3].getStart(), rows[0].getStart(),
-				columns[5].getEnd() - columns[3].getStart(),
-				rows[rows.length - 1].getEnd());
-		g2.fillRect(columns[0].getStart(), rows[3].getStart(),
-				columns[columns.length - 1].getEnd(), rows[5].getEnd()
-						- rows[3].getStart());
+		g2.fillRect(startPos(3), startPos(0),
+				endPos(5) - startPos(3),
+				endPos(8));
+		g2.fillRect(startPos(0), startPos(3),
+				endPos(8), endPos(5)
+						- startPos(3));
 		g2.setColor(Color.WHITE);
-		g2.fillRect(columns[3].getStart(), rows[3].getStart(),
-				columns[5].getEnd() - columns[3].getStart(), rows[5].getEnd()
-						- rows[3].getStart());
+		g2.fillRect(startPos(3), startPos(3),
+				endPos(5) - startPos(3), endPos(5)
+						- startPos(3));
 
 		g2.setColor(Color.BLACK);
 		for (int li = 0; li < 9; li++) {
-			g2.drawLine(columns[0].getStart(), rows[li].getStart(),
-					columns[columns.length - 1].getEnd(), rows[li].getStart());
-			g2.drawLine(columns[0].getStart(), rows[li].getEnd(),
-					columns[columns.length - 1].getEnd(), rows[li].getEnd());
+			g2.drawLine(startPos(0), startPos(li),
+					endPos(8), startPos(li));
+			g2.drawLine(startPos(0), endPos(li),
+					endPos(8), endPos(li));
 		}
 		for (int co = 0; co < 9; co++) {
-			g2.drawLine(columns[co].getStart(), rows[0].getStart(),
-					columns[co].getStart(), rows[rows.length - 1].getEnd());
-			g2.drawLine(columns[co].getEnd(), rows[0].getStart(),
-					columns[co].getEnd(), rows[rows.length - 1].getEnd());
+			g2.drawLine(startPos(co), startPos(0),
+					startPos(co), endPos(8));
+			g2.drawLine(endPos(co), startPos(0),
+					endPos(co), endPos(8));
 		}
 		g2.setColor(Color.BLACK);
-		g2.drawRect(columns[0].getStart() - 1, rows[0].getStart() - 1,
-				columns[columns.length - 1].getEnd() - columns[0].getStart()
-						+ 2,
-				rows[rows.length - 1].getEnd() - rows[0].getStart() + 2);
+		g2.drawRect(startPos(0) - 1, startPos(0) - 1,
+				endPos(8) - startPos(0) + 2,
+				endPos(8) - startPos(0) + 2);
 	}
 
 	/**
@@ -316,15 +413,15 @@ public class SwingGrid extends JPanel implements Printable {
 	private Position getLiCoForPos(Point inPos) {
 		int li = -1;
 		int co = -1;
-		for (int l = 0; l < rows.length; l++) {
-			if (rows[l].getStart() + 2 <= inPos.y && inPos.y < rows[l].getEnd() + 2) {
+		for (int l = 0; l < 9; l++) {
+			if (startPos(l) + 2 <= inPos.y && inPos.y < endPos(l) + 2) {
 				li = l;
 				break;
 			}
 		}
-		for (int c = 0; c < columns.length; c++) {
-			if (columns[c].getStart() <= inPos.x
-					&& inPos.x < columns[c].getEnd()) {
+		for (int c = 0; c < 9; c++) {
+			if (startPos(c) <= inPos.x
+					&& inPos.x < endPos(c)) {
 				co = c;
 				break;
 			}
@@ -345,28 +442,11 @@ public class SwingGrid extends JPanel implements Printable {
 	}
 
 	private Point getTopLeftPoint(int li, int co) {
-		int x = columns[co].getStart();
-		int y = rows[li].getStart();
+		int x = startPos(co);
+		int y = startPos(li);
 		return new Point(x, y);
 	}
 	
-	private class Strip {
-		private int start, end;
-
-		Strip(int s, int e) {
-			start = s;
-			end = e;
-		}
-
-		int getStart() {
-			return start;
-		}
-
-		int getEnd() {
-			return end;
-		}
-	}
-
 	@Override
 	public int print(Graphics graphics, PageFormat pf, int pageIndex)
 			throws PrinterException {
@@ -552,30 +632,4 @@ public class SwingGrid extends JPanel implements Printable {
 		}
 	}
 	
-	private Strip[] rows = new Strip[] { new Strip(offY, offY + CELL_SIZE),
-			new Strip(offY + CELL_SIZE, offY + 2 * CELL_SIZE),
-			new Strip(offY + 2 * CELL_SIZE, offY + 3 * CELL_SIZE),
-
-			new Strip(offY + 3 * CELL_SIZE + 1, offY + 4 * CELL_SIZE + 1),
-			new Strip(offY + 4 * CELL_SIZE + 1, offY + 5 * CELL_SIZE + 1),
-			new Strip(offY + 5 * CELL_SIZE + 1, offY + 6 * CELL_SIZE + 1),
-
-			new Strip(offY + 6 * CELL_SIZE + 2, offY + 7 * CELL_SIZE + 2),
-			new Strip(offY + 7 * CELL_SIZE + 2, offY + 8 * CELL_SIZE + 2),
-			new Strip(offY + 8 * CELL_SIZE + 2, offY + 9 * CELL_SIZE + 2), };
-
-	private Strip[] columns = new Strip[] { new Strip(offX, offX + CELL_SIZE),
-			new Strip(offX + CELL_SIZE, offX + 2 * CELL_SIZE),
-			new Strip(offX + 2 * CELL_SIZE, offX + 3 * CELL_SIZE),
-
-			new Strip(offX + 3 * CELL_SIZE + 1, offX + 4 * CELL_SIZE + 1),
-			new Strip(offX + 4 * CELL_SIZE + 1, offX + 5 * CELL_SIZE + 1),
-			new Strip(offX + 5 * CELL_SIZE + 1, offX + 6 * CELL_SIZE + 1),
-
-			new Strip(offX + 6 * CELL_SIZE + 2, offX + 7 * CELL_SIZE + 2),
-			new Strip(offX + 7 * CELL_SIZE + 2, offX + 8 * CELL_SIZE + 2),
-			new Strip(offX + 8 * CELL_SIZE + 2, offX + 9 * CELL_SIZE + 2),
-
-	};
-
 }

@@ -47,7 +47,7 @@ public class SwingView extends GridView {
 				frame.setLayout(new BorderLayout());
 				grid = new SwingGrid(SwingView.this, frame);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				frame.setResizable(false);
+				frame.setResizable(true);
 				
 				frame.setIconImage(Images.ICON_APPLICATION.getImage());
 				
