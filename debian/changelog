@@ -1,3 +1,14 @@
+sudokuki (1.2) unstable; urgency=low
+
+  * 2013-04-26 - released Sudokuki 1.2 (Stable)
+    - Added capability to resize the grid
+    - Improved the paint process (more efficient)
+    - dispose() "Resolution in progress" dialog before showing "Resolution successful"
+    - In the selection dialog, memos are no more in bold font when selected
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Fri, 26 Apr 2013 00:15:00 +0100
+
+
 sudokuki (1.1.8) unstable; urgency=low
 
   * 2013-02-07 - released Sudokuki 1.1.8 (Stable)

@@ -43,7 +43,7 @@ import net.jankenpoi.sudokuki.view.GridView;
 @SuppressWarnings("serial")
 public class ResolveGridDialog extends JDialog {
 
-	private JFrame parent;
+	private final JFrame parent;
 
 	private int status = -1;
 
@@ -55,7 +55,6 @@ public class ResolveGridDialog extends JDialog {
 	private final GridModel gridToSolve;
 
 	public ResolveGridDialog(JFrame parent, final GridView view) {
-
 		super(parent, true);
 		this.parent = parent;
 		this.view = view;
@@ -91,8 +90,9 @@ public class ResolveGridDialog extends JDialog {
 				} catch (ExecutionException e) {
 					e.printStackTrace();
 					return;
+				} finally {
+					dispose();
 				}
-				dispose();
 			}
 		};
 		initComponents();
@@ -170,8 +170,6 @@ public class ResolveGridDialog extends JDialog {
 					view.getController().notifyGridValueChanged(li, co, value, true);
 				}
 			}
-			dispose();
-			view.getController().notifyGridResolutionSuccess();
 			/**
 			 * RESOLUTION SUCCESSFULL
 			 */
@@ -183,5 +181,4 @@ public class ResolveGridDialog extends JDialog {
 			return Integer.valueOf(2);
 		}
 	}
-
 }

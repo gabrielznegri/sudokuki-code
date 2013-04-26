@@ -50,6 +50,7 @@ public class ResolveAction extends AbstractAction {
 		int result = dlg.getResult();
 		if (result == 0) {
 			setEnabled(false);
+			view.getController().notifyGridResolutionSuccess();
 		} else if (result == 2) {
 			JOptionPane.showMessageDialog(frame, "<html>"
 					+ "<table border=\"0\">" + "<tr>"
