@@ -3,6 +3,7 @@
 
 Update debian/changelog
 % cd sudokuki
+% ./autogen.sh (if the directory doesn't yet contain a configure script)
 % dpkg-buildpackage -rfakeroot
 Result: the resulting .deb is in sudokuki/../
 
