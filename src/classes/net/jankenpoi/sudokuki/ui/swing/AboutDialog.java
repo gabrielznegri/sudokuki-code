@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2012 Sylvain Vedrenne
+ * Copyright (C) 2007-2013 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -171,7 +171,7 @@ public class AboutDialog extends JDialog {
 								+ "<p>"
 								+ _("You are welcome to transfer this program to other people as long as you respect the license terms. Read the GNU General Public License for more details.")
 								+ "<br/>" + "</p>" + "<p>"
-								+ _("Copyright (C) 2007-2012 Sylvain Vedrenne")
+								+ _("Copyright (C) 2007-2013 Sylvain Vedrenne")
 								+ "<br/>" + "</p>" + "</body></html>"),
 						TRANSFER); // tooltip text
 
@@ -221,7 +221,7 @@ public class AboutDialog extends JDialog {
 				+ "<table border=\"0\">" + "<tr>" + "<td align=\"center\"><b>"
 				+ Version.versionString + "</b></td>" + "</tr>" + "<tr>"
 				+ "<td align=\"center\">"
-				+ _("Copyright (C) 2007-2012 Sylvain Vedrenne") + "</td>"
+				+ _("Copyright (C) 2007-2013 Sylvain Vedrenne") + "</td>"
 				+ "</tr>" + "</table>" + "</html>");
 		{
 			Color bgColor = new JPanel().getBackground();

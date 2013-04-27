@@ -1,6 +1,6 @@
 sudokuki (1.2) unstable; urgency=low
 
-  * 2013-04-26 - released Sudokuki 1.2 (Stable)
+  * 2013-04-27 - released Sudokuki 1.2 (Stable)
     - Added capability to resize the grid
     - Improved the paint process (more efficient)
     - dispose() "Resolution in progress" dialog before showing "Resolution successful"
