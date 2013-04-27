@@ -3,10 +3,11 @@ Sudokuki - essential sudoku game
 -- Changelog --
 
 * 2013-04-27 - released Sudokuki 1.2 (Stable)
-- Added capability to resize the grid
+- Added capability to resize the grid (fixes #245 GUI Needs to be dynamically resizable)
 - Improved the paint process (more efficient)
 - dispose() "Resolution in progress" dialog before showing "Resolution successful"
 - In the selection dialog, memos are no more in bold font when selected
+- Fixed #249 'debian' folder missing from source archive 
 
 * 2013-02-07 - released Sudokuki 1.1.8 (Stable)
 - Added Hungarian translations from Toni.
