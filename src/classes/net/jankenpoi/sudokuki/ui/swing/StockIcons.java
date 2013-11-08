@@ -113,6 +113,12 @@ public class StockIcons {
 			UIResources.class
 					.getResource("images/countryFlags/ru.png"));
 	/* 
+	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/in.png
+	 */
+	public final static ImageIcon ICON_FLAG_TA = new ImageIcon(
+			UIResources.class
+					.getResource("images/countryFlags/in.png"));
+	/* 
 	 * https://sourceforge.net/apps/piwik/sudokuki/plugins/UserCountry/flags/zh.png
 	 */
 	public final static ImageIcon ICON_FLAG_ZH = new ImageIcon(

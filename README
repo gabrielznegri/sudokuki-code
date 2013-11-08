@@ -2,6 +2,9 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2013-11-08 - released Sudokuki 1.2.1 (Stable)
+- Added Tamil translations from Sathish
+
 * 2013-04-27 - released Sudokuki 1.2 (Stable)
 - Added capability to resize the grid (fixes #245 GUI Needs to be dynamically resizable)
 - Improved the paint process (more efficient)
