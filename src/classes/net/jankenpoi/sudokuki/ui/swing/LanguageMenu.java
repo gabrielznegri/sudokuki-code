@@ -86,14 +86,14 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                 addItem("eo", "Esperanto", myGroup);
                 addItem("es", "Espa\u00f1ol", myGroup);
                 addItem("fr", "Fran\u00e7ais", myGroup);
-                addItem("hu", "Hungarian", myGroup);
+                addItem("hu", "Magyar", myGroup);
                 addItem("ja", "\u65e5\u672c\u8a9e", myGroup);
                 addItem("lv", "Latvie\u0161u", myGroup);
                 addItem("nl", "Nederlands", myGroup);
                 addItem("pt", "Portugu\u00eas", myGroup);
                 addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
                 addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
-                addItem("ta", "Tamil", myGroup);
+                addItem("ta", "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd \u0bae\u0bca\u0bb4\u0bbf", myGroup);
                 addItem("zh", "\u4e2d\u6587", myGroup);
         }
 

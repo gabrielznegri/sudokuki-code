@@ -19,6 +19,7 @@ package net.jankenpoi.sudokuki.ui.swing;
 
 import static net.jankenpoi.i18n.I18n._;
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -38,6 +39,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 
 import net.jankenpoi.i18n.I18n;
 import net.jankenpoi.i18n.LocaleListener;
@@ -58,12 +60,12 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		setResizable(false);
 		pack();
 
-		okBtn.requestFocus();
+		panel.requestFocus();
 		
 		Point toolBarLoc = toolbar.getLocationOnScreen();
+		setSize(parent.getWidth()*2/3, parent.getHeight()*2/3);
 		setLocation(toolBarLoc.x + toolbar.getWidth() / 2 - getWidth() / 2,
 				toolBarLoc.y + toolbar.getHeight());
-		setSize(getPreferredSize());
 		
         localeListener = new LocaleListenerImpl(this);
         I18n.addLocaleListener(localeListener);
@@ -79,7 +81,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 		BoxLayout globalLayout = new BoxLayout(pane, BoxLayout.Y_AXIS);
 		pane.setLayout(globalLayout);
 
-		GridLayout pnlLayout = new GridLayout(5, 1);
+		GridLayout pnlLayout = new GridLayout(0, 1);
 		panel.setLayout(pnlLayout);
 
         icons.put("ar", StockIcons.ICON_FLAG_AR);
@@ -107,17 +109,23 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         addItem("eo", "Esperanto", myGroup);
         addItem("es", "Espa\u00f1ol", myGroup);
         addItem("fr", "Fran\u00e7ais", myGroup);
-        addItem("hu", "Hungarian", myGroup);
+        addItem("hu", "Magyar", myGroup);
         addItem("ja", "\u65e5\u672c\u8a9e", myGroup);
         addItem("lv", "Latvie\u0161u", myGroup);
         addItem("nl", "Nederlands", myGroup);
         addItem("pt", "Portugu\u00eas", myGroup);
         addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
         addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
-        addItem("ta", "Tamil", myGroup);
+        addItem("ta", "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd \u0bae\u0bca\u0bb4\u0bbf", myGroup);
         addItem("zh", "\u4e2d\u6587", myGroup);
         
-		pane.add(panel);
+        JScrollPane scrollPane = new JScrollPane();
+        JPanel enclosingPanel = new JPanel();
+        enclosingPanel.add(panel);
+        enclosingPanel.setBackground(Color.WHITE);
+        panel.setBackground(Color.WHITE);
+        scrollPane.getViewport().add(enclosingPanel);
+		pane.add(scrollPane);
 		
 		FlowLayout btnLayout = new FlowLayout(1);
 		btnPanel.setLayout(btnLayout);
