@@ -119,19 +119,19 @@ msgstr "சீன மொழிபெயர்ப்பு"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:129
 msgid "Claus Poerschke"
-msgstr ""
+msgstr "க்ளாஸ் போயெர்ஸ்ச்கே"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:131
 msgid "Patches (v1.0) and German translations"
-msgstr ""
+msgstr "இணைப்புகள் (ப1.0) மற்றும் செர்மன் மொழிபெயர்ப்பு"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:133
 msgid "Dmitry Salnikov"
-msgstr ""
+msgstr "டிமிட்ரி சல்நிகோவ்"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:135
 msgid "Portuguese and Russian translations"
-msgstr ""
+msgstr "போர்த்துகீசியம் மற்றும் ரஷியன் மொழிபெயர்ப்பு"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:137
 msgid "Toni"
@@ -146,33 +146,36 @@ msgid "Sathish"
 msgstr ""
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:143
-#, fuzzy
 msgid "Tamil translations"
 msgstr "அரபிய‌ மொழிபெயர்ப்பு"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:145
 msgid "Helene Vedrenne"
-msgstr ""
+msgstr "ஹெலன் வெட்ரென்னே"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:149
 msgid "Sylvain Vedrenne"
-msgstr ""
+msgstr "சில்வெய்ன் வெட்ரென்னே"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:151
 msgid "Esperanto, French, and Japanese translations (v1.0)"
-msgstr ""
+msgstr "எஸ்பெராண்டோ, பிரஞ்சு, மற்றும் ஜப்பானிய‌ மொழிபெயர்ப்பு (ப‌1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:164
 msgid ""
 "<b>Sudokuki</b> is released under the terms of the GNU General Public "
 "License version 3 or later (GPL v3+)."
 msgstr ""
+"<b>சுடோகுகி</b> குனு பொது மக்கள் உரிமம் 3 அல்லது அதற்கு பிந்தைய விதிகளின் கீழ் "
+"வெளியிடப்பட்டது (பொ ம உ ப3+)."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:168
 msgid ""
 "The full license text is available in the file called COPYING that must be "
 "included in every copy of the program."
 msgstr ""
+"முழு உரிம உரையானது கிடைக்ககூடிய கோப்பானது நகலெடுத்தல் என அழைக்கப்படும் அந்த திட்டத்தின் "
+"ஒவ்வொரு நிரலின் நகலிலும் சேர்க்கப்பட்டுள்ளது."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:172
 msgid ""
