@@ -140,12 +140,11 @@ msgstr "Hungariaj tradukoj"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:141
 msgid "Sathish"
-msgstr ""
+msgstr "Sathish"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:143
-#, fuzzy
 msgid "Tamil translations"
-msgstr "Arabaj tradukoj"
+msgstr "Tamilaj tradukoj"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:145
 msgid "Helene Vedrenne"

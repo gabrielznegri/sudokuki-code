@@ -145,7 +145,7 @@ msgstr "Sathish"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:143
 msgid "Tamil translations"
-msgstr "Traductions en tamul"
+msgstr "Traductions en tamoul"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:145
 msgid "Helene Vedrenne"
