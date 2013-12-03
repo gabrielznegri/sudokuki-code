@@ -39,9 +39,8 @@ msgid "License"
 msgstr "ترخيص"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:85
-#, fuzzy
 msgid "Sathish Anandh"
-msgstr "ساذيش"
+msgstr "ساذيش انانده"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:87
 msgid "Tamil translations"
@@ -114,12 +113,11 @@ msgstr "الترجمة اليابانية"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
 msgid "Ahmet Kemal Okmen"
-msgstr ""
+msgstr "آحمد كامل آوكميه"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:123
-#, fuzzy
 msgid "Turkish translations"
-msgstr "الترجمة الهولندية"
+msgstr "الترجمة التركية"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:125
 msgid "Jeanne Peng"

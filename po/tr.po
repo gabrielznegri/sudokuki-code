@@ -42,12 +42,11 @@ msgstr "Lisans"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:85
 msgid "Sathish Anandh"
-msgstr ""
+msgstr "Sathish Anandh"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:87
-#, fuzzy
 msgid "Tamil translations"
-msgstr "Arapça çeviriler"
+msgstr "Tamil çeviriler"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:89
 msgid "Aritz Beraza"
@@ -116,12 +115,11 @@ msgstr "Japonca çeviriler"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
 msgid "Ahmet Kemal Okmen"
-msgstr ""
+msgstr "Ahmet Kemal Ökmen"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:123
-#, fuzzy
 msgid "Turkish translations"
-msgstr "Felemenkçe çeviriler"
+msgstr "Türkçe çeviriler"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:125
 msgid "Jeanne Peng"

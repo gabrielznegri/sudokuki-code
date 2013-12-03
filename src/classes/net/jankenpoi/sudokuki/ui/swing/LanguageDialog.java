@@ -117,7 +117,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         addItem("pt", "Portugu\u00eas", myGroup);
         addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
         addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
-        addItem("ta", "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd \u0bae\u0bca\u0bb4\u0bbf", myGroup);
+        addItem("ta", "\u0BA4\u0BAE\u0BBF\u0BB4\u0BCD\u0020\u0028\u0B87\u0BA8\u0BCD\u0BA4\u0BBF\u0BAF\u0BBE\u0029", myGroup);
         addItem("tr", "Turkish", myGroup);
         addItem("zh", "\u4e2d\u6587", myGroup);
         

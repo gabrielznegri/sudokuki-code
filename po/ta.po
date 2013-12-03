@@ -115,12 +115,11 @@ msgstr "ஜப்பானிய மொழிபெயர்ப்பு"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
 msgid "Ahmet Kemal Okmen"
-msgstr ""
+msgstr "அஹ்மத் கெமால் ஒக்மென்"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:123
-#, fuzzy
 msgid "Turkish translations"
-msgstr "டச்சு மொழிபெயர்ப்பு"
+msgstr "துருக்கிய மொழிபெயர்ப்பு"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:125
 msgid "Jeanne Peng"
