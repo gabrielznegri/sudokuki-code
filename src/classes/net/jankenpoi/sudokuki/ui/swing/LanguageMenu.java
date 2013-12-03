@@ -94,6 +94,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                 addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
                 addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
                 addItem("ta", "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd \u0bae\u0bca\u0bb4\u0bbf", myGroup);
+                addItem("tr", "Turkish", myGroup);
                 addItem("zh", "\u4e2d\u6587", myGroup);
         }
 
@@ -174,6 +175,8 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 				return StockIcons.ICON_FLAG_RU;
 			} else if ("ta".equals(langCode)) {
 				return StockIcons.ICON_FLAG_TA;
+			} else if ("tr".equals(langCode)) {
+				return StockIcons.ICON_FLAG_TR;
 			} else if ("zh".equals(langCode)) {
 				return StockIcons.ICON_FLAG_ZH;
 			}

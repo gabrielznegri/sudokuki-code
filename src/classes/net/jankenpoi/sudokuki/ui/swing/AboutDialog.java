@@ -55,7 +55,6 @@ public class AboutDialog extends JDialog {
 	private final String ABOUT_SUDOKUKI = _("About Sudokuki...");
 	private final String INFORMATION = _("Information");
 	private final String CONTRIBUTORS = _("Contributors");
-	private final String FEEDBACK = _("Feedback");
 	private final String TRANSFER = _("Transfer");
 	private final String LICENSE = _("License");
 
@@ -74,13 +73,6 @@ public class AboutDialog extends JDialog {
 		} catch (URISyntaxException e1) {
 			e1.printStackTrace();
 		}
-		URI forumURI = null;
-		try {
-			forumURI = new URI(
-					"http://sourceforge.net/projects/sudokuki/forums");
-		} catch (URISyntaxException e1) {
-			e1.printStackTrace();
-		}
 
 		JTabbedPane tabbedPane = new JTabbedPane();
 		tabbedPane.addTab(INFORMATION, null, makeInfoPanel(sudokukiURI),
@@ -89,6 +81,10 @@ public class AboutDialog extends JDialog {
 		tabbedPane.addTab(CONTRIBUTORS, null, makeTextPanel("<html><body>"
 				+ "<table border=\"0\"><tr></tr>"
 				
+				+ "<tr><td align=\"right\"><b>"
+				+ _("Sathish Anandh")
+				+ "</b></td><td></td><td align=\"left\">"
+				+ _("Tamil translations")
 				+ "<tr><td align=\"right\"><b>"
 				+ _("Aritz Beraza")
 				+ "</b></td><td></td><td align=\"left\">"
@@ -122,6 +118,10 @@ public class AboutDialog extends JDialog {
 				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Japanese translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
+				+ _("Ahmet Kemal Okmen")
+				+ "</b></td><td></td><td align=\"left\">"
+				+ _("Turkish translations")
+				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Jeanne Peng")
 				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Chinese translations")
@@ -138,10 +138,6 @@ public class AboutDialog extends JDialog {
 				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Hungarian translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Sathish")
-				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Tamil translations")
-				+ "</td></tr><tr><td align=\"right\"><b>"
 				+ _("Helene Vedrenne")
 				+ "</b></td><td></td><td align=\"left\">"
 				+ _("Japanese translations")
@@ -152,9 +148,6 @@ public class AboutDialog extends JDialog {
 				
 				+ "</td>" + "</tr>" + "</table>"
 				+ "</body></html>"), CONTRIBUTORS);
-
-		tabbedPane
-				.addTab(FEEDBACK, null, makeFeedbackPanel(forumURI), FEEDBACK);
 
 		tabbedPane
 				.addTab(TRANSFER,
@@ -197,7 +190,7 @@ public class AboutDialog extends JDialog {
 
 		Dimension parentDim = parent.getPreferredSize();
 		Dimension dim = new Dimension();
-		double width = parentDim.getHeight() * 1.4;
+		double width = parentDim.getHeight() * 1.2;
 		double height = parentDim.getWidth() * 1.3;
 		dim.setSize(width, height);
 		tabbedPane.setPreferredSize(dim);

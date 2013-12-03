@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.1.4\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2013-11-22 22:12+0100\n"
+"POT-Creation-Date: 2013-12-03 22:34+0100\n"
 "PO-Revision-Date: 2012-05-01 18:09+0100\n"
 "Last-Translator: Dmitry Salnikov <dimasalnikov88@gmail.com>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
@@ -31,82 +31,96 @@ msgid "Contributors"
 msgstr "Участники"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:58
-msgid "Feedback"
-msgstr "Отзывы"
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:59
 msgid "Transfer"
 msgstr "Скачать"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:60
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:59
 msgid "License"
 msgstr "Лицензия"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:93
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:85
+msgid "Sathish Anandh"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:87
+#, fuzzy
+msgid "Tamil translations"
+msgstr "Латвийский перевод"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:89
 msgid "Aritz Beraza"
 msgstr "Аритз Бераза"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:95
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:91
 msgid "Spanish translations (v1.0)"
 msgstr "Испанский перевод (v1.0)"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:97
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:93
 msgid "Jeroen P. Broks"
 msgstr "Жероен П. Брокс"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:99
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:95
 msgid "Dutch translations"
 msgstr "Голландский перевод"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:101
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:97
 msgid "Helene Damianakos"
 msgstr "Елен Дамианакоз"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:103
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:99
 msgid "Greek translations (v1.0)"
 msgstr "Греческий перевод (v1.0)"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:105
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:101
 msgid "Janis Eisaks"
 msgstr "Жанис Еисакс"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:107
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:103
 msgid "Latvian translations"
 msgstr "Латвийский перевод"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:109
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:105
 msgid "Rafael Ferreira"
 msgstr "Рафаель Феррейра"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:107
 msgid "Brazilian Portuguese translations"
 msgstr "Бразильский португальский перевод"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:113
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:109
 msgid "Daneih Ismail"
 msgstr ""
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:115
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111
 #, fuzzy
 msgid "Arabic translations"
 msgstr "Латвийский перевод"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:117
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:113
 msgid "Stavros Mavrakis"
 msgstr "Ставрос Мавракис"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:115
 msgid "Greek translations"
 msgstr "Греческий перевод"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:117
 msgid "Fumiaki Nakanishi"
 msgstr "Фумиаки Наканиши"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:123
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:147
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:143
 msgid "Japanese translations"
 msgstr "Японский перевод"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
+msgid "Ahmet Kemal Okmen"
+msgstr ""
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:123
+#, fuzzy
+msgid "Turkish translations"
+msgstr "Голландский перевод"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:125
 msgid "Jeanne Peng"
@@ -141,33 +155,24 @@ msgid "Hungarian translations"
 msgstr "Венгерский перевод"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:141
-msgid "Sathish"
-msgstr ""
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:143
-#, fuzzy
-msgid "Tamil translations"
-msgstr "Латвийский перевод"
-
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:145
 msgid "Helene Vedrenne"
 msgstr "Елен Ведрэннэ"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:149
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:145
 msgid "Sylvain Vedrenne"
 msgstr "Сильваин Ведреннэ"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:151
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:147
 msgid "Esperanto, French, and Japanese translations (v1.0)"
 msgstr "Эсперанто, Французкий, и Японский перевод (v1.0)"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:164
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:157
 msgid ""
 "<b>Sudokuki</b> is released under the terms of the GNU General Public "
 "License version 3 or later (GPL v3+)."
 msgstr "Лицензия версии 3 или последующей (GPL v3+)."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:168
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:161
 msgid ""
 "The full license text is available in the file called COPYING that must be "
 "included in every copy of the program."
@@ -175,7 +180,7 @@ msgstr ""
 "Полный текст лицензии находится в файле под названием COPYING который должен "
 "быть включен в каждую копию программы."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:172
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:165
 msgid ""
 "This program is Free Software (\"Free\" as in \"Freedom\") developped during "
 "the author's free-time in the hope that some users will find it useful, but "
@@ -184,7 +189,7 @@ msgstr ""
 "Эта программа бесплатная. Разработана автором в свободное от работы время, в "
 "надежде что пользователи найдут в ней пользу, но без каких либо гарантий."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:176
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:169
 msgid ""
 "You are welcome to transfer this program to other people as long as you "
 "respect the license terms. Read the GNU General Public License for more "
@@ -194,16 +199,16 @@ msgstr ""
 "подчиняетесь условиям лицензии. Прочитайтеподробнее в Открытом Лицензионном "
 "Соглашении GNU."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:178
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:228
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:171
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:221
 msgid "Copyright (C) 2007-2013 Sylvain Vedrenne"
 msgstr "Copyright (C) 2007-2013 Sylvain Vedrenne"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:254
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:247
 msgid "on the Web"
 msgstr "в Интернете"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:279
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:272
 msgid ""
 "Feel free to request features and report bugs<br/>on the Sudokuki Forums "
 "hosted by Sourceforge!"
@@ -211,7 +216,7 @@ msgstr ""
 "Не стесняйтесь спрашивать об особенностях и сообщать<br/>об ощибках на "
 "Форумах Sudokuki на Sourceforge!"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:297
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:290
 msgid "Sudokuki Forums"
 msgstr "Форумы Sudokuki"
 
@@ -414,16 +419,16 @@ msgid "About..."
 msgstr "О нас.."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:57
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:149
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:151
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:72
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:133
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:134
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:95
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:104
 msgid "Language"
 msgstr "Язык"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:76
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:150
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:152
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:124
 msgid "Ok"
 msgstr "Да"
@@ -565,3 +570,6 @@ msgstr ""
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:100
 msgid "Sudokuki Translators Forum"
 msgstr "Форум для переводчиков Sudokuki"
+
+#~ msgid "Feedback"
+#~ msgstr "Отзывы"
