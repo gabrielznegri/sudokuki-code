@@ -1,27 +1,29 @@
 # Latvian translations for the Sudokuki package.
-# Copyright (C) 2006-2013 Sylvain Vedrenne
+# Copyright (C) 2006-2012 Sylvain Vedrenne
 # This file is distributed under the same license as the Sudokuki package.
 # Sylvain Vedrenne <sylvain@jankenpoi.net>, 2012.
 # Translation by Janis Eisaks <je@dv.lv>, 2012.
-# 
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: sudokuki 1.1.6\n"
+"Project-Id-Version: sudokuki 1.1.1\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
 "POT-Creation-Date: 2013-12-03 22:34+0100\n"
-"PO-Revision-Date: 2012-05-14 12:26+0300\n"
+"PO-Revision-Date: 2013-12-04 09:30+0200\n"
 "Last-Translator: Jānis Eisaks <jancs@dv.lv>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
-"Language: \n"
+"Language: lv_LV\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:55
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/HelpMenu.java:69
 msgid "About Sudokuki..."
-msgstr "Par Sudokuki"
+msgstr "Par Sudokuki..."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:56
 msgid "Information"
@@ -29,7 +31,7 @@ msgstr "Informācija"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:57
 msgid "Contributors"
-msgstr "Kontributori"
+msgstr "Atbalstītāji"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:58
 msgid "Transfer"
@@ -53,7 +55,7 @@ msgstr "Aritz Beraza"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:91
 msgid "Spanish translations (v1.0)"
-msgstr "Spāņu valodas tulkojumi (v1.0)"
+msgstr "Tulkojums spāņu valodā (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:93
 msgid "Jeroen P. Broks"
@@ -61,7 +63,7 @@ msgstr "Jeroen P. Broks"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:95
 msgid "Dutch translations"
-msgstr "Holandiešu valodas tulkojums"
+msgstr "Tulkojums holandiešu valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:97
 msgid "Helene Damianakos"
@@ -69,7 +71,7 @@ msgstr "Helene Damianakos"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:99
 msgid "Greek translations (v1.0)"
-msgstr "Grieķu  valodas tulkojumi (v1.0)"
+msgstr "Tulkojums grieķu  valodā (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:101
 msgid "Janis Eisaks"
@@ -77,7 +79,7 @@ msgstr "Jānis Eisaks"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:103
 msgid "Latvian translations"
-msgstr "Latviešu valodas tulkojums"
+msgstr "Tulkojums latviešu valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:105
 msgid "Rafael Ferreira"
@@ -85,7 +87,7 @@ msgstr "Rafael Ferreira"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:107
 msgid "Brazilian Portuguese translations"
-msgstr "Brazīlijas portugāļu valodas tulkojums"
+msgstr "Tulkojums Brazīlijas portugāļu valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:109
 msgid "Daneih Ismail"
@@ -93,7 +95,7 @@ msgstr "Daneih Ismail"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:111
 msgid "Arabic translations"
-msgstr "Arābu valodas tulkojums"
+msgstr "Tulkojums arābu valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:113
 msgid "Stavros Mavrakis"
@@ -101,7 +103,7 @@ msgstr "Stavros Mavrakis"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:115
 msgid "Greek translations"
-msgstr "Grieķu valodas tulkojumi"
+msgstr "Tulkojums grieķu valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:117
 msgid "Fumiaki Nakanishi"
@@ -110,16 +112,15 @@ msgstr "Fumiaki Nakanishi"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:119
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:143
 msgid "Japanese translations"
-msgstr "Japāņu valodas tulkojumi"
+msgstr "Tulkojums japāņu valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
 msgid "Ahmet Kemal Okmen"
-msgstr ""
+msgstr "Ahmet Kemal Okmen"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:123
-#, fuzzy
 msgid "Turkish translations"
-msgstr "Holandiešu valodas tulkojums"
+msgstr "Tulkojums turku valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:125
 msgid "Jeanne Peng"
@@ -127,7 +128,7 @@ msgstr "Jeanne Peng"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:127
 msgid "Chinese translations"
-msgstr "Ķīniešu valodas tulkojumi"
+msgstr "Tulkojums ķīniešu valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:129
 msgid "Claus Poerschke"
@@ -135,7 +136,7 @@ msgstr "Claus Poerschke"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:131
 msgid "Patches (v1.0) and German translations"
-msgstr "Labojumi (v1.0) un vācu valodas tulkojums"
+msgstr "Labojumi (v1.0) un tulkojums vācu valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:133
 msgid "Dmitry Salnikov"
@@ -143,7 +144,7 @@ msgstr "Dmitry Salnikov"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:135
 msgid "Portuguese and Russian translations"
-msgstr "Portugāļu un krievu valodas tulkojums"
+msgstr "Tulkojumi portugāļu un krievu valodās"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:137
 msgid "Toni"
@@ -151,7 +152,7 @@ msgstr "Toni"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:139
 msgid "Hungarian translations"
-msgstr "Ungāru valodas tulkojums"
+msgstr "Tulkojums ungāru valodā"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:141
 msgid "Helene Vedrenne"
@@ -163,7 +164,7 @@ msgstr "Sylvain Vedrenne"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:147
 msgid "Esperanto, French, and Japanese translations (v1.0)"
-msgstr "Esperanto, franču un japāņu valodas tulkojumi (v1.0)"
+msgstr "Tulkojumi esperanto, franču un japāņu valodās (v1.0)"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:157
 msgid ""
@@ -487,7 +488,7 @@ msgstr "Lejupielādēt Sudokuki"
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:50
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:87
 msgid "Standard"
-msgstr ""
+msgstr "Standarta"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:58
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/NumbersMenu.java:88
@@ -572,6 +573,3 @@ msgstr ""
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/TranslateDialog.java:100
 msgid "Sudokuki Translators Forum"
 msgstr "Sudokuki Tulkotāju forums"
-
-#~ msgid "Feedback"
-#~ msgstr "Atsauksmes"

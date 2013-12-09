@@ -42,11 +42,11 @@ msgstr "உரிமம்"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:85
 msgid "Sathish Anandh"
-msgstr ""
+msgstr "சதிஸ் ஆனந்த்"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:87
 msgid "Tamil translations"
-msgstr "அரபிய‌ மொழிபெயர்ப்பு"
+msgstr "தமிழ் மொழிபெயர்ப்பு"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:89
 msgid "Aritz Beraza"

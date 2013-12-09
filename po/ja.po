@@ -40,9 +40,8 @@ msgid "License"
 msgstr "ライセンス"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:85
-#, fuzzy
 msgid "Sathish Anandh"
-msgstr "サティシュ"
+msgstr "サティシュ・アナンド"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:87
 msgid "Tamil translations"
@@ -115,12 +114,11 @@ msgstr "日本語訳"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:121
 msgid "Ahmet Kemal Okmen"
-msgstr ""
+msgstr "アメット　カマル・オクメン"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:123
-#, fuzzy
 msgid "Turkish translations"
-msgstr "オランダ語訳"
+msgstr "トルコ語翻訳"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:125
 msgid "Jeanne Peng"
