@@ -1,3 +1,14 @@
+sudokuki (1.2.1) unstable; urgency=low
+
+  * 2013-12-10 - released Sudokuki 1.2.1 (Stable)
+    - Added Tamil translations from Sathish Anandh
+    - Added Turkish translations from Ahmet Kemal Okmen
+    - Improved the language selection dialog
+    - Removed the "feedback" tab from the About dialog
+
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Tue, 10 Dec 2013 23:30:00 +0100
+
+
 sudokuki (1.2) unstable; urgency=low
 
   * 2013-04-27 - released Sudokuki 1.2 (Stable)
