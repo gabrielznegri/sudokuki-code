@@ -94,7 +94,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                 addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
                 addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
                 addItem("ta", "\u0BA4\u0BAE\u0BBF\u0BB4\u0BCD\u0020\u0028\u0B87\u0BA8\u0BCD\u0BA4\u0BBF\u0BAF\u0BBE\u0029", myGroup);
-                addItem("tr", "Turkish", myGroup);
+                addItem("tr", "\u0054\u00FC\u0072\u006B\u00E7\u0065", myGroup);
                 addItem("zh", "\u4e2d\u6587", myGroup);
         }
 
