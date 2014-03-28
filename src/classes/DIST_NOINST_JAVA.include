@@ -14,6 +14,7 @@ net/jankenpoi/sudokuki/model/Position.java  \
 net/jankenpoi/sudokuki/preferences/UserPreferences.java  \
 net/jankenpoi/sudokuki/resources/UIResources.java  \
 net/jankenpoi/sudokuki/solver/BruteForceGridSolver.java  \
+net/jankenpoi/sudokuki/solver/DLXGridSolver.java  \
 net/jankenpoi/sudokuki/solver/GridShadow.java  \
 net/jankenpoi/sudokuki/solver/GridSolution.java  \
 net/jankenpoi/sudokuki/solver/GridSolver.java  \
@@ -73,4 +74,6 @@ net/jankenpoi/sudokuki/ui/text/TextView.java  \
 net/jankenpoi/sudokuki/ui/UIApp.java  \
 net/jankenpoi/sudokuki/Version.java  \
 net/jankenpoi/sudokuki/view/GridListener.java  \
-net/jankenpoi/sudokuki/view/GridView.java
+net/jankenpoi/sudokuki/view/GridView.java  \
+net/sourceforge/plantuml/sudoku/DLXEngine.java  \
+net/sourceforge/plantuml/sudoku/SuexgGenerator2.java
