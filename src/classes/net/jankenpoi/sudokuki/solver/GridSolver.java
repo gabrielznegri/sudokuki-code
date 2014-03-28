@@ -16,4 +16,6 @@ public interface GridSolver {
 	 */
 	GridSolution resolve();
 
+	void cancel();
+
 }

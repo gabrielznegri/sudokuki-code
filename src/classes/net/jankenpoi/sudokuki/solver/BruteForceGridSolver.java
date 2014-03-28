@@ -40,7 +40,6 @@ public class BruteForceGridSolver implements GridSolver {
 	
 	@Override
 	public GridSolution resolve() {
-
 		GridShadow gs = new GridShadow(cellShadowMemory, currentIndex, true); // 2.1
 		gs.debugDump();
 		boolean totalDeadEndNoSolution = false;

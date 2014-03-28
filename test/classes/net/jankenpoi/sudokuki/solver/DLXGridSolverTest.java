@@ -6,8 +6,8 @@ import net.jankenpoi.sudokuki.model.GridModel;
 import org.junit.Test;
 
 
-public class BruteForceGridSolverTest {
-	
+public class DLXGridSolverTest {
+
 	GridModel problemGrid1 = new GridModel(GridSolverTests.strProblemGrid1);
 	GridModel solutionGrid1 = new GridModel(GridSolverTests.strSolutionGrid1);
 	GridModel problemGridDifficult = new GridModel(GridSolverTests.strProblemGridDifficult);

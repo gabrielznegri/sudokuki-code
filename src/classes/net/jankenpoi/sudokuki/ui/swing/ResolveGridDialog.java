@@ -32,8 +32,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingWorker;
 
 import net.jankenpoi.sudokuki.model.GridModel;
-import net.jankenpoi.sudokuki.solver.BruteForceGridSolver;
+import net.jankenpoi.sudokuki.solver.DLXGridSolver;
 import net.jankenpoi.sudokuki.solver.GridSolution;
+import net.jankenpoi.sudokuki.solver.GridSolver;
 import net.jankenpoi.sudokuki.view.GridView;
 /**
  * CheckUpdateDialog.java
@@ -51,7 +52,7 @@ public class ResolveGridDialog extends JDialog {
 
 	private final SwingWorker<Integer, Void> worker;
 
-	private final BruteForceGridSolver bruteSolver;
+	private final GridSolver solver;
 	private final GridModel gridToSolve;
 
 	public ResolveGridDialog(JFrame parent, final GridView view) {
@@ -69,8 +70,8 @@ public class ResolveGridDialog extends JDialog {
 			}
 		}
 		gridToSolve = new GridModel(flagsTable, 0);
-		bruteSolver = new BruteForceGridSolver(gridToSolve);
-
+		solver = new DLXGridSolver(gridToSolve);
+		
 		worker = new SwingWorker<Integer, Void>() {
 
 			@Override
@@ -139,7 +140,7 @@ public class ResolveGridDialog extends JDialog {
 		/**
 		 * CANCELLED
 		 */
-		bruteSolver.cancel();
+		solver.cancel();
 	}
 
 	/**
@@ -155,7 +156,7 @@ public class ResolveGridDialog extends JDialog {
 
 	private Integer resolveGrid() {
 
-		GridSolution solution = bruteSolver.resolve();
+		GridSolution solution = solver.resolve();
 		if (solution == null) {
 			/**
 			 * RESOLUTION PROCESS CANCELLED BEFORE COMPLETION
