@@ -6,8 +6,6 @@ net/jankenpoi/sudokuki/controller/GridController.java  \
 net/jankenpoi/sudokuki/generator/SudokuGeneratorFactory.java  \
 net/jankenpoi/sudokuki/generator/SudokuGenerator.java  \
 net/jankenpoi/sudokuki/generator/suexg/SuexgGenerator.java  \
-net/jankenpoi/sudokuki/generator/suexg/SuexgJava.java  \
-net/jankenpoi/sudokuki/generator/suexg/SuexgProxy.java  \
 net/jankenpoi/sudokuki/model/GridChangedEvent.java  \
 net/jankenpoi/sudokuki/model/GridModel.java  \
 net/jankenpoi/sudokuki/model/Position.java  \

@@ -6,10 +6,9 @@ jar_DATA = $(jarfile)
 
 JAVA_HOME=@JAVA_HOME@
 JAVAC=@JAVAC@
-JAVAH=@JAVAH@
 JAVA=@JAVA@
 JAR=@JAR@
-$(jarfile): $(dist_noinst_JAVA) $(SUEXG_PROXY_JNI_INCLUDE) outputresources
+$(jarfile): $(dist_noinst_JAVA) outputresources
 	$(JAR) cmf $(MANIFEST) $(JARFLAGS) $@ -C $(top_builddir)/tmpjar .
 
 include DIST_NOINST_JAVA.include
@@ -83,11 +82,4 @@ mkversion:
 	echo "" >> $(VERSION_FILE); \
 	echo "}" >> $(VERSION_FILE);
 
-CLEANFILES = $(jarfile) $(VERSION_FILE) $(MANIFEST) $(SUEXG_PROXY_JNI_INCLUDE) new_DIST_NOINST_JAVA.include
-
-SUEXG_PROXY_JNI_DIR=$(top_builddir)/src/classes/net/jankenpoi/sudokuki/suexg
-SUEXG_PROXY_JNI_CLASS=net.jankenpoi.sudokuki.generator.suexg.SuexgProxy
-SUEXG_PROXY_JNI_INCLUDE=$(top_builddir)/tmpjar/net/jankenpoi/sudokuki/generator/suexg/net_jankenpoi_sudokuki_generator_suexg_SuexgProxy.h
-$(SUEXG_PROXY_JNI_INCLUDE):
-	$(JAVAH) -classpath $(JAVAROOT) -jni -o $(SUEXG_PROXY_JNI_INCLUDE) $(SUEXG_PROXY_JNI_CLASS)
-
+CLEANFILES = $(jarfile) $(VERSION_FILE) $(MANIFEST) new_DIST_NOINST_JAVA.include

@@ -92,7 +92,7 @@ AC_SUBST(JAVA)
 
 AC_PROG_CC
 AM_PROG_CC_STDC
-AC_CONFIG_FILES([Makefile src/Makefile src/suexg/Makefile src/resources/Makefile src/classes/Makefile po/Makefile.in])
+AC_CONFIG_FILES([Makefile src/Makefile src/resources/Makefile src/classes/Makefile po/Makefile.in])
 AC_CONFIG_COMMANDS([Version.java], [echo package: $pkgname version: $pkgversion], [pkgname=$PACKAGE_NAME, pkgversion=$PACKAGE_VERSION])
 
 AC_OUTPUT
