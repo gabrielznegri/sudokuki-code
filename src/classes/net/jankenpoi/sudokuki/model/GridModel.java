@@ -107,18 +107,18 @@ public class GridModel implements Cloneable {
 		if (strValues == null) {
 			return;
 		}
-		System.out
-				.println("GridModel.GridModel() length:" + strValues.length());
-		System.out.println("GridModel.GridModel() strValues:" + strValues);
+//		System.out
+//				.println("GridModel.GridModel() length:" + strValues.length());
+//		System.out.println("GridModel.GridModel() strValues:" + strValues);
 		for (int i = 0; i < strValues.length(); i++) {
 			short value = Short.valueOf(strValues.substring(i, i + 1)).shortValue();
-			System.out.print(value);
+//			System.out.print(value);
 			cellInfos[i] = value;
 			if (1 <= value && value <= 9) {
 				cellInfos[i] |= FLAG_CELL_READ_ONLY;
 			}
 		}
-		System.out.println();
+//		System.out.println();
 	}
 
 	public void addGridListener(GridListener view) {

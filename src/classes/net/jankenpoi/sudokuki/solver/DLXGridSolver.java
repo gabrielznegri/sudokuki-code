@@ -28,7 +28,9 @@ public class DLXGridSolver implements GridSolver {
 			}
 		}
 		String solution = engine.solve(gridToSolve).substring(0, 81);
-		System.out.println("solution = "+solution);
+		if (DLXEngine.DBG) {
+			System.out.println("solution = "+solution);
+		}
 		return new GridSolution(true, new GridModel(solution));
 	}
 

@@ -11,7 +11,9 @@ public class SuexgGenerator2 extends SudokuGenerator {
 	public SudokuGrid generateGrid(int minRating, int maxRating) {
 		DLXEngine dlxEngine = new DLXEngine(new Random());
 		String sudoku = dlxEngine.generate(minRating, maxRating);
-		System.out.println("sudoku : "+sudoku+" length = "+sudoku.length());
+		if (DLXEngine.DBG) {
+			System.out.println("sudoku : \n"+sudoku+" length = "+sudoku.length());
+		}
 		final int[] intGrid = new int[81];
 		int idx = 0;
 		for (int i=0; i<81; i++) {

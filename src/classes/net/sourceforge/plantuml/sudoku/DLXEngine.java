@@ -18,7 +18,6 @@ package net.sourceforge.plantuml.sudoku;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Date;
 import java.util.Random;
 
 /*******************************************************************************
@@ -75,7 +74,9 @@ class dlx_solver {
 	 * puzzle
 	 */
 	String solve(String puzzle) {
-		System.out.println("puzzle = "+puzzle);
+		if (DLXEngine.DBG) {
+			System.out.println("puzzle = "+puzzle);
+		}
 		String result = new String();
 		int STATE = M6;
 
@@ -354,15 +355,21 @@ class dlx_solver {
 					solutions++;
 
 				if (solutions >= smax) {
-					System.out.println("smax xolutions found");
+					if (DLXEngine.DBG) {
+						System.out.println("smax xolutions found");
+					}
 					if (_try_ == 1)
-						System.out.print("+");
+						if (DLXEngine.DBG) {
+							System.out.print("+");
+						}
 					STATE = NEXT_TRY;
 					break;
 				}
 				if (tnodes > vmax) {
 					if (_try_ == 1)
-						System.out.print("-");
+						if (DLXEngine.DBG) {
+							System.out.print("-");
+						}
 					STATE = NEXT_TRY;
 					break;
 				}
@@ -419,7 +426,9 @@ class dlx_solver {
 					yy = solutions;
 					for (i = 1; i < 33; i++)
 						yy = yy * xx;
-					System.out.println("clues: " + clues + " estimated solutions:" + yy + " time " + x1 + "ms");
+					if (DLXEngine.DBG) {
+						System.out.println("clues: " + clues + " estimated solutions:" + yy + " time " + x1 + "ms");
+					}
 
 					STATE = END;
 					break;
@@ -441,22 +450,32 @@ class dlx_solver {
 					break;
 				}
 				if (p == 6) {
-					System.out.println(solutions);
+					if (DLXEngine.DBG) {
+						System.out.println(solutions);
+					}
 					STATE = END;
 					break;
 				}
 				if (p == 0 || p == 1) {
-					System.out.println(solutions + " solution(s), rating " + (100 * tnodes) + ", time " + x1 + "ms");
+					if (DLXEngine.DBG) {
+						System.out.println(solutions + " solution(s), rating " + (100 * tnodes) + ", time " + x1 + "ms");
+					}
 				}
 				if (p > 5) {
 					x = 0;
 					for (i = 1; i <= N4; i++) {
 						x += Node[i];
-						System.out.print(Node[i]);
+						if (DLXEngine.DBG) {
+							System.out.print(Node[i]);
+						}
 						if (i % 9 == 0)
-							System.out.println();
+							if (DLXEngine.DBG) {
+								System.out.println();
+							}
 					}
-					System.out.println(x);
+					if (DLXEngine.DBG) {
+						System.out.println(x);
+					}
 				}
 				STATE = END;
 				break;
@@ -600,13 +619,11 @@ class dlx_generator {
 	static final int END = 20;
 	static final int M6 = 21;
 
-	/** Set to true to generate debug output */
-	boolean DBG = true;
-
 	/** Output trace messages */
 	void dbg(String s) {
-		if (DBG)
+		if (DLXEngine.DBG) {
 			System.out.println(s);
+		}
 	}
 
 	private final Random random;
@@ -779,9 +796,14 @@ class dlx_generator {
 
 				if (fi > 0)
 					if ((nt / z) > fi) {
-						for (i = 1; i <= 81; i++)
-							System.out.println(L[A[i]]);
-						System.out.println();
+						for (i = 1; i <= 81; i++) {
+							if (DLXEngine.DBG) {
+								System.out.println(L[A[i]]);
+							}
+						}
+						if (DLXEngine.DBG) {
+							System.out.println();
+						}
 						STATE = M6;
 						break;
 					}
@@ -792,13 +814,18 @@ class dlx_generator {
 				}
 
 				if ((z & 1) > 0) {
-					System.out.println(nt / z);
+					if (DLXEngine.DBG) {
+						System.out.println(nt / z);
+					}
 					STATE = M6;
 					break;
 				}
 
-				if (rate > 1)
-					System.out.println("hint: " + H[mi2]);
+				if (rate > 1) {
+					if (DLXEngine.DBG) {
+						System.out.println("hint: " + H[mi2]);
+					}
+				}
 
 				STATE = END;
 				break;
@@ -1121,63 +1148,10 @@ class dlx_generator {
 	}
 }
 
-/**
- * 
- * @author Rolf Sandberg
- */
-
-class xxxDLXEngine {
-	dlx_generator generator;
-	dlx_solver solver;
-
-	public xxxDLXEngine(Random random) {
-		generator = new dlx_generator(random);
-		solver = new dlx_solver(random);
-	}
-
-	String generate(int minrating, int maxrating) {
-		// Date t = new Date();
-		// long start = t.getTime();
-		// int tries = 0, i, samples = 5;
-		// long rating = 0;
-		String ss[] = generator.generate(1, 0);
-		return ss[0];
-
-		// Generator:
-		// First arg: rand seed
-		// Second arg: #samples, ignored if <= 0
-		// Third arg: rating and hints, ignored if <= 0
-
-		// Task: Find a Sudoku with a rating in a specified interval.
-		// Do it by generating samples and examine them
-		// Continue until an appropriate puzzle is found.
-		// while(tries < 9999999) {
-		// tries++;
-		// t = new Date();
-		// ss = generator.generate(samples, 0);
-		// for(i = 0; i < samples; i++) {
-		// rating = generator.rate(ss[i].replace("\n","").trim());
-		// if(rating > minrating && rating < maxrating) {
-		// return ss[i];
-		// }
-		// }
-		// System.out.println(minrating + ", " + maxrating + ", " + rating + ",
-		// looping");
-		// }
-		// return ss[0];
-	}
-
-	long rate(String s) {
-		return generator.rate(s);
-	}
-
-	String solve(String s) {
-		String result = solver.solve(s);
-		return result;
-	}
-}	
-
 public class DLXEngine {
+	/** Set to true to generate debug output */
+	public static boolean DBG = false;
+
 	dlx_generator generator;
 	dlx_solver solver;
 
@@ -1209,7 +1183,9 @@ public class DLXEngine {
 			for(i = 0; i < samples; i++) {
 				rating = generator.rate(ss[i].replace("\n","").trim());
 				if(rating > minrating && rating < maxrating) {
-					System.out.println(minrating + ", " + maxrating + ", " + rating);
+					if (DLXEngine.DBG) {
+						System.out.println(minrating + ", " + maxrating + ", " + rating);
+					}
 					return ss[i];
 				}
 			}
