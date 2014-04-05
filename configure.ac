@@ -14,8 +14,8 @@ AC_PROG_LIBTOOL
 
 
 JAVA_HOME_message_line1="Use the following command if you want to specify a custom JAVA_HOME"
-JAVA_HOME_message_line2="  ./configure JAVA_HOME=<path to an installed JDK top directory...)"
-NO_JDK_error_message="No valid JDK environment was found, try passing JAVA_HOME to 'configure'"
+JAVA_HOME_message_line2="  ./configure JAVA_HOME=<path to an installed JRE or JDK top directory...)"
+NO_JDK_error_message="No valid JRE or JDK environment found, try passing JAVA_HOME to 'configure'"
 
 
 
@@ -41,17 +41,6 @@ if test "x$JAVA_HOME" = x; then
     JAVA_HOME=`echo $TMP_JAVAC | sed "s/\/*bin\/*javac*//"`
   fi
   if test "x$JAVA_HOME" = x; then
-    AC_PATH_PROG(TMP_JAVAH, javah, [])
-    if test "x$TMP_JAVAH" != "x"; then
-      TMP_NOSYMLINK_JAVAH=$(readlink -f $TMP_JAVAH)
-      if test "$TMP_NOSYMLINK_JAVAH" != "$TMP_JAVAH"; then
-        AC_MSG_RESULT([checking location... $TMP_NOSYMLINK_JAVAH])
-        TMP_JAVAH=$TMP_NOSYMLINK_JAVAH
-      fi
-      JAVA_HOME=`echo $TMP_JAVAH | sed "s/\/*bin\/*javah*//"`
-    fi
-  fi
-  if test "x$JAVA_HOME" = x; then
     AC_PATH_PROG(TMP_JAR, jar, [])
     if test "x$TMP_JAR" != "x"; then
       TMP_NOSYMLINK_JAR=$(readlink -f $TMP_JAR)
@@ -71,21 +60,19 @@ if test "x$JAVA_HOME" = x; then
 fi
 
 #AC_MSG_NOTICE
-AC_MSG_NOTICE([Checking whether ${JAVA_HOME} is a valid JAVA_HOME for a JDK...])
+AC_MSG_NOTICE([Checking whether ${JAVA_HOME} is a valid JAVA_HOME for a JRE or JDK...])
 
 AC_PATH_PROG(JAVAC, javac, [not found], [${JAVA_HOME}/bin])
-AC_PATH_PROG(JAVAH, javah, [not found], [${JAVA_HOME}/bin])
 AC_PATH_PROG(JAVA, java, [not found], [${JAVA_HOME}/bin])
 AC_PATH_PROG(JAR, jar, [not found], [${JAVA_HOME}/bin])
 
 found_all_tools=false
-test "x$JAVAC" != "xnot found" && test "x$JAVAH" != "xnot found" && test "x$JAVA" != "xnot found" && test "x$JAR" != "xnot found" && found_all_tools=true
+test "x$JAVAC" != "xnot found" && test "x$JAVA" != "xnot found" && test "x$JAR" != "xnot found" && found_all_tools=true
 if test $found_all_tools != true; then
   AC_MSG_ERROR([$NO_JDK_error_message])
 fi
 AC_ARG_VAR(JAVA_HOME, [Path to an installed Java Development Kit (JDK)])
 AC_SUBST(JAVAC)
-AC_SUBST(JAVAH)
 AC_SUBST(JAR)
 AC_SUBST(JAVA)
 
