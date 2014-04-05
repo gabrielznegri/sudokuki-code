@@ -2,6 +2,9 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2014-04-05 - released Sudokuki 1.2.2 (Stable)
+- Replaced previous implementation of Suexg (Java/C) by a pure Java implementation
+
 * 2013-12-10 - released Sudokuki 1.2.1 (Stable)
 - Added Tamil translations from Sathish Anandh
 - Added Turkish translations from Ahmet Kemal Okmen
