@@ -13,6 +13,8 @@ files/net/jankenpoi/i18n/sudokuki_nl.properties  \
 files/net/jankenpoi/i18n/sudokuki_pt_BR.properties  \
 files/net/jankenpoi/i18n/sudokuki_pt.properties  \
 files/net/jankenpoi/i18n/sudokuki_ru.properties  \
+files/net/jankenpoi/i18n/sudokuki_ta.properties  \
+files/net/jankenpoi/i18n/sudokuki_tr.properties  \
 files/net/jankenpoi/i18n/sudokuki_zh.properties  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/br.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/de.png  \
@@ -22,12 +24,14 @@ files/net/jankenpoi/sudokuki/resources/images/countryFlags/eo.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/es.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/fr.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/hu.png  \
+files/net/jankenpoi/sudokuki/resources/images/countryFlags/in.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/ja.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/lv.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/nl.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/pt.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/ru.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/sa.png  \
+files/net/jankenpoi/sudokuki/resources/images/countryFlags/tr.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/xx.png  \
 files/net/jankenpoi/sudokuki/resources/images/countryFlags/zh.png  \
 files/net/jankenpoi/sudokuki/resources/images/gtk+/stock-icons/16/application-exit.png  \

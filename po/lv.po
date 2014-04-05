@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.1.1\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2013-12-03 22:34+0100\n"
+"POT-Creation-Date: 2014-04-06 00:31+0200\n"
 "PO-Revision-Date: 2013-12-04 09:30+0200\n"
 "Last-Translator: Jānis Eisaks <jancs@dv.lv>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
@@ -297,7 +297,7 @@ msgstr "Lūdzu, uzgaidiet..."
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:158
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:120
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:117
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:118
 msgid "Cancel"
 msgstr "Atsaukt"
 
@@ -529,7 +529,7 @@ msgstr "Nosūtīt uz printeri..."
 msgid "This grid has no solution."
 msgstr "Šim režģim nav atrisinājuma."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:113
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:114
 msgid "Grid resolution in progress..."
 msgstr "Režģis tiek risināts...."
 

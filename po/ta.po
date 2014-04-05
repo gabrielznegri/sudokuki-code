@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sudokuki\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2013-12-03 22:34+0100\n"
+"POT-Creation-Date: 2014-04-06 00:31+0200\n"
 "PO-Revision-Date: 2013-11-08 06:35+0000\n"
 "Last-Translator: sathish <webdevsathish@gmail.com>\n"
 "Language-Team: Tamil (http://www.transifex.com/projects/p/sudokuki/language/"
@@ -294,7 +294,7 @@ msgstr "தயவுசெய்து காத்திருக்கவு�
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/CheckUpdateDialog.java:158
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/PrintMultiDialog.java:120
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:117
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:118
 msgid "Cancel"
 msgstr "கைவிடு"
 
@@ -526,7 +526,7 @@ msgstr "அச்சுப்பொறிக்கு..."
 msgid "This grid has no solution."
 msgstr "இந்த கட்டத்திற்கு தீர்வு இல்லை."
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:113
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/ResolveGridDialog.java:114
 msgid "Grid resolution in progress..."
 msgstr "கட்ட தீர்மானம் செயல்படுகிறது..."
 
