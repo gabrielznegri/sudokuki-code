@@ -2,7 +2,7 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
-* 2014-04-05 - released Sudokuki 1.2.2 (Stable)
+* 2014-04-06 - released Sudokuki 1.2.2 (Stable)
 - Replaced legacy grid generator (C version of Suexg) by a Java version of Suexg
 - Replaced legacy brute-force solver by the solver included in Suexg
 
