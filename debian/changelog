@@ -1,9 +1,10 @@
 sudokuki (1.2.2) unstable; urgency=low
 
-  * 2014-04-05 - released Sudokuki 1.2.2 (Stable)
-    - Replaced previous implementation of Suexg (Java/C) by a pure Java implementation
+  * 2014-04-06 - released Sudokuki 1.2.2 (Stable)
+    - Replaced legacy grid generator (C version of Suexg) by a Java version of Suexg
+    - Replaced legacy brute-force solver by the solver included in Suexg
 
- -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Sun, 05 Apr 2014 23:55:00 +0100
+ -- Sylvain Vedrenne <sylvain@jankenpoi.net>  Sun, 06 Apr 2014 17:00:00 +0100
 
 
 sudokuki (1.2.1) unstable; urgency=low
