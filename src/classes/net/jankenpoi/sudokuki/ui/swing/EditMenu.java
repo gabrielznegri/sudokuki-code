@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -51,15 +51,15 @@ public class EditMenu extends JMenu implements L10nComponent {
         
         @Override
         public void setL10nMessages(Locale locale, String languageCode) {
-                setText(_("Edit"));
-                itemClearAllMoves.setText(_("Clear moves"));
-                actionClearAllMoves.putValue(Action.SHORT_DESCRIPTION, _("Clear all moves"));
-                itemEraseAllMemos.setText(_("Hide memos..."));
-                actionEraseAllMemos.putValue(Action.SHORT_DESCRIPTION, _("Hide all memos..."));
-                itemCustomGrid.setText(_("Custom grid"));
-                actionCustomGrid.putValue(Action.SHORT_DESCRIPTION, _("Compose a custom grid..."));
-                itemPlayCustomGrid.setText(_("Play grid"));
-                actionPlayCustomGrid.putValue(Action.SHORT_DESCRIPTION, _("Play with current grid..."));
+                setText(gtxt("Edit"));
+                itemClearAllMoves.setText(gtxt("Clear moves"));
+                actionClearAllMoves.putValue(Action.SHORT_DESCRIPTION, gtxt("Clear all moves"));
+                itemEraseAllMemos.setText(gtxt("Hide memos..."));
+                actionEraseAllMemos.putValue(Action.SHORT_DESCRIPTION, gtxt("Hide all memos..."));
+                itemCustomGrid.setText(gtxt("Custom grid"));
+                actionCustomGrid.putValue(Action.SHORT_DESCRIPTION, gtxt("Compose a custom grid..."));
+                itemPlayCustomGrid.setText(gtxt("Play grid"));
+                actionPlayCustomGrid.putValue(Action.SHORT_DESCRIPTION, gtxt("Play with current grid..."));
         }
 
         EditMenu(ActionsRepository actions, JFrame parent, SwingView view) {
@@ -89,7 +89,7 @@ public class EditMenu extends JMenu implements L10nComponent {
                 
                 addItems(actions, parent, view);
                 
-                setL10nMessages(null, _("DETECTED_LANGUAGE"));
+                setL10nMessages(null, gtxt("DETECTED_LANGUAGE"));
                 localeListener = new LocaleListenerImpl(this);
                 I18n.addLocaleListener(localeListener);
         }

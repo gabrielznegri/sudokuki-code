@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 
 /**
  * HOW TO USE THIS CLASS:<br/>
- * import static net.jankenpoi.i18n._; 
+ * import static net.jankenpoi.i18n.gtxt; 
  */
 public class I18n {
 
@@ -78,7 +78,7 @@ public class I18n {
 		}
 	}
 
-	public static String _(String msgid) {
+	public static String gtxt(String msgid) {
 		synchronized (lock) {
 			if (catalog != null) {
 				return gnu.gettext.GettextResource.gettext(catalog, msgid);

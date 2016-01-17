@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -54,7 +54,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 	
 	public LanguageDialog(JFrame parent, ToolBar toolbar) {
 		super(parent, true);
-		setTitle(_("Language"));
+		setTitle(gtxt("Language"));
 
 		initComponents();
 		setResizable(false);
@@ -73,7 +73,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 
 	private JPanel panel = new JPanel();
 	private JPanel btnPanel = new JPanel();
-	private JButton okBtn = new JButton(_("Ok"));
+	private JButton okBtn = new JButton(gtxt("Ok"));
 	
 	private void initComponents() {
 		
@@ -95,6 +95,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         icons.put("ja", StockIcons.ICON_FLAG_JA);
         icons.put("lv", StockIcons.ICON_FLAG_LV);
         icons.put("nl", StockIcons.ICON_FLAG_NL);
+        icons.put("pl", StockIcons.ICON_FLAG_PL);
         icons.put("pt", StockIcons.ICON_FLAG_PT);
         icons.put("pt_BR", StockIcons.ICON_FLAG_BR);
         icons.put("ru", StockIcons.ICON_FLAG_RU);
@@ -114,6 +115,7 @@ public class LanguageDialog extends JDialog implements L10nComponent {
         addItem("ja", "\u65e5\u672c\u8a9e", myGroup);
         addItem("lv", "Latvie\u0161u", myGroup);
         addItem("nl", "Nederlands", myGroup);
+        addItem("pl", "Polish", myGroup);
         addItem("pt", "Portugu\u00eas", myGroup);
         addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
         addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
@@ -148,8 +150,8 @@ public class LanguageDialog extends JDialog implements L10nComponent {
 
 	@Override
 	public void setL10nMessages(Locale locale, String languageCode) {
-		setTitle(_("Language"));
-		okBtn.setText(_("Ok"));
+		setTitle(gtxt("Language"));
+		okBtn.setText(gtxt("Ok"));
 	}
 
     private final HashMap<String, Icon> icons = new HashMap<String, Icon>();

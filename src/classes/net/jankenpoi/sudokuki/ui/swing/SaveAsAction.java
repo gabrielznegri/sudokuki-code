@@ -1,6 +1,6 @@
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.ActionEvent;
 import java.io.File;
@@ -44,10 +44,10 @@ public class SaveAsAction extends AbstractAction {
 			}
 		};
 
-		fc.setDialogTitle(I18n._("Save as..."));
+		fc.setDialogTitle(I18n.gtxt("Save as..."));
 		fc.setAcceptAllFileFilterUsed(false);
 		FileNameExtensionFilter filter = new FileNameExtensionFilter(
-				I18n._("Sudokuki grid files"), new String[] { "skg" });
+				I18n.gtxt("Sudokuki grid files"), new String[] { "skg" });
 		fc.setFileFilter(filter);
 		int returnVal = fc.showSaveDialog(this.frame);
 
@@ -64,7 +64,7 @@ public class SaveAsAction extends AbstractAction {
 		} catch (IOException e1) {
             JOptionPane.showMessageDialog(frame, "<html>"
                     + "<table border=\"0\">" + "<tr>"
-                    + _("Failed to save the grid<br/>at the selected location.") + "</tr>"
+                    + gtxt("Failed to save the grid<br/>at the selected location.") + "</tr>"
                     + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
             return;
 		}
@@ -74,7 +74,7 @@ public class SaveAsAction extends AbstractAction {
 		} catch (FileNotFoundException e1) {
             JOptionPane.showMessageDialog(frame, "<html>"
                     + "<table border=\"0\">" + "<tr>"
-                    + _("Failed to save the grid<br/>at the selected location.") + "</tr>"
+                    + gtxt("Failed to save the grid<br/>at the selected location.") + "</tr>"
                     + "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
             return;
 		}

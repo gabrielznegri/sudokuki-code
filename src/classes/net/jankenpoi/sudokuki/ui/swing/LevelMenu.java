@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.ActionEvent;
 import java.util.Locale;
@@ -49,35 +49,35 @@ public class LevelMenu extends JMenu implements L10nComponent {
 	private final LocaleListener localeListener;
 	
 	public LevelMenu() {
-		actionLevel1 = new AbstractAction(_("Level 1"), null) {
+		actionLevel1 = new AbstractAction(gtxt("Level 1"), null) {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				setLevelRatingBounds(0, 5700);			
 			}
 		};
-		actionLevel2 = new AbstractAction(_("Level 2"), null) {
+		actionLevel2 = new AbstractAction(gtxt("Level 2"), null) {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				setLevelRatingBounds(5700, 6700);
 			}
 		};
-		actionLevel3 = new AbstractAction(_("Level 3"), null) {
+		actionLevel3 = new AbstractAction(gtxt("Level 3"), null) {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				setLevelRatingBounds(6700, 11000);
 			}
 		};
-		actionLevel4 = new AbstractAction(_("Level 4"), null) {
+		actionLevel4 = new AbstractAction(gtxt("Level 4"), null) {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				setLevelRatingBounds(11000, 15000);
 			}
 		};
-		actionLevel5 = new AbstractAction(_("Level 5"), null) {
+		actionLevel5 = new AbstractAction(gtxt("Level 5"), null) {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -88,7 +88,7 @@ public class LevelMenu extends JMenu implements L10nComponent {
 		addItems();
 		setIcon(StockIcons.ICON_PLUS);
 
-		setL10nMessages(null, _("DETECTED_LANGUAGE"));
+		setL10nMessages(null, gtxt("DETECTED_LANGUAGE"));
 		localeListener = new LocaleListenerImpl(this);
 		I18n.addLocaleListener(localeListener);
 		
@@ -97,12 +97,12 @@ public class LevelMenu extends JMenu implements L10nComponent {
 
 	@Override
 	public void setL10nMessages(Locale locale, String languageCode) {
-		setText(_("Level"));
-		itemLevel1.setText(_("Level 1"));
-		itemLevel2.setText(_("Level 2"));
-		itemLevel3.setText(_("Level 3"));
-		itemLevel4.setText(_("Level 4"));
-		itemLevel5.setText(_("Level 5"));
+		setText(gtxt("Level"));
+		itemLevel1.setText(gtxt("Level 1"));
+		itemLevel2.setText(gtxt("Level 2"));
+		itemLevel3.setText(gtxt("Level 3"));
+		itemLevel4.setText(gtxt("Level 4"));
+		itemLevel5.setText(gtxt("Level 5"));
 	}
 	
 	private void addItems() {

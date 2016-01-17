@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.Color;
 import java.awt.Desktop;
@@ -46,7 +46,7 @@ public class TranslateDialog extends JDialog {
 		this.parent = parent;
 		initComponents();
 		// setResizable(false);
-		setTitle(_("Translate this application"));
+		setTitle(gtxt("Translate this application"));
 		pack();
 	}
 
@@ -80,11 +80,11 @@ public class TranslateDialog extends JDialog {
 				+ "<tr>"
 				+ "</tr>"
 				+ "<tr>"
-				+ _("You can easily translate Sudokuki into your own language!")+"<br/>"
+				+ gtxt("You can easily translate Sudokuki into your own language!")+"<br/>"
 				+"<br/>"
 				+ "</tr>"
 				+ "<tr>"
-				+ _("Propose your help and get information on how to proceed<br/> on the Translators Forum hosted by Sourceforge:")+"<br/>"
+				+ gtxt("Propose your help and get information on how to proceed<br/> on the Translators Forum hosted by Sourceforge:")+"<br/>"
 				+ "</tr>"
 				+ "<tr>"
 				+ "</tr>" + "<tr>" + "</tr>" + "</table>" + "</html>";
@@ -97,7 +97,7 @@ public class TranslateDialog extends JDialog {
 		JButton linkButton = new JButton();
 
 		linkButton
-				.setText("<HTML><FONT color=\"#000099\"><U>"+_("Sudokuki Translators Forum")+"</U></FONT></HTML>");
+				.setText("<HTML><FONT color=\"#000099\"><U>"+gtxt("Sudokuki Translators Forum")+"</U></FONT></HTML>");
 		linkButton.setHorizontalAlignment(SwingConstants.CENTER);
 		linkButton.setBorderPainted(false);
 		linkButton.setOpaque(false);

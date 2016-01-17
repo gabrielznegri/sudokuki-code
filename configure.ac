@@ -1,4 +1,4 @@
-AC_INIT([sudokuki],[1.2.2],[sylvain@jankenpoi.net])
+AC_INIT([sudokuki],[1.2.3],[sylvain@jankenpoi.net])
 AC_CONFIG_SRCDIR([src/classes/net/jankenpoi/i18n/I18n.java])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])

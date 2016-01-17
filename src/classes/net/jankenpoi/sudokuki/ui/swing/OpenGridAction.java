@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.ActionEvent;
 import java.io.File;
@@ -51,7 +51,7 @@ public class OpenGridAction extends AbstractAction {
 		
 		final JFileChooser fc = new JFileChooser();
 		
-		fc.setDialogTitle(_("Open grid..."));
+		fc.setDialogTitle(gtxt("Open grid..."));
 		fc.setAcceptAllFileFilterUsed(false);
 		fc.setFileFilter(new FileFilter() {
 			
@@ -68,7 +68,7 @@ public class OpenGridAction extends AbstractAction {
 			
 			@Override
 			public String getDescription() {
-				return _("Sudokuki grid files");
+				return gtxt("Sudokuki grid files");
 			}
 			
 			@Override
@@ -124,7 +124,7 @@ public class OpenGridAction extends AbstractAction {
 		} catch (IOException e1) {
 			JOptionPane.showMessageDialog(frame, "<html>"
 					+ "<table border=\"0\">" + "<tr>"
-					+ _("This file is not a Sudokuki grid.") + "</tr>"
+					+ gtxt("This file is not a Sudokuki grid.") + "</tr>"
 					+ "</html>", "Sudokuki", JOptionPane.ERROR_MESSAGE);
 		} finally {
 			try {

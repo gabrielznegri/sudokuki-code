@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
@@ -46,13 +46,13 @@ public class LanguageMenu extends JMenu implements L10nComponent {
         
         public LanguageMenu() {
                 addItems();
-                setIcon(languageIcon(_("DETECTED_LANGUAGE")));
+                setIcon(languageIcon(gtxt("DETECTED_LANGUAGE")));
                 
                 addMenuListener(new MenuListener() {
                         
                         @Override
                         public void menuSelected(MenuEvent arg0) {
-                                final String detectedLanguage = _("DETECTED_LANGUAGE");
+                                final String detectedLanguage = gtxt("DETECTED_LANGUAGE");
                                 langCode = detectedLanguage;
                         }
                         
@@ -67,9 +67,9 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                         }
                 });
                 
-                final String detectedLanguage = _("DETECTED_LANGUAGE");
+                final String detectedLanguage = gtxt("DETECTED_LANGUAGE");
                 JRadioButtonMenuItem selectedItem = itemsMap.get(detectedLanguage);
-                setText(_("Language"));
+                setText(gtxt("Language"));
                 if (selectedItem != null) {
                         selectedItem.setSelected(true);
                 }
@@ -90,6 +90,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
                 addItem("ja", "\u65e5\u672c\u8a9e", myGroup);
                 addItem("lv", "Latvie\u0161u", myGroup);
                 addItem("nl", "Nederlands", myGroup);
+                addItem("pl", "Polski", myGroup);
                 addItem("pt", "Portugu\u00eas", myGroup);
                 addItem("pt_BR", "Portugu\u00eas (Brasil)", myGroup);
                 addItem("ru", "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", myGroup);
@@ -131,7 +132,7 @@ public class LanguageMenu extends JMenu implements L10nComponent {
         private final LocaleListener localeListener;
 		@Override
 		public void setL10nMessages(Locale locale, String languageCode) {
-			setText(_("Language"));
+			setText(gtxt("Language"));
 			setIcon(languageIcon(languageCode));
 
 		JRadioButtonMenuItem selectedItem = itemsMap.get(languageCode);
@@ -167,6 +168,8 @@ public class LanguageMenu extends JMenu implements L10nComponent {
 				return StockIcons.ICON_FLAG_LV;
 			} else if ("nl".equals(langCode)) {
 				return StockIcons.ICON_FLAG_NL;
+                        } else if ("pl".equals(langCode)) {
+                                return StockIcons.ICON_FLAG_PL;
 			} else if ("pt".equals(langCode)) {
 				return StockIcons.ICON_FLAG_PT;
 			} else if ("pt_BR".equals(langCode)) {

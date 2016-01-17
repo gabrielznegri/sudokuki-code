@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -150,12 +150,12 @@ public class CheckUpdateDialog extends JDialog {
 
 		JLabel messageLbl1 = new JLabel("<html>" + "<table border=\"0\">"
 				+ "<tr>" + "<td align=\"center\">"
-				+ _("Checking for available updates") + ".</td>"
+				+ gtxt("Checking for available updates") + ".</td>"
 				+ "</tr><html>");
 		JLabel messageLbl2 = new JLabel("<html>" + "<table border=\"0\">"
-				+ "<tr>" + "<td align=\"center\">" + _("Please wait...")
+				+ "<tr>" + "<td align=\"center\">" + gtxt("Please wait...")
 				+ "</td>" + "</tr><html>");
-		JButton cancelBtn = new JButton(_("Cancel"));
+		JButton cancelBtn = new JButton(gtxt("Cancel"));
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		cancelBtn.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {

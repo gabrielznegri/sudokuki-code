@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 /**
  * 
@@ -97,7 +97,7 @@ public class SelectMemosPanel extends JPanel {
 		btnConfirm = new JButton();
 
 		btnClear = new JButton();
-		btnClear.setText(_("Clear memos"));
+		btnClear.setText(gtxt("Clear memos"));
 		btnClear.setEnabled(true);
 		btnClear.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +121,7 @@ public class SelectMemosPanel extends JPanel {
 		configureCheckBox(ckb[0], "1", 0);
 		configureCheckBox(ckb[1], "2", 1);
 		configureCheckBox(ckb[2], "3", 2);
-		btnConfirm.setText(_("Ok"));
+		btnConfirm.setText(gtxt("Ok"));
 		btnConfirm.setEnabled(true);
 		btnConfirm.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {

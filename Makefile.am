@@ -5,7 +5,7 @@ EXTRA_DIST = debian build-aux/config.rpath sudokuki.sh
 
 update-po:
 	if [ -e src/resources/files/net/jankenpoi/i18n/* ]; then rm src/resources/files/net/jankenpoi/i18n/*; fi
-	@find $(srcdir)/src/ -name "*.java" -exec grep -q "I18n._" {} \; -print | sort > $(srcdir)/po/POTFILES.in.2 ; \
+	@find $(srcdir)/src/ -name "*.java" -exec grep -q "I18n.gtxt" {} \; -print | sort > $(srcdir)/po/POTFILES.in.2 ; \
 	if diff $(srcdir)/po/POTFILES.in $(srcdir)/po/POTFILES.in.2 >/dev/null 2>&1 ; then \
 		rm -f $(srcdir)/po/POTFILES.in.2 ; \
 	else \
@@ -18,6 +18,6 @@ update-po:
 	  msgmerge --update --no-fuzzy-matching --backup=off "po/"$$language".po" po/sudokuki.pot; \
 	  msgcat "po/"$$language".po" -p -o "po/sudokuki_"$$language".properties"; \
 	done
-	if [ ! -e src/resources/files/net/jankenpoi/i18n ]; then mkdir -p src/resources/files/net/jankenpoi/i18n; fi
+	if [ ! -e src/resources/files/net/jankenpoi/i18n ]; then $(MKDIR_P) src/resources/files/net/jankenpoi/i18n; fi
 	cp po/*.properties src/resources/files/net/jankenpoi/i18n/
 

@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.KeyEvent;
 import java.util.Locale;
@@ -47,26 +47,26 @@ public class HelpMenu extends JMenu implements L10nComponent {
 	private final LocaleListener localeListener;
 	@Override
 	public void setL10nMessages(Locale locale, String languageCode) {
-		setText(_("Help"));
+		setText(gtxt("Help"));
 		
-		itemCheckUpdate.setText(_("Update"));
+		itemCheckUpdate.setText(gtxt("Update"));
 		actionCheckUpdate.putValue(Action.SMALL_ICON, StockIcons.ICON_VIEW_REFRESH);
-		actionCheckUpdate.putValue(Action.SHORT_DESCRIPTION, _("Check for updates"));
+		actionCheckUpdate.putValue(Action.SHORT_DESCRIPTION, gtxt("Check for updates"));
 		actionCheckUpdate.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_U));
 		
-		itemUpdateSite.setText(_("Download"));
+		itemUpdateSite.setText(gtxt("Download"));
 		actionOpenUpdateSite.putValue(Action.SMALL_ICON, StockIcons.ICON_UPDATE_AVAILABLE);
-		actionOpenUpdateSite.putValue(Action.SHORT_DESCRIPTION, _("Download new version"));
+		actionOpenUpdateSite.putValue(Action.SHORT_DESCRIPTION, gtxt("Download new version"));
 		actionOpenUpdateSite.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_D));
 		
-		itemTranslate.setText(_("Translate this application"));
+		itemTranslate.setText(gtxt("Translate this application"));
 		actionTranslate.putValue(Action.SMALL_ICON, StockIcons.ICON_TRANSLATE);
-		actionTranslate.putValue(Action.SHORT_DESCRIPTION, _(_("Help translate this application")));
+		actionTranslate.putValue(Action.SHORT_DESCRIPTION, gtxt(gtxt("Help translate this application")));
 		actionTranslate.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_T));
 		
-		itemAbout.setText(_("About..."));
+		itemAbout.setText(gtxt("About..."));
 		actionAbout.putValue(Action.SMALL_ICON, StockIcons.ICON_HELP_ABOUT);
-		actionAbout.putValue(Action.SHORT_DESCRIPTION, _("About Sudokuki..."));
+		actionAbout.putValue(Action.SHORT_DESCRIPTION, gtxt("About Sudokuki..."));
 		actionAbout.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_P));
 	}
 
@@ -87,7 +87,7 @@ public class HelpMenu extends JMenu implements L10nComponent {
 		actionAbout = new AboutAction(parent);
 		actions.put("About", actionAbout);
 		addItems();
-		setL10nMessages(null, _("DETECTED_LANGUAGE"));
+		setL10nMessages(null, gtxt("DETECTED_LANGUAGE"));
 		localeListener = new LocaleListenerImpl(this);
 		I18n.addLocaleListener(localeListener);
 	}

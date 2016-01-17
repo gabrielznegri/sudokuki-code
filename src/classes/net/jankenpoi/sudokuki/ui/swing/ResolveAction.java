@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import net.jankenpoi.sudokuki.view.GridView;
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 @SuppressWarnings("serial")
 public class ResolveAction extends AbstractAction {
@@ -54,7 +54,7 @@ public class ResolveAction extends AbstractAction {
 		} else if (result == 2) {
 			JOptionPane.showMessageDialog(frame, "<html>"
 					+ "<table border=\"0\">" + "<tr>"
-					+ _("This grid has no solution.")+"<br/><br/>"
+					+ gtxt("This grid has no solution.")+"<br/><br/>"
 					+ "</tr>" + "</html>", "Sudokuki",
 					JOptionPane.WARNING_MESSAGE);
 		} else if (result == 1) {

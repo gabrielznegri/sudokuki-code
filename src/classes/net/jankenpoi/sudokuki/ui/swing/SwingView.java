@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.BorderLayout;
 
@@ -114,21 +114,21 @@ public class SwingView extends GridView {
         + "<table border=\"0\">"
         + "<tr>"
         + "<td align=\"center\"><b>"
-        + _("Congratulations!")
+        + gtxt("Congratulations!")
         + "</b></td>"
         + "</tr>"
         + "<tr>"
         + "</tr>"
         + "<tr>"
         + "<td align=\"center\">"
-        + _("Grid complete!") + "</td>"
+        + gtxt("Grid complete!") + "</td>"
         + "</tr>" + "</table>" + "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
 	}
 	
 	@Override
 	public void gridResolved() {
 		JOptionPane.showMessageDialog(frame, "<html>" + "<table border=\"0\">"
-				+ "<tr>" + _("Grid resolved with success.") + "</tr>"
+				+ "<tr>" + gtxt("Grid resolved with success.") + "</tr>"
 				+ "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
 	}
 	

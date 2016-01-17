@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -52,38 +52,38 @@ public class FileMenu extends JMenu implements L10nComponent {
 	private final LocaleListener localeListener;
 	@Override
 	public void setL10nMessages(Locale locale, String languageCode) {
-		setText(_("File"));
+		setText(gtxt("File"));
 
-		itemNew.setText(_("New"));
+		itemNew.setText(gtxt("New"));
 		actionNew.putValue(Action.SMALL_ICON, StockIcons.ICON_NEW);
-		actionNew.putValue(Action.SHORT_DESCRIPTION, _("New"));
+		actionNew.putValue(Action.SHORT_DESCRIPTION, gtxt("New"));
 		actionNew.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_N));
 
-		itemOpen.setText(_("Open"));
+		itemOpen.setText(gtxt("Open"));
 		actionOpen.putValue(Action.SMALL_ICON, StockIcons.ICON_OPEN);
-		actionOpen.putValue(Action.SHORT_DESCRIPTION, _("Open"));
+		actionOpen.putValue(Action.SHORT_DESCRIPTION, gtxt("Open"));
 		actionOpen.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_O));
 		
-		itemSaveAs.setText(_("Save as"));
+		itemSaveAs.setText(gtxt("Save as"));
 		actionSaveAs.putValue(Action.SMALL_ICON, StockIcons.ICON_SAVE_AS);
-		actionSaveAs.putValue(Action.SHORT_DESCRIPTION, _("Save as"));
+		actionSaveAs.putValue(Action.SHORT_DESCRIPTION, gtxt("Save as"));
 		actionSaveAs.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_S));
 
-		itemPrint.setText(_("Print"));
+		itemPrint.setText(gtxt("Print"));
 		actionPrint.putValue(Action.SMALL_ICON, StockIcons.ICON_PRINT);
-		actionPrint.putValue(Action.SHORT_DESCRIPTION, _("Print the grid"));
+		actionPrint.putValue(Action.SHORT_DESCRIPTION, gtxt("Print the grid"));
 		actionPrint.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_P));
 
-		itemPrintMulti.setText(_("Print x 4..."));
+		itemPrintMulti.setText(gtxt("Print x 4..."));
 		actionPrintMulti.putValue(Action.SMALL_ICON,
 				StockIcons.ICON_PRINTER_INFO);
 		actionPrintMulti.putValue(Action.SHORT_DESCRIPTION,
-				_("Print four grids"));
+				gtxt("Print four grids"));
 
-		itemQuit.setText(_("Quit"));
+		itemQuit.setText(gtxt("Quit"));
 		actionQuit.putValue(Action.SMALL_ICON, StockIcons.ICON_QUIT);
 		actionQuit
-				.putValue(Action.SHORT_DESCRIPTION, _("Quit the application"));
+				.putValue(Action.SHORT_DESCRIPTION, gtxt("Quit the application"));
 		actionQuit.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_Q));
 	}
 
@@ -103,7 +103,7 @@ public class FileMenu extends JMenu implements L10nComponent {
 		actionPrintMulti = new PrintMultiAction(parent, view);
 		actions.put("PrintMulti", actionPrintMulti);
 		addItems();
-		setL10nMessages(null, _("DETECTED_LANGUAGE"));
+		setL10nMessages(null, gtxt("DETECTED_LANGUAGE"));
 		localeListener = new LocaleListenerImpl(this);
 		I18n.addLocaleListener(localeListener);
 	}

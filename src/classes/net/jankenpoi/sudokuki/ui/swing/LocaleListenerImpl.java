@@ -4,7 +4,7 @@ import java.util.Locale;
 
 import net.jankenpoi.i18n.LocaleListener;
 import net.jankenpoi.sudokuki.ui.L10nComponent;
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 class LocaleListenerImpl implements LocaleListener {
 
@@ -16,7 +16,7 @@ class LocaleListenerImpl implements LocaleListener {
 	
 	@Override
 	public void onLocaleChanged(Locale locale) {
-		String languageCode = _("DETECTED_LANGUAGE");
+		String languageCode = gtxt("DETECTED_LANGUAGE");
 		l10nComp.setL10nMessages(locale, languageCode);
 	}
 	

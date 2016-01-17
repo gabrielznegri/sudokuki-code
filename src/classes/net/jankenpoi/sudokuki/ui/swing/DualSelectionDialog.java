@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -35,8 +35,8 @@ public class DualSelectionDialog extends JDialog {
 		tabbedPane = new JTabbedPane();
 		numberPanel = new SelectNumberPanel(this, previousValue);
 		memosPanel = new SelectMemosPanel(this, previousMemos);
-		tabbedPane.addTab(_("Select"), numberPanel);
-		tabbedPane.addTab(_("Memos"), memosPanel);
+		tabbedPane.addTab(gtxt("Select"), numberPanel);
+		tabbedPane.addTab(gtxt("Memos"), memosPanel);
 		
 		tabbedPane.setSelectedComponent(valuePickerOnTop ? numberPanel
 				: memosPanel);

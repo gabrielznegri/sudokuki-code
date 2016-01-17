@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.KeyEvent;
 import java.util.Locale;
@@ -38,17 +38,17 @@ public class CheatMenu extends JMenu implements L10nComponent {
         private final LocaleListener localeListener;
         @Override
         public void setL10nMessages(Locale locale, String languageCode) {
-                setText(_("Solution..."));
+                setText(gtxt("Solution..."));
                 setIcon(StockIcons.ICON_SOLUTION_MENU);
 
-                itemSetMemosHere.setText(_("Memos"));
-                actionSetMemosHere.putValue(Action.SHORT_DESCRIPTION, _("Set memos"));
-                itemSetAllMemos.setText(_("All memos"));
-                actionSetAllMemos.putValue(Action.SHORT_DESCRIPTION, _("Set memos in all cells"));
+                itemSetMemosHere.setText(gtxt("Memos"));
+                actionSetMemosHere.putValue(Action.SHORT_DESCRIPTION, gtxt("Set memos"));
+                itemSetAllMemos.setText(gtxt("All memos"));
+                actionSetAllMemos.putValue(Action.SHORT_DESCRIPTION, gtxt("Set memos in all cells"));
                 
-                itemResolve.setText(_("Resolve"));
+                itemResolve.setText(gtxt("Resolve"));
                 actionResolve.putValue(Action.SMALL_ICON, StockIcons.ICON_GO_JUMP);
-                actionResolve.putValue(Action.SHORT_DESCRIPTION, _("Resolve the grid"));
+                actionResolve.putValue(Action.SHORT_DESCRIPTION, gtxt("Resolve the grid"));
                 actionResolve.putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_R));
         }
 
@@ -60,24 +60,24 @@ public class CheatMenu extends JMenu implements L10nComponent {
         private final Action actionResolve;
         
         public CheatMenu(ActionsRepository actions, JFrame parent, GridView view) {
-                actionSetMemosHere = new SetMemosHereAction(_("Memos"),
-                                StockIcons.ICON_SET_MEMOS_HERE, _("Set memos"), new Integer(
+                actionSetMemosHere = new SetMemosHereAction(gtxt("Memos"),
+                                StockIcons.ICON_SET_MEMOS_HERE, gtxt("Set memos"), new Integer(
                                                 KeyEvent.VK_T), view);
                 actions.put("SetMemosHere", actionSetMemosHere);
                 
-                actionSetAllMemos = new SetAllMemosAction(_("All memos"),
-                                StockIcons.ICON_SET_ALL_MEMOS, _("Set memos in all cells"), new Integer(
+                actionSetAllMemos = new SetAllMemosAction(gtxt("All memos"),
+                                StockIcons.ICON_SET_ALL_MEMOS, gtxt("Set memos in all cells"), new Integer(
                                                 KeyEvent.VK_X), view);
                 actions.put("SetAllMemos", actionSetAllMemos);
                 
-                actionResolve = new ResolveAction(parent, _("Resolve"),
-                                StockIcons.ICON_GO_JUMP, _("Resolve the grid"), new Integer(
+                actionResolve = new ResolveAction(parent, gtxt("Resolve"),
+                                StockIcons.ICON_GO_JUMP, gtxt("Resolve the grid"), new Integer(
                                                 KeyEvent.VK_R), view);
                 actions.put("ResolveGrid", actionResolve);
                 
                 addItems();
                 setEnabled(true);
-                setL10nMessages(null, _("DETECTED_LANGUAGE"));
+                setL10nMessages(null, gtxt("DETECTED_LANGUAGE"));
                 localeListener = new LocaleListenerImpl(this);
                 I18n.addLocaleListener(localeListener);
         }

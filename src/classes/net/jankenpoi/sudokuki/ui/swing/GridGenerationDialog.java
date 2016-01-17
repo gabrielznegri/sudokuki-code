@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
@@ -101,11 +101,11 @@ public class GridGenerationDialog extends JDialog {
 		JLabel messageLbl1 = new JLabel(	
 		"<html>"
 		+ "<table border=\"0\">" + "<tr>"
-		+ _("Generating grid...") + "</tr>"
+		+ gtxt("Generating grid...") + "</tr>"
 		+ "</html>");
 		
 		JLabel messageLbl3 = new JLabel("");
-		JButton cancelBtn = new JButton(_("Please wait..."));
+		JButton cancelBtn = new JButton(gtxt("Please wait..."));
 		cancelBtn.setEnabled(false); // generate task is not interruptible at the moment
 		cancelBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 		cancelBtn.addActionListener(new java.awt.event.ActionListener() {

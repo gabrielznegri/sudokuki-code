@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudokuki 1.1.4\n"
 "Report-Msgid-Bugs-To: sudokuki-i18n@lists.sourceforge.net\n"
-"POT-Creation-Date: 2014-04-06 00:31+0200\n"
+"POT-Creation-Date: 2016-01-15 13:46+0100\n"
 "PO-Revision-Date: 2012-05-01 18:29+0100\n"
 "Last-Translator: Fumiaki Nakanishi <fumiaki.nakanishi@sfr.fr>\n"
 "Language-Team:  <sudokuki-i18n@lists.sourceforge.net>\n"
@@ -164,7 +164,15 @@ msgstr "シルヴァン・ヴドレンヌ"
 msgid "Esperanto, French, and Japanese translations (v1.0)"
 msgstr "エスペラント語、フランス語、日本語訳"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:157
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:149
+msgid "Monika Viste"
+msgstr "モニカ・ヴィスト"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:151
+msgid "Polish translations"
+msgstr "ポーランド語翻訳"
+
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:161
 msgid ""
 "<b>Sudokuki</b> is released under the terms of the GNU General Public "
 "License version 3 or later (GPL v3+)."
@@ -172,7 +180,7 @@ msgstr ""
 "<b>スードクキ</b>はＧＮＵ一般公共ライセンスヴァージョン３または 後で (GPL "
 "v3+)の用語で公開されました。"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:161
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:165
 msgid ""
 "The full license text is available in the file called COPYING that must be "
 "included in every copy of the program."
@@ -180,7 +188,7 @@ msgstr ""
 "完全なライセンステキストはプログラムのどのコピーにも含まれているはずの複写と"
 "よばれるファイルにおいて利用可能です。"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:165
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:169
 msgid ""
 "This program is Free Software (\"Free\" as in \"Freedom\") developped during "
 "the author's free-time in the hope that some users will find it useful, but "
@@ -190,7 +198,7 @@ msgstr ""
 "に開発したフリーソフトウェア(\"フリーダム\" の中のものとしての\"フリー\")です"
 "が、いかなる種類の保証もありません。 "
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:169
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:173
 msgid ""
 "You are welcome to transfer this program to other people as long as you "
 "respect the license terms. Read the GNU General Public License for more "
@@ -199,16 +207,16 @@ msgstr ""
 "このプログラムを、ライセンスの期限を守る限り、他の人々に自由に譲渡することが"
 "出来ます。詳細はＧＮＵ一般公共ライセンスを読んで下さい。"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:171
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:221
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:175
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:225
 msgid "Copyright (C) 2007-2013 Sylvain Vedrenne"
 msgstr "著作権 (C) 2007-2013 シルヴァン・ヴドレンヌ"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:247
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:251
 msgid "on the Web"
 msgstr "ウェブ"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:272
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:276
 msgid ""
 "Feel free to request features and report bugs<br/>on the Sudokuki Forums "
 "hosted by Sourceforge!"
@@ -216,7 +224,7 @@ msgstr ""
 "ソルスフォルジュによって主催されたスードクキフォーラムに<br/>どうぞ御自由に特"
 "別記事をリクエストして、バグを報告してください。"
 
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:290
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:294
 msgid "Sudokuki Forums"
 msgstr "スードクキ　フォーラム"
 
@@ -419,16 +427,16 @@ msgid "About..."
 msgstr "スードクキについて"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:57
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:151
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:153
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:72
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:134
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageMenu.java:135
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:95
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/ToolBar.java:104
 msgid "Language"
 msgstr "言語"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:76
-#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:152
+#: src/classes/net/jankenpoi/sudokuki/ui/swing/LanguageDialog.java:154
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/SelectMemosPanel.java:124
 msgid "Ok"
 msgstr "Ok"

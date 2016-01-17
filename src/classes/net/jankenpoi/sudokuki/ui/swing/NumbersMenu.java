@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.event.ActionEvent;
 import java.util.Locale;
@@ -47,7 +47,7 @@ public class NumbersMenu extends JMenu implements L10nComponent {
 	public NumbersMenu(SwingView view) {
 		this.view = view;
 
-		actionStandardNumbers = new AbstractAction(_("Standard"), null) {
+		actionStandardNumbers = new AbstractAction(gtxt("Standard"), null) {
 		    
 		    @Override
 		    public void actionPerformed(ActionEvent arg0) {
@@ -55,7 +55,7 @@ public class NumbersMenu extends JMenu implements L10nComponent {
 		    }
 		};
 		
-		actionChineseNumbers = new AbstractAction(_("Chinese"), null) {
+		actionChineseNumbers = new AbstractAction(gtxt("Chinese"), null) {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -63,7 +63,7 @@ public class NumbersMenu extends JMenu implements L10nComponent {
 			}
 		};
 
-		actionArabicNumbers = new AbstractAction(_("Arabic"), null) {
+		actionArabicNumbers = new AbstractAction(gtxt("Arabic"), null) {
 		    
 		    @Override
 		    public void actionPerformed(ActionEvent arg0) {
@@ -74,7 +74,7 @@ public class NumbersMenu extends JMenu implements L10nComponent {
 		addItems();
 		setIcon(StockIcons.ICON_FONT);
 		
-		setL10nMessages(null, _("DETECTED_LANGUAGE"));
+		setL10nMessages(null, gtxt("DETECTED_LANGUAGE"));
 		localeListener = new LocaleListenerImpl(this);
 		I18n.addLocaleListener(localeListener);
 		
@@ -83,10 +83,10 @@ public class NumbersMenu extends JMenu implements L10nComponent {
 
 	@Override
 	public void setL10nMessages(Locale locale, String languageCode) {
-		setText(_("Numbers"));
-		itemStandardNumbers.setText(_("Standard"));
-		itemChineseNumbers.setText(_("Chinese"));
-		itemArabicNumbers.setText(_("Arabic"));
+		setText(gtxt("Numbers"));
+		itemStandardNumbers.setText(gtxt("Standard"));
+		itemChineseNumbers.setText(gtxt("Chinese"));
+		itemArabicNumbers.setText(gtxt("Arabic"));
 	}
 	
 	private void addItems() {

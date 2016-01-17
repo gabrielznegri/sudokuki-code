@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 @SuppressWarnings("serial")
 public class NewVersionFoundDialog extends JDialog {
@@ -45,7 +45,7 @@ public class NewVersionFoundDialog extends JDialog {
 		this.parent = parent;
 		initComponents();
 		// setResizable(false);
-		setTitle(_("Update recommended"));
+		setTitle(gtxt("Update recommended"));
 		pack();
 	}
 
@@ -79,10 +79,10 @@ public class NewVersionFoundDialog extends JDialog {
 				+ "<tr>"
 				+ "</tr>"
 				+ "<tr>"
-				+ _("A new version of Sudokuki is available!<br/>")
+				+ gtxt("A new version of Sudokuki is available!<br/>")
 				+ "</tr>"
 				+ "<tr>"
-				+ _("Please download and install the latest package<br/>from the following website:<br/>")
+				+ gtxt("Please download and install the latest package<br/>from the following website:<br/>")
 				+ "</tr>"
 				+ "<tr>"
 				+ "</tr>" + "<tr>" + "</tr>" + "</table>" + "</html>";
@@ -95,7 +95,7 @@ public class NewVersionFoundDialog extends JDialog {
 		JButton linkButton = new JButton();
 
 		linkButton
-				.setText("<HTML><FONT color=\"#000099\"><U>"+_("Download Sudokuki")+"</U></FONT></HTML>");
+				.setText("<HTML><FONT color=\"#000099\"><U>"+gtxt("Download Sudokuki")+"</U></FONT></HTML>");
 		linkButton.setHorizontalAlignment(SwingConstants.CENTER);
 		linkButton.setBorderPainted(false);
 		linkButton.setOpaque(false);

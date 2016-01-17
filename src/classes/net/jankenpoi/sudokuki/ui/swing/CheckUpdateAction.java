@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 @SuppressWarnings("serial")
 public class CheckUpdateAction extends AbstractAction {
@@ -46,7 +46,7 @@ public class CheckUpdateAction extends AbstractAction {
                 if (upToDateStatus == 0) {
                         JOptionPane.showMessageDialog(frame, "<html>"
                                         + "<table border=\"0\">" + "<tr>"
-                                        + _("This version of Sudokuki is up-to-date.") + "</tr>"
+                                        + gtxt("This version of Sudokuki is up-to-date.") + "</tr>"
                                         + "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
                 } else if (upToDateStatus == 1) {
                         openUpdateSiteAction.setEnabled(true);
@@ -55,7 +55,7 @@ public class CheckUpdateAction extends AbstractAction {
                 } else if (upToDateStatus == -1) {
                         JOptionPane.showMessageDialog(frame, "<html>"
                                         + "<table border=\"0\">" + "<tr>"
-                                        + _("Unable to retrieve update information.<br/><br/>Please check on the following website<br/>if a new version of Sudokuki is available:<br/><br/>")
+                                        + gtxt("Unable to retrieve update information.<br/><br/>Please check on the following website<br/>if a new version of Sudokuki is available:<br/><br/>")
                                         + "http://sourceforge.net/projects/sudokuki/files/sudokuki"
                                         + "</tr>" + "</html>", "Sudokuki",
                                         JOptionPane.WARNING_MESSAGE);

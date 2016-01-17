@@ -1,6 +1,6 @@
 /*
  * Sudokuki - essential sudoku game
- * Copyright (C) 2007-2013 Sylvain Vedrenne
+ * Copyright (C) 2007-2016 Sylvain Vedrenne
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  */
 package net.jankenpoi.sudokuki.ui.swing;
 
-import static net.jankenpoi.i18n.I18n._;
+import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.Color;
 import java.awt.Desktop;
@@ -52,11 +52,11 @@ public class AboutDialog extends JDialog {
 
 	private Frame parent;
 
-	private final String ABOUT_SUDOKUKI = _("About Sudokuki...");
-	private final String INFORMATION = _("Information");
-	private final String CONTRIBUTORS = _("Contributors");
-	private final String TRANSFER = _("Transfer");
-	private final String LICENSE = _("License");
+	private final String ABOUT_SUDOKUKI = gtxt("About Sudokuki...");
+	private final String INFORMATION = gtxt("Information");
+	private final String CONTRIBUTORS = gtxt("Contributors");
+	private final String TRANSFER = gtxt("Transfer");
+	private final String LICENSE = gtxt("License");
 
 	public AboutDialog(Frame parent) {
 		super(parent, true);
@@ -82,69 +82,73 @@ public class AboutDialog extends JDialog {
 				+ "<table border=\"0\"><tr></tr>"
 				
 				+ "<tr><td align=\"right\"><b>"
-				+ _("Sathish Anandh")
+				+ gtxt("Sathish Anandh")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Tamil translations")
+				+ gtxt("Tamil translations")
 				+ "<tr><td align=\"right\"><b>"
-				+ _("Aritz Beraza")
+				+ gtxt("Aritz Beraza")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Spanish translations (v1.0)")
+				+ gtxt("Spanish translations (v1.0)")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Jeroen P. Broks")
+				+ gtxt("Jeroen P. Broks")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Dutch translations")
+				+ gtxt("Dutch translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Helene Damianakos")
+				+ gtxt("Helene Damianakos")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Greek translations (v1.0)")
+				+ gtxt("Greek translations (v1.0)")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Janis Eisaks")
+				+ gtxt("Janis Eisaks")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Latvian translations")
+				+ gtxt("Latvian translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Rafael Ferreira")
+				+ gtxt("Rafael Ferreira")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Brazilian Portuguese translations")
+				+ gtxt("Brazilian Portuguese translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Daneih Ismail")
+				+ gtxt("Daneih Ismail")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Arabic translations")
+				+ gtxt("Arabic translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Stavros Mavrakis")
+				+ gtxt("Stavros Mavrakis")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Greek translations")
+				+ gtxt("Greek translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Fumiaki Nakanishi")
+				+ gtxt("Fumiaki Nakanishi")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Japanese translations")
+				+ gtxt("Japanese translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Ahmet Kemal Okmen")
+				+ gtxt("Ahmet Kemal Okmen")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Turkish translations")
+				+ gtxt("Turkish translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Jeanne Peng")
+				+ gtxt("Jeanne Peng")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Chinese translations")
+				+ gtxt("Chinese translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Claus Poerschke")
+				+ gtxt("Claus Poerschke")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Patches (v1.0) and German translations")
+				+ gtxt("Patches (v1.0) and German translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Dmitry Salnikov")
+				+ gtxt("Dmitry Salnikov")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Portuguese and Russian translations")
+				+ gtxt("Portuguese and Russian translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Toni")
+				+ gtxt("Toni")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Hungarian translations")
+				+ gtxt("Hungarian translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Helene Vedrenne")
+				+ gtxt("Helene Vedrenne")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Japanese translations")
+				+ gtxt("Japanese translations")
 				+ "</td></tr><tr><td align=\"right\"><b>"
-				+ _("Sylvain Vedrenne")
+				+ gtxt("Sylvain Vedrenne")
 				+ "</b></td><td></td><td align=\"left\">"
-				+ _("Esperanto, French, and Japanese translations (v1.0)")
+				+ gtxt("Esperanto, French, and Japanese translations (v1.0)")
+                                + "</td></tr><tr><td align=\"right\"><b>"
+				+ gtxt("Monika Viste")
+				+ "</b></td><td></td><td align=\"left\">"
+				+ gtxt("Polish translations")
 				
 				+ "</td>" + "</tr>" + "</table>"
 				+ "</body></html>"), CONTRIBUTORS);
@@ -154,21 +158,21 @@ public class AboutDialog extends JDialog {
 						null,
 						makeTextPanel("<html><body>"
 								+ "<p>"
-								+ _("<b>Sudokuki</b> is released under the terms of the GNU General Public License version 3 or later (GPL v3+).")
+								+ gtxt("<b>Sudokuki</b> is released under the terms of the GNU General Public License version 3 or later (GPL v3+).")
 								+ "<br/>"
 								+ "</p>"
 								+ "<p>"
-								+ _("The full license text is available in the file called COPYING that must be included in every copy of the program.")
+								+ gtxt("The full license text is available in the file called COPYING that must be included in every copy of the program.")
 								+ "<br/>"
 								+ "</p>"
 								+ "<p>"
-								+ _("This program is Free Software (\"Free\" as in \"Freedom\") developped during the author's free-time in the hope that some users will find it useful, but WITHOUT ANY WARRANTY of any kind.")
+								+ gtxt("This program is Free Software (\"Free\" as in \"Freedom\") developped during the author's free-time in the hope that some users will find it useful, but WITHOUT ANY WARRANTY of any kind.")
 								+ "<br/>"
 								+ "</p>"
 								+ "<p>"
-								+ _("You are welcome to transfer this program to other people as long as you respect the license terms. Read the GNU General Public License for more details.")
+								+ gtxt("You are welcome to transfer this program to other people as long as you respect the license terms. Read the GNU General Public License for more details.")
 								+ "<br/>" + "</p>" + "<p>"
-								+ _("Copyright (C) 2007-2013 Sylvain Vedrenne")
+								+ gtxt("Copyright (C) 2007-2016 Sylvain Vedrenne")
 								+ "<br/>" + "</p>" + "</body></html>"),
 						TRANSFER); // tooltip text
 
@@ -218,7 +222,7 @@ public class AboutDialog extends JDialog {
 				+ "<table border=\"0\">" + "<tr>" + "<td align=\"center\"><b>"
 				+ Version.versionString + "</b></td>" + "</tr>" + "<tr>"
 				+ "<td align=\"center\">"
-				+ _("Copyright (C) 2007-2013 Sylvain Vedrenne") + "</td>"
+				+ gtxt("Copyright (C) 2007-2016 Sylvain Vedrenne") + "</td>"
 				+ "</tr>" + "</table>" + "</html>");
 		{
 			Color bgColor = new JPanel().getBackground();
@@ -244,7 +248,7 @@ public class AboutDialog extends JDialog {
 		JButton linkButton = new JButton();
 
 		linkButton.setText("<HTML><FONT color=\"#000099\"><U>Sudokuki "
-				+ _("on the Web") + "</U></FONT></HTML>");
+				+ gtxt("on the Web") + "</U></FONT></HTML>");
 		linkButton.setHorizontalAlignment(SwingConstants.CENTER);
 		linkButton.setBorderPainted(false);
 		linkButton.setOpaque(false);
@@ -269,7 +273,7 @@ public class AboutDialog extends JDialog {
 
 		String feedbackStr = "<html>"
 				+ "<body><p></p><p>"
-				+ _("Feel free to request features and report bugs<br/>on the Sudokuki Forums hosted by Sourceforge!")
+				+ gtxt("Feel free to request features and report bugs<br/>on the Sudokuki Forums hosted by Sourceforge!")
 				+ "</p></body>" + "</html>";
 		JEditorPane feedbackPane = new JEditorPane("text/html", feedbackStr);
 		feedbackPane.setEditable(false);
@@ -287,7 +291,7 @@ public class AboutDialog extends JDialog {
 		JButton linkButton = new JButton();
 
 		linkButton.setText("<HTML><FONT color=\"#000099\"><U>"
-				+ _("Sudokuki Forums") + "</U></FONT></HTML>");
+				+ gtxt("Sudokuki Forums") + "</U></FONT></HTML>");
 		linkButton.setHorizontalAlignment(SwingConstants.CENTER);
 		linkButton.setBorderPainted(false);
 		linkButton.setOpaque(false);
