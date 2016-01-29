@@ -6,7 +6,7 @@ or double-click on the JAR file (MS-Windows systems),
 
 or manually execute the following command:
 
-java -Djava.library.path=./libs -jar sudokuki-<VERSION>.jar (replace <VERSION> by the release version number)
+java -jar sudokuki-<VERSION>.jar (replace <VERSION> by the release version number)
 
 For feature requests, bug reports, remarks, contributions, etc., please visit:
 http://sourceforge.net/projects/sudokuki

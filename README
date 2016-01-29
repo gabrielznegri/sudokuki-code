@@ -2,65 +2,69 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
-* 2014-04-06 - released Sudokuki 1.2.2 (Stable)
+* 2016-01-29 - released Sudokuki 1.2.3 (stable)
+- Add Polish translations from Monika Viste
+- Fix build issues that could affect recent distributions
+
+* 2014-04-06 - released Sudokuki 1.2.2 (stable)
 - Replaced legacy grid generator (C version of Suexg) by a Java version of Suexg
 - Replaced legacy brute-force solver by the solver included in Suexg
 
-* 2013-12-10 - released Sudokuki 1.2.1 (Stable)
+* 2013-12-10 - released Sudokuki 1.2.1 (stable)
 - Added Tamil translations from Sathish Anandh
 - Added Turkish translations from Ahmet Kemal Okmen
 - Improved the language selection dialog
 - Removed the "feedback" tab from the About dialog
 
-* 2013-04-27 - released Sudokuki 1.2 (Stable)
+* 2013-04-27 - released Sudokuki 1.2 (stable)
 - Added capability to resize the grid (fixes #245 GUI Needs to be dynamically resizable)
 - Improved the paint process (more efficient)
 - dispose() "Resolution in progress" dialog before showing "Resolution successful"
 - In the selection dialog, memos are no more in bold font when selected
 - Fixed #249 'debian' folder missing from source archive 
 
-* 2013-02-07 - released Sudokuki 1.1.8 (Stable)
+* 2013-02-07 - released Sudokuki 1.1.8 (stable)
 - Added Hungarian translations from Toni.
 
-* 2012-12-28 - released Sudokuki 1.1.7 (Stable)
+* 2012-12-28 - released Sudokuki 1.1.7 (stable)
 - Numbers are now 'Standard', 'Chinese' or 'Arabic' (added 'arabic' numbers)
 - Improved the centering of the digits inside the cells
 - Fixed several Java warnings in the source code
 
-* 2012-11-24 - released Sudokuki 1.1.6 (Stable)
+* 2012-11-24 - released Sudokuki 1.1.6 (stable)
 - Added Arabic translations from Daneih Ismail
 - Fixed issue #244 1.1.5: LanguageMenu lost sync with current locale
 - Updated translation files for nl and pt_BR
 
-* 2012-05-17 - released Sudokuki 1.1.5 (Stable)
+* 2012-05-17 - released Sudokuki 1.1.5 (stable)
 - Added Brazilian Portuguese translations from Rafael Ferreira
 - Fixed item #3525975 "Ameliorate existing country flags look"
 - Fixed item #3526392 "Hardcoded language names for lang-selection menu/dialog"
 
-* 2012-05-10 - released Sudokuki 1.1.4 (Stable)
+* 2012-05-10 - released Sudokuki 1.1.4 (stable)
 - Fixed item #3520726 "Cannot enter filename when saving a grid on MacOS X"
 - Fixed item #3522650 "Corrupted or wrong grid files are not correctly handled"
 - Fixed item #3520759 "AboutDialog: ensure all text is visible (like for GPLv3 txt)"
 - Fixed item #3522280 "With Sun/Oracle JDK: fatal error: jni_md.h: No such file ..."
 - Updated Portuguese and Russian po files with Dutch translator's name
 
-* 2012-04-28 - released Sudokuki 1.1.3 (Stable)
+* 2012-04-28 - released Sudokuki 1.1.3 (stable)
 - Dutch translations from Jeroen P. Broks. Added country flag for new translation, 
   updated some po files accordingly.
 - Fixed Japanese translation string for "Latvian translations"
 - Fixed item #3520763 Package build JDK detection should see beyond symlinks
 - Debian package now depends upon java6-runtime and its build upon java6-sdk
 
-* 2012-03-20 - released Sudokuki 1.1.2 (Stable)
+* 2012-03-20 - released Sudokuki 1.1.2 (stable)
 - Latvian translations by Janis Eisaks
 - Updated country flag icons from PIWIK project
 - Fixed #3509367 COPYING file and release packages
 
-* 2012-03-12 - released Sudokuki 1.1.1 (Stable)
+* 2012-03-12 - released Sudokuki 1.1.1 (stable)
 - Final version of Portuguese translation for 1.1 release (item #3493404)
 - Fixed #3499862 Errors with EXTRA_DIST.include or DIST_NOINST_JAVA.include
 
-* 2012-02-23 - released Sudokuki 1.1.0 (Stable)
+* 2012-02-23 - released Sudokuki 1.1.0 (stable)
 - Greek translations (by Stavros Mavrakis)
 - Fixed aspect of two Cancel buttons
 - Fixed warnings and spurious traces
@@ -332,7 +336,7 @@ The stable release files can be found here:
 https://sourceforge.net/projects/sudokuki/files/sudokuki/
 
 Translations include Japanese, Chinese, Arabic, Tamil, Turkish, Latvian, Dutch,
-English, Esperanto, French, German, Greek, Hungarian, Portuguese, Russian
+English, Esperanto, French, German, Greek, Hungarian, Polish, Portuguese, Russian,
 and Spanish, at the moment.
 
 The current stable release is version 1.2 
