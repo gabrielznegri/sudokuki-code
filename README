@@ -2,6 +2,10 @@ Sudokuki - essential sudoku game
 
 -- Changelog --
 
+* 2016-03-08 - released Sudokuki 1.2.4 (Stable)
+- Update Polish translations from Monika Viste
+- Update Tamil translations from Sathish
+
 * 2016-01-29 - released Sudokuki 1.2.3 (stable)
 - Add Polish translations from Monika Viste
 - Fix build issues that could affect recent distributions

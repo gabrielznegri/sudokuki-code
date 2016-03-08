@@ -167,12 +167,11 @@ msgstr "எஸ்பெராண்டோ, பிரஞ்சு, மற்�
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:149
 msgid "Monika Viste"
-msgstr ""
+msgstr "மொனிகா விஸ்தே"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:151
-#, fuzzy
 msgid "Polish translations"
-msgstr "துருக்கிய மொழிபெயர்ப்பு"
+msgstr "பொலிஷ் மொழிபெயர்ப்பு"
 
 #: src/classes/net/jankenpoi/sudokuki/ui/swing/AboutDialog.java:161
 msgid ""
