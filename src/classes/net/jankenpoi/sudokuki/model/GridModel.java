@@ -129,7 +129,7 @@ public class GridModel implements Cloneable {
 		return cellInfos[9 * li + co];
 	}
 
-	public void setMemosForAllCells() {
+	private void fillAllCellsWithAllMemos() {
 		for (int li = 0; li < 9; li++) {
 			for (int co = 0; co < 9; co++) {
 				if (!isCellFilled(li, co)) {
@@ -137,6 +137,10 @@ public class GridModel implements Cloneable {
 				}
 			}
 		}
+	}
+
+	public void setMemosForAllCells() {
+		fillAllCellsWithAllMemos();
 
 		// parcourir tous les carres
 		// - pour chaque carre, cribler les memos
@@ -349,12 +353,11 @@ public class GridModel implements Cloneable {
 		cellInfos[9 * li + co] |= value;
 		clearCellMemos(li, co);
 		
-		if (silent == false) {
-			fireGridChanged(new GridChangedEvent(this, li, co, cellInfos[9 * li
-				+ co]));
-		}
+		if (silent) return;
+
+		fireGridChanged(new GridChangedEvent(this, li, co, cellInfos[9 * li + co]));
 		
-		if (!silent && isGridFull()) {
+		if (isGridFull()) {
 			GridValidity validity = checkGridValidity();
 			if (validity.isGridValid()) {
 				setGridComplete();
@@ -374,9 +377,14 @@ public class GridModel implements Cloneable {
 		return (cellInfos[9 * li + co] & getMemoFlag(value)) != 0;
 	}
 
-	public boolean isCellReadOnly(int li, int co) {
-		return !isCustomGridModeON && (cellInfos[9 * li + co] & FLAG_CELL_READ_ONLY) != 0;
+	private boolean isFlagReadOnlySet(int li, int co) {
+		return (cellInfos[9 * li + co] & FLAG_CELL_READ_ONLY) != 0;
 	}
+
+	public boolean isCellReadOnly(int li, int co) {
+		return !isCustomGridModeON && isFlagReadOnlySet(li, co);
+	}
+
 
 	public boolean isGridFull() {
 		for (int li=0; li<9; li++) {
@@ -615,9 +623,7 @@ public class GridModel implements Cloneable {
 	public boolean areSomeCellsEmpty() {
 		for (int li = 0; li < 9; li++) {
 			for (int co = 0; co < 9; co++) {
-				if (isCellFilled(li, co)) {
-					continue;
-				} else {
+				if (!isCellFilled(li, co)) {
 					return true;
 				}
 			}
