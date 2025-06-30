@@ -20,11 +20,17 @@ package net.jankenpoi.sudokuki.ui.swing;
 import static net.jankenpoi.i18n.I18n.gtxt;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.Action;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.Timer;
 
 import net.jankenpoi.sudokuki.model.GridChangedEvent;
 import net.jankenpoi.sudokuki.model.GridModel;
@@ -38,6 +44,12 @@ public class SwingView extends GridView {
 	private ActionsRepository actions;
 	private CheatMenu cheatMenu;
 	private LevelMenu levelMenu;
+
+	private Timer timer;
+	private int seconds = 0;
+	private JLabel timerLabel;
+	private JButton startButton;
+	private boolean running = false;
 	
 	public SwingView(GridModel model) {
 		super(model);
@@ -59,6 +71,26 @@ public class SwingView extends GridView {
 				JToolBar toolbar = new ToolBar(frame, menuBar.getActions());
 				frame.getContentPane().add(toolbar, BorderLayout.PAGE_START);
 				frame.getContentPane().add(grid, BorderLayout.CENTER);
+
+				timerLabel = new JLabel("00:00");
+				startButton = new JButton("Iniciar Timer");
+
+				timer = new Timer(1000, new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						seconds++;
+						int mins = seconds / 60;
+						int secs = seconds % 60;
+						timerLabel.setText(String.format("%02d:%02d", mins, secs));
+					}
+				});
+
+				startButton.addActionListener(e -> toggleTimer());
+
+				JPanel timerPanel = new JPanel();
+				timerPanel.add(startButton);
+				timerPanel.add(timerLabel);
+
+				frame.getContentPane().add(timerPanel, BorderLayout.SOUTH);
 
 				actions = menuBar.getActions();
 				
@@ -85,6 +117,7 @@ public class SwingView extends GridView {
 	}
 
 	public void gridChanged(final GridChangedEvent event) {
+		resetTimer();
 
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
@@ -109,6 +142,8 @@ public class SwingView extends GridView {
 	
 	@Override
 	public void gridComplete() {
+		resetTimer();
+
 		JOptionPane.showMessageDialog(frame, 
 		"<html>"
         + "<table border=\"0\">"
@@ -127,6 +162,8 @@ public class SwingView extends GridView {
 	
 	@Override
 	public void gridResolved() {
+		resetTimer();
+		
 		JOptionPane.showMessageDialog(frame, "<html>" + "<table border=\"0\">"
 				+ "<tr>" + gtxt("Grid resolved with success.") + "</tr>"
 				+ "</html>", "Sudokuki", JOptionPane.PLAIN_MESSAGE);
@@ -191,6 +228,31 @@ public class SwingView extends GridView {
 		}
 		Action playCustomGridAction = actions.get("PlayCustomGrid"); 
 		playCustomGridAction.setEnabled(model.getCustomGridMode() && model.getGridValidity().isGridValid());
+	}
+
+	private void toggleTimer() {
+		if (running) {
+			timer.stop();
+			startButton.setText("Iniciar Timer");
+		} else {
+			timer.start();
+			startButton.setText("Pausar Timer");
+		}
+		running = !running;
+	}
+
+	private void resetTimer() {
+		if (timer != null) {
+			timer.stop();
+		}
+		seconds = 0;
+		running = false;
+		if (startButton != null) {
+			startButton.setText("Iniciar Timer");
+		}
+		if (timerLabel != null) {
+			timerLabel.setText("00:00");
+		}
 	}
 
 	@Override
